@@ -3,7 +3,7 @@
  "start": "2026-04-22T00:00:00Z",
  "budgetSeconds": 240,
  "binanceus": { "quotes": ["USDT", "USDC", "USD"], "depthLevels": 10, "firstPassPages": 3, "maxPagesPerSymbol": 40, "weightPause": 4500 },
- "reference": { "always": ["BTC", "ETH", "SOL", "USDT", "USDC"], "krakenMax": 40, "coinbaseMaxPages": 40, "candleChunkMinutes": 300 },
+ "reference": { "always": ["BTC", "ETH", "SOL", "USDT", "USDC"], "krakenMax": 40, "coinbaseMaxPages": 120, "candleChunkMinutes": 300 },
  "spacingMs": { "api.binance.us": 110, "api.exchange.coinbase.com": 130, "api.kraken.com": 1100 },
  "probes": [
   { "name": "binanceus-ping", "url": "https://api.binance.us/api/v3/ping" },

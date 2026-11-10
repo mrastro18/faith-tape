@@ -21,7 +21,7 @@ Reference bases are BTC, ETH, SOL, USDT, USDC and the base of every Binance.US p
 
 ## Guarantees and limits
 
-- **Complete tapes.** Every stream resumes from a cursor in `state/state.json`, so a late or skipped scheduled run loses nothing on Binance.US. Coinbase pages back at most 40 pages a run; a longer outage on a busy product is written to `data/gaps/` with the missing ids, never silently skipped.
+- **Complete tapes.** Every stream resumes from a cursor in `state/state.json`, so a late or skipped scheduled run loses nothing on Binance.US. Coinbase pages back at most 120 pages a run; a longer outage on a busy product is written to `data/gaps/` with the missing ids, never silently skipped.
 - **Settled seconds only.** A one-second bar is written only once the fetch happened at least 5 s after that second ended, and each second is written once.
 - **The book is a snapshot**, once an hour. It measures spread and depth at that moment, not what happened between runs.
 - **Run times are not exact.** GitHub may start a scheduled run late or skip one. Nothing here depends on the run time.
