@@ -1,0 +1,8 @@
+{
+  "name": "faith-tape",
+  "private": true,
+  "type": "module",
+  "description": "Public market data recorder for FAITH. Data only; no strategy code, no keys.",
+  "scripts": { "test": "node --test test/*.test.mjs", "record": "node recorder/record.mjs ." },
+  "engines": { "node": ">=22" }
+}

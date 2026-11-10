@@ -1,0 +1,49 @@
+name: record
+
+# Hourly recorder of public market data. No secrets: it reads documented public endpoints and commits
+# what it read to this repository with the job's own short-lived token. A push of recorder code also
+# starts a run, so a fix is tested on real venues at once. Commits made by this job start no run.
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ["recorder/**", "test/**", ".github/workflows/record.yml"]
+
+concurrency:
+  group: record
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    runs-on: ubuntu-26.04
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "22"
+      - name: Recorder tests
+        run: node --test test/*.test.mjs
+      - name: Record
+        run: node recorder/record.mjs .
+      - name: Commit data
+        run: |
+          git config user.name "faith-tape recorder"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data state
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -q -m "tape: $(date -u +%Y-%m-%dT%H:%MZ) run ${GITHUB_RUN_ID}"
+          for i in 1 2 3; do
+            if git push -q origin HEAD:main; then exit 0; fi
+            git fetch -q --depth=20 origin main
+            git rebase -q origin/main || { git rebase --abort; exit 1; }
+            sleep $((i * 5))
+          done
+          exit 1
