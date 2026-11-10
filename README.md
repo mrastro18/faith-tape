@@ -16,6 +16,7 @@ A data-only repository for FAITH (decision S5): a plain Node recorder that reads
 | Reference history before recording began, one-minute candles | Coinbase `/products/{id}/candles` | `data/coinbase/candles1m/<day>/<BASE>.ndjson` | `[ms, open, high, low, close, volume]` |
 | Second reference, one-second bars | Kraken `/0/public/Trades` | `data/kraken/bars1s/<day>/<BASE>.ndjson` | as Coinbase |
 | Kalshi perpetuals, crypto markets, once a run | `external-api.kalshi.com/trade-api/v2/margin/markets` | `data/kalshi/perps/<day>.ndjson` | `[ms, [market objects as served]]` |
+| Kalshi perpetuals, funding-rate history for every market, once a day | `external-api.kalshi.com/trade-api/v2/margin/funding_rates/historical` (public) | `data/kalshi/funding/history.json`, rewritten daily | `{at, json}`, the answer as served |
 | Endpoint probes and fee/terms page hashes, daily | see `recorder/config.json` | `data/probes/<day>.ndjson`, `data/pages/<name>/<day>.html` on change | |
 | Run health: calls, non-200 answers, per-task results | | `data/health/<day>.ndjson`, `state/last-run.json` | |
 | Known holes in a tape | | `data/gaps/<day>.ndjson` | |

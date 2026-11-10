@@ -15,3 +15,9 @@ export async function marginMarkets(f, { maxPages = 10 } = {}) {
   }
   return { markets, pages };
 }
+
+/** Historical funding rates for every margin market (public; no ticker means all markets), as served. */
+export async function fundingHistory(f) {
+  const { json } = await f.getJson(`${BASE}/funding_rates/historical`);
+  return json;
+}

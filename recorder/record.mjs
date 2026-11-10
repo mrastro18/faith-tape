@@ -260,7 +260,20 @@ export async function runOnce({ root, config, fetchImpl, now = Date.now, wait = 
     for (const m of markets) classes[m.asset_class ?? "?"] = (classes[m.asset_class ?? "?"] ?? 0) + 1;
     const keep = markets.filter((m) => /crypto/i.test(String(m.asset_class ?? "")));
     if (keep.length) appendByDay((d) => D("kalshi", "perps", `${d}.ndjson`), [[at, keep]], (r) => dayOf(r[0]));
-    return { markets: markets.length, crypto: keep.length, pages, classes };
+    // Once a day, the public funding-rate history for every market, kept as served (git keeps each version).
+    const s = (state.kalshi ||= {});
+    let funding = s.fundingDay === today ? "skipped" : null;
+    if (!funding) {
+      try {
+        const json = await ks.fundingHistory(f);
+        writeJson(D("kalshi", "funding", "history.json"), { at, json });
+        s.fundingDay = today;
+        funding = JSON.stringify(json).length;
+      } catch (e) {
+        funding = `error: ${String(e.message ?? e).slice(0, 120)}`;
+      }
+    }
+    return { markets: markets.length, crypto: keep.length, pages, classes, funding };
   }
 
   // ---------- Once a day: endpoint probes and fee/terms page hashes ----------

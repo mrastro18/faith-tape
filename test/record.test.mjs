@@ -97,6 +97,8 @@ function fakeFetch(w) {
     }
     if (u.host === "external-api.kalshi.com" && u.pathname === "/trade-api/v2/margin/markets")
       return res(200, { markets: [{ ticker: "BTC-PERP", asset_class: "Crypto", bid: "1", ask: "2" }, { ticker: "SPY-PERP", asset_class: "Equities" }], cursor: "" });
+    if (u.host === "external-api.kalshi.com" && u.pathname === "/trade-api/v2/margin/funding_rates/historical")
+      return res(200, { funding_rates: [{ ticker: "BTC-PERP", rate: 0.0001, ts: 1 }] });
     return res(200, "ok");
   };
 }
@@ -279,6 +281,8 @@ test("Kalshi perps: crypto markets are kept, other classes are counted only", as
   const root = mkdtempSync(join(tmpdir(), "tape-"));
   const h = await run(w, root);
   assert.deepEqual(h.tasks.kalshi.classes, { Crypto: 1, Equities: 1 });
+  const fund = JSON.parse(readFileSync(join(root, "data", "kalshi", "funding", "history.json"), "utf8"));
+  assert.equal(fund.json.funding_rates[0].ticker, "BTC-PERP");
   const line = JSON.parse(readFileSync(join(root, "data", "kalshi", "perps", "2026-11-10.ndjson"), "utf8").trim());
   assert.deepEqual(line[1].map((m) => m.ticker), ["BTC-PERP"]);
 });
