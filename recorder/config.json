@@ -1,7 +1,7 @@
 {
  "note": "Recorder settings. Public endpoints only, no keys. Changing the universe rules here is a data change: log it in CHANGES.md.",
  "start": "2026-04-22T00:00:00Z",
- "budgetSeconds": 240,
+ "budgetSeconds": 420,
  "binanceus": {
   "quotes": [
    "USDT",
