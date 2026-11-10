@@ -3,6 +3,10 @@ name: record
 # Half-hourly recorder of public market data. No secrets: it reads documented public endpoints and commits
 # what it read to this repository with the job's own short-lived token. A push of recorder code also
 # starts a run, so a fix is tested on real venues at once. Commits made by this job start no run.
+# GitHub's schedule alone is not enough: it fired once in the first 13 hours. So each run ends by waiting
+# for the next slot (minute 7 or 37) and starting the next run itself. A start made with the job's token
+# is one of the two events GitHub lets such a token trigger. If two chains ever run, the concurrency group
+# keeps one run and one pending, and a newer pending run replaces the older, so they fold back into one.
 on:
   schedule:
     - cron: "7,37 * * * *" # every 30 minutes, at minutes 7 and 37 (UTC)
@@ -17,6 +21,7 @@ concurrency:
 
 permissions:
   contents: write
+  actions: write # only for the next job's start of the next run
 
 jobs:
   record:
@@ -48,3 +53,24 @@ jobs:
             sleep $((i * 5))
           done
           exit 1
+
+  next:
+    needs: record
+    if: always() # a failed record must not stop the chain
+    runs-on: ubuntu-26.04
+    timeout-minutes: 40
+    steps:
+      - name: Wait for the next slot, then start the next run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          now=$(date -u +%s)
+          min=$(( (now / 60) % 60 ))
+          sec=$(( now % 60 ))
+          if [ "$min" -lt 7 ]; then wait=$(( (7 - min) * 60 - sec ))
+          elif [ "$min" -lt 37 ]; then wait=$(( (37 - min) * 60 - sec ))
+          else wait=$(( (67 - min) * 60 - sec )); fi
+          echo "next run in ${wait}s"
+          sleep "$wait"
+          gh workflow run record.yml --ref main
