@@ -1,11 +1,11 @@
 name: record
 
-# Hourly recorder of public market data. No secrets: it reads documented public endpoints and commits
+# Half-hourly recorder of public market data. No secrets: it reads documented public endpoints and commits
 # what it read to this repository with the job's own short-lived token. A push of recorder code also
 # starts a run, so a fix is tested on real venues at once. Commits made by this job start no run.
 on:
   schedule:
-    - cron: "17 * * * *" # hourly at minute 17 (UTC)
+    - cron: "7,37 * * * *" # every 30 minutes, at minutes 7 and 37 (UTC)
   workflow_dispatch: {}
   push:
     branches: [main]
