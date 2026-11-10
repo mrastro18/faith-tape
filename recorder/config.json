@@ -100,7 +100,7 @@
   "note": "Best bid and ask polled while the chain waits for its next run (recorder/quotes.mjs).",
   "everyMs": 5000,
   "snapshotEveryMs": 600000,
-  "maxBytesPerSession": 800000,
+  "maxBytesPerSession": 3000000,
   "maxFailuresInRow": 6
  }
 }

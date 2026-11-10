@@ -1,7 +1,8 @@
 // Quote poller tests against a fake bookTicker. No network.
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { mkdtempSync, mkdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
+import { mkdtempSync, mkdirSync, readFileSync, readdirSync, writeFileSync, existsSync } from "node:fs";
+import { gunzipSync } from "node:zlib";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { pollQuotes, quoteSymbols } from "../recorder/quotes.mjs";
@@ -47,10 +48,14 @@ function world(start, book) {
   return w;
 }
 
-const rowsOf = (root, day) =>
-  existsSync(join(root, "data", "binanceus", "quotes", `${day}.ndjson`))
-    ? readFileSync(join(root, "data", "binanceus", "quotes", `${day}.ndjson`), "utf8").trim().split("\n").map((l) => JSON.parse(l))
-    : [];
+// Every session file of a day, in order; each must be sealed (gzip, no plain file left behind).
+const rowsOf = (root, day) => {
+  const dir = join(root, "data", "binanceus", "quotes", day);
+  if (!existsSync(dir)) return [];
+  const names = readdirSync(dir).sort();
+  assert.ok(names.every((n) => n.endsWith(".ndjson.gz")), `unsealed: ${names}`);
+  return names.flatMap((n) => gunzipSync(readFileSync(join(dir, n))).toString("utf8").trim().split("\n").map((l) => JSON.parse(l)));
+};
 
 const config = { spacingMs: {}, quotes: { everyMs: 5000, snapshotEveryMs: 60_000 } };
 
@@ -101,6 +106,8 @@ test("a session that crosses midnight ends and restarts in the new day's file", 
   await pollQuotes({ root, config, untilMs: T0 + 30_000, fetchImpl: w.fetchImpl, now: w.now, wait: w.wait, log: () => {} });
   const a = rowsOf(root, "2026-11-10");
   const b = rowsOf(root, "2026-11-11");
+  assert.equal(readdirSync(join(root, "data", "binanceus", "quotes", "2026-11-11")).length, 1);
+  assert.match(readdirSync(join(root, "data", "binanceus", "quotes", "2026-11-11"))[0], /^000\d{3}Z-local\.ndjson\.gz$/);
   assert.deepEqual([a[0][0], a.at(-1)[0]], ["s", "e"]);
   assert.deepEqual([b[0][0], b[1][0], b.at(-1)[0]], ["s", "f", "e"]);
   assert.equal(b[1][3], 1.5);

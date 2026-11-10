@@ -2,7 +2,8 @@
 // Binance.US best bid and ask for the recorded pairs, polled while the chain waits for its next run.
 // Usage: node recorder/quotes.mjs [rootDir] --until <ISO time or epoch ms>
 // One call to /api/v3/ticker/bookTicker returns every pair, so a poll costs the same for 1 pair or 260.
-// Rows, in data/binanceus/quotes/<day>.ndjson:
+// One file per session, data/binanceus/quotes/<day>/<HHMMSS>Z-<run>.ndjson.gz: written as the same name without
+// .gz while the session runs, compressed when it ends. Rows:
 //   ["s", ms, run, everyMs]                        a polling session starts
 //   ["f", ms, symbol, bid, bidQty, ask, askQty]    a full snapshot of every recorded pair (at the start,
 //                                                  then every `snapshotEveryMs`)
@@ -10,15 +11,17 @@
 //   ["x", ms, status]                              a poll failed (status null for a timeout or network error)
 //   ["c", ms]                                      the session's byte budget ran out: snapshots only from here
 //   ["e", ms, polls, failures, capped]             the session ends
-// ms is when the answer arrived. Between an "s" and its "e", outside "x" polls and after a "c", every change
+// ms is when the answer arrived. Between an "s" and its "e", outside "x" polls and before any "c", every change
 // of best price is here at poll resolution: a price that came and went between two polls is not, and a size
-// change alone is not a row. Outside sessions nothing is known; a killed session has no "e" row. A session
-// that crosses midnight ends and restarts at the boundary. The budget is per session, so a cap never costs
-// the same hours of every day.
-import { join, resolve } from "node:path";
+// change alone is not a row. Outside sessions nothing is known; a killed session has no "e" row and stays
+// uncompressed. A session that crosses midnight ends and restarts at the boundary. The budget (raw bytes) is per
+// session, so a cap never costs the same hours of every day. Sessions on 2026-11-10 up to about 18:07 UTC (before
+// this format) are one plain 2026-11-10.ndjson.
+import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { readFileSync } from "node:fs";
-import { appendByDay, dayOf, makeFetcher, readJson, sleep } from "./lib.mjs";
+import { appendFileSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
+import { gzipSync } from "node:zlib";
+import { dayOf, makeFetcher, readJson, sleep } from "./lib.mjs";
 
 const URL_ALL = "https://api.binance.us/api/v3/ticker/bookTicker";
 
@@ -37,19 +40,31 @@ export async function pollQuotes({ root, config, untilMs, fetchImpl, now = Date.
   const qc = config.quotes ?? {};
   const everyMs = qc.everyMs ?? 5000;
   const snapshotEveryMs = qc.snapshotEveryMs ?? 600_000;
-  const maxBytesPerSession = qc.maxBytesPerSession ?? 800_000;
+  const maxBytesPerSession = qc.maxBytesPerSession ?? 3_000_000;
   const maxFailures = qc.maxFailuresInRow ?? 6;
   const run = process.env.GITHUB_RUN_ID ?? "local";
   const state = readJson(join(root, "state", "state.json"), {});
   const symbols = new Set(quoteSymbols(state));
   const f = makeFetcher({ fetchImpl, spacingMs: config.spacingMs, now, wait, retries429: 0 });
-  const file = (d) => join(root, "data", "binanceus", "quotes", `${d}.ndjson`);
+  const fileFor = (t) =>
+    join(root, "data", "binanceus", "quotes", dayOf(t), `${new Date(t).toISOString().slice(11, 19).replace(/:/g, "")}Z-${run}.ndjson`);
 
   let rows = [];
   let bytes = 0; // bytes written in the current session
+  let cur = null; // the current session's file, uncompressed while it runs
   const flush = () => {
-    if (rows.length) appendByDay(file, rows, (r) => dayOf(r[1]));
+    if (rows.length && cur) {
+      mkdirSync(dirname(cur), { recursive: true });
+      appendFileSync(cur, rows.map((r) => JSON.stringify(r)).join("\n") + "\n");
+    }
     rows = [];
+  };
+  const seal = () => {
+    flush();
+    if (!cur) return;
+    writeFileSync(`${cur}.gz`, gzipSync(readFileSync(cur), { level: 9 }));
+    unlinkSync(cur);
+    cur = null;
   };
   const push = (r) => {
     rows.push(r);
@@ -71,6 +86,7 @@ export async function pollQuotes({ root, config, untilMs, fetchImpl, now = Date.
   let failures = 0;
   const open = (t) => {
     day = dayOf(t);
+    cur = fileFor(t);
     bytes = 0;
     capped = false;
     push(["s", t, run, everyMs]);
@@ -112,7 +128,8 @@ export async function pollQuotes({ root, config, untilMs, fetchImpl, now = Date.
     const t = now();
     if (day && dayOf(t) !== day) {
       close(lastT ?? t);
-      flush();
+      out.rows += rows.length;
+      seal();
     }
     if (!day || dayOf(t) !== day) open(t);
     polls += 1;
@@ -140,7 +157,7 @@ export async function pollQuotes({ root, config, untilMs, fetchImpl, now = Date.
   }
   if (day) close(lastT ?? now());
   out.rows += rows.length;
-  flush();
+  seal();
   return out;
 }
 
