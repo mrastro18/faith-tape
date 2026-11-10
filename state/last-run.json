@@ -1,6 +1,6 @@
 {
- "at": "2026-11-10T03:38:34.894Z",
- "run": "42750733752",
+ "at": "2026-11-10T03:54:42.383Z",
+ "run": "42752427628",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 268,
+   "ms": 433,
    "markets": 127,
    "crypto": 20,
    "pages": 1,
@@ -21,37 +21,32 @@
     "Indices": 3
    }
   },
-  "coinbase": {
-   "ok": false,
-   "ms": 14921,
-   "error": "HTTP 429 api.exchange.coinbase.com/products/SNX-USD/trades",
-   "status": 429
-  },
   "kraken": {
    "ok": true,
-   "ms": 15542,
+   "ms": 16712,
    "bases": 15,
-   "bars": 390
+   "bars": 1126
   },
   "binanceus": {
    "ok": true,
-   "ms": 77418,
+   "ms": 56752,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 16433,
+   "tradesWritten": 224,
    "symbolsBehind": 0
+  },
+  "coinbase": {
+   "ok": true,
+   "ms": 239980,
+   "bases": 137,
+   "historyBases": 62,
+   "bars": 6589,
+   "candles": 372466
   }
  },
- "calls": 650,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/SNX-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 77420
+ "calls": 1958,
+ "http": [],
+ "ms": 240028
 }
