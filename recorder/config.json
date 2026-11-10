@@ -95,5 +95,12 @@
    "name": "coinbase-advanced-fees",
    "url": "https://www.coinbase.com/advanced-fees"
   }
- ]
+ ],
+ "quotes": {
+  "note": "Best bid and ask polled while the chain waits for its next run (recorder/quotes.mjs).",
+  "everyMs": 5000,
+  "snapshotEveryMs": 600000,
+  "maxBytesPerDay": 60000000,
+  "maxFailuresInRow": 6
+ }
 }

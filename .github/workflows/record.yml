@@ -60,10 +60,8 @@ jobs:
     runs-on: ubuntu-26.04
     timeout-minutes: 40
     steps:
-      - name: Wait for the next slot, then start the next run
-        env:
-          GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
+      - name: Work out the next slot (minute 7 or 37)
+        id: slot
         run: |
           now=$(date -u +%s)
           min=$(( (now / 60) % 60 ))
@@ -71,6 +69,44 @@ jobs:
           if [ "$min" -lt 7 ]; then wait=$(( (7 - min) * 60 - sec ))
           elif [ "$min" -lt 37 ]; then wait=$(( (37 - min) * 60 - sec ))
           else wait=$(( (67 - min) * 60 - sec )); fi
+          echo "at=$(( now + wait ))" >> "$GITHUB_OUTPUT"
           echo "next run in ${wait}s"
-          sleep "$wait"
+      # The wait would otherwise be idle: poll Binance.US best bid and ask until a minute before the slot.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        continue-on-error: true
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        continue-on-error: true
+        with:
+          node-version: "22"
+      - name: Poll quotes
+        continue-on-error: true
+        timeout-minutes: 32
+        run: node recorder/quotes.mjs . --until "$(( (${{ steps.slot.outputs.at }} - 60) * 1000 ))"
+      - name: Commit quotes
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          git config user.name "faith-tape recorder"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/binanceus/quotes
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -q -m "quotes: $(date -u +%Y-%m-%dT%H:%MZ) run ${GITHUB_RUN_ID}"
+          for i in 1 2 3; do
+            if git push -q origin HEAD:main; then exit 0; fi
+            git fetch -q --depth=20 origin main
+            git rebase -q origin/main || { git rebase --abort; exit 1; }
+            sleep $((i * 5))
+          done
+          exit 1
+      - name: Wait for the slot, then start the next run
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          wait=$(( ${{ steps.slot.outputs.at }} - $(date -u +%s) ))
+          if [ "$wait" -gt 0 ]; then sleep "$wait"; fi
           gh workflow run record.yml --ref main
