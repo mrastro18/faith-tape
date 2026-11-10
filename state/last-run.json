@@ -1,6 +1,6 @@
 {
- "at": "2026-11-10T05:58:43.151Z",
- "run": "42765423357",
+ "at": "2026-11-10T06:06:10.161Z",
+ "run": "42765441852",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 309,
+   "ms": 417,
    "markets": 127,
    "crypto": 20,
    "pages": 1,
@@ -23,33 +23,39 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 15539,
+   "ms": 15560,
    "bases": 15,
-   "bars": 450
+   "bars": 413
   },
   "binanceus": {
    "ok": true,
-   "ms": 72746,
+   "ms": 82243,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 81,
+   "tradesWritten": 83,
    "symbolsBehind": 0
   },
   "coinbase": {
    "ok": true,
-   "ms": 420027,
+   "ms": 420028,
    "bases": 137,
    "historyBases": 62,
-   "historyBehind": 5,
-   "bars": 2543,
-   "candles": 563637,
-   "failed": [],
-   "failedCount": 0
+   "historyBehind": 3,
+   "bars": 2397,
+   "candles": 119951,
+   "failed": [
+    {
+     "base": "WLFI",
+     "status": null,
+     "candles": true
+    }
+   ],
+   "failedCount": 1
   }
  },
- "calls": 3686,
+ "calls": 2813,
  "http": [],
- "ms": 420056
+ "ms": 420071
 }
