@@ -84,3 +84,19 @@ export async function stats24h(f) {
   const { json } = await f.getJson(`${BASE}/api/v3/ticker/24hr`);
   return json.map((s) => [s.symbol, s.count, Number(s.quoteVolume), Number(s.bidPrice ?? 0), Number(s.askPrice ?? 0)]);
 }
+
+/**
+ * Daily candles for one symbol from `startMs`, completed days only: [openMs, close, quoteVolume, trades].
+ * The trade count per day is what the universe rules read, so it is kept for every listed pair, busy or not.
+ */
+export async function klines1d(f, symbol, startMs, nowMs) {
+  const out = [];
+  let from = startMs;
+  for (let i = 0; i < 5; i++) {
+    const { json } = await f.getJson(`${BASE}/api/v3/klines?symbol=${symbol}&interval=1d&startTime=${from}&limit=1000`);
+    for (const k of json) if (k[6] < nowMs) out.push([k[0], Number(k[4]), Number(k[7]), k[8]]);
+    if (json.length < 1000) break;
+    from = json[json.length - 1][0] + 86_400_000;
+  }
+  return out;
+}

@@ -40,6 +40,15 @@ function fakeFetch(w) {
           symbols: Object.keys(w.bus).map((s) => ({ symbol: s, status: "TRADING", baseAsset: s.replace("USDT", ""), quoteAsset: "USDT", filters: [{ filterType: "PRICE_FILTER", tickSize: "0.01" }, { filterType: "LOT_SIZE", stepSize: "0.1" }] })),
         });
       if (u.pathname === "/api/v3/ticker/24hr") return res(200, Object.keys(w.bus).map((s) => ({ symbol: s, count: w.bus[s].length, quoteVolume: "1", bidPrice: "1", askPrice: "1.01" })));
+      if (u.pathname === "/api/v3/klines") {
+        const day = 86_400_000;
+        const rows = [];
+        for (let d = Math.floor(Number(q.startTime) / day) * day; d + day <= w.now; d += day) {
+          const n = w.bus[q.symbol].filter((t) => t.T >= d && t.T < d + day).length;
+          rows.push([d, "1", "1", "1", "1", "1", d + day - 1, "1", n, "0", "0", "0"]);
+        }
+        return res(200, rows.slice(0, Number(q.limit)));
+      }
       if (u.pathname === "/api/v3/depth") return res(200, { lastUpdateId: 7, bids: [["1", "2"]], asks: [["1.01", "3"]] });
       if (u.pathname === "/api/v3/aggTrades") {
         const all = w.bus[q.symbol].filter((t) => t.T <= w.now);
@@ -80,6 +89,8 @@ function fakeFetch(w) {
         return res(200, { error: [], result: { [q.pair]: page, last } });
       }
     }
+    if (u.host === "external-api.kalshi.com" && u.pathname === "/trade-api/v2/margin/markets")
+      return res(200, { markets: [{ ticker: "BTC-PERP", asset_class: "Crypto", bid: "1", ask: "2" }, { ticker: "SPY-PERP", asset_class: "Equities" }], cursor: "" });
     return res(200, "ok");
   };
 }
@@ -87,8 +98,8 @@ function fakeFetch(w) {
 const config = {
   start: "2026-11-10T00:00:00Z",
   budgetSeconds: 60,
-  binanceus: { quotes: ["USDT"], depthLevels: 5, firstPassPages: 1, maxPagesPerSymbol: 50, weightPause: 4500 },
-  reference: { always: ["BTC", "USDT"], krakenMax: 10, coinbaseMaxPages: 50, candleChunkMinutes: 300 },
+  binanceus: { quotes: ["USDT"], depthLevels: 5, firstPassPages: 1, maxPagesPerSymbol: 50, weightPause: 4500, universe: { maxCountAtEntry: 3000, dropAbove: 5000 } },
+  reference: { always: ["BTC", "USDT"], krakenMax: 10, coinbaseMaxPages: 50, candleChunkMinutes: 300, historyMinTradesPerDay: 50 },
   spacingMs: {},
   probes: [{ name: "p", url: "https://example.test/ping" }],
   pages: [{ name: "fees", url: "https://example.test/fees" }],
@@ -204,4 +215,34 @@ test("daily probes run once a day and fee pages are stored only when they change
   const h2 = await run(w, root);
   assert.equal(h2.tasks.daily.skipped, true);
   assert.ok(existsSync(join(root, "data", "pages", "fees", "2026-11-10.html")));
+});
+
+test("universe: a pair busy when first seen is never recorded, a thin one is, and it stops if it gets very busy", async () => {
+  const w = makeWorld();
+  w.bus.BUSYUSDT = [];
+  const root = mkdtempSync(join(tmpdir(), "tape-"));
+  for (let i = 0; i < 4000; i++) w.addBus("BUSYUSDT", T0 - 3_600_000 + i * 500);
+  for (let i = 0; i < 100; i++) w.addBus("THINUSDT", T0 - 3_600_000 + i * 1000);
+  const h = await run(w, root);
+  assert.equal(h.tasks.binanceus.tracked, 2); // THIN and BTC (empty); BUSY is out
+  const files = new Set(readNd(root, "binanceus", "trades").map(([f]) => f));
+  assert.ok(files.has("THINUSDT.ndjson"));
+  assert.ok(!files.has("BUSYUSDT.ndjson"));
+  for (let i = 0; i < 6000; i++) w.addBus("THINUSDT", T0 + i * 10);
+  w.now += 3_600_000;
+  const h2 = await run(w, root);
+  assert.equal(h2.tasks.binanceus.tracked, 1);
+  const st = JSON.parse(readFileSync(join(root, "state", "state.json"), "utf8"));
+  assert.equal(st.binanceus.universe.BUSYUSDT.why, "busy when first seen");
+  assert.equal(st.binanceus.universe.THINUSDT.why, "busy");
+  assert.ok(existsSync(join(root, "data", "binanceus", "klines1d", "BUSYUSDT.json")), "daily counts are kept for every listed pair");
+});
+
+test("Kalshi perps: crypto markets are kept, other classes are counted only", async () => {
+  const w = makeWorld();
+  const root = mkdtempSync(join(tmpdir(), "tape-"));
+  const h = await run(w, root);
+  assert.deepEqual(h.tasks.kalshi.classes, { Crypto: 1, Equities: 1 });
+  const line = JSON.parse(readFileSync(join(root, "data", "kalshi", "perps", "2026-11-10.ndjson"), "utf8").trim());
+  assert.deepEqual(line[1].map((m) => m.ticker), ["BTC-PERP"]);
 });

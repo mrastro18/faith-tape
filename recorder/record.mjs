@@ -9,15 +9,27 @@ import { appendByDay, dayOf, makeDeadline, makeFetcher, readJson, secondBars, sh
 import * as bus from "./venues/binanceus.mjs";
 import * as cb from "./venues/coinbase.mjs";
 import * as kr from "./venues/kraken.mjs";
+import * as ks from "./venues/kalshi.mjs";
 
 const SETTLE_MS = 5000; // a second is final once the fetch happened this long after it ended
+
+/** {"YYYY-MM": mean trades per day} over completed daily candles [openMs, close, quoteVol, trades]. */
+export function monthlyTradesPerDay(rows) {
+  const acc = {};
+  for (const r of rows) {
+    const m = new Date(r[0]).toISOString().slice(0, 7);
+    (acc[m] ||= [0, 0])[0] += r[3];
+    acc[m][1] += 1;
+  }
+  return Object.fromEntries(Object.entries(acc).map(([m, [s, n]]) => [m, Math.round(s / n)]));
+}
 
 export async function runOnce({ root, config, fetchImpl, now = Date.now, wait = sleep, log = console.log }) {
   const startedAt = now();
   const deadline = makeDeadline(config.budgetSeconds * 1000, now);
   const f = makeFetcher({ fetchImpl, spacingMs: config.spacingMs, now, wait });
   const statePath = join(root, "state", "state.json");
-  const state = readJson(statePath, { version: 1, binanceus: {}, coinbase: {}, kraken: {}, daily: {} });
+  const state = readJson(statePath, { version: 1, binanceus: {}, coinbase: {}, kraken: {}, kalshi: {}, daily: {} });
   const today = dayOf(startedAt);
   const startMs = Date.parse(config.start);
   const D = (...p) => join(root, "data", ...p);
@@ -52,11 +64,43 @@ export async function runOnce({ root, config, fetchImpl, now = Date.now, wait = 
       }
     };
     const t = now();
-    const stats = await bus.stats24h(f);
+    const listed = new Set(s.pairs.map((p) => p.symbol));
+    const stats = (await bus.stats24h(f)).filter((r) => listed.has(r[0]));
     appendByDay((d) => D("binanceus", "stats24h", `${d}.ndjson`), [[t, stats]], (r) => dayOf(r[0]));
+    // Universe (CHANGES.md, 2026-11-10b): a pair is recorded when it is thin the first time it is seen, and
+    // stops only if it becomes very busy. The rule reads nothing but the 24 h count at that moment.
+    const u = config.binanceus.universe;
+    const counts = new Map(stats.map((r) => [r[0], r[1]]));
+    s.universe ||= {};
+    for (const p of s.pairs) {
+      const n = counts.get(p.symbol) ?? 0;
+      const cur = s.universe[p.symbol];
+      if (!cur) s.universe[p.symbol] = n <= u.maxCountAtEntry ? { in: true, day: today, count: n } : { in: false, day: today, count: n, why: "busy when first seen" };
+      else if (cur.in && n > u.dropAbove) s.universe[p.symbol] = { in: false, day: today, count: n, why: "busy", since: cur.day };
+    }
+    const tracked = s.pairs.filter((p) => s.universe[p.symbol].in);
+    // Once a day, daily candles for every listed pair: the trade counts that later universe rules read.
+    let klineSymbols = 0;
+    if (s.klinesDay !== today) {
+      if (s.klinesProgress?.day !== today) s.klinesProgress = { day: today, done: {} };
+      s.activity ||= {};
+      for (const p of s.pairs) {
+        if (s.klinesProgress.done[p.symbol]) continue;
+        if (deadline.passed()) break;
+        const rows = await bus.klines1d(f, p.symbol, startMs, now());
+        writeJson(D("binanceus", "klines1d", `${p.symbol}.json`), rows);
+        s.activity[p.symbol] = monthlyTradesPerDay(rows);
+        s.klinesProgress.done[p.symbol] = 1;
+        klineSymbols += 1;
+      }
+      if (s.pairs.every((p) => s.klinesProgress.done[p.symbol])) {
+        s.klinesDay = today;
+        delete s.klinesProgress;
+      }
+    }
     let depthRows = 0;
     const depths = [];
-    for (const p of s.pairs) {
+    for (const p of tracked) {
       if (deadline.passed()) break;
       try {
         depths.push([p.symbol, ...(await bus.depth(f, p.symbol, config.binanceus.depthLevels, now()))]);
@@ -69,7 +113,7 @@ export async function runOnce({ root, config, fetchImpl, now = Date.now, wait = 
     let behind = 0;
     for (const passPages of [config.binanceus.firstPassPages, config.binanceus.maxPagesPerSymbol]) {
       behind = 0;
-      for (const p of s.pairs) {
+      for (const p of tracked) {
         if (deadline.passed()) {
           behind += 1;
           continue;
@@ -91,14 +135,31 @@ export async function runOnce({ root, config, fetchImpl, now = Date.now, wait = 
         if (!r.caughtUp) behind += 1;
       }
     }
-    return { pairs: s.pairs.length, depthRows, tradesWritten: written, symbolsBehind: behind };
+    return { pairs: s.pairs.length, tracked: tracked.length, klineSymbols, depthRows, tradesWritten: written, symbolsBehind: behind };
   }
 
   // ---------- Reference prices: Coinbase and Kraken, one-second bars ----------
   function referenceBases() {
     const bases = new Set(config.reference.always);
-    for (const p of state.binanceus?.pairs ?? []) bases.add(p.base);
+    const uni = state.binanceus?.universe ?? {};
+    for (const p of state.binanceus?.pairs ?? []) if (uni[p.symbol]?.in) bases.add(p.base);
     return [...bases].sort();
+  }
+
+  // Bases that get one-minute history before recording began: the always set, then every base with a
+  // Binance.US pair that averaged at least `historyMinTradesPerDay` trades a day in some calendar month.
+  // A superset of anything a monthly universe rule could pick, decided from trade counts alone.
+  function historyBases() {
+    const always = config.reference.always;
+    const min = config.reference.historyMinTradesPerDay;
+    const best = new Map();
+    for (const p of state.binanceus?.pairs ?? []) {
+      const months = state.binanceus?.activity?.[p.symbol] ?? {};
+      const top = Math.max(0, ...Object.values(months));
+      if (top >= min) best.set(p.base, Math.max(best.get(p.base) ?? 0, top));
+    }
+    const rest = [...best.keys()].filter((b) => !always.includes(b)).sort((a, b) => best.get(b) - best.get(a) || (a < b ? -1 : 1));
+    return [...always, ...rest];
   }
 
   async function coinbase() {
@@ -131,7 +192,8 @@ export async function runOnce({ root, config, fetchImpl, now = Date.now, wait = 
     // History before recording began: one-minute candles, oldest first, a bounded slice per run.
     let candles = 0;
     const chunk = config.reference.candleChunkMinutes * 60000;
-    for (const base of bases) {
+    const hist = historyBases().filter((b) => s.products[b] && s.recordStart[b] != null);
+    for (const base of hist) {
       const until = Math.floor(s.recordStart[base] / 60000) * 60000;
       let from = s.candlesUntil[base] ?? startMs;
       while (from < until && !deadline.passed()) {
@@ -142,7 +204,7 @@ export async function runOnce({ root, config, fetchImpl, now = Date.now, wait = 
         s.candlesUntil[base] = from;
       }
     }
-    return { bases: bases.length, bars, candles };
+    return { bases: bases.length, historyBases: hist.length, bars, candles };
   }
 
   async function kraken() {
@@ -172,6 +234,17 @@ export async function runOnce({ root, config, fetchImpl, now = Date.now, wait = 
       s.cursors[base] = { since: String(BigInt(Math.max(cutoffSec - 1, 0)) * 1000000000n), lastId };
     }
     return { bases: bases.length, bars };
+  }
+
+  // ---------- Kalshi perpetuals: one snapshot of the crypto markets each run ----------
+  async function kalshi() {
+    const at = now();
+    const { markets, pages } = await ks.marginMarkets(f);
+    const classes = {};
+    for (const m of markets) classes[m.asset_class ?? "?"] = (classes[m.asset_class ?? "?"] ?? 0) + 1;
+    const keep = markets.filter((m) => /crypto/i.test(String(m.asset_class ?? "")));
+    if (keep.length) appendByDay((d) => D("kalshi", "perps", `${d}.ndjson`), [[at, keep]], (r) => dayOf(r[0]));
+    return { markets: markets.length, crypto: keep.length, pages, classes };
   }
 
   // ---------- Once a day: endpoint probes and fee/terms page hashes ----------
@@ -208,7 +281,7 @@ export async function runOnce({ root, config, fetchImpl, now = Date.now, wait = 
   }
 
   // Each host runs its own queue, so a slow venue never starves another.
-  await Promise.all([task("binanceus", binanceus), task("coinbase", coinbase), task("kraken", kraken), task("daily", daily)]);
+  await Promise.all([task("binanceus", binanceus), task("coinbase", coinbase), task("kraken", kraken), task("kalshi", kalshi), task("daily", daily)]);
 
   if (gaps.length) appendByDay((d) => D("gaps", `${d}.ndjson`), gaps, (g) => dayOf(g.at));
   health.calls = f.calls;
@@ -229,6 +302,6 @@ if (isMain) {
   console.log(JSON.stringify(h, null, 1));
   // A run where every venue failed is a failed job, so GitHub marks it red; partial failures stay green
   // and show in data/health.
-  const all = Object.entries(h.tasks).filter(([k]) => k !== "daily");
+  const all = Object.entries(h.tasks).filter(([k]) => k !== "daily" && k !== "kalshi");
   if (all.every(([, v]) => !v.ok)) process.exit(1);
 }

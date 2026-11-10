@@ -2,25 +2,98 @@
  "note": "Recorder settings. Public endpoints only, no keys. Changing the universe rules here is a data change: log it in CHANGES.md.",
  "start": "2026-04-22T00:00:00Z",
  "budgetSeconds": 240,
- "binanceus": { "quotes": ["USDT", "USDC", "USD"], "depthLevels": 10, "firstPassPages": 3, "maxPagesPerSymbol": 40, "weightPause": 4500 },
- "reference": { "always": ["BTC", "ETH", "SOL", "USDT", "USDC"], "krakenMax": 40, "coinbaseMaxPages": 120, "candleChunkMinutes": 300 },
- "spacingMs": { "api.binance.us": 110, "api.exchange.coinbase.com": 130, "api.kraken.com": 1100 },
+ "binanceus": {
+  "quotes": [
+   "USDT",
+   "USDC",
+   "USD"
+  ],
+  "depthLevels": 10,
+  "firstPassPages": 3,
+  "maxPagesPerSymbol": 40,
+  "weightPause": 4500,
+  "universe": {
+   "maxCountAtEntry": 5000,
+   "dropAbove": 50000
+  }
+ },
+ "reference": {
+  "always": [
+   "BTC",
+   "ETH",
+   "SOL",
+   "USDT",
+   "USDC"
+  ],
+  "krakenMax": 15,
+  "coinbaseMaxPages": 120,
+  "candleChunkMinutes": 300,
+  "historyMinTradesPerDay": 50
+ },
+ "spacingMs": {
+  "api.binance.us": 110,
+  "api.exchange.coinbase.com": 130,
+  "api.kraken.com": 1100,
+  "external-api.kalshi.com": 500
+ },
  "probes": [
-  { "name": "binanceus-ping", "url": "https://api.binance.us/api/v3/ping" },
-  { "name": "binanceus-historicalTrades-nokey", "url": "https://api.binance.us/api/v3/historicalTrades?symbol=BTCUSDT&limit=1" },
-  { "name": "coinbase-time", "url": "https://api.exchange.coinbase.com/time" },
-  { "name": "kraken-time", "url": "https://api.kraken.com/0/public/Time" },
-  { "name": "kalshi-event-exchange-status", "url": "https://api.elections.kalshi.com/trade-api/v2/exchange/status" },
-  { "name": "kalshi-margin-root", "url": "https://external-api.kalshi.com/trade-api/v2/margin/markets" },
-  { "name": "tardis-binance-us-free-day", "url": "https://datasets.tardis.dev/v1/binance-us/trades/2026/11/01/BTCUSDT.csv.gz" }
+  {
+   "name": "binanceus-ping",
+   "url": "https://api.binance.us/api/v3/ping"
+  },
+  {
+   "name": "binanceus-historicalTrades-nokey",
+   "url": "https://api.binance.us/api/v3/historicalTrades?symbol=BTCUSDT&limit=1"
+  },
+  {
+   "name": "coinbase-time",
+   "url": "https://api.exchange.coinbase.com/time"
+  },
+  {
+   "name": "kraken-time",
+   "url": "https://api.kraken.com/0/public/Time"
+  },
+  {
+   "name": "kalshi-event-exchange-status",
+   "url": "https://api.elections.kalshi.com/trade-api/v2/exchange/status"
+  },
+  {
+   "name": "kalshi-margin-root",
+   "url": "https://external-api.kalshi.com/trade-api/v2/margin/markets"
+  },
+  {
+   "name": "tardis-binance-us-free-day",
+   "url": "https://datasets.tardis.dev/v1/binance-us/trades/2026/11/01/BTCUSDT.csv.gz"
+  }
  ],
  "pages": [
-  { "name": "binanceus-fees", "url": "https://www.binance.us/fees" },
-  { "name": "binanceus-states", "url": "https://support.binance.us/en/articles/9842798-list-of-supported-and-unsupported-states-and-regions" },
-  { "name": "binanceus-terms", "url": "https://www.binance.us/terms-of-use" },
-  { "name": "kalshi-perps-fees-help", "url": "https://help.kalshi.com/en/articles/16071417-perps-fees-explained" },
-  { "name": "kalshi-perps-access-help", "url": "https://help.kalshi.com/en/articles/15357656-applying-for-perpetuals-access" },
-  { "name": "kraken-fees", "url": "https://www.kraken.com/features/fee-schedule" },
-  { "name": "coinbase-advanced-fees", "url": "https://www.coinbase.com/advanced-fees" }
+  {
+   "name": "binanceus-fees",
+   "url": "https://www.binance.us/fees"
+  },
+  {
+   "name": "binanceus-states",
+   "url": "https://support.binance.us/en/articles/9842798-list-of-supported-and-unsupported-states-and-regions"
+  },
+  {
+   "name": "binanceus-terms",
+   "url": "https://www.binance.us/terms-of-use"
+  },
+  {
+   "name": "kalshi-perps-fees-help",
+   "url": "https://help.kalshi.com/en/articles/16071417-perps-fees-explained"
+  },
+  {
+   "name": "kalshi-perps-access-help",
+   "url": "https://help.kalshi.com/en/articles/15357656-applying-for-perpetuals-access"
+  },
+  {
+   "name": "kraken-fees",
+   "url": "https://www.kraken.com/features/fee-schedule"
+  },
+  {
+   "name": "coinbase-advanced-fees",
+   "url": "https://www.coinbase.com/advanced-fees"
+  }
  ]
 }
