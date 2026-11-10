@@ -1,6 +1,6 @@
 {
- "at": "2026-11-10T00:22:31.595Z",
- "run": "42727789413",
+ "at": "2026-11-10T02:34:27.327Z",
+ "run": "42743677328",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 358,
+   "ms": 208,
    "markets": 127,
    "crypto": 20,
    "pages": 1,
@@ -21,32 +21,37 @@
     "Indices": 3
    }
   },
+  "coinbase": {
+   "ok": false,
+   "ms": 12051,
+   "error": "HTTP 429 api.exchange.coinbase.com/products/ETC-USD/trades",
+   "status": 429
+  },
   "kraken": {
    "ok": true,
-   "ms": 4587,
-   "bases": 5,
-   "bars": 771
-  },
-  "coinbase": {
-   "ok": true,
-   "ms": 239996,
-   "bases": 4,
-   "historyBases": 4,
-   "bars": 1298,
-   "candles": 415235
+   "ms": 37511,
+   "bases": 15,
+   "bars": 8493
   },
   "binanceus": {
    "ok": true,
-   "ms": 240892,
+   "ms": 240129,
    "pairs": 260,
    "tracked": 253,
-   "klineSymbols": 260,
+   "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 275652,
-   "symbolsBehind": 253
+   "tradesWritten": 336067,
+   "symbolsBehind": 245
   }
  },
- "calls": 3356,
- "http": [],
- "ms": 240894
+ "calls": 1629,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/ETC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 240133
 }
