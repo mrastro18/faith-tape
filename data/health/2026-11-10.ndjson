@@ -1,0 +1,1 @@
+{"at":"2026-11-10T00:11:36.990Z","run":"42726380363","tasks":{"daily":{"ok":true,"ms":4503,"items":14},"kraken":{"ok":true,"ms":5693,"bases":5,"bars":57},"coinbase":{"ok":true,"ms":240010,"bases":4,"bars":110,"candles":449920},"binanceus":{"ok":true,"ms":240842,"pairs":260,"depthRows":260,"tradesWritten":247843,"symbolsBehind":260}},"calls":3614,"http":[],"ms":240843}

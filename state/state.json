@@ -1,0 +1,5404 @@
+{
+ "version": 1,
+ "binanceus": {
+  "pairs": [
+   {
+    "symbol": "0GUSDT",
+    "base": "0G",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "1000MOGUSDT",
+    "base": "1000MOG",
+    "quote": "USDT",
+    "tick": "0.00000001",
+    "step": "1.00"
+   },
+   {
+    "symbol": "1000REKTUSDT",
+    "base": "1000REKT",
+    "quote": "USDT",
+    "tick": "0.00000001",
+    "step": "1.00"
+   },
+   {
+    "symbol": "1INCHUSDT",
+    "base": "1INCH",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "1MWOJAKUSDT",
+    "base": "1MWOJAK",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "AAVEUSD",
+    "base": "AAVE",
+    "quote": "USD",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "AAVEUSDT",
+    "base": "AAVE",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "ACHUSDT",
+    "base": "ACH",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "ADAUSD",
+    "base": "ADA",
+    "quote": "USD",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "ADAUSDC",
+    "base": "ADA",
+    "quote": "USDC",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "ADAUSDT",
+    "base": "ADA",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "ADXUSDT",
+    "base": "ADX",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "AIXBTUSDT",
+    "base": "AIXBT",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "ALGOUSD",
+    "base": "ALGO",
+    "quote": "USD",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "ALGOUSDT",
+    "base": "ALGO",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "ALICEUSDT",
+    "base": "ALICE",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ALPINEUSDT",
+    "base": "ALPINE",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ANIMEUSDT",
+    "base": "ANIME",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "ANKRUSDT",
+    "base": "ANKR",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "APEUSDT",
+    "base": "APE",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "API3USDT",
+    "base": "API3",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "APTUSDT",
+    "base": "APT",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ARBUSDT",
+    "base": "ARB",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "ASTERUSDT",
+    "base": "ASTER",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ASTRUSDT",
+    "base": "ASTR",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "ATOMUSD",
+    "base": "ATOM",
+    "quote": "USD",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ATOMUSDT",
+    "base": "ATOM",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "AUDIOUSDT",
+    "base": "AUDIO",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "AUSDT",
+    "base": "A",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "AVAXUSD",
+    "base": "AVAX",
+    "quote": "USD",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "AVAXUSDT",
+    "base": "AVAX",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "AVNTUSDT",
+    "base": "AVNT",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "AXLUSDT",
+    "base": "AXL",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "AXSUSDT",
+    "base": "AXS",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "BANDUSDT",
+    "base": "BAND",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "BATUSDT",
+    "base": "BAT",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "BCHUSD",
+    "base": "BCH",
+    "quote": "USD",
+    "tick": "0.10000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "BCHUSDT",
+    "base": "BCH",
+    "quote": "USDT",
+    "tick": "0.10000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "BERTUSDT",
+    "base": "BERT",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "BICOUSDT",
+    "base": "BICO",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "BLURUSDT",
+    "base": "BLUR",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "BMTUSDT",
+    "base": "BMT",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "BNBUSD",
+    "base": "BNB",
+    "quote": "USD",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "BNBUSDT",
+    "base": "BNB",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "BNTUSDT",
+    "base": "BNT",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "BONKUSD",
+    "base": "BONK",
+    "quote": "USD",
+    "tick": "0.00000001",
+    "step": "1.00"
+   },
+   {
+    "symbol": "BONKUSDT",
+    "base": "BONK",
+    "quote": "USDT",
+    "tick": "0.00000001",
+    "step": "1.00"
+   },
+   {
+    "symbol": "BOSONUSDT",
+    "base": "BOSON",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "BRETTUSDT",
+    "base": "BRETT",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "BTCUSD",
+    "base": "BTC",
+    "quote": "USD",
+    "tick": "0.01000000",
+    "step": "0.00001000"
+   },
+   {
+    "symbol": "BTCUSDC",
+    "base": "BTC",
+    "quote": "USDC",
+    "tick": "0.01000000",
+    "step": "0.00001000"
+   },
+   {
+    "symbol": "BTCUSDT",
+    "base": "BTC",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00001000"
+   },
+   {
+    "symbol": "BTRSTUSDT",
+    "base": "BTRST",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "BTTCUSDT",
+    "base": "BTTC",
+    "quote": "USDT",
+    "tick": "0.00000001",
+    "step": "1.0"
+   },
+   {
+    "symbol": "CAKEUSDT",
+    "base": "CAKE",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "CELOUSDT",
+    "base": "CELO",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "CELRUSDT",
+    "base": "CELR",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "CHZUSDT",
+    "base": "CHZ",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "COMPUSDT",
+    "base": "COMP",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "COTIUSDT",
+    "base": "COTI",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "CRVUSD",
+    "base": "CRV",
+    "quote": "USD",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "CRVUSDT",
+    "base": "CRV",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "CTSIUSDT",
+    "base": "CTSI",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "DASHUSDT",
+    "base": "DASH",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "DGBUSD",
+    "base": "DGB",
+    "quote": "USD",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "DGBUSDT",
+    "base": "DGB",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "DIAUSDT",
+    "base": "DIA",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "DOGEUSD",
+    "base": "DOGE",
+    "quote": "USD",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "DOGEUSDT",
+    "base": "DOGE",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "DOODUSDT",
+    "base": "DOOD",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "DOTUSD",
+    "base": "DOT",
+    "quote": "USD",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "DOTUSDT",
+    "base": "DOT",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "DUSKUSDT",
+    "base": "DUSK",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "EGLDUSDT",
+    "base": "EGLD",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "EIGENUSDT",
+    "base": "EIGEN",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ENAUSDT",
+    "base": "ENA",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ENJUSDT",
+    "base": "ENJ",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "ENSUSD",
+    "base": "ENS",
+    "quote": "USD",
+    "tick": "0.01000000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ENSUSDT",
+    "base": "ENS",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ETCUSD",
+    "base": "ETC",
+    "quote": "USD",
+    "tick": "0.01000000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ETCUSDT",
+    "base": "ETC",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ETHUSD",
+    "base": "ETH",
+    "quote": "USD",
+    "tick": "0.01000000",
+    "step": "0.00010000"
+   },
+   {
+    "symbol": "ETHUSDC",
+    "base": "ETH",
+    "quote": "USDC",
+    "tick": "0.01000000",
+    "step": "0.00010000"
+   },
+   {
+    "symbol": "ETHUSDT",
+    "base": "ETH",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00010000"
+   },
+   {
+    "symbol": "FARTCOINUSDT",
+    "base": "FARTCOIN",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "FETUSD",
+    "base": "FET",
+    "quote": "USD",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "FETUSDT",
+    "base": "FET",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "FILUSDT",
+    "base": "FIL",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "FLOKIUSD",
+    "base": "FLOKI",
+    "quote": "USD",
+    "tick": "0.00000001",
+    "step": "1.00"
+   },
+   {
+    "symbol": "FLOKIUSDT",
+    "base": "FLOKI",
+    "quote": "USDT",
+    "tick": "0.00000001",
+    "step": "1.00"
+   },
+   {
+    "symbol": "FLOWUSDT",
+    "base": "FLOW",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "FLUXUSDT",
+    "base": "FLUX",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "FORTHUSDT",
+    "base": "FORTH",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "FORTUSDT",
+    "base": "FORT",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "GALAUSD",
+    "base": "GALA",
+    "quote": "USD",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "GALAUSDT",
+    "base": "GALA",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "GASUSDT",
+    "base": "GAS",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "GIGAUSDT",
+    "base": "GIGA",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "GLMUSDT",
+    "base": "GLM",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "GRAMUSDT",
+    "base": "GRAM",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "GRTUSD",
+    "base": "GRT",
+    "quote": "USD",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "GRTUSDT",
+    "base": "GRT",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "GTCUSDT",
+    "base": "GTC",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "GUSDT",
+    "base": "G",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "HBARUSD",
+    "base": "HBAR",
+    "quote": "USD",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "HBARUSDT",
+    "base": "HBAR",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "HYPEUSD",
+    "base": "HYPE",
+    "quote": "USD",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "HYPEUSDT",
+    "base": "HYPE",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "ICPUSD",
+    "base": "ICP",
+    "quote": "USD",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ICPUSDT",
+    "base": "ICP",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ILVUSDT",
+    "base": "ILV",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "IMXUSDT",
+    "base": "IMX",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "INJUSDT",
+    "base": "INJ",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "IOSTUSDT",
+    "base": "IOST",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "IOTAUSD",
+    "base": "IOTA",
+    "quote": "USD",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "IOTAUSDT",
+    "base": "IOTA",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "IOTXUSDT",
+    "base": "IOTX",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "JTOUSDT",
+    "base": "JTO",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "JUPUSD",
+    "base": "JUP",
+    "quote": "USD",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "JUPUSDT",
+    "base": "JUP",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "KAITOUSDT",
+    "base": "KAITO",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "KAVAUSDT",
+    "base": "KAVA",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "KNCUSDT",
+    "base": "KNC",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "KSMUSDT",
+    "base": "KSM",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "LAYERUSDT",
+    "base": "LAYER",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "LAZIOUSDT",
+    "base": "LAZIO",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "LDOUSDT",
+    "base": "LDO",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "LINKUSD",
+    "base": "LINK",
+    "quote": "USD",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "LINKUSDT",
+    "base": "LINK",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "LMWRUSDT",
+    "base": "LMWR",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "LOFIUSDT",
+    "base": "LOFI",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "LPTUSD",
+    "base": "LPT",
+    "quote": "USD",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "LPTUSDT",
+    "base": "LPT",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "LSKUSDT",
+    "base": "LSK",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "LTCUSD",
+    "base": "LTC",
+    "quote": "USD",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "LTCUSDT",
+    "base": "LTC",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "MAGICUSDT",
+    "base": "MAGIC",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "MANAUSDT",
+    "base": "MANA",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "MASKUSDT",
+    "base": "MASK",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "METISUSDT",
+    "base": "METIS",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "MEUSD",
+    "base": "ME",
+    "quote": "USD",
+    "tick": "0.00001000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "MEUSDT",
+    "base": "ME",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "MEWUSDT",
+    "base": "MEW",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00"
+   },
+   {
+    "symbol": "MOODENGUSDT",
+    "base": "MOODENG",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "NEARUSD",
+    "base": "NEAR",
+    "quote": "USD",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "NEARUSDT",
+    "base": "NEAR",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "NEIROUSDT",
+    "base": "NEIRO",
+    "quote": "USDT",
+    "tick": "0.00000001",
+    "step": "1.00"
+   },
+   {
+    "symbol": "NEOUSDT",
+    "base": "NEO",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "NMRUSDT",
+    "base": "NMR",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "NOBODYUSDT",
+    "base": "NOBODY",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "NPCUSDT",
+    "base": "NPC",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "OCEANUSDT",
+    "base": "OCEAN",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "OGNUSDT",
+    "base": "OGN",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "ONDOUSDT",
+    "base": "ONDO",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "ONEUSD",
+    "base": "ONE",
+    "quote": "USD",
+    "tick": "0.00000100",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "ONEUSDT",
+    "base": "ONE",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "ONGUSDT",
+    "base": "ONG",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "ONTUSDT",
+    "base": "ONT",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "OPUSD",
+    "base": "OP",
+    "quote": "USD",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "OPUSDT",
+    "base": "OP",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ORBSUSDT",
+    "base": "ORBS",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "ORCAUSDT",
+    "base": "ORCA",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "PAXGUSDT",
+    "base": "PAXG",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00010000"
+   },
+   {
+    "symbol": "PENGUUSDT",
+    "base": "PENGU",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "PEPEUSD",
+    "base": "PEPE",
+    "quote": "USD",
+    "tick": "0.00000001",
+    "step": "1.00"
+   },
+   {
+    "symbol": "PEPEUSDT",
+    "base": "PEPE",
+    "quote": "USDT",
+    "tick": "0.00000001",
+    "step": "1.00"
+   },
+   {
+    "symbol": "PNUTUSDT",
+    "base": "PNUT",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "POLUSD",
+    "base": "POL",
+    "quote": "USD",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "POLUSDT",
+    "base": "POL",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "POLYXUSDT",
+    "base": "POLYX",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "POPCATUSDT",
+    "base": "POPCAT",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "PORTOUSDT",
+    "base": "PORTO",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "PROMUSDT",
+    "base": "PROM",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "PUMPUSDT",
+    "base": "PUMP",
+    "quote": "USDT",
+    "tick": "0.00000010",
+    "step": "1.00"
+   },
+   {
+    "symbol": "PURRUSDT",
+    "base": "PURR",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "QNTUSDT",
+    "base": "QNT",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "QTUMUSDT",
+    "base": "QTUM",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "RADUSDT",
+    "base": "RAD",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "RAREUSDT",
+    "base": "RARE",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "REEFUSDT",
+    "base": "REEF",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "RENDERUSD",
+    "base": "RENDER",
+    "quote": "USD",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "RENDERUSDT",
+    "base": "RENDER",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "REQUSDT",
+    "base": "REQ",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "RHEAUSDT",
+    "base": "RHEA",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "RLCUSDT",
+    "base": "RLC",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "ROSEUSDT",
+    "base": "ROSE",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "RVNUSD",
+    "base": "RVN",
+    "quote": "USD",
+    "tick": "0.00000100",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "RVNUSDT",
+    "base": "RVN",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "SANDUSD",
+    "base": "SAND",
+    "quote": "USD",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "SANDUSDT",
+    "base": "SAND",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "SANTOSUSDT",
+    "base": "SANTOS",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "SEIUSDT",
+    "base": "SEI",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "SHIBUSD",
+    "base": "SHIB",
+    "quote": "USD",
+    "tick": "0.00000001",
+    "step": "1.00"
+   },
+   {
+    "symbol": "SHIBUSDT",
+    "base": "SHIB",
+    "quote": "USDT",
+    "tick": "0.00000001",
+    "step": "1.00"
+   },
+   {
+    "symbol": "SKLUSDT",
+    "base": "SKL",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "SKYUSDT",
+    "base": "SKY",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "SLPUSDT",
+    "base": "SLP",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "SNXUSDT",
+    "base": "SNX",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "SOLUSD",
+    "base": "SOL",
+    "quote": "USD",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "SOLUSDC",
+    "base": "SOL",
+    "quote": "USDC",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "SOLUSDT",
+    "base": "SOL",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "SPXUSDT",
+    "base": "SPX",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "STORJUSDT",
+    "base": "STORJ",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "SUIUSD",
+    "base": "SUI",
+    "quote": "USD",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "SUIUSDT",
+    "base": "SUI",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "SUSD",
+    "base": "S",
+    "quote": "USD",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "SUSDT",
+    "base": "S",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "SUSHIUSD",
+    "base": "SUSHI",
+    "quote": "USD",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "SUSHIUSDT",
+    "base": "SUSHI",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "SYSUSDT",
+    "base": "SYS",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "TFUELUSDT",
+    "base": "TFUEL",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "THETAUSD",
+    "base": "THETA",
+    "quote": "USD",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "THETAUSDT",
+    "base": "THETA",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "TIAUSDT",
+    "base": "TIA",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "TLMUSDT",
+    "base": "TLM",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "TOSHIUSDT",
+    "base": "TOSHI",
+    "quote": "USDT",
+    "tick": "0.00000001",
+    "step": "1.00"
+   },
+   {
+    "symbol": "TRACUSDT",
+    "base": "TRAC",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "TROLLUSDT",
+    "base": "TROLL",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "TRUMPUSD",
+    "base": "TRUMP",
+    "quote": "USD",
+    "tick": "0.00100000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "TRUMPUSDT",
+    "base": "TRUMP",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "TRXUSD",
+    "base": "TRX",
+    "quote": "USD",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "TRXUSDT",
+    "base": "TRX",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "TURBOUSDT",
+    "base": "TURBO",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "TUSDT",
+    "base": "T",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "TWTUSDT",
+    "base": "TWT",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "UNIUSD",
+    "base": "UNI",
+    "quote": "USD",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "UNIUSDT",
+    "base": "UNI",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "USD1USDT",
+    "base": "USD1",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "USDCUSD",
+    "base": "USDC",
+    "quote": "USD",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "USDCUSDT",
+    "base": "USDC",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "USDTUSD",
+    "base": "USDT",
+    "quote": "USD",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "USDUCUSDT",
+    "base": "USDUC",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "USELESSUSDT",
+    "base": "USELESS",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "VELOUSDT",
+    "base": "VELO",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "VETUSD",
+    "base": "VET",
+    "quote": "USD",
+    "tick": "0.00000100",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "VETUSDT",
+    "base": "VET",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "VIRTUALUSDT",
+    "base": "VIRTUAL",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "VOXELUSDT",
+    "base": "VOXEL",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "VTHOUSD",
+    "base": "VTHO",
+    "quote": "USD",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "VTHOUSDT",
+    "base": "VTHO",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "WAXPUSDT",
+    "base": "WAXP",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "WIFUSDT",
+    "base": "WIF",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "WLDUSDT",
+    "base": "WLD",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "WLFIUSDT",
+    "base": "WLFI",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10"
+   },
+   {
+    "symbol": "WODUSDT",
+    "base": "WOD",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "XDCUSDT",
+    "base": "XDC",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "1.00"
+   },
+   {
+    "symbol": "XECUSDT",
+    "base": "XEC",
+    "quote": "USDT",
+    "tick": "0.00000001",
+    "step": "1.00"
+   },
+   {
+    "symbol": "XLMUSD",
+    "base": "XLM",
+    "quote": "USD",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "XLMUSDT",
+    "base": "XLM",
+    "quote": "USDT",
+    "tick": "0.00001000",
+    "step": "1.00000000"
+   },
+   {
+    "symbol": "XNOUSDT",
+    "base": "XNO",
+    "quote": "USDT",
+    "tick": "0.00100000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "XRPUSD",
+    "base": "XRP",
+    "quote": "USD",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "XRPUSDT",
+    "base": "XRP",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "XTZUSDT",
+    "base": "XTZ",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "YFIUSDT",
+    "base": "YFI",
+    "quote": "USDT",
+    "tick": "1.00000000",
+    "step": "0.00001000"
+   },
+   {
+    "symbol": "ZECUSD",
+    "base": "ZEC",
+    "quote": "USD",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "ZECUSDT",
+    "base": "ZEC",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.00100000"
+   },
+   {
+    "symbol": "ZENUSDT",
+    "base": "ZEN",
+    "quote": "USDT",
+    "tick": "0.01000000",
+    "step": "0.01000000"
+   },
+   {
+    "symbol": "ZILUSD",
+    "base": "ZIL",
+    "quote": "USD",
+    "tick": "0.00000100",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "ZILUSDT",
+    "base": "ZIL",
+    "quote": "USDT",
+    "tick": "0.00000100",
+    "step": "0.10000000"
+   },
+   {
+    "symbol": "ZRXUSDT",
+    "base": "ZRX",
+    "quote": "USDT",
+    "tick": "0.00010000",
+    "step": "1.00000000"
+   }
+  ],
+  "pairsDay": "2026-11-10",
+  "cursors": {
+   "0GUSDT": {
+    "id": 2769,
+    "caughtUp": true,
+    "lastMs": 1794260274934
+   },
+   "1000MOGUSDT": {
+    "id": 12921,
+    "caughtUp": false,
+    "lastMs": 1788056301384
+   },
+   "1000REKTUSDT": {
+    "id": 7118,
+    "caughtUp": true,
+    "lastMs": 1794269522730
+   },
+   "1INCHUSDT": {
+    "id": 175589,
+    "caughtUp": true,
+    "lastMs": 1794261221498
+   },
+   "1MWOJAKUSDT": {
+    "id": 2999,
+    "caughtUp": false,
+    "lastMs": 1784667458311
+   },
+   "AAVEUSD": {
+    "id": 80053,
+    "caughtUp": true,
+    "lastMs": 1794254398932
+   },
+   "AAVEUSDT": {
+    "id": 907329,
+    "caughtUp": false,
+    "lastMs": 1784621794827
+   },
+   "ACHUSDT": {
+    "id": 281627,
+    "caughtUp": true,
+    "lastMs": 1794238507324
+   },
+   "ADAUSD": {
+    "id": 787894,
+    "caughtUp": false,
+    "lastMs": 1777911206968
+   },
+   "ADAUSDC": {
+    "id": 78533,
+    "caughtUp": true,
+    "lastMs": 1794253110528
+   },
+   "ADAUSDT": {
+    "id": 9108630,
+    "caughtUp": false,
+    "lastMs": 1778024108704
+   },
+   "ADXUSDT": {
+    "id": 12452,
+    "caughtUp": true,
+    "lastMs": 1793767587853
+   },
+   "AIXBTUSDT": {
+    "id": 3279,
+    "caughtUp": true,
+    "lastMs": 1793910326005
+   },
+   "ALGOUSD": {
+    "id": 219170,
+    "caughtUp": false,
+    "lastMs": 1791207058973
+   },
+   "ALGOUSDT": {
+    "id": 541869,
+    "caughtUp": false,
+    "lastMs": 1779311503865
+   },
+   "ALICEUSDT": {
+    "id": 22152,
+    "caughtUp": true,
+    "lastMs": 1794237304084
+   },
+   "ALPINEUSDT": {
+    "id": 41667,
+    "caughtUp": true,
+    "lastMs": 1793800559584
+   },
+   "ANIMEUSDT": {
+    "id": 1990,
+    "caughtUp": true,
+    "lastMs": 1794049643888
+   },
+   "ANKRUSDT": {
+    "id": 48969,
+    "caughtUp": true,
+    "lastMs": 1794099679542
+   },
+   "APEUSDT": {
+    "id": 2038589,
+    "caughtUp": false,
+    "lastMs": 1780447659757
+   },
+   "API3USDT": {
+    "id": 103559,
+    "caughtUp": true,
+    "lastMs": 1793228816051
+   },
+   "APTUSDT": {
+    "id": 161260,
+    "caughtUp": false,
+    "lastMs": 1792349823764
+   },
+   "ARBUSDT": {
+    "id": 122735,
+    "caughtUp": false,
+    "lastMs": 1788461599805
+   },
+   "ASTERUSDT": {
+    "id": 32921,
+    "caughtUp": false,
+    "lastMs": 1778906192359
+   },
+   "ASTRUSDT": {
+    "id": 66281,
+    "caughtUp": true,
+    "lastMs": 1794013357114
+   },
+   "ATOMUSD": {
+    "id": 392118,
+    "caughtUp": false,
+    "lastMs": 1784199935787
+   },
+   "ATOMUSDT": {
+    "id": 4171032,
+    "caughtUp": false,
+    "lastMs": 1778977413302
+   },
+   "AUDIOUSDT": {
+    "id": 164816,
+    "caughtUp": true,
+    "lastMs": 1794260662920
+   },
+   "AUSDT": {
+    "id": 6915,
+    "caughtUp": false,
+    "lastMs": 1783597902659
+   },
+   "AVAXUSD": {
+    "id": 294583,
+    "caughtUp": false,
+    "lastMs": 1779958560824
+   },
+   "AVAXUSDT": {
+    "id": 2429751,
+    "caughtUp": false,
+    "lastMs": 1778554112417
+   },
+   "AVNTUSDT": {
+    "id": 12366,
+    "caughtUp": false,
+    "lastMs": 1782341164412
+   },
+   "AXLUSDT": {
+    "id": 32921,
+    "caughtUp": true,
+    "lastMs": 1794266172901
+   },
+   "AXSUSDT": {
+    "id": 238582,
+    "caughtUp": true,
+    "lastMs": 1794258738886
+   },
+   "BANDUSDT": {
+    "id": 797877,
+    "caughtUp": true,
+    "lastMs": 1794267978452
+   },
+   "BATUSDT": {
+    "id": 1254805,
+    "caughtUp": false,
+    "lastMs": 1782520509758
+   },
+   "BCHUSD": {
+    "id": 110663,
+    "caughtUp": false,
+    "lastMs": 1788678801178
+   },
+   "BCHUSDT": {
+    "id": 1930898,
+    "caughtUp": false,
+    "lastMs": 1779236637014
+   },
+   "BERTUSDT": {
+    "id": 820,
+    "caughtUp": true,
+    "lastMs": 1794269080417
+   },
+   "BICOUSDT": {
+    "id": 69912,
+    "caughtUp": true,
+    "lastMs": 1793993762134
+   },
+   "BLURUSDT": {
+    "id": 20343,
+    "caughtUp": true,
+    "lastMs": 1794124341308
+   },
+   "BMTUSDT": {
+    "id": 696,
+    "caughtUp": true,
+    "lastMs": 1793710729475
+   },
+   "BNBUSD": {
+    "id": 942898,
+    "caughtUp": false,
+    "lastMs": 1777305826100
+   },
+   "BNBUSDT": {
+    "id": 6165929,
+    "caughtUp": false,
+    "lastMs": 1777683006093
+   },
+   "BNTUSDT": {
+    "id": 25165,
+    "caughtUp": true,
+    "lastMs": 1793847846576
+   },
+   "BONKUSD": {
+    "id": 35065,
+    "caughtUp": false,
+    "lastMs": 1783500121789
+   },
+   "BONKUSDT": {
+    "id": 216142,
+    "caughtUp": false,
+    "lastMs": 1779981364396
+   },
+   "BOSONUSDT": {
+    "id": 113537,
+    "caughtUp": false,
+    "lastMs": 1781299898543
+   },
+   "BRETTUSDT": {
+    "id": 3347,
+    "caughtUp": true,
+    "lastMs": 1793808970847
+   },
+   "BTCUSD": {
+    "id": 20505386,
+    "caughtUp": false,
+    "lastMs": 1776866987411
+   },
+   "BTCUSDC": {
+    "id": 10799734,
+    "caughtUp": false,
+    "lastMs": 1776879969392
+   },
+   "BTCUSDT": {
+    "id": 29632126,
+    "caughtUp": false,
+    "lastMs": 1776895505287
+   },
+   "BTRSTUSDT": {
+    "id": 20125,
+    "caughtUp": true,
+    "lastMs": 1794021491983
+   },
+   "BTTCUSDT": {
+    "id": 1795,
+    "caughtUp": true,
+    "lastMs": 1794250907092
+   },
+   "CAKEUSDT": {
+    "id": 6082,
+    "caughtUp": false,
+    "lastMs": 1787360200620
+   },
+   "CELOUSDT": {
+    "id": 68829,
+    "caughtUp": true,
+    "lastMs": 1794129293355
+   },
+   "CELRUSDT": {
+    "id": 60595,
+    "caughtUp": true,
+    "lastMs": 1794239170545
+   },
+   "CHZUSDT": {
+    "id": 190872,
+    "caughtUp": true,
+    "lastMs": 1794266020671
+   },
+   "COMPUSDT": {
+    "id": 956880,
+    "caughtUp": false,
+    "lastMs": 1784506603292
+   },
+   "COTIUSDT": {
+    "id": 108651,
+    "caughtUp": true,
+    "lastMs": 1794071777788
+   },
+   "CRVUSD": {
+    "id": 86611,
+    "caughtUp": false,
+    "lastMs": 1792925831962
+   },
+   "CRVUSDT": {
+    "id": 749661,
+    "caughtUp": false,
+    "lastMs": 1783903182691
+   },
+   "CTSIUSDT": {
+    "id": 130029,
+    "caughtUp": true,
+    "lastMs": 1793704574392
+   },
+   "DASHUSDT": {
+    "id": 137584,
+    "caughtUp": false,
+    "lastMs": 1778074230779
+   },
+   "DGBUSD": {
+    "id": 46140,
+    "caughtUp": false,
+    "lastMs": 1792119854795
+   },
+   "DGBUSDT": {
+    "id": 163349,
+    "caughtUp": false,
+    "lastMs": 1785330799461
+   },
+   "DIAUSDT": {
+    "id": 27635,
+    "caughtUp": true,
+    "lastMs": 1794021527798
+   },
+   "DOGEUSD": {
+    "id": 504605,
+    "caughtUp": false,
+    "lastMs": 1778071642036
+   },
+   "DOGEUSDT": {
+    "id": 12585325,
+    "caughtUp": false,
+    "lastMs": 1777486141772
+   },
+   "DOODUSDT": {
+    "id": 10513,
+    "caughtUp": true,
+    "lastMs": 1794232817732
+   },
+   "DOTUSD": {
+    "id": 174633,
+    "caughtUp": false,
+    "lastMs": 1782247066177
+   },
+   "DOTUSDT": {
+    "id": 875965,
+    "caughtUp": false,
+    "lastMs": 1779386131705
+   },
+   "DUSKUSDT": {
+    "id": 53432,
+    "caughtUp": false,
+    "lastMs": 1777631479310
+   },
+   "EGLDUSDT": {
+    "id": 2184142,
+    "caughtUp": false,
+    "lastMs": 1789961515236
+   },
+   "EIGENUSDT": {
+    "id": 3816,
+    "caughtUp": true,
+    "lastMs": 1794174956510
+   },
+   "ENAUSDT": {
+    "id": 19925,
+    "caughtUp": false,
+    "lastMs": 1791106172629
+   },
+   "ENJUSDT": {
+    "id": 225222,
+    "caughtUp": true,
+    "lastMs": 1794240817212
+   },
+   "ENSUSD": {
+    "id": 22437,
+    "caughtUp": true,
+    "lastMs": 1793889332949
+   },
+   "ENSUSDT": {
+    "id": 297881,
+    "caughtUp": true,
+    "lastMs": 1794182272147
+   },
+   "ETCUSD": {
+    "id": 137486,
+    "caughtUp": true,
+    "lastMs": 1794172832778
+   },
+   "ETCUSDT": {
+    "id": 2343215,
+    "caughtUp": false,
+    "lastMs": 1781569995414
+   },
+   "ETHUSD": {
+    "id": 8727592,
+    "caughtUp": false,
+    "lastMs": 1777345352249
+   },
+   "ETHUSDC": {
+    "id": 1011102,
+    "caughtUp": false,
+    "lastMs": 1780683834082
+   },
+   "ETHUSDT": {
+    "id": 17663562,
+    "caughtUp": false,
+    "lastMs": 1776959912480
+   },
+   "FARTCOINUSDT": {
+    "id": 5571,
+    "caughtUp": true,
+    "lastMs": 1794204817088
+   },
+   "FETUSD": {
+    "id": 305148,
+    "caughtUp": false,
+    "lastMs": 1793154275753
+   },
+   "FETUSDT": {
+    "id": 1183165,
+    "caughtUp": false,
+    "lastMs": 1779480011928
+   },
+   "FILUSDT": {
+    "id": 533806,
+    "caughtUp": false,
+    "lastMs": 1782702569132
+   },
+   "FLOKIUSD": {
+    "id": 39565,
+    "caughtUp": true,
+    "lastMs": 1794174785899
+   },
+   "FLOKIUSDT": {
+    "id": 766497,
+    "caughtUp": false,
+    "lastMs": 1780068962320
+   },
+   "FLOWUSDT": {
+    "id": 74971,
+    "caughtUp": true,
+    "lastMs": 1794174788124
+   },
+   "FLUXUSDT": {
+    "id": 297531,
+    "caughtUp": true,
+    "lastMs": 1794182402265
+   },
+   "FORTHUSDT": {
+    "id": 27918,
+    "caughtUp": true,
+    "lastMs": 1794231905576
+   },
+   "FORTUSDT": {
+    "id": 66558,
+    "caughtUp": true,
+    "lastMs": 1794262557004
+   },
+   "GALAUSD": {
+    "id": 291197,
+    "caughtUp": true,
+    "lastMs": 1794175592187
+   },
+   "GALAUSDT": {
+    "id": 757348,
+    "caughtUp": true,
+    "lastMs": 1794239175753
+   },
+   "GASUSDT": {
+    "id": 1083,
+    "caughtUp": true,
+    "lastMs": 1794214073564
+   },
+   "GIGAUSDT": {
+    "id": 10954,
+    "caughtUp": false,
+    "lastMs": 1794098767417
+   },
+   "GLMUSDT": {
+    "id": 26302,
+    "caughtUp": true,
+    "lastMs": 1794240376368
+   },
+   "GRAMUSDT": {
+    "id": 2500,
+    "caughtUp": true,
+    "lastMs": 1794266074385
+   },
+   "GRTUSD": {
+    "id": 229000,
+    "caughtUp": true,
+    "lastMs": 1794009698449
+   },
+   "GRTUSDT": {
+    "id": 249202,
+    "caughtUp": false,
+    "lastMs": 1781608277195
+   },
+   "GTCUSDT": {
+    "id": 38243,
+    "caughtUp": true,
+    "lastMs": 1794209843367
+   },
+   "GUSDT": {
+    "id": 28024,
+    "caughtUp": true,
+    "lastMs": 1794268031984
+   },
+   "HBARUSD": {
+    "id": 306358,
+    "caughtUp": false,
+    "lastMs": 1782506191225
+   },
+   "HBARUSDT": {
+    "id": 547194,
+    "caughtUp": false,
+    "lastMs": 1778778992730
+   },
+   "HYPEUSD": {
+    "id": 75610,
+    "caughtUp": false,
+    "lastMs": 1777957882589
+   },
+   "HYPEUSDT": {
+    "id": 103210,
+    "caughtUp": false,
+    "lastMs": 1778066350712
+   },
+   "ICPUSD": {
+    "id": 88824,
+    "caughtUp": false,
+    "lastMs": 1782857059118
+   },
+   "ICPUSDT": {
+    "id": 437717,
+    "caughtUp": false,
+    "lastMs": 1779550797946
+   },
+   "ILVUSDT": {
+    "id": 51054,
+    "caughtUp": true,
+    "lastMs": 1794239185635
+   },
+   "IMXUSDT": {
+    "id": 267571,
+    "caughtUp": true,
+    "lastMs": 1794194429349
+   },
+   "INJUSDT": {
+    "id": 2999,
+    "caughtUp": false,
+    "lastMs": 1780508801580
+   },
+   "IOSTUSDT": {
+    "id": 15830,
+    "caughtUp": true,
+    "lastMs": 1794266786988
+   },
+   "IOTAUSD": {
+    "id": 83152,
+    "caughtUp": false,
+    "lastMs": 1783338723223
+   },
+   "IOTAUSDT": {
+    "id": 321525,
+    "caughtUp": false,
+    "lastMs": 1782602355437
+   },
+   "IOTXUSDT": {
+    "id": 29883,
+    "caughtUp": true,
+    "lastMs": 1793665189574
+   },
+   "JTOUSDT": {
+    "id": 3656,
+    "caughtUp": true,
+    "lastMs": 1794156683864
+   },
+   "JUPUSD": {
+    "id": 6762,
+    "caughtUp": true,
+    "lastMs": 1794239102449
+   },
+   "JUPUSDT": {
+    "id": 10721,
+    "caughtUp": false,
+    "lastMs": 1791523140181
+   },
+   "KAITOUSDT": {
+    "id": 4756,
+    "caughtUp": true,
+    "lastMs": 1794174955026
+   },
+   "KAVAUSDT": {
+    "id": 89622,
+    "caughtUp": true,
+    "lastMs": 1794205929593
+   },
+   "KNCUSDT": {
+    "id": 811530,
+    "caughtUp": false,
+    "lastMs": null
+   }
+  }
+ },
+ "coinbase": {
+  "products": {
+   "WRON": "WRON-USD",
+   "BAND": "BAND-USD",
+   "CARD": "CARD-USD",
+   "ALICE": "ALICE-USD",
+   "PYR": "PYR-USD",
+   "TREE": "TREE-USD",
+   "WAL": "WAL-USD",
+   "FLOW": "FLOW-USD",
+   "ALT": "ALT-USD",
+   "PNG": "PNG-USD",
+   "FUN1": "FUN1-USD",
+   "BOBBOB": "BOBBOB-USD",
+   "DOT": "DOT-USD",
+   "GEOD": "GEOD-USD",
+   "ZAMA": "ZAMA-USD",
+   "ASTER": "ASTER-USD",
+   "UNI": "UNI-USD",
+   "CBETH": "CBETH-USD",
+   "BONK": "BONK-USD",
+   "SIGN": "SIGN-USD",
+   "APE": "APE-USD",
+   "C98": "C98-USD",
+   "WHUF": "WHUF-USD",
+   "RLC": "RLC-USD",
+   "DBR": "DBR-USD",
+   "DRB": "DRB-USD",
+   "TON": "TON-USD",
+   "SWFTC": "SWFTC-USD",
+   "B3": "B3-USD",
+   "DOGE": "DOGE-USD",
+   "HONEY": "HONEY-USD",
+   "JTO": "JTO-USD",
+   "FARTCOIN": "FARTCOIN-USD",
+   "KARRAT": "KARRAT-USD",
+   "DEXT": "DEXT-USD",
+   "RPL": "RPL-USD",
+   "TOWNS": "TOWNS-USD",
+   "BNT": "BNT-USD",
+   "PROS": "PROS-USD",
+   "OXT": "OXT-USD",
+   "DEGEN": "DEGEN-USD",
+   "RSC": "RSC-USD",
+   "HFT": "HFT-USD",
+   "RAY": "RAY-USD",
+   "JUPITER": "JUPITER-USD",
+   "CAKE": "CAKE-USD",
+   "NCT": "NCT-USD",
+   "REQ": "REQ-USD",
+   "INV": "INV-USD",
+   "MDT": "MDT-USD",
+   "CORECHAIN": "CORECHAIN-USD",
+   "YFI": "YFI-USD",
+   "PAX": "PAX-USD",
+   "MOODENG": "MOODENG-USD",
+   "LDO": "LDO-USD",
+   "XAN": "XAN-USD",
+   "TAO": "TAO-USD",
+   "FLOKI": "FLOKI-USD",
+   "BLUR": "BLUR-USD",
+   "GTC": "GTC-USD",
+   "XRP": "XRP-USD",
+   "AERGO": "AERGO-USD",
+   "ANKR": "ANKR-USD",
+   "DASH": "DASH-USD",
+   "RECALL": "RECALL-USD",
+   "LAYER": "LAYER-USD",
+   "RNBW": "RNBW-USD",
+   "TURBO": "TURBO-USD",
+   "ACS": "ACS-USD",
+   "BIO": "BIO-USD",
+   "DIA": "DIA-USD",
+   "SAFE": "SAFE-USD",
+   "GWEI": "GWEI-USD",
+   "CELR": "CELR-USD",
+   "GRT": "GRT-USD",
+   "FLR": "FLR-USD",
+   "RED": "RED-USD",
+   "SHIB": "SHIB-USD",
+   "MEZO": "MEZO-USD",
+   "CP": "CP-USD",
+   "VTHO": "VTHO-USD",
+   "PENGU": "PENGU-USD",
+   "USDT": "USDT-USD",
+   "PONS": "PONS-USD",
+   "ALIGN": "ALIGN-USD",
+   "T": "T-USD",
+   "DRV": "DRV-USD",
+   "EGLD": "EGLD-USD",
+   "DATA": "DATA-USD",
+   "LINK": "LINK-USD",
+   "FORTH": "FORTH-USD",
+   "CTSI": "CTSI-USD",
+   "CVX": "CVX-USD",
+   "FARM": "FARM-USD",
+   "KAVA": "KAVA-USD",
+   "MOG": "MOG-USD",
+   "ATH": "ATH-USD",
+   "METIS": "METIS-USD",
+   "COW": "COW-USD",
+   "OPN": "OPN-USD",
+   "BAT": "BAT-USD",
+   "ARPA": "ARPA-USD",
+   "SPA": "SPA-USD",
+   "HOME": "HOME-USD",
+   "HOPR": "HOPR-USD",
+   "AVAX": "AVAX-USD",
+   "POLS": "POLS-USD",
+   "1INCH": "1INCH-USD",
+   "FIDA": "FIDA-USD",
+   "ICNT": "ICNT-USD",
+   "AZTEC": "AZTEC-USD",
+   "SWELL": "SWELL-USD",
+   "VARA": "VARA-USD",
+   "MLN": "MLN-USD",
+   "FAI": "FAI-USD",
+   "TRAC": "TRAC-USD",
+   "KTA": "KTA-USD",
+   "KAITO": "KAITO-USD",
+   "IO": "IO-USD",
+   "ETH": "ETH-USD",
+   "GROVE": "GROVE-USD",
+   "NMR": "NMR-USD",
+   "LSETH": "LSETH-USD",
+   "TRUMP": "TRUMP-USD",
+   "ME": "ME-USD",
+   "VIRTUAL": "VIRTUAL-USD",
+   "MEGA": "MEGA-USD",
+   "BLEND": "BLEND-USD",
+   "SXT": "SXT-USD",
+   "DIEM": "DIEM-USD",
+   "MAGIC": "MAGIC-USD",
+   "GST": "GST-USD",
+   "TROLL": "TROLL-USD",
+   "ZK": "ZK-USD",
+   "GNO": "GNO-USD",
+   "LINEA": "LINEA-USD",
+   "VVV": "VVV-USD",
+   "ZRX": "ZRX-USD",
+   "RAD": "RAD-USD",
+   "AXL": "AXL-USD",
+   "BNB": "BNB-USD",
+   "SUI": "SUI-USD",
+   "AWE": "AWE-USD",
+   "GRVT": "GRVT-USD",
+   "FIGHT": "FIGHT-USD",
+   "PUMP": "PUMP-USD",
+   "IRYS": "IRYS-USD",
+   "RLS": "RLS-USD",
+   "USD1": "USD1-USD",
+   "SHDW": "SHDW-USD",
+   "LTC": "LTC-USD",
+   "W": "W-USD",
+   "IMU": "IMU-USD",
+   "SKY": "SKY-USD",
+   "DRIFT": "DRIFT-USD",
+   "PRCL": "PRCL-USD",
+   "PNUT": "PNUT-USD",
+   "PROVE": "PROVE-USD",
+   "ALGO": "ALGO-USD",
+   "POPCAT": "POPCAT-USD",
+   "A8": "A8-USD",
+   "SAPIEN": "SAPIEN-USD",
+   "XCN": "XCN-USD",
+   "FORT": "FORT-USD",
+   "BCH": "BCH-USD",
+   "HNT": "HNT-USD",
+   "PAXG": "PAXG-USD",
+   "NOM": "NOM-USD",
+   "KAT": "KAT-USD",
+   "ROSE": "ROSE-USD",
+   "TRUST": "TRUST-USD",
+   "COTI": "COTI-USD",
+   "NKN": "NKN-USD",
+   "LPT": "LPT-USD",
+   "SAND": "SAND-USD",
+   "AXIS": "AXIS-USD",
+   "TIA": "TIA-USD",
+   "RSR": "RSR-USD",
+   "ADA": "ADA-USD",
+   "QI": "QI-USD",
+   "INDEX": "INDEX-USD",
+   "BICO": "BICO-USD",
+   "CLANKER": "CLANKER-USD",
+   "KRL": "KRL-USD",
+   "SD": "SD-USD",
+   "SKL": "SKL-USD",
+   "DOOD": "DOOD-USD",
+   "BOBA": "BOBA-USD",
+   "RE": "RE-USD",
+   "COSMOSDYDX": "COSMOSDYDX-USD",
+   "ATOM": "ATOM-USD",
+   "VOXEL": "VOXEL-USD",
+   "DNT": "DNT-USD",
+   "USDS": "USDS-USD",
+   "APR": "APR-USD",
+   "ORCA": "ORCA-USD",
+   "CFG": "CFG-USD",
+   "AGLD": "AGLD-USD",
+   "GLM": "GLM-USD",
+   "ABT": "ABT-USD",
+   "UP": "UP-USD",
+   "WMTX": "WMTX-USD",
+   "CHZ": "CHZ-USD",
+   "2Z": "2Z-USD",
+   "NEWT": "NEWT-USD",
+   "S": "S-USD",
+   "FLUID": "FLUID-USD",
+   "AKT": "AKT-USD",
+   "POWR": "POWR-USD",
+   "BILL": "BILL-USD",
+   "ETHFI": "ETHFI-USD",
+   "PERP": "PERP-USD",
+   "COMP": "COMP-USD",
+   "ENA": "ENA-USD",
+   "PRO": "PRO-USD",
+   "AUCTION": "AUCTION-USD",
+   "00": "00-USD",
+   "SPX": "SPX-USD",
+   "CAP": "CAP-USD",
+   "G": "G-USD",
+   "SPELL": "SPELL-USD",
+   "LRDS": "LRDS-USD",
+   "LA": "LA-USD",
+   "OCEAN": "OCEAN-USD",
+   "RARI": "RARI-USD",
+   "EUL": "EUL-USD",
+   "BNKR": "BNKR-USD",
+   "ZRO": "ZRO-USD",
+   "ESP": "ESP-USD",
+   "ZORA": "ZORA-USD",
+   "STABLE": "STABLE-USD",
+   "WET": "WET-USD",
+   "OPG": "OPG-USD",
+   "SUKU": "SUKU-USD",
+   "SKR": "SKR-USD",
+   "REZ": "REZ-USD",
+   "MANA": "MANA-USD",
+   "IMX": "IMX-USD",
+   "KITE": "KITE-USD",
+   "ILV": "ILV-USD",
+   "MORPHO": "MORPHO-USD",
+   "DIMO": "DIMO-USD",
+   "GFI": "GFI-USD",
+   "CHIP": "CHIP-USD",
+   "ONDO": "ONDO-USD",
+   "YB": "YB-USD",
+   "GRASS": "GRASS-USD",
+   "EDGE": "EDGE-USD",
+   "WLFI": "WLFI-USD",
+   "KERNEL": "KERNEL-USD",
+   "HIGH": "HIGH-USD",
+   "BASED1": "BASED1-USD",
+   "ZKC": "ZKC-USD",
+   "MNDE": "MNDE-USD",
+   "AURORA": "AURORA-USD",
+   "PLU": "PLU-USD",
+   "AXS": "AXS-USD",
+   "BARD": "BARD-USD",
+   "AVNT": "AVNT-USD",
+   "FLOCK": "FLOCK-USD",
+   "BEAM": "BEAM-USD",
+   "INX": "INX-USD",
+   "BASECAT": "BASECAT-USD",
+   "PENDLE": "PENDLE-USD",
+   "NOICE": "NOICE-USD",
+   "ZETACHAIN": "ZETACHAIN-USD",
+   "KEYCAT": "KEYCAT-USD",
+   "KSM": "KSM-USD",
+   "PEPE": "PEPE-USD",
+   "DOLO": "DOLO-USD",
+   "GHST": "GHST-USD",
+   "TRIA": "TRIA-USD",
+   "OP": "OP-USD",
+   "BIGTIME": "BIGTIME-USD",
+   "RITUAL": "RITUAL-USD",
+   "RAVE": "RAVE-USD",
+   "ARB": "ARB-USD",
+   "SNX": "SNX-USD",
+   "THQ": "THQ-USD",
+   "OSMO": "OSMO-USD",
+   "JASMY": "JASMY-USD",
+   "RARE": "RARE-USD",
+   "ICP": "ICP-USD",
+   "GIGA": "GIGA-USD",
+   "PYTH": "PYTH-USD",
+   "CTR": "CTR-USD",
+   "SYRUP": "SYRUP-USD",
+   "NEAR": "NEAR-USD",
+   "API3": "API3-USD",
+   "AAVE": "AAVE-USD",
+   "SUP": "SUP-USD",
+   "PRIME": "PRIME-USD",
+   "OGN": "OGN-USD",
+   "HYPE": "HYPE-USD",
+   "AERO": "AERO-USD",
+   "MON": "MON-USD",
+   "STRK": "STRK-USD",
+   "SUSHI": "SUSHI-USD",
+   "SYND": "SYND-USD",
+   "LCX": "LCX-USD",
+   "SOL": "SOL-USD",
+   "ENS": "ENS-USD",
+   "STG": "STG-USD",
+   "PLUME": "PLUME-USD",
+   "GODS": "GODS-USD",
+   "WLD": "WLD-USD",
+   "ASM": "ASM-USD",
+   "ROBO": "ROBO-USD",
+   "EDGEX": "EDGEX-USD",
+   "ELSA": "ELSA-USD",
+   "SEI": "SEI-USD",
+   "ALCX": "ALCX-USD",
+   "MASK": "MASK-USD",
+   "SHPING": "SHPING-USD",
+   "AST": "AST-USD",
+   "CVC": "CVC-USD",
+   "KMNO": "KMNO-USD",
+   "WAXL": "WAXL-USD",
+   "GMT": "GMT-USD",
+   "CTX": "CTX-USD",
+   "MET": "MET-USD",
+   "BLZ": "BLZ-USD",
+   "ZEC": "ZEC-USD",
+   "LQTY": "LQTY-USD",
+   "NEON": "NEON-USD",
+   "KAIO": "KAIO-USD",
+   "ARX": "ARX-USD",
+   "MSOL": "MSOL-USD",
+   "FET": "FET-USD",
+   "DEEP": "DEEP-USD",
+   "LMTS": "LMTS-USD",
+   "PUNDIX": "PUNDIX-USD",
+   "AUDIO": "AUDIO-USD",
+   "AIOZ": "AIOZ-USD",
+   "ETC": "ETC-USD",
+   "APT": "APT-USD",
+   "META": "META-USD",
+   "BERA": "BERA-USD",
+   "RENDER": "RENDER-USD",
+   "CRO": "CRO-USD",
+   "POND": "POND-USD",
+   "MINA": "MINA-USD",
+   "COOKIE": "COOKIE-USD",
+   "XLM": "XLM-USD",
+   "CHECK": "CHECK-USD",
+   "ALEPH": "ALEPH-USD",
+   "HBAR": "HBAR-USD",
+   "MAMO": "MAMO-USD",
+   "CRV": "CRV-USD",
+   "KNC": "KNC-USD",
+   "ALEO": "ALEO-USD",
+   "SENT": "SENT-USD",
+   "AMP": "AMP-USD",
+   "UMA": "UMA-USD",
+   "SPK": "SPK-USD",
+   "ZEN": "ZEN-USD",
+   "XYO": "XYO-USD",
+   "CGLD": "CGLD-USD",
+   "ALLO": "ALLO-USD",
+   "FIL": "FIL-USD",
+   "BREV": "BREV-USD",
+   "TRB": "TRB-USD",
+   "AVT": "AVT-USD",
+   "WELL": "WELL-USD",
+   "NEX": "NEX-USD",
+   "EIGEN": "EIGEN-USD",
+   "AI": "AI-USD",
+   "ZKP": "ZKP-USD",
+   "BLUECHIP": "BLUECHIP-USD",
+   "ELA": "ELA-USD",
+   "JITOSOL": "JITOSOL-USD",
+   "MPLX": "MPLX-USD",
+   "INJ": "INJ-USD",
+   "HYPER": "HYPER-USD",
+   "PRL": "PRL-USD",
+   "BTC": "BTC-USD",
+   "XPL": "XPL-USD",
+   "MATH": "MATH-USD",
+   "ACH": "ACH-USD",
+   "BIRB": "BIRB-USD",
+   "QNT": "QNT-USD",
+   "ERA": "ERA-USD",
+   "MANTLE": "MANTLE-USD",
+   "USELESS": "USELESS-USD",
+   "L3": "L3-USD",
+   "O": "O-USD",
+   "CT": "CT-USD",
+   "TOSHI": "TOSHI-USD",
+   "ARKM": "ARKM-USD",
+   "FOX": "FOX-USD",
+   "WCT": "WCT-USD",
+   "LIGHTER": "LIGHTER-USD",
+   "STX": "STX-USD",
+   "SQD": "SQD-USD",
+   "VET": "VET-USD",
+   "DOGINME": "DOGINME-USD",
+   "ZETA": "ZETA-USD",
+   "WIF": "WIF-USD",
+   "XTZ": "XTZ-USD",
+   "BTRST": "BTRST-USD",
+   "PROMPT": "PROMPT-USD",
+   "SUPER": "SUPER-USD",
+   "POL": "POL-USD"
+  },
+  "productsDay": "2026-11-10",
+  "cursors": {
+   "BTC": 1117868621,
+   "ETH": 853575584,
+   "SOL": 360122700,
+   "USDT": 149774473
+  },
+  "recordStart": {
+   "BTC": 1794269437000,
+   "ETH": 1794269439000,
+   "SOL": 1794269437000,
+   "USDT": 1794269437000
+  },
+  "candlesUntil": {
+   "BTC": 1794269400000,
+   "ETH": 1786410000000
+  }
+ },
+ "kraken": {
+  "pairs": {
+   "0G": {
+    "key": "0GUSD",
+    "altname": "0GUSD"
+   },
+   "1INCH": {
+    "key": "1INCHUSD",
+    "altname": "1INCHUSD"
+   },
+   "2Z": {
+    "key": "2ZUSD",
+    "altname": "2ZUSD"
+   },
+   "AAVE": {
+    "key": "AAVEUSD",
+    "altname": "AAVEUSD"
+   },
+   "AB": {
+    "key": "ABUSD",
+    "altname": "ABUSD"
+   },
+   "ACH": {
+    "key": "ACHUSD",
+    "altname": "ACHUSD"
+   },
+   "ACT": {
+    "key": "ACTUSD",
+    "altname": "ACTUSD"
+   },
+   "ACU": {
+    "key": "ACUUSD",
+    "altname": "ACUUSD"
+   },
+   "ADA": {
+    "key": "ADAUSD",
+    "altname": "ADAUSD"
+   },
+   "ADI": {
+    "key": "ADIUSD",
+    "altname": "ADIUSD"
+   },
+   "ADX": {
+    "key": "ADXUSD",
+    "altname": "ADXUSD"
+   },
+   "AERO": {
+    "key": "AEROUSD",
+    "altname": "AEROUSD"
+   },
+   "AEVO": {
+    "key": "AEVOUSD",
+    "altname": "AEVOUSD"
+   },
+   "AIN": {
+    "key": "AINUSD",
+    "altname": "AINUSD"
+   },
+   "AIO": {
+    "key": "AIOUSD",
+    "altname": "AIOUSD"
+   },
+   "AIOZ": {
+    "key": "AIOZUSD",
+    "altname": "AIOZUSD"
+   },
+   "AI": {
+    "key": "AIUSD",
+    "altname": "AIUSD"
+   },
+   "AIXBT": {
+    "key": "AIXBTUSD",
+    "altname": "AIXBTUSD"
+   },
+   "AKE": {
+    "key": "AKEUSD",
+    "altname": "AKEUSD"
+   },
+   "AKT": {
+    "key": "AKTUSD",
+    "altname": "AKTUSD"
+   },
+   "ALCH": {
+    "key": "ALCHUSD",
+    "altname": "ALCHUSD"
+   },
+   "ALCX": {
+    "key": "ALCXUSD",
+    "altname": "ALCXUSD"
+   },
+   "ALEO": {
+    "key": "ALEOUSD",
+    "altname": "ALEOUSD"
+   },
+   "ALGO": {
+    "key": "ALGOUSD",
+    "altname": "ALGOUSD"
+   },
+   "ALICE": {
+    "key": "ALICEUSD",
+    "altname": "ALICEUSD"
+   },
+   "ALIGN": {
+    "key": "ALIGNUSD",
+    "altname": "ALIGNUSD"
+   },
+   "ALKIMI": {
+    "key": "ALKIMIUSD",
+    "altname": "ALKIMIUSD"
+   },
+   "ALLO": {
+    "key": "ALLOUSD",
+    "altname": "ALLOUSD"
+   },
+   "ALPHA": {
+    "key": "ALPHAUSD",
+    "altname": "ALPHAUSD"
+   },
+   "ALT": {
+    "key": "ALTUSD",
+    "altname": "ALTUSD"
+   },
+   "AMI": {
+    "key": "AMIUSD",
+    "altname": "AMIUSD"
+   },
+   "ANIME": {
+    "key": "ANIMEUSD",
+    "altname": "ANIMEUSD"
+   },
+   "ANKR": {
+    "key": "ANKRUSD",
+    "altname": "ANKRUSD"
+   },
+   "ANON": {
+    "key": "ANONUSD",
+    "altname": "ANONUSD"
+   },
+   "APENFT": {
+    "key": "APENFTUSD",
+    "altname": "APENFTUSD"
+   },
+   "APE": {
+    "key": "APEUSD",
+    "altname": "APEUSD"
+   },
+   "API3": {
+    "key": "API3USD",
+    "altname": "API3USD"
+   },
+   "APR": {
+    "key": "APRUSD",
+    "altname": "APRUSD"
+   },
+   "APT": {
+    "key": "APTUSD",
+    "altname": "APTUSD"
+   },
+   "APXUSD": {
+    "key": "APXUSDUSD",
+    "altname": "APXUSDUSD"
+   },
+   "ARB": {
+    "key": "ARBUSD",
+    "altname": "ARBUSD"
+   },
+   "ARC": {
+    "key": "ARCUSD",
+    "altname": "ARCUSD"
+   },
+   "ARKM": {
+    "key": "ARKMUSD",
+    "altname": "ARKMUSD"
+   },
+   "ARPA": {
+    "key": "ARPAUSD",
+    "altname": "ARPAUSD"
+   },
+   "AR": {
+    "key": "ARUSD",
+    "altname": "ARUSD"
+   },
+   "ARX": {
+    "key": "ARXUSD",
+    "altname": "ARXUSD"
+   },
+   "ASSET": {
+    "key": "ASSETUSD",
+    "altname": "ASSETUSD"
+   },
+   "ASTER": {
+    "key": "ASTERUSD",
+    "altname": "ASTERUSD"
+   },
+   "ASTR": {
+    "key": "ASTRUSD",
+    "altname": "ASTRUSD"
+   },
+   "ATH": {
+    "key": "ATHUSD",
+    "altname": "ATHUSD"
+   },
+   "ATLAS": {
+    "key": "ATLASUSD",
+    "altname": "ATLASUSD"
+   },
+   "ATOM": {
+    "key": "ATOMUSD",
+    "altname": "ATOMUSD"
+   },
+   "AUCTION": {
+    "key": "AUCTIONUSD",
+    "altname": "AUCTIONUSD"
+   },
+   "AUDIO": {
+    "key": "AUDIOUSD",
+    "altname": "AUDIOUSD"
+   },
+   "AUD": {
+    "key": "AUDUSD",
+    "altname": "AUDUSD"
+   },
+   "AUDX": {
+    "key": "AUDXUSD",
+    "altname": "AUDXUSD"
+   },
+   "AUGUR": {
+    "key": "AUGURUSD",
+    "altname": "AUGURUSD"
+   },
+   "A": {
+    "key": "AUSD",
+    "altname": "AUSD"
+   },
+   "AUSD": {
+    "key": "AUSDUSD",
+    "altname": "AUSDUSD"
+   },
+   "AVAAI": {
+    "key": "AVAAIUSD",
+    "altname": "AVAAIUSD"
+   },
+   "AVA": {
+    "key": "AVAUSD",
+    "altname": "AVAUSD"
+   },
+   "AVAX": {
+    "key": "AVAXUSD",
+    "altname": "AVAXUSD"
+   },
+   "AVL": {
+    "key": "AVLUSD",
+    "altname": "AVLUSD"
+   },
+   "AVNT": {
+    "key": "AVNTUSD",
+    "altname": "AVNTUSD"
+   },
+   "AXS": {
+    "key": "AXSUSD",
+    "altname": "AXSUSD"
+   },
+   "AZTEC": {
+    "key": "AZTECUSD",
+    "altname": "AZTECUSD"
+   },
+   "B2": {
+    "key": "B2USD",
+    "altname": "B2USD"
+   },
+   "B3": {
+    "key": "B3USD",
+    "altname": "B3USD"
+   },
+   "BABYSHARK": {
+    "key": "BABYSHARKUSD",
+    "altname": "BABYSHARKUSD"
+   },
+   "BABY": {
+    "key": "BABYUSD",
+    "altname": "BABYUSD"
+   },
+   "BADGER": {
+    "key": "BADGERUSD",
+    "altname": "BADGERUSD"
+   },
+   "BAL": {
+    "key": "BALUSD",
+    "altname": "BALUSD"
+   },
+   "BANANAS31": {
+    "key": "BANANAS31USD",
+    "altname": "BANANAS31USD"
+   },
+   "BAND": {
+    "key": "BANDUSD",
+    "altname": "BANDUSD"
+   },
+   "BASED": {
+    "key": "BASEDUSD",
+    "altname": "BASEDUSD"
+   },
+   "BAT": {
+    "key": "BATUSD",
+    "altname": "BATUSD"
+   },
+   "BCH": {
+    "key": "BCHUSD",
+    "altname": "BCHUSD"
+   },
+   "BEAM": {
+    "key": "BEAMUSD",
+    "altname": "BEAMUSD"
+   },
+   "BERA": {
+    "key": "BERAUSD",
+    "altname": "BERAUSD"
+   },
+   "BERT": {
+    "key": "BERTUSD",
+    "altname": "BERTUSD"
+   },
+   "BGB": {
+    "key": "BGBUSD",
+    "altname": "BGBUSD"
+   },
+   "BICO": {
+    "key": "BICOUSD",
+    "altname": "BICOUSD"
+   },
+   "BIGTIME": {
+    "key": "BIGTIMEUSD",
+    "altname": "BIGTIMEUSD"
+   },
+   "BILL": {
+    "key": "BILLUSD",
+    "altname": "BILLUSD"
+   },
+   "BILLY": {
+    "key": "BILLYUSD",
+    "altname": "BILLYUSD"
+   },
+   "BIO": {
+    "key": "BIOUSD",
+    "altname": "BIOUSD"
+   },
+   "BLEND": {
+    "key": "BLENDUSD",
+    "altname": "BLENDUSD"
+   },
+   "BLESS": {
+    "key": "BLESSUSD",
+    "altname": "BLESSUSD"
+   },
+   "BLUAI": {
+    "key": "BLUAIUSD",
+    "altname": "BLUAIUSD"
+   },
+   "BLUE": {
+    "key": "BLUEUSD",
+    "altname": "BLUEUSD"
+   },
+   "BLUR": {
+    "key": "BLURUSD",
+    "altname": "BLURUSD"
+   },
+   "BLZ": {
+    "key": "BLZUSD",
+    "altname": "BLZUSD"
+   },
+   "BMT": {
+    "key": "BMTUSD",
+    "altname": "BMTUSD"
+   },
+   "BNB": {
+    "key": "BNBUSD",
+    "altname": "BNBUSD"
+   },
+   "BNKR": {
+    "key": "BNKRUSD",
+    "altname": "BNKRUSD"
+   },
+   "BNT": {
+    "key": "BNTUSD",
+    "altname": "BNTUSD"
+   },
+   "BOBA": {
+    "key": "BOBAUSD",
+    "altname": "BOBAUSD"
+   },
+   "BOB": {
+    "key": "BOBUSD",
+    "altname": "BOBUSD"
+   },
+   "BODEN": {
+    "key": "BODENUSD",
+    "altname": "BODENUSD"
+   },
+   "BONK": {
+    "key": "BONKUSD",
+    "altname": "BONKUSD"
+   },
+   "BONZO": {
+    "key": "BONZOUSD",
+    "altname": "BONZOUSD"
+   },
+   "BREV": {
+    "key": "BREVUSD",
+    "altname": "BREVUSD"
+   },
+   "BRL1": {
+    "key": "BRL1USD",
+    "altname": "BRL1USD"
+   },
+   "BTR": {
+    "key": "BTRUSD",
+    "altname": "BTRUSD"
+   },
+   "BTT": {
+    "key": "BTTUSD",
+    "altname": "BTTUSD"
+   },
+   "C98": {
+    "key": "C98USD",
+    "altname": "C98USD"
+   },
+   "CAKE": {
+    "key": "CAKEUSD",
+    "altname": "CAKEUSD"
+   },
+   "CAMP": {
+    "key": "CAMPUSD",
+    "altname": "CAMPUSD"
+   },
+   "CAP": {
+    "key": "CAPUSD",
+    "altname": "CAPUSD"
+   },
+   "CARV": {
+    "key": "CARVUSD",
+    "altname": "CARVUSD"
+   },
+   "CASH": {
+    "key": "CASHUSD",
+    "altname": "CASHUSD"
+   },
+   "CAT": {
+    "key": "CATUSD",
+    "altname": "CATUSD"
+   },
+   "CCD": {
+    "key": "CCDUSD",
+    "altname": "CCDUSD"
+   },
+   "CC": {
+    "key": "CCUSD",
+    "altname": "CCUSD"
+   },
+   "CELO": {
+    "key": "CELOUSD",
+    "altname": "CELOUSD"
+   },
+   "CELR": {
+    "key": "CELRUSD",
+    "altname": "CELRUSD"
+   },
+   "CFG": {
+    "key": "CFGUSD",
+    "altname": "CFGUSD"
+   },
+   "CFX": {
+    "key": "CFXUSD",
+    "altname": "CFXUSD"
+   },
+   "CHECK": {
+    "key": "CHECKUSD",
+    "altname": "CHECKUSD"
+   },
+   "CHEEMS": {
+    "key": "CHEEMSUSD",
+    "altname": "CHEEMSUSD"
+   },
+   "CHEX": {
+    "key": "CHEXUSD",
+    "altname": "CHEXUSD"
+   },
+   "CHILLHOUSE": {
+    "key": "CHILLHOUSEUSD",
+    "altname": "CHILLHOUSEUSD"
+   },
+   "CHIP": {
+    "key": "CHIPUSD",
+    "altname": "CHIPUSD"
+   },
+   "CHR": {
+    "key": "CHRUSD",
+    "altname": "CHRUSD"
+   },
+   "CHZ": {
+    "key": "CHZUSD",
+    "altname": "CHZUSD"
+   },
+   "CLANKER": {
+    "key": "CLANKERUSD",
+    "altname": "CLANKERUSD"
+   },
+   "CLOUD": {
+    "key": "CLOUDUSD",
+    "altname": "CLOUDUSD"
+   },
+   "CMETH": {
+    "key": "CMETHUSD",
+    "altname": "CMETHUSD"
+   },
+   "COMP": {
+    "key": "COMPUSD",
+    "altname": "COMPUSD"
+   },
+   "COOKIE": {
+    "key": "COOKIEUSD",
+    "altname": "COOKIEUSD"
+   },
+   "COPM": {
+    "key": "COPMUSD",
+    "altname": "COPMUSD"
+   },
+   "COQ": {
+    "key": "COQUSD",
+    "altname": "COQUSD"
+   },
+   "CORN": {
+    "key": "CORNUSD",
+    "altname": "CORNUSD"
+   },
+   "COTI": {
+    "key": "COTIUSD",
+    "altname": "COTIUSD"
+   },
+   "COW": {
+    "key": "COWUSD",
+    "altname": "COWUSD"
+   },
+   "CPOOL": {
+    "key": "CPOOLUSD",
+    "altname": "CPOOLUSD"
+   },
+   "CRO": {
+    "key": "CROUSD",
+    "altname": "CROUSD"
+   },
+   "CRV": {
+    "key": "CRVUSD",
+    "altname": "CRVUSD"
+   },
+   "CSPR": {
+    "key": "CSPRUSD",
+    "altname": "CSPRUSD"
+   },
+   "CTC": {
+    "key": "CTCUSD",
+    "altname": "CTCUSD"
+   },
+   "CTR": {
+    "key": "CTRUSD",
+    "altname": "CTRUSD"
+   },
+   "CTSI": {
+    "key": "CTSIUSD",
+    "altname": "CTSIUSD"
+   },
+   "CT": {
+    "key": "CTUSD",
+    "altname": "CTUSD"
+   },
+   "CVC": {
+    "key": "CVCUSD",
+    "altname": "CVCUSD"
+   },
+   "CVX": {
+    "key": "CVXUSD",
+    "altname": "CVXUSD"
+   },
+   "CYBER": {
+    "key": "CYBERUSD",
+    "altname": "CYBERUSD"
+   },
+   "DAG": {
+    "key": "DAGUSD",
+    "altname": "DAGUSD"
+   },
+   "DAI": {
+    "key": "DAIUSD",
+    "altname": "DAIUSD"
+   },
+   "DASH": {
+    "key": "DASHUSD",
+    "altname": "DASHUSD"
+   },
+   "DBR": {
+    "key": "DBRUSD",
+    "altname": "DBRUSD"
+   },
+   "DCR": {
+    "key": "DCRUSD",
+    "altname": "DCRUSD"
+   },
+   "DEBIT": {
+    "key": "DEBITUSD",
+    "altname": "DEBITUSD"
+   },
+   "DEEP": {
+    "key": "DEEPUSD",
+    "altname": "DEEPUSD"
+   },
+   "DEGEN": {
+    "key": "DEGENUSD",
+    "altname": "DEGENUSD"
+   },
+   "DENT": {
+    "key": "DENTUSD",
+    "altname": "DENTUSD"
+   },
+   "DGAI": {
+    "key": "DGAIUSD",
+    "altname": "DGAIUSD"
+   },
+   "DMC": {
+    "key": "DMCUSD",
+    "altname": "DMCUSD"
+   },
+   "DNA": {
+    "key": "DNAUSD",
+    "altname": "DNAUSD"
+   },
+   "DOGS": {
+    "key": "DOGSUSD",
+    "altname": "DOGSUSD"
+   },
+   "DOG": {
+    "key": "DOGUSD",
+    "altname": "DOGUSD"
+   },
+   "DOLO": {
+    "key": "DOLOUSD",
+    "altname": "DOLOUSD"
+   },
+   "DOS": {
+    "key": "DOSUSD",
+    "altname": "DOSUSD"
+   },
+   "DOT": {
+    "key": "DOTUSD",
+    "altname": "DOTUSD"
+   },
+   "DOVU": {
+    "key": "DOVUUSD",
+    "altname": "DOVUUSD"
+   },
+   "DRIFT": {
+    "key": "DRIFTUSD",
+    "altname": "DRIFTUSD"
+   },
+   "DRV": {
+    "key": "DRVUSD",
+    "altname": "DRVUSD"
+   },
+   "DUAL": {
+    "key": "DUALUSD",
+    "altname": "DUALUSD"
+   },
+   "DYDX": {
+    "key": "DYDXUSD",
+    "altname": "DYDXUSD"
+   },
+   "DYM": {
+    "key": "DYMUSD",
+    "altname": "DYMUSD"
+   },
+   "EAT": {
+    "key": "EATUSD",
+    "altname": "EATUSD"
+   },
+   "EDGE": {
+    "key": "EDGEUSD",
+    "altname": "EDGEUSD"
+   },
+   "EDGEX": {
+    "key": "EDGEXUSD",
+    "altname": "EDGEXUSD"
+   },
+   "EDU": {
+    "key": "EDUUSD",
+    "altname": "EDUUSD"
+   },
+   "EGLD": {
+    "key": "EGLDUSD",
+    "altname": "EGLDUSD"
+   },
+   "EIGEN": {
+    "key": "EIGENUSD",
+    "altname": "EIGENUSD"
+   },
+   "ELIZAOS": {
+    "key": "ELIZAOSUSD",
+    "altname": "ELIZAOSUSD"
+   },
+   "ENA": {
+    "key": "ENAUSD",
+    "altname": "ENAUSD"
+   },
+   "ENJ": {
+    "key": "ENJUSD",
+    "altname": "ENJUSD"
+   },
+   "ENSO": {
+    "key": "ENSOUSD",
+    "altname": "ENSOUSD"
+   },
+   "ENS": {
+    "key": "ENSUSD",
+    "altname": "ENSUSD"
+   },
+   "ESPORTS": {
+    "key": "ESPORTSUSD",
+    "altname": "ESPORTSUSD"
+   },
+   "ESP": {
+    "key": "ESPUSD",
+    "altname": "ESPUSD"
+   },
+   "ES": {
+    "key": "ESUSD",
+    "altname": "ESUSD"
+   },
+   "ETHFI": {
+    "key": "ETHFIUSD",
+    "altname": "ETHFIUSD"
+   },
+   "EUL": {
+    "key": "EULUSD",
+    "altname": "EULUSD"
+   },
+   "EURC": {
+    "key": "EURCUSD",
+    "altname": "EURCUSD"
+   },
+   "EURCV": {
+    "key": "EURCVUSD",
+    "altname": "EURCVUSD"
+   },
+   "EUROP": {
+    "key": "EUROPUSD",
+    "altname": "EUROPUSD"
+   },
+   "EURQ": {
+    "key": "EURQUSD",
+    "altname": "EURQUSD"
+   },
+   "EVAA": {
+    "key": "EVAAUSD",
+    "altname": "EVAAUSD"
+   },
+   "EV": {
+    "key": "EVUSD",
+    "altname": "EVUSD"
+   },
+   "EWT": {
+    "key": "EWTUSD",
+    "altname": "EWTUSD"
+   },
+   "FARTCOIN": {
+    "key": "FARTCOINUSD",
+    "altname": "FARTCOINUSD"
+   },
+   "FET": {
+    "key": "FETUSD",
+    "altname": "FETUSD"
+   },
+   "FF": {
+    "key": "FFUSD",
+    "altname": "FFUSD"
+   },
+   "FHE": {
+    "key": "FHEUSD",
+    "altname": "FHEUSD"
+   },
+   "FIDA": {
+    "key": "FIDAUSD",
+    "altname": "FIDAUSD"
+   },
+   "FIDD": {
+    "key": "FIDDUSD",
+    "altname": "FIDDUSD"
+   },
+   "FIGHT": {
+    "key": "FIGHTUSD",
+    "altname": "FIGHTUSD"
+   },
+   "FIL": {
+    "key": "FILUSD",
+    "altname": "FILUSD"
+   },
+   "FLOCK": {
+    "key": "FLOCKUSD",
+    "altname": "FLOCKUSD"
+   },
+   "FLOKI": {
+    "key": "FLOKIUSD",
+    "altname": "FLOKIUSD"
+   },
+   "FLOW": {
+    "key": "FLOWUSD",
+    "altname": "FLOWUSD"
+   },
+   "FLR": {
+    "key": "FLRUSD",
+    "altname": "FLRUSD"
+   },
+   "FLUX": {
+    "key": "FLUXUSD",
+    "altname": "FLUXUSD"
+   },
+   "FOLD": {
+    "key": "FOLDUSD",
+    "altname": "FOLDUSD"
+   },
+   "FOLKS": {
+    "key": "FOLKSUSD",
+    "altname": "FOLKSUSD"
+   },
+   "FOREST": {
+    "key": "FORESTUSD",
+    "altname": "FORESTUSD"
+   },
+   "FORTH": {
+    "key": "FORTHUSD",
+    "altname": "FORTHUSD"
+   },
+   "FRNT": {
+    "key": "FRNTUSD",
+    "altname": "FRNTUSD"
+   },
+   "FUN": {
+    "key": "FUNUSD",
+    "altname": "FUNUSD"
+   },
+   "FWOG": {
+    "key": "FWOGUSD",
+    "altname": "FWOGUSD"
+   },
+   "FXS": {
+    "key": "FXSUSD",
+    "altname": "FXSUSD"
+   },
+   "GAIB": {
+    "key": "GAIBUSD",
+    "altname": "GAIBUSD"
+   },
+   "GALA": {
+    "key": "GALAUSD",
+    "altname": "GALAUSD"
+   },
+   "GAME2": {
+    "key": "GAME2USD",
+    "altname": "GAME2USD"
+   },
+   "GAS": {
+    "key": "GASUSD",
+    "altname": "GASUSD"
+   },
+   "GENIUS": {
+    "key": "GENIUSUSD",
+    "altname": "GENIUSUSD"
+   },
+   "GFI": {
+    "key": "GFIUSD",
+    "altname": "GFIUSD"
+   },
+   "GHST": {
+    "key": "GHSTUSD",
+    "altname": "GHSTUSD"
+   },
+   "GIB": {
+    "key": "GIBUSD",
+    "altname": "GIBUSD"
+   },
+   "GIGA": {
+    "key": "GIGAUSD",
+    "altname": "GIGAUSD"
+   },
+   "GLMR": {
+    "key": "GLMRUSD",
+    "altname": "GLMRUSD"
+   },
+   "GMT": {
+    "key": "GMTUSD",
+    "altname": "GMTUSD"
+   },
+   "GMX": {
+    "key": "GMXUSD",
+    "altname": "GMXUSD"
+   },
+   "GNOT": {
+    "key": "GNOTUSD",
+    "altname": "GNOTUSD"
+   },
+   "GNO": {
+    "key": "GNOUSD",
+    "altname": "GNOUSD"
+   },
+   "GOAT": {
+    "key": "GOATUSD",
+    "altname": "GOATUSD"
+   },
+   "GOMINING": {
+    "key": "GOMININGUSD",
+    "altname": "GOMININGUSD"
+   },
+   "GRASS": {
+    "key": "GRASSUSD",
+    "altname": "GRASSUSD"
+   },
+   "GRIFFAIN": {
+    "key": "GRIFFAINUSD",
+    "altname": "GRIFFAINUSD"
+   },
+   "GRT": {
+    "key": "GRTUSD",
+    "altname": "GRTUSD"
+   },
+   "GST": {
+    "key": "GSTUSD",
+    "altname": "GSTUSD"
+   },
+   "GTC": {
+    "key": "GTCUSD",
+    "altname": "GTCUSD"
+   },
+   "GUN": {
+    "key": "GUNUSD",
+    "altname": "GUNUSD"
+   },
+   "G": {
+    "key": "GUSD",
+    "altname": "GUSD"
+   },
+   "GWEI": {
+    "key": "GWEIUSD",
+    "altname": "GWEIUSD"
+   },
+   "HBAR": {
+    "key": "HBARUSD",
+    "altname": "HBARUSD"
+   },
+   "HFT": {
+    "key": "HFTUSD",
+    "altname": "HFTUSD"
+   },
+   "HMSTR": {
+    "key": "HMSTRUSD",
+    "altname": "HMSTRUSD"
+   },
+   "HNT": {
+    "key": "HNTUSD",
+    "altname": "HNTUSD"
+   },
+   "HOLO": {
+    "key": "HOLOUSD",
+    "altname": "HOLOUSD"
+   },
+   "HONEY": {
+    "key": "HONEYUSD",
+    "altname": "HONEYUSD"
+   },
+   "HPOS10I": {
+    "key": "HPOS10IUSD",
+    "altname": "HPOS10IUSD"
+   },
+   "HSK": {
+    "key": "HSKUSD",
+    "altname": "HSKUSD"
+   },
+   "HYPE": {
+    "key": "HYPEUSD",
+    "altname": "HYPEUSD"
+   },
+   "IAG": {
+    "key": "IAGUSD",
+    "altname": "IAGUSD"
+   },
+   "ICNT": {
+    "key": "ICNTUSD",
+    "altname": "ICNTUSD"
+   },
+   "ICP": {
+    "key": "ICPUSD",
+    "altname": "ICPUSD"
+   },
+   "IDOS": {
+    "key": "IDOSUSD",
+    "altname": "IDOSUSD"
+   },
+   "IMX": {
+    "key": "IMXUSD",
+    "altname": "IMXUSD"
+   },
+   "INIT": {
+    "key": "INITUSD",
+    "altname": "INITUSD"
+   },
+   "INJ": {
+    "key": "INJUSD",
+    "altname": "INJUSD"
+   },
+   "IN": {
+    "key": "INUSD",
+    "altname": "INUSD"
+   },
+   "INX": {
+    "key": "INXUSD",
+    "altname": "INXUSD"
+   },
+   "IP": {
+    "key": "IPUSD",
+    "altname": "IPUSD"
+   },
+   "JAILSTOOL": {
+    "key": "JAILSTOOLUSD",
+    "altname": "JAILSTOOLUSD"
+   },
+   "JASMY": {
+    "key": "JASMYUSD",
+    "altname": "JASMYUSD"
+   },
+   "JITOSOL": {
+    "key": "JITOSOLUSD",
+    "altname": "JITOSOLUSD"
+   },
+   "JOE": {
+    "key": "JOEUSD",
+    "altname": "JOEUSD"
+   },
+   "JST": {
+    "key": "JSTUSD",
+    "altname": "JSTUSD"
+   },
+   "JTO": {
+    "key": "JTOUSD",
+    "altname": "JTOUSD"
+   },
+   "JUP": {
+    "key": "JUPUSD",
+    "altname": "JUPUSD"
+   },
+   "KAITO": {
+    "key": "KAITOUSD",
+    "altname": "KAITOUSD"
+   },
+   "KAS": {
+    "key": "KASUSD",
+    "altname": "KASUSD"
+   },
+   "KAT": {
+    "key": "KATUSD",
+    "altname": "KATUSD"
+   },
+   "KAVA": {
+    "key": "KAVAUSD",
+    "altname": "KAVAUSD"
+   },
+   "KEEP": {
+    "key": "KEEPUSD",
+    "altname": "KEEPUSD"
+   },
+   "KERNEL": {
+    "key": "KERNELUSD",
+    "altname": "KERNELUSD"
+   },
+   "KGEN": {
+    "key": "KGENUSD",
+    "altname": "KGENUSD"
+   },
+   "KII": {
+    "key": "KIIUSD",
+    "altname": "KIIUSD"
+   },
+   "KMNO": {
+    "key": "KMNOUSD",
+    "altname": "KMNOUSD"
+   },
+   "KNC": {
+    "key": "KNCUSD",
+    "altname": "KNCUSD"
+   },
+   "KNTQ": {
+    "key": "KNTQUSD",
+    "altname": "KNTQUSD"
+   },
+   "KOR": {
+    "key": "KORUSD",
+    "altname": "KORUSD"
+   },
+   "KSM": {
+    "key": "KSMUSD",
+    "altname": "KSMUSD"
+   },
+   "KTA": {
+    "key": "KTAUSD",
+    "altname": "KTAUSD"
+   },
+   "KULA": {
+    "key": "KULAUSD",
+    "altname": "KULAUSD"
+   },
+   "L3": {
+    "key": "L3USD",
+    "altname": "L3USD"
+   },
+   "LAPTOP": {
+    "key": "LAPTOPUSD",
+    "altname": "LAPTOPUSD"
+   },
+   "LAVA": {
+    "key": "LAVAUSD",
+    "altname": "LAVAUSD"
+   },
+   "LAYER": {
+    "key": "LAYERUSD",
+    "altname": "LAYERUSD"
+   },
+   "LCAP": {
+    "key": "LCAPUSD",
+    "altname": "LCAPUSD"
+   },
+   "LCX": {
+    "key": "LCXUSD",
+    "altname": "LCXUSD"
+   },
+   "LDO": {
+    "key": "LDOUSD",
+    "altname": "LDOUSD"
+   },
+   "LIGHTER": {
+    "key": "LIGHTERUSD",
+    "altname": "LIGHTERUSD"
+   },
+   "LINEA": {
+    "key": "LINEAUSD",
+    "altname": "LINEAUSD"
+   },
+   "LINK": {
+    "key": "LINKUSD",
+    "altname": "LINKUSD"
+   },
+   "LION": {
+    "key": "LIONUSD",
+    "altname": "LIONUSD"
+   },
+   "LIT": {
+    "key": "LITUSD",
+    "altname": "LITUSD"
+   },
+   "LMWR": {
+    "key": "LMWRUSD",
+    "altname": "LMWRUSD"
+   },
+   "LOFI": {
+    "key": "LOFIUSD",
+    "altname": "LOFIUSD"
+   },
+   "LPT": {
+    "key": "LPTUSD",
+    "altname": "LPTUSD"
+   },
+   "LQTY": {
+    "key": "LQTYUSD",
+    "altname": "LQTYUSD"
+   },
+   "LRC": {
+    "key": "LRCUSD",
+    "altname": "LRCUSD"
+   },
+   "LSETH": {
+    "key": "LSETHUSD",
+    "altname": "LSETHUSD"
+   },
+   "LSK": {
+    "key": "LSKUSD",
+    "altname": "LSKUSD"
+   },
+   "LSSOL": {
+    "key": "LSSOLUSD",
+    "altname": "LSSOLUSD"
+   },
+   "LUNA": {
+    "key": "LUNAUSD",
+    "altname": "LUNAUSD"
+   },
+   "MANA": {
+    "key": "MANAUSD",
+    "altname": "MANAUSD"
+   },
+   "MANTRA": {
+    "key": "MANTRAUSD",
+    "altname": "MANTRAUSD"
+   },
+   "MASK": {
+    "key": "MASKUSD",
+    "altname": "MASKUSD"
+   },
+   "MEGA": {
+    "key": "MEGAUSD",
+    "altname": "MEGAUSD"
+   },
+   "MELANIA": {
+    "key": "MELANIAUSD",
+    "altname": "MELANIAUSD"
+   },
+   "MEME": {
+    "key": "MEMEUSD",
+    "altname": "MEMEUSD"
+   },
+   "MERL": {
+    "key": "MERLUSD",
+    "altname": "MERLUSD"
+   },
+   "METH": {
+    "key": "METHUSD",
+    "altname": "METHUSD"
+   },
+   "METIS": {
+    "key": "METISUSD",
+    "altname": "METISUSD"
+   },
+   "MET": {
+    "key": "METUSD",
+    "altname": "METUSD"
+   },
+   "ME": {
+    "key": "MEUSD",
+    "altname": "MEUSD"
+   },
+   "MEW": {
+    "key": "MEWUSD",
+    "altname": "MEWUSD"
+   },
+   "MEZO": {
+    "key": "MEZOUSD",
+    "altname": "MEZOUSD"
+   },
+   "MF": {
+    "key": "MFUSD",
+    "altname": "MFUSD"
+   },
+   "MIM": {
+    "key": "MIMUSD",
+    "altname": "MIMUSD"
+   },
+   "MINA": {
+    "key": "MINAUSD",
+    "altname": "MINAUSD"
+   },
+   "MIRA": {
+    "key": "MIRAUSD",
+    "altname": "MIRAUSD"
+   },
+   "MNT": {
+    "key": "MNTUSD",
+    "altname": "MNTUSD"
+   },
+   "MOCA": {
+    "key": "MOCAUSD",
+    "altname": "MOCAUSD"
+   },
+   "MOG": {
+    "key": "MOGUSD",
+    "altname": "MOGUSD"
+   },
+   "MON": {
+    "key": "MONUSD",
+    "altname": "MONUSD"
+   },
+   "MOODENG": {
+    "key": "MOODENGUSD",
+    "altname": "MOODENGUSD"
+   },
+   "MORPHO": {
+    "key": "MORPHOUSD",
+    "altname": "MORPHOUSD"
+   },
+   "MOVR": {
+    "key": "MOVRUSD",
+    "altname": "MOVRUSD"
+   },
+   "MSOL": {
+    "key": "MSOLUSD",
+    "altname": "MSOLUSD"
+   },
+   "MUBARAK": {
+    "key": "MUBARAKUSD",
+    "altname": "MUBARAKUSD"
+   },
+   "MXNB": {
+    "key": "MXNBUSD",
+    "altname": "MXNBUSD"
+   },
+   "MYX": {
+    "key": "MYXUSD",
+    "altname": "MYXUSD"
+   },
+   "NANO": {
+    "key": "NANOUSD",
+    "altname": "NANOUSD"
+   },
+   "NEAR": {
+    "key": "NEARUSD",
+    "altname": "NEARUSD"
+   },
+   "NEIRO": {
+    "key": "NEIROUSD",
+    "altname": "NEIROUSD"
+   },
+   "NEO": {
+    "key": "NEOUSD",
+    "altname": "NEOUSD"
+   },
+   "NES": {
+    "key": "NESUSD",
+    "altname": "NESUSD"
+   },
+   "NEXO": {
+    "key": "NEXOUSD",
+    "altname": "NEXOUSD"
+   },
+   "NEX": {
+    "key": "NEXUSD",
+    "altname": "NEXUSD"
+   },
+   "NIGHT": {
+    "key": "NIGHTUSD",
+    "altname": "NIGHTUSD"
+   },
+   "NIL": {
+    "key": "NILUSD",
+    "altname": "NILUSD"
+   },
+   "NMR": {
+    "key": "NMRUSD",
+    "altname": "NMRUSD"
+   },
+   "NOCK": {
+    "key": "NOCKUSD",
+    "altname": "NOCKUSD"
+   },
+   "NODE": {
+    "key": "NODEUSD",
+    "altname": "NODEUSD"
+   },
+   "NOS": {
+    "key": "NOSUSD",
+    "altname": "NOSUSD"
+   },
+   "NOT": {
+    "key": "NOTUSD",
+    "altname": "NOTUSD"
+   },
+   "NPC": {
+    "key": "NPCUSD",
+    "altname": "NPCUSD"
+   },
+   "OCEAN": {
+    "key": "OCEANUSD",
+    "altname": "OCEANUSD"
+   },
+   "ODOS": {
+    "key": "ODOSUSD",
+    "altname": "ODOSUSD"
+   },
+   "OGN": {
+    "key": "OGNUSD",
+    "altname": "OGNUSD"
+   },
+   "OKB": {
+    "key": "OKBUSD",
+    "altname": "OKBUSD"
+   },
+   "OMG": {
+    "key": "OMGUSD",
+    "altname": "OMGUSD"
+   },
+   "OMI": {
+    "key": "OMIUSD",
+    "altname": "OMIUSD"
+   },
+   "ONDO": {
+    "key": "ONDOUSD",
+    "altname": "ONDOUSD"
+   },
+   "ONE": {
+    "key": "ONEUSD",
+    "altname": "ONEUSD"
+   },
+   "OOB": {
+    "key": "OOBUSD",
+    "altname": "OOBUSD"
+   },
+   "OPEN": {
+    "key": "OPENUSD",
+    "altname": "OPENUSD"
+   },
+   "OPN": {
+    "key": "OPNUSD",
+    "altname": "OPNUSD"
+   },
+   "OP": {
+    "key": "OPUSD",
+    "altname": "OPUSD"
+   },
+   "ORCA": {
+    "key": "ORCAUSD",
+    "altname": "ORCAUSD"
+   },
+   "ORDER": {
+    "key": "ORDERUSD",
+    "altname": "ORDERUSD"
+   },
+   "OSMO": {
+    "key": "OSMOUSD",
+    "altname": "OSMOUSD"
+   },
+   "OUSD": {
+    "key": "OUSDUSD",
+    "altname": "OUSDUSD"
+   },
+   "OXT": {
+    "key": "OXTUSD",
+    "altname": "OXTUSD"
+   },
+   "PACK": {
+    "key": "PACKUSD",
+    "altname": "PACKUSD"
+   },
+   "PACT": {
+    "key": "PACTUSD",
+    "altname": "PACTUSD"
+   },
+   "PARTI": {
+    "key": "PARTIUSD",
+    "altname": "PARTIUSD"
+   },
+   "PAXG": {
+    "key": "PAXGUSD",
+    "altname": "PAXGUSD"
+   },
+   "PEAQ": {
+    "key": "PEAQUSD",
+    "altname": "PEAQUSD"
+   },
+   "PENDLE": {
+    "key": "PENDLEUSD",
+    "altname": "PENDLEUSD"
+   },
+   "PENGU": {
+    "key": "PENGUUSD",
+    "altname": "PENGUUSD"
+   },
+   "PEPECOIN": {
+    "key": "PEPECOINUSD",
+    "altname": "PEPECOINUSD"
+   },
+   "PEPE": {
+    "key": "PEPEUSD",
+    "altname": "PEPEUSD"
+   },
+   "PEP": {
+    "key": "PEPUSD",
+    "altname": "PEPUSD"
+   },
+   "PERP": {
+    "key": "PERPUSD",
+    "altname": "PERPUSD"
+   },
+   "PHA": {
+    "key": "PHAUSD",
+    "altname": "PHAUSD"
+   },
+   "PIEVERSE": {
+    "key": "PIEVERSEUSD",
+    "altname": "PIEVERSEUSD"
+   },
+   "PIPE": {
+    "key": "PIPEUSD",
+    "altname": "PIPEUSD"
+   },
+   "PI": {
+    "key": "PIUSD",
+    "altname": "PIUSD"
+   },
+   "PLAY": {
+    "key": "PLAYUSD",
+    "altname": "PLAYUSD"
+   },
+   "PLUME": {
+    "key": "PLUMEUSD",
+    "altname": "PLUMEUSD"
+   },
+   "PNT": {
+    "key": "PNTUSD",
+    "altname": "PNTUSD"
+   },
+   "PNUT": {
+    "key": "PNUTUSD",
+    "altname": "PNUTUSD"
+   },
+   "POLIS": {
+    "key": "POLISUSD",
+    "altname": "POLISUSD"
+   },
+   "POLS": {
+    "key": "POLSUSD",
+    "altname": "POLSUSD"
+   },
+   "POL": {
+    "key": "POLUSD",
+    "altname": "POLUSD"
+   },
+   "POND": {
+    "key": "PONDUSD",
+    "altname": "PONDUSD"
+   },
+   "PONKE": {
+    "key": "PONKEUSD",
+    "altname": "PONKEUSD"
+   },
+   "PONS": {
+    "key": "PONSUSD",
+    "altname": "PONSUSD"
+   },
+   "POPCAT": {
+    "key": "POPCATUSD",
+    "altname": "POPCATUSD"
+   },
+   "PORTAL": {
+    "key": "PORTALUSD",
+    "altname": "PORTALUSD"
+   },
+   "POWR": {
+    "key": "POWRUSD",
+    "altname": "POWRUSD"
+   },
+   "PRCL": {
+    "key": "PRCLUSD",
+    "altname": "PRCLUSD"
+   },
+   "PRIME": {
+    "key": "PRIMEUSD",
+    "altname": "PRIMEUSD"
+   },
+   "PROMPT": {
+    "key": "PROMPTUSD",
+    "altname": "PROMPTUSD"
+   },
+   "PROS": {
+    "key": "PROSUSD",
+    "altname": "PROSUSD"
+   },
+   "PRO": {
+    "key": "PROUSD",
+    "altname": "PROUSD"
+   },
+   "PROVE": {
+    "key": "PROVEUSD",
+    "altname": "PROVEUSD"
+   },
+   "PTB": {
+    "key": "PTBUSD",
+    "altname": "PTBUSD"
+   },
+   "PUFFER": {
+    "key": "PUFFERUSD",
+    "altname": "PUFFERUSD"
+   },
+   "PUMP": {
+    "key": "PUMPUSD",
+    "altname": "PUMPUSD"
+   },
+   "PUPS": {
+    "key": "PUPSUSD",
+    "altname": "PUPSUSD"
+   },
+   "PWT": {
+    "key": "PWTUSD",
+    "altname": "PWTUSD"
+   },
+   "PYTH": {
+    "key": "PYTHUSD",
+    "altname": "PYTHUSD"
+   },
+   "PYUSD": {
+    "key": "PYUSDUSD",
+    "altname": "PYUSDUSD"
+   },
+   "QCAD": {
+    "key": "QCADUSD",
+    "altname": "QCADUSD"
+   },
+   "QI": {
+    "key": "QIUSD",
+    "altname": "QIUSD"
+   },
+   "QNT": {
+    "key": "QNTUSD",
+    "altname": "QNTUSD"
+   },
+   "QTUM": {
+    "key": "QTUMUSD",
+    "altname": "QTUMUSD"
+   },
+   "QUAI": {
+    "key": "QUAIUSD",
+    "altname": "QUAIUSD"
+   },
+   "QUID": {
+    "key": "QUIDUSD",
+    "altname": "QUIDUSD"
+   },
+   "Q": {
+    "key": "QUSD",
+    "altname": "QUSD"
+   },
+   "RAD": {
+    "key": "RADUSD",
+    "altname": "RADUSD"
+   },
+   "RAILS": {
+    "key": "RAILSUSD",
+    "altname": "RAILSUSD"
+   },
+   "RARE": {
+    "key": "RAREUSD",
+    "altname": "RAREUSD"
+   },
+   "RARI": {
+    "key": "RARIUSD",
+    "altname": "RARIUSD"
+   },
+   "RAY": {
+    "key": "RAYUSD",
+    "altname": "RAYUSD"
+   },
+   "RED": {
+    "key": "REDUSD",
+    "altname": "REDUSD"
+   },
+   "REKT": {
+    "key": "REKTUSD",
+    "altname": "REKTUSD"
+   },
+   "RENDER": {
+    "key": "RENDERUSD",
+    "altname": "RENDERUSD"
+   },
+   "REN": {
+    "key": "RENUSD",
+    "altname": "RENUSD"
+   },
+   "REPPO": {
+    "key": "REPPOUSD",
+    "altname": "REPPOUSD"
+   },
+   "REQ": {
+    "key": "REQUSD",
+    "altname": "REQUSD"
+   },
+   "RE": {
+    "key": "REUSD",
+    "altname": "REUSD"
+   },
+   "REZ": {
+    "key": "REZUSD",
+    "altname": "REZUSD"
+   },
+   "RIVER": {
+    "key": "RIVERUSD",
+    "altname": "RIVERUSD"
+   },
+   "RLC": {
+    "key": "RLCUSD",
+    "altname": "RLCUSD"
+   },
+   "RLS": {
+    "key": "RLSUSD",
+    "altname": "RLSUSD"
+   },
+   "RLUSD": {
+    "key": "RLUSDUSD",
+    "altname": "RLUSDUSD"
+   },
+   "RNBW": {
+    "key": "RNBWUSD",
+    "altname": "RNBWUSD"
+   },
+   "ROBO": {
+    "key": "ROBOUSD",
+    "altname": "ROBOUSD"
+   },
+   "ROLL": {
+    "key": "ROLLUSD",
+    "altname": "ROLLUSD"
+   },
+   "RPL": {
+    "key": "RPLUSD",
+    "altname": "RPLUSD"
+   },
+   "RSC": {
+    "key": "RSCUSD",
+    "altname": "RSCUSD"
+   },
+   "RSR": {
+    "key": "RSRUSD",
+    "altname": "RSRUSD"
+   },
+   "RUJI": {
+    "key": "RUJIUSD",
+    "altname": "RUJIUSD"
+   },
+   "RUNE": {
+    "key": "RUNEUSD",
+    "altname": "RUNEUSD"
+   },
+   "RVV": {
+    "key": "RVVUSD",
+    "altname": "RVVUSD"
+   },
+   "SAFE": {
+    "key": "SAFEUSD",
+    "altname": "SAFEUSD"
+   },
+   "SAGA": {
+    "key": "SAGAUSD",
+    "altname": "SAGAUSD"
+   },
+   "SAHARA": {
+    "key": "SAHARAUSD",
+    "altname": "SAHARAUSD"
+   },
+   "SAMO": {
+    "key": "SAMOUSD",
+    "altname": "SAMOUSD"
+   },
+   "SAND": {
+    "key": "SANDUSD",
+    "altname": "SANDUSD"
+   },
+   "SAPIEN": {
+    "key": "SAPIENUSD",
+    "altname": "SAPIENUSD"
+   },
+   "SAUCE": {
+    "key": "SAUCEUSD",
+    "altname": "SAUCEUSD"
+   },
+   "SCOR": {
+    "key": "SCORUSD",
+    "altname": "SCORUSD"
+   },
+   "SCRT": {
+    "key": "SCRTUSD",
+    "altname": "SCRTUSD"
+   },
+   "SC": {
+    "key": "SCUSD",
+    "altname": "SCUSD"
+   },
+   "SEI": {
+    "key": "SEIUSD",
+    "altname": "SEIUSD"
+   },
+   "SENT": {
+    "key": "SENTUSD",
+    "altname": "SENTUSD"
+   },
+   "SFI": {
+    "key": "SFIUSD",
+    "altname": "SFIUSD"
+   },
+   "SGB": {
+    "key": "SGBUSD",
+    "altname": "SGBUSD"
+   },
+   "SHAPE": {
+    "key": "SHAPEUSD",
+    "altname": "SHAPEUSD"
+   },
+   "SHIB": {
+    "key": "SHIBUSD",
+    "altname": "SHIBUSD"
+   },
+   "SHX": {
+    "key": "SHXUSD",
+    "altname": "SHXUSD"
+   },
+   "SIGMA": {
+    "key": "SIGMAUSD",
+    "altname": "SIGMAUSD"
+   },
+   "SIGN": {
+    "key": "SIGNUSD",
+    "altname": "SIGNUSD"
+   },
+   "SKR": {
+    "key": "SKRUSD",
+    "altname": "SKRUSD"
+   },
+   "SKY": {
+    "key": "SKYUSD",
+    "altname": "SKYUSD"
+   },
+   "SLX": {
+    "key": "SLXUSD",
+    "altname": "SLXUSD"
+   },
+   "SN44": {
+    "key": "SN44USD",
+    "altname": "SN44USD"
+   },
+   "SN51": {
+    "key": "SN51USD",
+    "altname": "SN51USD"
+   },
+   "SN62": {
+    "key": "SN62USD",
+    "altname": "SN62USD"
+   },
+   "SN64": {
+    "key": "SN64USD",
+    "altname": "SN64USD"
+   },
+   "SN75": {
+    "key": "SN75USD",
+    "altname": "SN75USD"
+   },
+   "SN8": {
+    "key": "SN8USD",
+    "altname": "SN8USD"
+   },
+   "SNEK": {
+    "key": "SNEKUSD",
+    "altname": "SNEKUSD"
+   },
+   "SNX": {
+    "key": "SNXUSD",
+    "altname": "SNXUSD"
+   },
+   "SODA": {
+    "key": "SODAUSD",
+    "altname": "SODAUSD"
+   },
+   "SOFID": {
+    "key": "SOFIDUSD",
+    "altname": "SOFIDUSD"
+   },
+   "SOL": {
+    "key": "SOLUSD",
+    "altname": "SOLUSD"
+   },
+   "SOLV": {
+    "key": "SOLVUSD",
+    "altname": "SOLVUSD"
+   },
+   "SOMI": {
+    "key": "SOMIUSD",
+    "altname": "SOMIUSD"
+   },
+   "SONIC": {
+    "key": "SONICUSD",
+    "altname": "SONICUSD"
+   },
+   "SOON": {
+    "key": "SOONUSD",
+    "altname": "SOONUSD"
+   },
+   "SOSO": {
+    "key": "SOSOUSD",
+    "altname": "SOSOUSD"
+   },
+   "SPACE": {
+    "key": "SPACEUSD",
+    "altname": "SPACEUSD"
+   },
+   "SPELL": {
+    "key": "SPELLUSD",
+    "altname": "SPELLUSD"
+   },
+   "SPK": {
+    "key": "SPKUSD",
+    "altname": "SPKUSD"
+   },
+   "SPX": {
+    "key": "SPXUSD",
+    "altname": "SPXUSD"
+   },
+   "SRM": {
+    "key": "SRMUSD",
+    "altname": "SRMUSD"
+   },
+   "SSV": {
+    "key": "SSVUSD",
+    "altname": "SSVUSD"
+   },
+   "STABLE": {
+    "key": "STABLEUSD",
+    "altname": "STABLEUSD"
+   },
+   "STBL": {
+    "key": "STBLUSD",
+    "altname": "STBLUSD"
+   },
+   "STG": {
+    "key": "STGUSD",
+    "altname": "STGUSD"
+   },
+   "STORJ": {
+    "key": "STORJUSD",
+    "altname": "STORJUSD"
+   },
+   "STRK": {
+    "key": "STRKUSD",
+    "altname": "STRKUSD"
+   },
+   "ST": {
+    "key": "STUSD",
+    "altname": "STUSD"
+   },
+   "STX": {
+    "key": "STXUSD",
+    "altname": "STXUSD"
+   },
+   "SUI": {
+    "key": "SUIUSD",
+    "altname": "SUIUSD"
+   },
+   "SUKU": {
+    "key": "SUKUUSD",
+    "altname": "SUKUUSD"
+   },
+   "SUNDOG": {
+    "key": "SUNDOGUSD",
+    "altname": "SUNDOGUSD"
+   },
+   "SUN": {
+    "key": "SUNUSD",
+    "altname": "SUNUSD"
+   },
+   "SUPER": {
+    "key": "SUPERUSD",
+    "altname": "SUPERUSD"
+   },
+   "SUP": {
+    "key": "SUPUSD",
+    "altname": "SUPUSD"
+   },
+   "S": {
+    "key": "SUSD",
+    "altname": "SUSD"
+   },
+   "SUSHI": {
+    "key": "SUSHIUSD",
+    "altname": "SUSHIUSD"
+   },
+   "SWARMS": {
+    "key": "SWARMSUSD",
+    "altname": "SWARMSUSD"
+   },
+   "SWEAT": {
+    "key": "SWEATUSD",
+    "altname": "SWEATUSD"
+   },
+   "SWELL": {
+    "key": "SWELLUSD",
+    "altname": "SWELLUSD"
+   },
+   "SXT": {
+    "key": "SXTUSD",
+    "altname": "SXTUSD"
+   },
+   "SYND": {
+    "key": "SYNDUSD",
+    "altname": "SYNDUSD"
+   },
+   "SYN": {
+    "key": "SYNUSD",
+    "altname": "SYNUSD"
+   },
+   "SYRUP": {
+    "key": "SYRUPUSD",
+    "altname": "SYRUPUSD"
+   },
+   "TAC": {
+    "key": "TACUSD",
+    "altname": "TACUSD"
+   },
+   "TAKE": {
+    "key": "TAKEUSD",
+    "altname": "TAKEUSD"
+   },
+   "TAO": {
+    "key": "TAOUSD",
+    "altname": "TAOUSD"
+   },
+   "TBTC": {
+    "key": "TBTCUSD",
+    "altname": "TBTCUSD"
+   },
+   "TCS": {
+    "key": "TCSUSD",
+    "altname": "TCSUSD"
+   },
+   "TEL": {
+    "key": "TELUSD",
+    "altname": "TELUSD"
+   },
+   "TGBP": {
+    "key": "TGBPUSD",
+    "altname": "TGBPUSD"
+   },
+   "THQ": {
+    "key": "THQUSD",
+    "altname": "THQUSD"
+   },
+   "TIA": {
+    "key": "TIAUSD",
+    "altname": "TIAUSD"
+   },
+   "TLM": {
+    "key": "TLMUSD",
+    "altname": "TLMUSD"
+   },
+   "TMX": {
+    "key": "TMXUSD",
+    "altname": "TMXUSD"
+   },
+   "TNSR": {
+    "key": "TNSRUSD",
+    "altname": "TNSRUSD"
+   },
+   "TOKEN": {
+    "key": "TOKENUSD",
+    "altname": "TOKENUSD"
+   },
+   "TON": {
+    "key": "TONUSD",
+    "altname": "TONUSD"
+   },
+   "TOSHI": {
+    "key": "TOSHIUSD",
+    "altname": "TOSHIUSD"
+   },
+   "TRAC": {
+    "key": "TRACUSD",
+    "altname": "TRACUSD"
+   },
+   "TREAD": {
+    "key": "TREADUSD",
+    "altname": "TREADUSD"
+   },
+   "TREE": {
+    "key": "TREEUSD",
+    "altname": "TREEUSD"
+   },
+   "TRIA": {
+    "key": "TRIAUSD",
+    "altname": "TRIAUSD"
+   },
+   "TRUMP": {
+    "key": "TRUMPUSD",
+    "altname": "TRUMPUSD"
+   },
+   "TRUST": {
+    "key": "TRUSTUSD",
+    "altname": "TRUSTUSD"
+   },
+   "TRU": {
+    "key": "TRUUSD",
+    "altname": "TRUUSD"
+   },
+   "TRX": {
+    "key": "TRXUSD",
+    "altname": "TRXUSD"
+   },
+   "TURBO": {
+    "key": "TURBOUSD",
+    "altname": "TURBOUSD"
+   },
+   "T": {
+    "key": "TUSD",
+    "altname": "TUSD"
+   },
+   "TX": {
+    "key": "TXUSD",
+    "altname": "TXUSD"
+   },
+   "UAI": {
+    "key": "UAIUSD",
+    "altname": "UAIUSD"
+   },
+   "UFD": {
+    "key": "UFDUSD",
+    "altname": "UFDUSD"
+   },
+   "UMA": {
+    "key": "UMAUSD",
+    "altname": "UMAUSD"
+   },
+   "UMXM": {
+    "key": "UMXMUSD",
+    "altname": "UMXMUSD"
+   },
+   "UNFI": {
+    "key": "UNFIUSD",
+    "altname": "UNFIUSD"
+   },
+   "UNITAS": {
+    "key": "UNITASUSD",
+    "altname": "UNITASUSD"
+   },
+   "UNI": {
+    "key": "UNIUSD",
+    "altname": "UNIUSD"
+   },
+   "UP": {
+    "key": "UPUSD",
+    "altname": "UPUSD"
+   },
+   "USAT": {
+    "key": "USATUSD",
+    "altname": "USATUSD"
+   },
+   "USD1": {
+    "key": "USD1USD",
+    "altname": "USD1USD"
+   },
+   "USDC": {
+    "key": "USDCUSD",
+    "altname": "USDCUSD"
+   },
+   "USDD": {
+    "key": "USDDUSD",
+    "altname": "USDDUSD"
+   },
+   "USDE": {
+    "key": "USDEUSD",
+    "altname": "USDEUSD"
+   },
+   "USDGO": {
+    "key": "USDGOUSD",
+    "altname": "USDGOUSD"
+   },
+   "USDG": {
+    "key": "USDGUSD",
+    "altname": "USDGUSD"
+   },
+   "USDPT": {
+    "key": "USDPTUSD",
+    "altname": "USDPTUSD"
+   },
+   "USDQ": {
+    "key": "USDQUSD",
+    "altname": "USDQUSD"
+   },
+   "USDSM": {
+    "key": "USDSMUSD",
+    "altname": "USDSMUSD"
+   },
+   "USDSUI": {
+    "key": "USDSUIUSD",
+    "altname": "USDSUIUSD"
+   },
+   "USDS": {
+    "key": "USDSUSD",
+    "altname": "USDSUSD"
+   },
+   "USDT": {
+    "key": "USDTZUSD",
+    "altname": "USDTUSD"
+   },
+   "USDUC": {
+    "key": "USDUCUSD",
+    "altname": "USDUCUSD"
+   },
+   "USELESS": {
+    "key": "USELESSUSD",
+    "altname": "USELESSUSD"
+   },
+   "USTABLES": {
+    "key": "USTABLESUSD",
+    "altname": "USTABLESUSD"
+   },
+   "USUAL": {
+    "key": "USUALUSD",
+    "altname": "USUALUSD"
+   },
+   "US": {
+    "key": "USUSD",
+    "altname": "USUSD"
+   },
+   "VELO": {
+    "key": "VELOUSD",
+    "altname": "VELOUSD"
+   },
+   "VELVET": {
+    "key": "VELVETUSD",
+    "altname": "VELVETUSD"
+   },
+   "VET": {
+    "key": "VETUSD",
+    "altname": "VETUSD"
+   },
+   "VFY": {
+    "key": "VFYUSD",
+    "altname": "VFYUSD"
+   },
+   "VINE": {
+    "key": "VINEUSD",
+    "altname": "VINEUSD"
+   },
+   "VIRTUAL": {
+    "key": "VIRTUALUSD",
+    "altname": "VIRTUALUSD"
+   },
+   "VOOI": {
+    "key": "VOOIUSD",
+    "altname": "VOOIUSD"
+   },
+   "VSN": {
+    "key": "VSNUSD",
+    "altname": "VSNUSD"
+   },
+   "VTHO": {
+    "key": "VTHOUSD",
+    "altname": "VTHOUSD"
+   },
+   "VVV": {
+    "key": "VVVUSD",
+    "altname": "VVVUSD"
+   },
+   "WAL": {
+    "key": "WALUSD",
+    "altname": "WALUSD"
+   },
+   "WARD": {
+    "key": "WARDUSD",
+    "altname": "WARDUSD"
+   },
+   "WAR": {
+    "key": "WARUSD",
+    "altname": "WARUSD"
+   },
+   "WAXL": {
+    "key": "WAXLUSD",
+    "altname": "WAXLUSD"
+   },
+   "WBTC": {
+    "key": "WBTCUSD",
+    "altname": "WBTCUSD"
+   },
+   "WBT": {
+    "key": "WBTUSD",
+    "altname": "WBTUSD"
+   },
+   "WCT": {
+    "key": "WCTUSD",
+    "altname": "WCTUSD"
+   },
+   "WELL": {
+    "key": "WELLUSD",
+    "altname": "WELLUSD"
+   },
+   "WEMIX": {
+    "key": "WEMIXUSD",
+    "altname": "WEMIXUSD"
+   },
+   "WFB": {
+    "key": "WFBUSD",
+    "altname": "WFBUSD"
+   },
+   "WIF": {
+    "key": "WIFUSD",
+    "altname": "WIFUSD"
+   },
+   "WINGS": {
+    "key": "WINGSUSD",
+    "altname": "WINGSUSD"
+   },
+   "WIN": {
+    "key": "WINUSD",
+    "altname": "WINUSD"
+   },
+   "WLD": {
+    "key": "WLDUSD",
+    "altname": "WLDUSD"
+   },
+   "WLFI": {
+    "key": "WLFIUSD",
+    "altname": "WLFIUSD"
+   },
+   "WMTX": {
+    "key": "WMTXUSD",
+    "altname": "WMTXUSD"
+   },
+   "WOJAK": {
+    "key": "WOJAKUSD",
+    "altname": "WOJAKUSD"
+   },
+   "WOO": {
+    "key": "WOOUSD",
+    "altname": "WOOUSD"
+   },
+   "W": {
+    "key": "WUSD",
+    "altname": "WUSD"
+   },
+   "XAN": {
+    "key": "XANUSD",
+    "altname": "XANUSD"
+   },
+   "XAUT": {
+    "key": "XAUTUSD",
+    "altname": "XAUTUSD"
+   },
+   "XCN": {
+    "key": "XCNUSD",
+    "altname": "XCNUSD"
+   },
+   "XDC": {
+    "key": "XDCUSD",
+    "altname": "XDCUSD"
+   },
+   "DOGE": {
+    "key": "XDGUSD",
+    "altname": "XDGUSD"
+   },
+   "XDP": {
+    "key": "XDPUSD",
+    "altname": "XDPUSD"
+   },
+   "ETC": {
+    "key": "XETCZUSD",
+    "altname": "ETCUSD"
+   },
+   "ETH": {
+    "key": "XETHZUSD",
+    "altname": "ETHUSD"
+   },
+   "XION": {
+    "key": "XIONUSD",
+    "altname": "XIONUSD"
+   },
+   "XL1": {
+    "key": "XL1USD",
+    "altname": "XL1USD"
+   },
+   "LTC": {
+    "key": "XLTCZUSD",
+    "altname": "LTCUSD"
+   },
+   "MLN": {
+    "key": "XMLNZUSD",
+    "altname": "MLNUSD"
+   },
+   "XMN": {
+    "key": "XMNUSD",
+    "altname": "XMNUSD"
+   },
+   "XNY": {
+    "key": "XNYUSD",
+    "altname": "XNYUSD"
+   },
+   "XPL": {
+    "key": "XPLUSD",
+    "altname": "XPLUSD"
+   },
+   "XTZ": {
+    "key": "XTZUSD",
+    "altname": "XTZUSD"
+   },
+   "XU3O8": {
+    "key": "XU3O8USD",
+    "altname": "XU3O8USD"
+   },
+   "BTC": {
+    "key": "XXBTZUSD",
+    "altname": "XBTUSD"
+   },
+   "XLM": {
+    "key": "XXLMZUSD",
+    "altname": "XLMUSD"
+   },
+   "XMR": {
+    "key": "XXMRZUSD",
+    "altname": "XMRUSD"
+   },
+   "XRP": {
+    "key": "XXRPZUSD",
+    "altname": "XRPUSD"
+   },
+   "XYO": {
+    "key": "XYOUSD",
+    "altname": "XYOUSD"
+   },
+   "ZEC": {
+    "key": "XZECZUSD",
+    "altname": "ZECUSD"
+   },
+   "YB": {
+    "key": "YBUSD",
+    "altname": "YBUSD"
+   },
+   "YFI": {
+    "key": "YFIUSD",
+    "altname": "YFIUSD"
+   },
+   "YGG": {
+    "key": "YGGUSD",
+    "altname": "YGGUSD"
+   },
+   "YOM": {
+    "key": "YOMUSD",
+    "altname": "YOMUSD"
+   },
+   "ZAMA": {
+    "key": "ZAMAUSD",
+    "altname": "ZAMAUSD"
+   },
+   "ZBCN": {
+    "key": "ZBCNUSD",
+    "altname": "ZBCNUSD"
+   },
+   "ZBT": {
+    "key": "ZBTUSD",
+    "altname": "ZBTUSD"
+   },
+   "ZCHF": {
+    "key": "ZCHFUSD",
+    "altname": "ZCHFUSD"
+   },
+   "ZEREBRO": {
+    "key": "ZEREBROUSD",
+    "altname": "ZEREBROUSD"
+   },
+   "ZETA": {
+    "key": "ZETAUSD",
+    "altname": "ZETAUSD"
+   },
+   "EUR": {
+    "key": "ZEURZUSD",
+    "altname": "EURUSD"
+   },
+   "ZEUS": {
+    "key": "ZEUSUSD",
+    "altname": "ZEUSUSD"
+   },
+   "ZEX": {
+    "key": "ZEXUSD",
+    "altname": "ZEXUSD"
+   },
+   "GBP": {
+    "key": "ZGBPZUSD",
+    "altname": "GBPUSD"
+   },
+   "ZIG": {
+    "key": "ZIGUSD",
+    "altname": "ZIGUSD"
+   },
+   "ZKP": {
+    "key": "ZKPUSD",
+    "altname": "ZKPUSD"
+   },
+   "ZK": {
+    "key": "ZKUSD",
+    "altname": "ZKUSD"
+   },
+   "ZORA": {
+    "key": "ZORAUSD",
+    "altname": "ZORAUSD"
+   },
+   "ZRC": {
+    "key": "ZRCUSD",
+    "altname": "ZRCUSD"
+   },
+   "ZRO": {
+    "key": "ZROUSD",
+    "altname": "ZROUSD"
+   },
+   "ZRX": {
+    "key": "ZRXUSD",
+    "altname": "ZRXUSD"
+   }
+  },
+  "pairsDay": "2026-11-10",
+  "cursors": {
+   "BTC": {
+    "since": "1794269491000000000",
+    "lastId": 115015477
+   },
+   "ETH": {
+    "since": "1794269492000000000",
+    "lastId": 68975539
+   },
+   "SOL": {
+    "since": "1794269493000000000",
+    "lastId": 35395357
+   },
+   "USDC": {
+    "since": "1794269494000000000",
+    "lastId": 24104257
+   },
+   "USDT": {
+    "since": "1794269495000000000",
+    "lastId": 85580499
+   }
+  }
+ },
+ "daily": {
+  "hashes": {
+   "binanceus-fees": "f0e0d61577ba4e6d145c8e3ef2810a1c1c6171d2d537459e8cd5467d2a915496",
+   "binanceus-states": "109eb19464d8836dd5a537e7f0585010ee380bd5944e0d0a7f530fa7cee0ed42",
+   "binanceus-terms": "e8b3b97b7921348b2cdb984fa9c18f17275e6cb747daa4acc606521762aa6ccd",
+   "kalshi-perps-fees-help": "6e613d91115777879632340f2c91a23639fa3ca0fb51a53f6ae78e668df0639c",
+   "kalshi-perps-access-help": "f227e096d805a437a4cb525a32c3c62b09eda34524f842667060bc78edcee019",
+   "kraken-fees": "5e7fb1eee8733cab9540f5c58bab9a968165a1faf176328bf2d066439ca6b3d5",
+   "coinbase-advanced-fees": "b703b8b5a94e5ce5d30bad557b53bbd7a91a111c6c1389f3f3fcd54389747ded"
+  },
+  "day": "2026-11-10"
+ }
+}
