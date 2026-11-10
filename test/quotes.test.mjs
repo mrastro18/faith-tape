@@ -120,17 +120,19 @@ test("stops at a rate limit without retrying, and still closes the session", asy
   const rows = rowsOf(root, "2026-11-10");
   assert.equal(rows.at(-1)[0], "e");
   assert.equal(rows.at(-1)[3], 1);
+  assert.deepEqual(rows.at(-2).filter((x, i) => i !== 1), ["x", 429]);
 });
 
-test("over the daily byte cap only snapshots are written", async () => {
+test("over the session byte budget only snapshots are written, after a marker", async () => {
   const root = setup();
   const T0 = Date.parse("2026-11-10T12:00:00Z");
   const w = world(T0, (t, n) => [["THINUSD", 1 + n / 100, 1, 2, 1]]);
-  const cfg = { ...config, quotes: { ...config.quotes, maxBytesPerDay: 10 } };
+  const cfg = { ...config, quotes: { ...config.quotes, maxBytesPerSession: 10 } };
   const out = await pollQuotes({ root, config: cfg, untilMs: T0 + 30_000, fetchImpl: w.fetchImpl, now: w.now, wait: w.wait, log: () => {} });
   const rows = rowsOf(root, "2026-11-10");
   assert.equal(rows.filter((r) => r[0] === "q").length, 0);
   assert.equal(rows.filter((r) => r[0] === "f").length, 1);
+  assert.equal(rows.filter((r) => r[0] === "c").length, 1);
   assert.equal(rows.at(-1)[4], true);
   assert.equal(out.capped, true);
 });

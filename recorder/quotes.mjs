@@ -7,13 +7,17 @@
 //   ["f", ms, symbol, bid, bidQty, ask, askQty]    a full snapshot of every recorded pair (at the start,
 //                                                  then every `snapshotEveryMs`)
 //   ["q", ms, symbol, bid, bidQty, ask, askQty]    the bid or ask price changed since the last poll
+//   ["x", ms, status]                              a poll failed (status null for a timeout or network error)
+//   ["c", ms]                                      the session's byte budget ran out: snapshots only from here
 //   ["e", ms, polls, failures, capped]             the session ends
-// ms is when the answer arrived. Between an "s" and its "e" every change of best price is here at poll
-// resolution: a price that came and went between two polls is not. A size change alone is not a row.
-// Outside sessions nothing is known. A session that crosses midnight ends and restarts at the boundary.
+// ms is when the answer arrived. Between an "s" and its "e", outside "x" polls and after a "c", every change
+// of best price is here at poll resolution: a price that came and went between two polls is not, and a size
+// change alone is not a row. Outside sessions nothing is known; a killed session has no "e" row. A session
+// that crosses midnight ends and restarts at the boundary. The budget is per session, so a cap never costs
+// the same hours of every day.
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { readFileSync, existsSync, statSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { appendByDay, dayOf, makeFetcher, readJson, sleep } from "./lib.mjs";
 
 const URL_ALL = "https://api.binance.us/api/v3/ticker/bookTicker";
@@ -33,17 +37,16 @@ export async function pollQuotes({ root, config, untilMs, fetchImpl, now = Date.
   const qc = config.quotes ?? {};
   const everyMs = qc.everyMs ?? 5000;
   const snapshotEveryMs = qc.snapshotEveryMs ?? 600_000;
-  const maxBytesPerDay = qc.maxBytesPerDay ?? 60e6;
+  const maxBytesPerSession = qc.maxBytesPerSession ?? 800_000;
   const maxFailures = qc.maxFailuresInRow ?? 6;
   const run = process.env.GITHUB_RUN_ID ?? "local";
   const state = readJson(join(root, "state", "state.json"), {});
   const symbols = new Set(quoteSymbols(state));
   const f = makeFetcher({ fetchImpl, spacingMs: config.spacingMs, now, wait, retries429: 0 });
   const file = (d) => join(root, "data", "binanceus", "quotes", `${d}.ndjson`);
-  const sizeOf = (d) => (existsSync(file(d)) ? statSync(file(d)).size : 0);
 
   let rows = [];
-  let bytes = 0; // bytes buffered for the current day since the last flush
+  let bytes = 0; // bytes written in the current session
   const flush = () => {
     if (rows.length) appendByDay(file, rows, (r) => dayOf(r[1]));
     rows = [];
@@ -68,8 +71,8 @@ export async function pollQuotes({ root, config, untilMs, fetchImpl, now = Date.
   let failures = 0;
   const open = (t) => {
     day = dayOf(t);
-    bytes = sizeOf(day);
-    capped = bytes > maxBytesPerDay;
+    bytes = 0;
+    capped = false;
     push(["s", t, run, everyMs]);
     out.sessions += 1;
     last = new Map();
@@ -87,14 +90,17 @@ export async function pollQuotes({ root, config, untilMs, fetchImpl, now = Date.
   while (now() + everyMs <= untilMs) {
     const d = nextAt - now();
     if (d > 0) await wait(d);
-    nextAt += everyMs;
+    nextAt = Math.max(nextAt + everyMs, now()); // no burst of catch-up polls after a slow one
     let list;
     try {
       ({ json: list } = await f.getJson(URL_ALL));
       inRow = 0;
     } catch (e) {
       out.failures += 1;
-      if (day) failures += 1;
+      if (day) {
+        failures += 1;
+        push(["x", now(), e.status ?? null]);
+      }
       inRow += 1;
       log(`bookTicker failed: ${e.message}`);
       if (e.status === 429 || e.status === 418 || e.status === 403 || inRow >= maxFailures) {
@@ -114,7 +120,10 @@ export async function pollQuotes({ root, config, untilMs, fetchImpl, now = Date.
     lastT = t;
     const full = t - lastSnap >= snapshotEveryMs;
     if (full) lastSnap = t;
-    if (!capped && bytes > maxBytesPerDay) capped = true;
+    if (!capped && bytes > maxBytesPerSession) {
+      capped = true;
+      push(["c", t]);
+    }
     for (const x of list) {
       if (!symbols.has(x.symbol)) continue;
       const q = quote(x);
