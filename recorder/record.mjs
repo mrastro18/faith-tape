@@ -173,11 +173,20 @@ export async function runOnce({ root, config, fetchImpl, now = Date.now, wait = 
     s.candlesUntil ||= {};
     const bases = referenceBases().filter((b) => s.products[b]);
     let bars = 0;
+    // A base whose trades fetch fails is skipped for this run (its cursor stays put, so nothing is lost)
+    // and the rest go on, so one rate-limited product cannot stop the history candles below.
+    const failed = [];
     for (const base of bases) {
       if (deadline.passed()) break;
       const product = s.products[base];
       const fetchedAt = now();
-      const r = await cb.tradesSince(f, product, s.cursors[base], { maxPages: config.reference.coinbaseMaxPages, deadline });
+      let r;
+      try {
+        r = await cb.tradesSince(f, product, s.cursors[base], { maxPages: config.reference.coinbaseMaxPages, deadline });
+      } catch (e) {
+        failed.push({ base, status: e.status ?? null });
+        continue;
+      }
       if (r.gap && r.trades.length) gaps.push({ venue: "coinbase", key: product, afterId: r.gapFrom, beforeId: r.gapTo, at: fetchedAt });
       const cutoffSec = Math.floor((fetchedAt - SETTLE_MS) / 1000);
       const final = r.trades.filter((t) => Math.floor(t.t / 1000) < cutoffSec);
@@ -198,13 +207,20 @@ export async function runOnce({ root, config, fetchImpl, now = Date.now, wait = 
       let from = s.candlesUntil[base] ?? startMs;
       while (from < until && !deadline.passed()) {
         const to = Math.min(from + chunk, until);
-        const rows = await cb.candles1m(f, s.products[base], from, to);
+        let rows;
+        try {
+          rows = await cb.candles1m(f, s.products[base], from, to);
+        } catch (e) {
+          failed.push({ base, status: e.status ?? null, candles: true });
+          break;
+        }
         candles += appendByDay((d) => D("coinbase", "candles1m", d, `${base}.ndjson`), rows, (row) => dayOf(row[0]));
         from = to;
         s.candlesUntil[base] = from;
       }
     }
-    return { bases: bases.length, historyBases: hist.length, bars, candles };
+    const behind = hist.filter((b) => (s.candlesUntil[b] ?? startMs) < Math.floor(s.recordStart[b] / 60000) * 60000).length;
+    return { bases: bases.length, historyBases: hist.length, historyBehind: behind, bars, candles, failed: failed.slice(0, 20), failedCount: failed.length };
   }
 
   async function kraken() {

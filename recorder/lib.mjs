@@ -82,11 +82,22 @@ export const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
  * A polite fetcher: fixed spacing between calls per host, a timeout, JSON parsing, and a record of every
  * non-200 status so the health file shows exactly what a venue answered.
  */
-export function makeFetcher({ fetchImpl = fetch, spacingMs = {}, timeoutMs = 15000, now = Date.now, wait = sleep } = {}) {
+export function makeFetcher({ fetchImpl = fetch, spacingMs = {}, timeoutMs = 15000, now = Date.now, wait = sleep, retries429 = 3 } = {}) {
   const last = new Map();
   const statuses = [];
   let calls = 0;
-  async function getJson(url, { headers } = {}) {
+  /** Like getOnce, but a 429 (rate limited) waits and tries again, up to `retries429` times: 1 s, 2 s, 4 s. */
+  async function getJson(url, opts = {}) {
+    for (let attempt = 0; ; attempt += 1) {
+      try {
+        return await getOnce(url, opts);
+      } catch (e) {
+        if (e.status !== 429 || attempt >= retries429) throw e;
+        await wait(1000 * 2 ** attempt);
+      }
+    }
+  }
+  async function getOnce(url, { headers } = {}) {
     const host = new URL(url).host;
     const gap = spacingMs[host] ?? 120;
     const prev = last.get(host) ?? 0;

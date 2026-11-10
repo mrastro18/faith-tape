@@ -17,6 +17,7 @@ function makeWorld() {
     kr: { THINUSD: [], XBTUSD: [] }, // [price, vol, timeSec, side, type, misc, id]
     calls: [],
     failHosts: new Set(),
+    limited: new Map(), // path -> number of 429 answers still to give (Infinity: always)
   };
   w.addBus = (sym, t, p = 1, q = 1) => w.bus[sym].push({ a: w.bus[sym].length, T: t, p: String(p), q: String(q), m: false });
   w.addCb = (prod, t, p = 1, q = 1) => w.cb[prod].push({ trade_id: w.cb[prod].length + 1, time: new Date(t).toISOString(), price: String(p), size: String(q), side: "buy" });
@@ -33,6 +34,11 @@ function fakeFetch(w) {
     const u = new URL(url);
     w.calls.push(u.host + u.pathname);
     if (w.failHosts.has(u.host)) return res(503, "down");
+    const left = w.limited.get(u.pathname) ?? 0;
+    if (left > 0) {
+      w.limited.set(u.pathname, left - 1);
+      return res(429, "slow down");
+    }
     const q = Object.fromEntries(u.searchParams);
     if (u.host === "api.binance.us") {
       if (u.pathname === "/api/v3/exchangeInfo")
@@ -178,6 +184,36 @@ test("Coinbase candles backfill history from the start date up to where 1 s bars
   const st = JSON.parse(readFileSync(join(root, "state", "state.json"), "utf8"));
   assert.ok(st.coinbase.candlesUntil.BTC <= st.coinbase.recordStart.BTC);
   assert.equal(rows[rows.length - 1], st.coinbase.candlesUntil.BTC - 60000);
+});
+
+test("a rate-limited answer is retried after a wait and the run carries on", async () => {
+  const w = makeWorld();
+  const root = mkdtempSync(join(tmpdir(), "tape-"));
+  for (let i = 0; i < 50; i++) w.addCb("BTC-USD", T0 - 20_000 + i * 200, 100, 1);
+  w.limited.set("/products/BTC-USD/trades", 2);
+  const h = await run(w, root);
+  assert.equal(h.tasks.coinbase.ok, true);
+  assert.equal(h.tasks.coinbase.failedCount, 0);
+  assert.ok(readNd(root, "coinbase", "bars1s").some(([f]) => f === "BTC.ndjson"), "bars written after the retries");
+  assert.equal(h.http.filter((x) => x.status === 429).length, 2);
+});
+
+test("a product that stays rate limited is skipped, and the other bases and the history candles still run", async () => {
+  const w = makeWorld();
+  w.cb["ETH-USD"] = [];
+  const root = mkdtempSync(join(tmpdir(), "tape-"));
+  w.addCb("ETH-USD", T0 - 10_000, 100, 1);
+  w.addCb("BTC-USD", T0 - 10_000, 100, 1);
+  w.limited.set("/products/BTC-USD/trades", Infinity);
+  const cfg = { ...config, reference: { ...config.reference, always: ["BTC", "ETH", "USDT"] } };
+  const h = await run(w, root, cfg);
+  assert.equal(h.tasks.coinbase.ok, true);
+  assert.deepEqual(h.tasks.coinbase.failed.map((x) => [x.base, x.status]), [["BTC", 429]]);
+  const st = JSON.parse(readFileSync(join(root, "state", "state.json"), "utf8"));
+  assert.equal(st.coinbase.cursors.BTC, undefined, "the skipped base keeps no cursor, so its trades are fetched next run");
+  const eth = readNd(root, "coinbase", "candles1m").filter(([f]) => f === "ETH.ndjson");
+  assert.ok(eth.length > 0, "history candles for the other base were written");
+  assert.equal(h.tasks.coinbase.historyBehind, 0);
 });
 
 test("Kraken bars resume with overlap but never duplicate a trade", async () => {
