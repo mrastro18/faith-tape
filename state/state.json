@@ -1831,9 +1831,9 @@
     "lastMs": 1794260274934
    },
    "1000MOGUSDT": {
-    "id": 12921,
-    "caughtUp": false,
-    "lastMs": 1788056301384
+    "id": 13167,
+    "caughtUp": true,
+    "lastMs": 1794239168485
    },
    "1000REKTUSDT": {
     "id": 7118,
@@ -1846,9 +1846,9 @@
     "lastMs": 1794261221498
    },
    "1MWOJAKUSDT": {
-    "id": 2999,
-    "caughtUp": false,
-    "lastMs": 1784667458311
+    "id": 4100,
+    "caughtUp": true,
+    "lastMs": 1794179293574
    },
    "AAVEUSD": {
     "id": 80053,
@@ -1856,9 +1856,9 @@
     "lastMs": 1794254398932
    },
    "AAVEUSDT": {
-    "id": 907329,
+    "id": 910329,
     "caughtUp": false,
-    "lastMs": 1784621794827
+    "lastMs": 1789479477394
    },
    "ACHUSDT": {
     "id": 281627,
@@ -1866,9 +1866,9 @@
     "lastMs": 1794238507324
    },
    "ADAUSD": {
-    "id": 787894,
+    "id": 790894,
     "caughtUp": false,
-    "lastMs": 1777911206968
+    "lastMs": 1778802662113
    },
    "ADAUSDC": {
     "id": 78533,
@@ -1876,9 +1876,9 @@
     "lastMs": 1794253110528
    },
    "ADAUSDT": {
-    "id": 9108630,
+    "id": 9111630,
     "caughtUp": false,
-    "lastMs": 1778024108704
+    "lastMs": 1778717913809
    },
    "ADXUSDT": {
     "id": 12452,
@@ -1891,14 +1891,14 @@
     "lastMs": 1793910326005
    },
    "ALGOUSD": {
-    "id": 219170,
-    "caughtUp": false,
-    "lastMs": 1791207058973
+    "id": 219673,
+    "caughtUp": true,
+    "lastMs": 1794174919283
    },
    "ALGOUSDT": {
-    "id": 541869,
+    "id": 544869,
     "caughtUp": false,
-    "lastMs": 1779311503865
+    "lastMs": 1781137572803
    },
    "ALICEUSDT": {
     "id": 22152,
@@ -1921,9 +1921,9 @@
     "lastMs": 1794099679542
    },
    "APEUSDT": {
-    "id": 2038589,
+    "id": 2041589,
     "caughtUp": false,
-    "lastMs": 1780447659757
+    "lastMs": 1785939185862
    },
    "API3USDT": {
     "id": 103559,
@@ -1931,19 +1931,19 @@
     "lastMs": 1793228816051
    },
    "APTUSDT": {
-    "id": 161260,
-    "caughtUp": false,
-    "lastMs": 1792349823764
+    "id": 161546,
+    "caughtUp": true,
+    "lastMs": 1794242529772
    },
    "ARBUSDT": {
-    "id": 122735,
+    "id": 125735,
     "caughtUp": false,
-    "lastMs": 1788461599805
+    "lastMs": 1791342263061
    },
    "ASTERUSDT": {
-    "id": 32921,
+    "id": 35921,
     "caughtUp": false,
-    "lastMs": 1778906192359
+    "lastMs": 1780410231291
    },
    "ASTRUSDT": {
     "id": 66281,
@@ -1951,14 +1951,14 @@
     "lastMs": 1794013357114
    },
    "ATOMUSD": {
-    "id": 392118,
-    "caughtUp": false,
-    "lastMs": 1784199935787
+    "id": 394347,
+    "caughtUp": true,
+    "lastMs": 1794227440247
    },
    "ATOMUSDT": {
-    "id": 4171032,
+    "id": 4174032,
     "caughtUp": false,
-    "lastMs": 1778977413302
+    "lastMs": 1780428671956
    },
    "AUDIOUSDT": {
     "id": 164816,
@@ -1966,24 +1966,24 @@
     "lastMs": 1794260662920
    },
    "AUSDT": {
-    "id": 6915,
-    "caughtUp": false,
-    "lastMs": 1783597902659
+    "id": 8563,
+    "caughtUp": true,
+    "lastMs": 1794243880252
    },
    "AVAXUSD": {
-    "id": 294583,
+    "id": 297583,
     "caughtUp": false,
-    "lastMs": 1779958560824
+    "lastMs": 1782308984800
    },
    "AVAXUSDT": {
-    "id": 2429751,
+    "id": 2432751,
     "caughtUp": false,
-    "lastMs": 1778554112417
+    "lastMs": 1779806309408
    },
    "AVNTUSDT": {
-    "id": 12366,
+    "id": 15366,
     "caughtUp": false,
-    "lastMs": 1782341164412
+    "lastMs": 1786404717373
    },
    "AXLUSDT": {
     "id": 32921,
@@ -2001,24 +2001,24 @@
     "lastMs": 1794267978452
    },
    "BATUSDT": {
-    "id": 1254805,
+    "id": 1257805,
     "caughtUp": false,
-    "lastMs": 1782520509758
+    "lastMs": 1789817050240
    },
    "BCHUSD": {
-    "id": 110663,
+    "id": 113663,
     "caughtUp": false,
-    "lastMs": 1788678801178
+    "lastMs": 1793949429313
    },
    "BCHUSDT": {
-    "id": 1930898,
+    "id": 1933898,
     "caughtUp": false,
-    "lastMs": 1779236637014
+    "lastMs": 1780623807073
    },
    "BERTUSDT": {
-    "id": 820,
+    "id": 825,
     "caughtUp": true,
-    "lastMs": 1794269080417
+    "lastMs": 1794270188534
    },
    "BICOUSDT": {
     "id": 69912,
@@ -2036,14 +2036,14 @@
     "lastMs": 1793710729475
    },
    "BNBUSD": {
-    "id": 942898,
+    "id": 945898,
     "caughtUp": false,
-    "lastMs": 1777305826100
+    "lastMs": 1778130331999
    },
    "BNBUSDT": {
-    "id": 6165929,
+    "id": 6168929,
     "caughtUp": false,
-    "lastMs": 1777683006093
+    "lastMs": 1778246842625
    },
    "BNTUSDT": {
     "id": 25165,
@@ -2051,19 +2051,19 @@
     "lastMs": 1793847846576
    },
    "BONKUSD": {
-    "id": 35065,
+    "id": 38065,
     "caughtUp": false,
-    "lastMs": 1783500121789
+    "lastMs": 1790875028252
    },
    "BONKUSDT": {
-    "id": 216142,
+    "id": 219142,
     "caughtUp": false,
-    "lastMs": 1779981364396
+    "lastMs": 1783360775441
    },
    "BOSONUSDT": {
-    "id": 113537,
+    "id": 116537,
     "caughtUp": false,
-    "lastMs": 1781299898543
+    "lastMs": 1781807976898
    },
    "BRETTUSDT": {
     "id": 3347,
@@ -2076,9 +2076,9 @@
     "lastMs": 1776866987411
    },
    "BTCUSDC": {
-    "id": 10799734,
+    "id": 10802734,
     "caughtUp": false,
-    "lastMs": 1776879969392
+    "lastMs": 1777007526436
    },
    "BTCUSDT": {
     "id": 29632126,
@@ -2096,9 +2096,9 @@
     "lastMs": 1794250907092
    },
    "CAKEUSDT": {
-    "id": 6082,
-    "caughtUp": false,
-    "lastMs": 1787360200620
+    "id": 7720,
+    "caughtUp": true,
+    "lastMs": 1794254496136
    },
    "CELOUSDT": {
     "id": 68829,
@@ -2116,9 +2116,9 @@
     "lastMs": 1794266020671
    },
    "COMPUSDT": {
-    "id": 956880,
+    "id": 959880,
     "caughtUp": false,
-    "lastMs": 1784506603292
+    "lastMs": 1792283403940
    },
    "COTIUSDT": {
     "id": 108651,
@@ -2126,14 +2126,14 @@
     "lastMs": 1794071777788
    },
    "CRVUSD": {
-    "id": 86611,
-    "caughtUp": false,
-    "lastMs": 1792925831962
+    "id": 86828,
+    "caughtUp": true,
+    "lastMs": 1793915314039
    },
    "CRVUSDT": {
-    "id": 749661,
+    "id": 752661,
     "caughtUp": false,
-    "lastMs": 1783903182691
+    "lastMs": 1792417826585
    },
    "CTSIUSDT": {
     "id": 130029,
@@ -2141,19 +2141,19 @@
     "lastMs": 1793704574392
    },
    "DASHUSDT": {
-    "id": 137584,
+    "id": 140584,
     "caughtUp": false,
-    "lastMs": 1778074230779
+    "lastMs": 1778449102907
    },
    "DGBUSD": {
-    "id": 46140,
-    "caughtUp": false,
-    "lastMs": 1792119854795
+    "id": 46606,
+    "caughtUp": true,
+    "lastMs": 1794159959646
    },
    "DGBUSDT": {
-    "id": 163349,
+    "id": 166349,
     "caughtUp": false,
-    "lastMs": 1785330799461
+    "lastMs": 1792374229437
    },
    "DIAUSDT": {
     "id": 27635,
@@ -2161,14 +2161,14 @@
     "lastMs": 1794021527798
    },
    "DOGEUSD": {
-    "id": 504605,
+    "id": 507605,
     "caughtUp": false,
-    "lastMs": 1778071642036
+    "lastMs": 1778675072225
    },
    "DOGEUSDT": {
-    "id": 12585325,
+    "id": 12588325,
     "caughtUp": false,
-    "lastMs": 1777486141772
+    "lastMs": 1778002740519
    },
    "DOODUSDT": {
     "id": 10513,
@@ -2176,24 +2176,24 @@
     "lastMs": 1794232817732
    },
    "DOTUSD": {
-    "id": 174633,
+    "id": 177633,
     "caughtUp": false,
-    "lastMs": 1782247066177
+    "lastMs": 1789076890970
    },
    "DOTUSDT": {
-    "id": 875965,
+    "id": 878965,
     "caughtUp": false,
-    "lastMs": 1779386131705
+    "lastMs": 1781178750153
    },
    "DUSKUSDT": {
-    "id": 53432,
+    "id": 56432,
     "caughtUp": false,
-    "lastMs": 1777631479310
+    "lastMs": 1778220979870
    },
    "EGLDUSDT": {
-    "id": 2184142,
-    "caughtUp": false,
-    "lastMs": 1789961515236
+    "id": 2186989,
+    "caughtUp": true,
+    "lastMs": 1794262494209
    },
    "EIGENUSDT": {
     "id": 3816,
@@ -2201,9 +2201,9 @@
     "lastMs": 1794174956510
    },
    "ENAUSDT": {
-    "id": 19925,
-    "caughtUp": false,
-    "lastMs": 1791106172629
+    "id": 21865,
+    "caughtUp": true,
+    "lastMs": 1794265559308
    },
    "ENJUSDT": {
     "id": 225222,
@@ -2226,9 +2226,9 @@
     "lastMs": 1794172832778
    },
    "ETCUSDT": {
-    "id": 2343215,
+    "id": 2346215,
     "caughtUp": false,
-    "lastMs": 1781569995414
+    "lastMs": 1787444562509
    },
    "ETHUSD": {
     "id": 8727592,
@@ -2236,9 +2236,9 @@
     "lastMs": 1777345352249
    },
    "ETHUSDC": {
-    "id": 1011102,
+    "id": 1014102,
     "caughtUp": false,
-    "lastMs": 1780683834082
+    "lastMs": 1782395888675
    },
    "ETHUSDT": {
     "id": 17663562,
@@ -2251,19 +2251,19 @@
     "lastMs": 1794204817088
    },
    "FETUSD": {
-    "id": 305148,
-    "caughtUp": false,
-    "lastMs": 1793154275753
+    "id": 305457,
+    "caughtUp": true,
+    "lastMs": 1794258669411
    },
    "FETUSDT": {
-    "id": 1183165,
+    "id": 1186165,
     "caughtUp": false,
-    "lastMs": 1779480011928
+    "lastMs": 1780195883606
    },
    "FILUSDT": {
-    "id": 533806,
+    "id": 536806,
     "caughtUp": false,
-    "lastMs": 1782702569132
+    "lastMs": 1790144247022
    },
    "FLOKIUSD": {
     "id": 39565,
@@ -2271,9 +2271,9 @@
     "lastMs": 1794174785899
    },
    "FLOKIUSDT": {
-    "id": 766497,
+    "id": 769497,
     "caughtUp": false,
-    "lastMs": 1780068962320
+    "lastMs": 1786734220398
    },
    "FLOWUSDT": {
     "id": 74971,
@@ -2311,9 +2311,9 @@
     "lastMs": 1794214073564
    },
    "GIGAUSDT": {
-    "id": 10954,
-    "caughtUp": false,
-    "lastMs": 1794098767417
+    "id": 11002,
+    "caughtUp": true,
+    "lastMs": 1794268862994
    },
    "GLMUSDT": {
     "id": 26302,
@@ -2331,9 +2331,9 @@
     "lastMs": 1794009698449
    },
    "GRTUSDT": {
-    "id": 249202,
+    "id": 252202,
     "caughtUp": false,
-    "lastMs": 1781608277195
+    "lastMs": 1787333244072
    },
    "GTCUSDT": {
     "id": 38243,
@@ -2346,34 +2346,34 @@
     "lastMs": 1794268031984
    },
    "HBARUSD": {
-    "id": 306358,
+    "id": 309358,
     "caughtUp": false,
-    "lastMs": 1782506191225
+    "lastMs": 1782925725232
    },
    "HBARUSDT": {
-    "id": 547194,
+    "id": 550194,
     "caughtUp": false,
-    "lastMs": 1778778992730
+    "lastMs": 1780038016250
    },
    "HYPEUSD": {
-    "id": 75610,
+    "id": 78610,
     "caughtUp": false,
-    "lastMs": 1777957882589
+    "lastMs": 1778767665039
    },
    "HYPEUSDT": {
-    "id": 103210,
+    "id": 106210,
     "caughtUp": false,
-    "lastMs": 1778066350712
+    "lastMs": 1778947511133
    },
    "ICPUSD": {
-    "id": 88824,
+    "id": 91824,
     "caughtUp": false,
-    "lastMs": 1782857059118
+    "lastMs": 1791490323532
    },
    "ICPUSDT": {
-    "id": 437717,
+    "id": 440717,
     "caughtUp": false,
-    "lastMs": 1779550797946
+    "lastMs": 1781790035023
    },
    "ILVUSDT": {
     "id": 51054,
@@ -2386,9 +2386,9 @@
     "lastMs": 1794194429349
    },
    "INJUSDT": {
-    "id": 2999,
+    "id": 5999,
     "caughtUp": false,
-    "lastMs": 1780508801580
+    "lastMs": 1782681918218
    },
    "IOSTUSDT": {
     "id": 15830,
@@ -2396,14 +2396,14 @@
     "lastMs": 1794266786988
    },
    "IOTAUSD": {
-    "id": 83152,
+    "id": 86152,
     "caughtUp": false,
-    "lastMs": 1783338723223
+    "lastMs": 1791632883526
    },
    "IOTAUSDT": {
-    "id": 321525,
+    "id": 324525,
     "caughtUp": false,
-    "lastMs": 1782602355437
+    "lastMs": 1785982214202
    },
    "IOTXUSDT": {
     "id": 29883,
@@ -2421,9 +2421,9 @@
     "lastMs": 1794239102449
    },
    "JUPUSDT": {
-    "id": 10721,
-    "caughtUp": false,
-    "lastMs": 1791523140181
+    "id": 11493,
+    "caughtUp": true,
+    "lastMs": 1794239042819
    },
    "KAITOUSDT": {
     "id": 4756,
@@ -2436,11 +2436,4268 @@
     "lastMs": 1794205929593
    },
    "KNCUSDT": {
-    "id": 811530,
+    "id": 812083,
+    "caughtUp": true,
+    "lastMs": 1794193455097
+   },
+   "KSMUSDT": {
+    "id": 65067,
+    "caughtUp": true,
+    "lastMs": 1794265796935
+   },
+   "LAYERUSDT": {
+    "id": 1001,
+    "caughtUp": true,
+    "lastMs": 1793052902622
+   },
+   "LAZIOUSDT": {
+    "id": 87804,
+    "caughtUp": true,
+    "lastMs": 1794026050644
+   },
+   "LDOUSDT": {
+    "id": 186098,
+    "caughtUp": true,
+    "lastMs": 1794253990367
+   },
+   "LINKUSD": {
+    "id": 406852,
+    "caughtUp": false,
+    "lastMs": 1779128883457
+   },
+   "LINKUSDT": {
+    "id": 1260214,
+    "caughtUp": false,
+    "lastMs": 1778174980802
+   },
+   "LMWRUSDT": {
+    "id": 1623,
+    "caughtUp": true,
+    "lastMs": 1794268027238
+   },
+   "LOFIUSDT": {
+    "id": 1919,
+    "caughtUp": true,
+    "lastMs": 1794210556715
+   },
+   "LPTUSD": {
+    "id": 55653,
+    "caughtUp": false,
+    "lastMs": 1789741306215
+   },
+   "LPTUSDT": {
+    "id": 257097,
+    "caughtUp": false,
+    "lastMs": 1787019620916
+   },
+   "LSKUSDT": {
+    "id": 28398,
+    "caughtUp": true,
+    "lastMs": 1794171701641
+   },
+   "LTCUSD": {
+    "id": 478317,
+    "caughtUp": false,
+    "lastMs": 1787241316662
+   },
+   "LTCUSDT": {
+    "id": 4145287,
+    "caughtUp": false,
+    "lastMs": 1778053453511
+   },
+   "MAGICUSDT": {
+    "id": 8025,
+    "caughtUp": true,
+    "lastMs": 1794093329606
+   },
+   "MANAUSDT": {
+    "id": 426446,
+    "caughtUp": true,
+    "lastMs": 1794260497248
+   },
+   "MASKUSDT": {
+    "id": 98642,
+    "caughtUp": true,
+    "lastMs": 1793827505977
+   },
+   "METISUSDT": {
+    "id": 1929,
+    "caughtUp": true,
+    "lastMs": 1794250886588
+   },
+   "MEUSD": {
+    "id": 2414,
+    "caughtUp": true,
+    "lastMs": 1794012431763
+   },
+   "MEUSDT": {
+    "id": 2895,
+    "caughtUp": true,
+    "lastMs": 1794175509618
+   },
+   "MEWUSDT": {
+    "id": 944,
+    "caughtUp": true,
+    "lastMs": 1793822767468
+   },
+   "MOODENGUSDT": {
+    "id": 2702,
+    "caughtUp": true,
+    "lastMs": 1793367488279
+   },
+   "NEARUSD": {
+    "id": 150214,
+    "caughtUp": false,
+    "lastMs": 1780112460747
+   },
+   "NEARUSDT": {
+    "id": 530139,
+    "caughtUp": false,
+    "lastMs": 1779461260451
+   },
+   "NEIROUSDT": {
+    "id": 9045,
+    "caughtUp": true,
+    "lastMs": 1794264650803
+   },
+   "NEOUSDT": {
+    "id": 1199878,
+    "caughtUp": false,
+    "lastMs": 1782434019092
+   },
+   "NMRUSDT": {
+    "id": 188655,
+    "caughtUp": true,
+    "lastMs": 1794132908664
+   },
+   "NOBODYUSDT": {
+    "id": 33600,
+    "caughtUp": false,
+    "lastMs": 1780004815774
+   },
+   "NPCUSDT": {
+    "id": 10984,
+    "caughtUp": false,
+    "lastMs": 1778456724422
+   },
+   "OCEANUSDT": {
+    "id": 145430,
+    "caughtUp": true,
+    "lastMs": 1793975969844
+   },
+   "OGNUSDT": {
+    "id": 226800,
+    "caughtUp": true,
+    "lastMs": 1794265684097
+   },
+   "ONDOUSDT": {
+    "id": 13960,
+    "caughtUp": false,
+    "lastMs": 1780442791775
+   },
+   "ONEUSD": {
+    "id": 138707,
+    "caughtUp": false,
+    "lastMs": 1788111462772
+   },
+   "ONEUSDT": {
+    "id": 5193195,
+    "caughtUp": false,
+    "lastMs": 1782998718342
+   },
+   "ONGUSDT": {
+    "id": 13311,
+    "caughtUp": true,
+    "lastMs": 1794212277731
+   },
+   "ONTUSDT": {
+    "id": 931610,
+    "caughtUp": false,
+    "lastMs": 1790135002758
+   },
+   "OPUSD": {
+    "id": 212034,
+    "caughtUp": true,
+    "lastMs": 1794174784450
+   },
+   "OPUSDT": {
+    "id": 497023,
+    "caughtUp": false,
+    "lastMs": 1783357514456
+   },
+   "ORBSUSDT": {
+    "id": 79930,
+    "caughtUp": true,
+    "lastMs": 1793936654905
+   },
+   "ORCAUSDT": {
+    "id": 1295,
+    "caughtUp": true,
+    "lastMs": 1794242778312
+   },
+   "PAXGUSDT": {
+    "id": 134971,
+    "caughtUp": false,
+    "lastMs": 1786197286229
+   },
+   "PENGUUSDT": {
+    "id": 71948,
+    "caughtUp": false,
+    "lastMs": 1779082870385
+   },
+   "PEPEUSD": {
+    "id": 49990,
+    "caughtUp": false,
+    "lastMs": 1780413351194
+   },
+   "PEPEUSDT": {
+    "id": 202152,
+    "caughtUp": false,
+    "lastMs": 1779891661474
+   },
+   "PNUTUSDT": {
+    "id": 12177,
+    "caughtUp": true,
+    "lastMs": 1794010806660
+   },
+   "POLUSD": {
+    "id": 14671,
+    "caughtUp": false,
+    "lastMs": 1787795075326
+   },
+   "POLUSDT": {
+    "id": 50496,
+    "caughtUp": false,
+    "lastMs": 1779811123256
+   },
+   "POLYXUSDT": {
+    "id": 69606,
+    "caughtUp": true,
+    "lastMs": 1793748949851
+   },
+   "POPCATUSDT": {
+    "id": 2963,
+    "caughtUp": true,
+    "lastMs": 1794260612842
+   },
+   "PORTOUSDT": {
+    "id": 41798,
+    "caughtUp": true,
+    "lastMs": 1794107059148
+   },
+   "PROMUSDT": {
+    "id": 14657,
+    "caughtUp": true,
+    "lastMs": 1794262797015
+   },
+   "PUMPUSDT": {
+    "id": 22207,
+    "caughtUp": false,
+    "lastMs": 1781161414943
+   },
+   "PURRUSDT": {
+    "id": 4456,
+    "caughtUp": true,
+    "lastMs": 1794254461442
+   },
+   "QNTUSDT": {
+    "id": 86907,
+    "caughtUp": false,
+    "lastMs": 1790535991703
+   },
+   "QTUMUSDT": {
+    "id": 832940,
+    "caughtUp": true,
+    "lastMs": 1794270317956
+   },
+   "RADUSDT": {
+    "id": 60466,
+    "caughtUp": true,
+    "lastMs": 1794202375899
+   },
+   "RAREUSDT": {
+    "id": 54297,
+    "caughtUp": true,
+    "lastMs": 1794267963975
+   },
+   "REEFUSDT": {
+    "id": 71918,
+    "caughtUp": true,
+    "lastMs": 1794236628710
+   },
+   "RENDERUSD": {
+    "id": 16120,
+    "caughtUp": false,
+    "lastMs": 1786334306414
+   },
+   "RENDERUSDT": {
+    "id": 152887,
+    "caughtUp": false,
+    "lastMs": 1779806374382
+   },
+   "REQUSDT": {
+    "id": 92844,
+    "caughtUp": true,
+    "lastMs": 1794228505760
+   },
+   "RHEAUSDT": {
+    "id": 2779,
+    "caughtUp": true,
+    "lastMs": 1794035019632
+   },
+   "RLCUSDT": {
+    "id": 49412,
+    "caughtUp": true,
+    "lastMs": 1794179729412
+   },
+   "ROSEUSDT": {
+    "id": 395872,
+    "caughtUp": true,
+    "lastMs": 1794260589205
+   },
+   "RVNUSD": {
+    "id": 62087,
+    "caughtUp": true,
+    "lastMs": 1794211379770
+   },
+   "RVNUSDT": {
+    "id": 212192,
+    "caughtUp": false,
+    "lastMs": 1783301012954
+   },
+   "SANDUSD": {
+    "id": 51029,
+    "caughtUp": true,
+    "lastMs": 1794174891033
+   },
+   "SANDUSDT": {
+    "id": 149478,
+    "caughtUp": true,
+    "lastMs": 1794174945327
+   },
+   "SANTOSUSDT": {
+    "id": 183843,
+    "caughtUp": true,
+    "lastMs": 1793319807402
+   },
+   "SEIUSDT": {
+    "id": 5437,
+    "caughtUp": false,
+    "lastMs": 1786323603857
+   },
+   "SHIBUSD": {
+    "id": 211348,
+    "caughtUp": false,
+    "lastMs": 1785063364738
+   },
+   "SHIBUSDT": {
+    "id": 8357951,
+    "caughtUp": false,
+    "lastMs": 1780537997757
+   },
+   "SKLUSDT": {
+    "id": 52863,
+    "caughtUp": true,
+    "lastMs": 1794174949591
+   },
+   "SKYUSDT": {
+    "id": 6706,
+    "caughtUp": false,
+    "lastMs": 1792568045751
+   },
+   "SLPUSDT": {
+    "id": 105842,
     "caughtUp": false,
     "lastMs": null
    }
-  }
+  },
+  "universe": {
+   "0GUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 105
+   },
+   "1000MOGUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1
+   },
+   "1000REKTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4
+   },
+   "1INCHUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1
+   },
+   "1MWOJAKUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "AAVEUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 7
+   },
+   "AAVEUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 36
+   },
+   "ACHUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 9
+   },
+   "ADAUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1378
+   },
+   "ADAUSDC": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 5
+   },
+   "ADAUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1056
+   },
+   "ADXUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "AIXBTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "ALGOUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "ALGOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 98
+   },
+   "ALICEUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 2
+   },
+   "ALPINEUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "ANIMEUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "ANKRUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "APEUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 6
+   },
+   "API3USDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "APTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 7
+   },
+   "ARBUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 90
+   },
+   "ASTERUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 12
+   },
+   "ASTRUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "ATOMUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 22
+   },
+   "ATOMUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 54
+   },
+   "AUDIOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1
+   },
+   "AUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 22
+   },
+   "AVAXUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 406
+   },
+   "AVAXUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 735
+   },
+   "AVNTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 68
+   },
+   "AXLUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 22
+   },
+   "AXSUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 30
+   },
+   "BANDUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 3
+   },
+   "BATUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 49
+   },
+   "BCHUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 97
+   },
+   "BCHUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1335
+   },
+   "BERTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 191
+   },
+   "BICOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "BLURUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "BMTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "BNBUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 290
+   },
+   "BNBUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 269
+   },
+   "BNTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "BONKUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 2
+   },
+   "BONKUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 3
+   },
+   "BOSONUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 14
+   },
+   "BRETTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "BTCUSD": {
+    "in": false,
+    "day": "2026-11-10",
+    "count": 12525,
+    "why": "busy when first seen"
+   },
+   "BTCUSDC": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 751
+   },
+   "BTCUSDT": {
+    "in": false,
+    "day": "2026-11-10",
+    "count": 17291,
+    "why": "busy when first seen"
+   },
+   "BTRSTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "BTTCUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 9
+   },
+   "CAKEUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1
+   },
+   "CELOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "CELRUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4
+   },
+   "CHZUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 6
+   },
+   "COMPUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 9
+   },
+   "COTIUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "CRVUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "CRVUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4
+   },
+   "CTSIUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "DASHUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 182
+   },
+   "DGBUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "DGBUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 11
+   },
+   "DIAUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "DOGEUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 179
+   },
+   "DOGEUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 745
+   },
+   "DOODUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4
+   },
+   "DOTUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 12
+   },
+   "DOTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 15
+   },
+   "DUSKUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 218
+   },
+   "EGLDUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 5
+   },
+   "EIGENUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "ENAUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 9
+   },
+   "ENJUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 3
+   },
+   "ENSUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "ENSUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "ETCUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "ETCUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 25
+   },
+   "ETHUSD": {
+    "in": false,
+    "day": "2026-11-10",
+    "count": 11906,
+    "why": "busy when first seen"
+   },
+   "ETHUSDC": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 162
+   },
+   "ETHUSDT": {
+    "in": false,
+    "day": "2026-11-10",
+    "count": 12382,
+    "why": "busy when first seen"
+   },
+   "FARTCOINUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1
+   },
+   "FETUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 26
+   },
+   "FETUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 49
+   },
+   "FILUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 16
+   },
+   "FLOKIUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "FLOKIUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 10
+   },
+   "FLOWUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4
+   },
+   "FLUXUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "FORTHUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1
+   },
+   "FORTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 76
+   },
+   "GALAUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "GALAUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 5
+   },
+   "GASUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1
+   },
+   "GIGAUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 34
+   },
+   "GLMUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 5
+   },
+   "GRAMUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 10
+   },
+   "GRTUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "GRTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 13
+   },
+   "GTCUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 41
+   },
+   "GUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 6
+   },
+   "HBARUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4386
+   },
+   "HBARUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 111
+   },
+   "HYPEUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 550
+   },
+   "HYPEUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 118
+   },
+   "ICPUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 48
+   },
+   "ICPUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 31
+   },
+   "ILVUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 3
+   },
+   "IMXUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1
+   },
+   "INJUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 111
+   },
+   "IOSTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 12
+   },
+   "IOTAUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 14
+   },
+   "IOTAUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 25
+   },
+   "IOTXUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "JTOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "JUPUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 15
+   },
+   "JUPUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 14
+   },
+   "KAITOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "KAVAUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 2
+   },
+   "KNCUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4
+   },
+   "KSMUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 2
+   },
+   "LAYERUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "LAZIOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "LDOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 2
+   },
+   "LINKUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 220
+   },
+   "LINKUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 300
+   },
+   "LMWRUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 6
+   },
+   "LOFIUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 3
+   },
+   "LPTUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "LPTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 14
+   },
+   "LSKUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 3
+   },
+   "LTCUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 3
+   },
+   "LTCUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4471
+   },
+   "MAGICUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "MANAUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 7
+   },
+   "MASKUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "METISUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4
+   },
+   "MEUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "MEUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "MEWUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "MOODENGUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "NEARUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 327
+   },
+   "NEARUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 664
+   },
+   "NEIROUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 39
+   },
+   "NEOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 134
+   },
+   "NMRUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "NOBODYUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "NPCUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 175
+   },
+   "OCEANUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "OGNUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 7
+   },
+   "ONDOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 64
+   },
+   "ONEUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 2
+   },
+   "ONEUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 34
+   },
+   "ONGUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 52
+   },
+   "ONTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 12
+   },
+   "OPUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "OPUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 10
+   },
+   "ORBSUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 5
+   },
+   "ORCAUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 2
+   },
+   "PAXGUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4
+   },
+   "PENGUUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 45
+   },
+   "PEPEUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 269
+   },
+   "PEPEUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 169
+   },
+   "PNUTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "POLUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 7
+   },
+   "POLUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 185
+   },
+   "POLYXUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "POPCATUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 9
+   },
+   "PORTOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "PROMUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 5
+   },
+   "PUMPUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 799
+   },
+   "PURRUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1
+   },
+   "QNTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 34
+   },
+   "QTUMUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4
+   },
+   "RADUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 2
+   },
+   "RAREUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 13
+   },
+   "REEFUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4
+   },
+   "RENDERUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 13
+   },
+   "RENDERUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 30
+   },
+   "REQUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 11
+   },
+   "RHEAUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "RLCUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "ROSEUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 2
+   },
+   "RVNUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 13
+   },
+   "RVNUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 53
+   },
+   "SANDUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "SANDUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "SANTOSUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "SEIUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 3
+   },
+   "SHIBUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4
+   },
+   "SHIBUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 559
+   },
+   "SKLUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "SKYUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 28
+   },
+   "SLPUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1
+   },
+   "SNXUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 24
+   },
+   "SOLUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1893
+   },
+   "SOLUSDC": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 163
+   },
+   "SOLUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4938
+   },
+   "SPXUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4
+   },
+   "STORJUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "SUIUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 60
+   },
+   "SUIUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 288
+   },
+   "SUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 3
+   },
+   "SUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 2
+   },
+   "SUSHIUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "SUSHIUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 11
+   },
+   "SYSUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 6
+   },
+   "TFUELUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 64
+   },
+   "THETAUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 40
+   },
+   "THETAUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 42
+   },
+   "TIAUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 9
+   },
+   "TLMUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1
+   },
+   "TOSHIUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 27
+   },
+   "TRACUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "TROLLUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 30
+   },
+   "TRUMPUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 25
+   },
+   "TRUMPUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 27
+   },
+   "TRXUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 30
+   },
+   "TRXUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 85
+   },
+   "TURBOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "TUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 3
+   },
+   "TWTUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1
+   },
+   "UNIUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 24
+   },
+   "UNIUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 26
+   },
+   "USD1USDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1
+   },
+   "USDCUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 339
+   },
+   "USDCUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 575
+   },
+   "USDTUSD": {
+    "in": false,
+    "day": "2026-11-10",
+    "count": 5988,
+    "why": "busy when first seen"
+   },
+   "USDUCUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 31
+   },
+   "USELESSUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "VELOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 27
+   },
+   "VETUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 55
+   },
+   "VETUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 107
+   },
+   "VIRTUALUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 2
+   },
+   "VOXELUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 5
+   },
+   "VTHOUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "VTHOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 29
+   },
+   "WAXPUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "WIFUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 10
+   },
+   "WLDUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 13
+   },
+   "WLFIUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "WODUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 0
+   },
+   "XDCUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 24
+   },
+   "XECUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 12
+   },
+   "XLMUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 120
+   },
+   "XLMUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 208
+   },
+   "XNOUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 7
+   },
+   "XRPUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 4778
+   },
+   "XRPUSDT": {
+    "in": false,
+    "day": "2026-11-10",
+    "count": 7178,
+    "why": "busy when first seen"
+   },
+   "XTZUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 34
+   },
+   "YFIUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1
+   },
+   "ZECUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 1408
+   },
+   "ZECUSDT": {
+    "in": false,
+    "day": "2026-11-10",
+    "count": 19739,
+    "why": "busy when first seen"
+   },
+   "ZENUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 24
+   },
+   "ZILUSD": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 6
+   },
+   "ZILUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 72
+   },
+   "ZRXUSDT": {
+    "in": true,
+    "day": "2026-11-10",
+    "count": 14
+   }
+  },
+  "activity": {
+   "0GUSDT": {
+    "2026-08": 29,
+    "2026-09": 24,
+    "2026-10": 52,
+    "2026-11": 55
+   },
+   "1000MOGUSDT": {
+    "2026-04": 34,
+    "2026-05": 16,
+    "2026-06": 46,
+    "2026-07": 13,
+    "2026-08": 18,
+    "2026-09": 6,
+    "2026-10": 2,
+    "2026-11": 3
+   },
+   "1000REKTUSDT": {
+    "2026-04": 2,
+    "2026-05": 4,
+    "2026-06": 8,
+    "2026-07": 10,
+    "2026-08": 7,
+    "2026-09": 11,
+    "2026-10": 5,
+    "2026-11": 4
+   },
+   "1INCHUSDT": {
+    "2026-04": 10,
+    "2026-05": 6,
+    "2026-06": 16,
+    "2026-07": 18,
+    "2026-08": 11,
+    "2026-09": 10,
+    "2026-10": 8,
+    "2026-11": 2
+   },
+   "1MWOJAKUSDT": {
+    "2026-06": 142,
+    "2026-07": 48,
+    "2026-08": 17,
+    "2026-09": 11,
+    "2026-10": 3,
+    "2026-11": 3
+   },
+   "AAVEUSD": {
+    "2026-04": 2,
+    "2026-05": 3,
+    "2026-06": 17,
+    "2026-07": 7,
+    "2026-08": 5,
+    "2026-09": 11,
+    "2026-10": 23,
+    "2026-11": 10
+   },
+   "AAVEUSDT": {
+    "2026-04": 35,
+    "2026-05": 23,
+    "2026-06": 36,
+    "2026-07": 46,
+    "2026-08": 59,
+    "2026-09": 97,
+    "2026-10": 84,
+    "2026-11": 33
+   },
+   "ACHUSDT": {
+    "2026-04": 5,
+    "2026-05": 7,
+    "2026-06": 3,
+    "2026-07": 3,
+    "2026-08": 2,
+    "2026-09": 5,
+    "2026-10": 4,
+    "2026-11": 7
+   },
+   "ADAUSD": {
+    "2026-04": 266,
+    "2026-05": 300,
+    "2026-06": 548,
+    "2026-07": 383,
+    "2026-08": 501,
+    "2026-09": 613,
+    "2026-10": 792,
+    "2026-11": 982
+   },
+   "ADAUSDC": {
+    "2026-04": 1,
+    "2026-05": 6,
+    "2026-06": 11,
+    "2026-07": 3,
+    "2026-08": 7,
+    "2026-09": 16,
+    "2026-10": 9,
+    "2026-11": 4
+   },
+   "ADAUSDT": {
+    "2026-04": 207,
+    "2026-05": 325,
+    "2026-06": 481,
+    "2026-07": 457,
+    "2026-08": 588,
+    "2026-09": 895,
+    "2026-10": 929,
+    "2026-11": 1096
+   },
+   "ADXUSDT": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 0,
+    "2026-07": 1,
+    "2026-08": 0,
+    "2026-09": 1,
+    "2026-10": 1,
+    "2026-11": 1
+   },
+   "AIXBTUSDT": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 0,
+    "2026-07": 0,
+    "2026-08": 2,
+    "2026-09": 10,
+    "2026-10": 3,
+    "2026-11": 1
+   },
+   "ALGOUSD": {
+    "2026-04": 6,
+    "2026-05": 13,
+    "2026-06": 12,
+    "2026-07": 10,
+    "2026-08": 16,
+    "2026-09": 39,
+    "2026-10": 21,
+    "2026-11": 14
+   },
+   "ALGOUSDT": {
+    "2026-04": 106,
+    "2026-05": 125,
+    "2026-06": 109,
+    "2026-07": 181,
+    "2026-08": 199,
+    "2026-09": 488,
+    "2026-10": 276,
+    "2026-11": 649
+   },
+   "ALICEUSDT": {
+    "2026-04": 6,
+    "2026-05": 2,
+    "2026-06": 7,
+    "2026-07": 2,
+    "2026-08": 1,
+    "2026-09": 2,
+    "2026-10": 5,
+    "2026-11": 2
+   },
+   "ALPINEUSDT": {
+    "2026-04": 0,
+    "2026-05": 6,
+    "2026-06": 0,
+    "2026-07": 1,
+    "2026-08": 3,
+    "2026-09": 2,
+    "2026-10": 4,
+    "2026-11": 2
+   },
+   "ANIMEUSDT": {
+    "2026-04": 0,
+    "2026-05": 0,
+    "2026-06": 0,
+    "2026-07": 0,
+    "2026-08": 1,
+    "2026-09": 1,
+    "2026-10": 2,
+    "2026-11": 0
+   },
+   "ANKRUSDT": {
+    "2026-04": 1,
+    "2026-05": 2,
+    "2026-06": 2,
+    "2026-07": 7,
+    "2026-08": 3,
+    "2026-09": 5,
+    "2026-10": 11,
+    "2026-11": 2
+   },
+   "APEUSDT": {
+    "2026-04": 147,
+    "2026-05": 46,
+    "2026-06": 55,
+    "2026-07": 54,
+    "2026-08": 54,
+    "2026-09": 37,
+    "2026-10": 34,
+    "2026-11": 8
+   },
+   "API3USDT": {
+    "2026-04": 3,
+    "2026-05": 0,
+    "2026-06": 2,
+    "2026-07": 4,
+    "2026-08": 2,
+    "2026-09": 3,
+    "2026-10": 5,
+    "2026-11": 0
+   },
+   "APTUSDT": {
+    "2026-04": 11,
+    "2026-05": 18,
+    "2026-06": 14,
+    "2026-07": 9,
+    "2026-08": 18,
+    "2026-09": 29,
+    "2026-10": 17,
+    "2026-11": 11
+   },
+   "ARBUSDT": {
+    "2026-04": 23,
+    "2026-05": 20,
+    "2026-06": 29,
+    "2026-07": 21,
+    "2026-08": 17,
+    "2026-09": 100,
+    "2026-10": 32,
+    "2026-11": 35
+   },
+   "ASTERUSDT": {
+    "2026-04": 114,
+    "2026-05": 152,
+    "2026-06": 43,
+    "2026-07": 11,
+    "2026-08": 43,
+    "2026-09": 30,
+    "2026-10": 12,
+    "2026-11": 11
+   },
+   "ASTRUSDT": {
+    "2026-04": 0,
+    "2026-05": 2,
+    "2026-06": 3,
+    "2026-07": 2,
+    "2026-08": 3,
+    "2026-09": 5,
+    "2026-10": 1,
+    "2026-11": 1
+   },
+   "ATOMUSD": {
+    "2026-04": 19,
+    "2026-05": 8,
+    "2026-06": 14,
+    "2026-07": 86,
+    "2026-08": 32,
+    "2026-09": 16,
+    "2026-10": 10,
+    "2026-11": 11
+   },
+   "ATOMUSDT": {
+    "2026-04": 145,
+    "2026-05": 129,
+    "2026-06": 134,
+    "2026-07": 178,
+    "2026-08": 96,
+    "2026-09": 155,
+    "2026-10": 63,
+    "2026-11": 64
+   },
+   "AUDIOUSDT": {
+    "2026-04": 8,
+    "2026-05": 6,
+    "2026-06": 14,
+    "2026-07": 12,
+    "2026-08": 7,
+    "2026-09": 12,
+    "2026-10": 12,
+    "2026-11": 14
+   },
+   "AUSDT": {
+    "2026-04": 56,
+    "2026-05": 52,
+    "2026-06": 31,
+    "2026-07": 30,
+    "2026-08": 19,
+    "2026-09": 13,
+    "2026-10": 6,
+    "2026-11": 8
+   },
+   "AVAXUSD": {
+    "2026-04": 46,
+    "2026-05": 95,
+    "2026-06": 249,
+    "2026-07": 169,
+    "2026-08": 289,
+    "2026-09": 1174,
+    "2026-10": 440,
+    "2026-11": 143
+   },
+   "AVAXUSDT": {
+    "2026-04": 104,
+    "2026-05": 225,
+    "2026-06": 419,
+    "2026-07": 257,
+    "2026-08": 319,
+    "2026-09": 1031,
+    "2026-10": 172,
+    "2026-11": 233
+   },
+   "AVNTUSDT": {
+    "2026-04": 13,
+    "2026-05": 19,
+    "2026-06": 106,
+    "2026-07": 65,
+    "2026-08": 123,
+    "2026-09": 83,
+    "2026-10": 84,
+    "2026-11": 81
+   },
+   "AXLUSDT": {
+    "2026-04": 11,
+    "2026-05": 5,
+    "2026-06": 2,
+    "2026-07": 2,
+    "2026-08": 4,
+    "2026-09": 3,
+    "2026-10": 4,
+    "2026-11": 6
+   },
+   "AXSUSDT": {
+    "2026-04": 22,
+    "2026-05": 5,
+    "2026-06": 3,
+    "2026-07": 1,
+    "2026-08": 1,
+    "2026-09": 9,
+    "2026-10": 11,
+    "2026-11": 5
+   },
+   "BANDUSDT": {
+    "2026-04": 2,
+    "2026-05": 2,
+    "2026-06": 1,
+    "2026-07": 2,
+    "2026-08": 2,
+    "2026-09": 3,
+    "2026-10": 4,
+    "2026-11": 12
+   },
+   "BATUSDT": {
+    "2026-04": 45,
+    "2026-05": 42,
+    "2026-06": 47,
+    "2026-07": 35,
+    "2026-08": 37,
+    "2026-09": 37,
+    "2026-10": 97,
+    "2026-11": 59
+   },
+   "BCHUSD": {
+    "2026-04": 7,
+    "2026-05": 7,
+    "2026-06": 14,
+    "2026-07": 13,
+    "2026-08": 42,
+    "2026-09": 103,
+    "2026-10": 15,
+    "2026-11": 69
+   },
+   "BCHUSDT": {
+    "2026-04": 81,
+    "2026-05": 128,
+    "2026-06": 180,
+    "2026-07": 223,
+    "2026-08": 522,
+    "2026-09": 620,
+    "2026-10": 393,
+    "2026-11": 461
+   },
+   "BERTUSDT": {
+    "2026-06": 7,
+    "2026-07": 3,
+    "2026-08": 3,
+    "2026-09": 3,
+    "2026-10": 7,
+    "2026-11": 22
+   },
+   "BICOUSDT": {
+    "2026-04": 0,
+    "2026-05": 0,
+    "2026-06": 5,
+    "2026-07": 1,
+    "2026-08": 14,
+    "2026-09": 5,
+    "2026-10": 4,
+    "2026-11": 0
+   },
+   "BLURUSDT": {
+    "2026-04": 0,
+    "2026-05": 2,
+    "2026-06": 2,
+    "2026-07": 4,
+    "2026-08": 1,
+    "2026-09": 2,
+    "2026-10": 4,
+    "2026-11": 2
+   },
+   "BMTUSDT": {
+    "2026-04": 11,
+    "2026-05": 3,
+    "2026-06": 0,
+    "2026-07": 0,
+    "2026-08": 3,
+    "2026-09": 5,
+    "2026-10": 2,
+    "2026-11": 1
+   },
+   "BNBUSD": {
+    "2026-04": 457,
+    "2026-05": 437,
+    "2026-06": 385,
+    "2026-07": 308,
+    "2026-08": 461,
+    "2026-09": 483,
+    "2026-10": 377,
+    "2026-11": 306
+   },
+   "BNBUSDT": {
+    "2026-04": 287,
+    "2026-05": 491,
+    "2026-06": 539,
+    "2026-07": 317,
+    "2026-08": 552,
+    "2026-09": 719,
+    "2026-10": 560,
+    "2026-11": 333
+   },
+   "BNTUSDT": {
+    "2026-04": 1,
+    "2026-05": 1,
+    "2026-06": 2,
+    "2026-07": 0,
+    "2026-08": 1,
+    "2026-09": 1,
+    "2026-10": 1,
+    "2026-11": 0
+   },
+   "BONKUSD": {
+    "2026-04": 59,
+    "2026-05": 22,
+    "2026-06": 35,
+    "2026-07": 47,
+    "2026-08": 24,
+    "2026-09": 54,
+    "2026-10": 50,
+    "2026-11": 28
+   },
+   "BONKUSDT": {
+    "2026-04": 94,
+    "2026-05": 98,
+    "2026-06": 80,
+    "2026-07": 68,
+    "2026-08": 24,
+    "2026-09": 51,
+    "2026-10": 12,
+    "2026-11": 13
+   },
+   "BOSONUSDT": {
+    "2026-04": 43,
+    "2026-05": 35,
+    "2026-06": 171,
+    "2026-07": 9,
+    "2026-08": 5,
+    "2026-09": 4,
+    "2026-10": 15,
+    "2026-11": 26
+   },
+   "BRETTUSDT": {
+    "2026-04": 0,
+    "2026-05": 3,
+    "2026-06": 1,
+    "2026-07": 0,
+    "2026-08": 2,
+    "2026-09": 1,
+    "2026-10": 1,
+    "2026-11": 0
+   },
+   "BTCUSD": {
+    "2026-04": 2559,
+    "2026-05": 3210,
+    "2026-06": 3217,
+    "2026-07": 3525,
+    "2026-08": 4270,
+    "2026-09": 4248,
+    "2026-10": 7085,
+    "2026-11": 9080
+   },
+   "BTCUSDC": {
+    "2026-04": 2154,
+    "2026-05": 843,
+    "2026-06": 346,
+    "2026-07": 384,
+    "2026-08": 451,
+    "2026-09": 656,
+    "2026-10": 281,
+    "2026-11": 897
+   },
+   "BTCUSDT": {
+    "2026-04": 1823,
+    "2026-05": 2631,
+    "2026-06": 3116,
+    "2026-07": 3803,
+    "2026-08": 4898,
+    "2026-09": 4517,
+    "2026-10": 7069,
+    "2026-11": 10056
+   },
+   "BTRSTUSDT": {
+    "2026-04": 0,
+    "2026-05": 5,
+    "2026-06": 2,
+    "2026-07": 1,
+    "2026-08": 1,
+    "2026-09": 2,
+    "2026-10": 3,
+    "2026-11": 8
+   },
+   "BTTCUSDT": {
+    "2026-09": 76,
+    "2026-10": 15,
+    "2026-11": 12
+   },
+   "CAKEUSDT": {
+    "2026-04": 23,
+    "2026-05": 20,
+    "2026-06": 37,
+    "2026-07": 29,
+    "2026-08": 24,
+    "2026-09": 35,
+    "2026-10": 11,
+    "2026-11": 7
+   },
+   "CELOUSDT": {
+    "2026-04": 3,
+    "2026-05": 3,
+    "2026-06": 3,
+    "2026-07": 4,
+    "2026-08": 34,
+    "2026-09": 2,
+    "2026-10": 4,
+    "2026-11": 1
+   },
+   "CELRUSDT": {
+    "2026-04": 3,
+    "2026-05": 6,
+    "2026-06": 3,
+    "2026-07": 3,
+    "2026-08": 2,
+    "2026-09": 33,
+    "2026-10": 10,
+    "2026-11": 7
+   },
+   "CHZUSDT": {
+    "2026-04": 13,
+    "2026-05": 18,
+    "2026-06": 20,
+    "2026-07": 3,
+    "2026-08": 3,
+    "2026-09": 10,
+    "2026-10": 4,
+    "2026-11": 5
+   },
+   "COMPUSDT": {
+    "2026-04": 34,
+    "2026-05": 43,
+    "2026-06": 30,
+    "2026-07": 35,
+    "2026-08": 28,
+    "2026-09": 28,
+    "2026-10": 45,
+    "2026-11": 27
+   },
+   "COTIUSDT": {
+    "2026-04": 1,
+    "2026-05": 2,
+    "2026-06": 4,
+    "2026-07": 3,
+    "2026-08": 13,
+    "2026-09": 17,
+    "2026-10": 7,
+    "2026-11": 1
+   },
+   "CRVUSD": {
+    "2026-04": 1,
+    "2026-05": 3,
+    "2026-06": 11,
+    "2026-07": 14,
+    "2026-08": 20,
+    "2026-09": 24,
+    "2026-10": 35,
+    "2026-11": 3
+   },
+   "CRVUSDT": {
+    "2026-04": 7,
+    "2026-05": 15,
+    "2026-06": 57,
+    "2026-07": 49,
+    "2026-08": 25,
+    "2026-09": 38,
+    "2026-10": 32,
+    "2026-11": 9
+   },
+   "CTSIUSDT": {
+    "2026-04": 3,
+    "2026-05": 2,
+    "2026-06": 2,
+    "2026-07": 2,
+    "2026-08": 4,
+    "2026-09": 4,
+    "2026-10": 13,
+    "2026-11": 0
+   },
+   "DASHUSDT": {
+    "2026-04": 47,
+    "2026-05": 390,
+    "2026-06": 217,
+    "2026-07": 112,
+    "2026-08": 280,
+    "2026-09": 703,
+    "2026-10": 365,
+    "2026-11": 220
+   },
+   "DGBUSD": {
+    "2026-04": 39,
+    "2026-05": 21,
+    "2026-06": 23,
+    "2026-07": 12,
+    "2026-08": 23,
+    "2026-09": 16,
+    "2026-10": 13,
+    "2026-11": 26
+   },
+   "DGBUSDT": {
+    "2026-04": 52,
+    "2026-05": 22,
+    "2026-06": 17,
+    "2026-07": 61,
+    "2026-08": 40,
+    "2026-09": 56,
+    "2026-10": 37,
+    "2026-11": 55
+   },
+   "DIAUSDT": {
+    "2026-04": 0,
+    "2026-05": 2,
+    "2026-06": 1,
+    "2026-07": 5,
+    "2026-08": 4,
+    "2026-09": 3,
+    "2026-10": 6,
+    "2026-11": 1
+   },
+   "DOGEUSD": {
+    "2026-04": 184,
+    "2026-05": 509,
+    "2026-06": 271,
+    "2026-07": 275,
+    "2026-08": 853,
+    "2026-09": 748,
+    "2026-10": 283,
+    "2026-11": 250
+   },
+   "DOGEUSDT": {
+    "2026-04": 419,
+    "2026-05": 862,
+    "2026-06": 532,
+    "2026-07": 604,
+    "2026-08": 1051,
+    "2026-09": 1510,
+    "2026-10": 694,
+    "2026-11": 625
+   },
+   "DOODUSDT": {
+    "2026-04": 3,
+    "2026-05": 2,
+    "2026-06": 2,
+    "2026-07": 1,
+    "2026-08": 4,
+    "2026-09": 6,
+    "2026-10": 16,
+    "2026-11": 2
+   },
+   "DOTUSD": {
+    "2026-04": 27,
+    "2026-05": 42,
+    "2026-06": 71,
+    "2026-07": 34,
+    "2026-08": 36,
+    "2026-09": 33,
+    "2026-10": 21,
+    "2026-11": 11
+   },
+   "DOTUSDT": {
+    "2026-04": 75,
+    "2026-05": 125,
+    "2026-06": 127,
+    "2026-07": 55,
+    "2026-08": 139,
+    "2026-09": 101,
+    "2026-10": 127,
+    "2026-11": 37
+   },
+   "DUSKUSDT": {
+    "2026-04": 337,
+    "2026-05": 492,
+    "2026-06": 353,
+    "2026-07": 168,
+    "2026-08": 234,
+    "2026-09": 255,
+    "2026-10": 552,
+    "2026-11": 152
+   },
+   "EGLDUSDT": {
+    "2026-04": 3,
+    "2026-05": 5,
+    "2026-06": 3,
+    "2026-07": 4,
+    "2026-08": 5,
+    "2026-09": 138,
+    "2026-10": 36,
+    "2026-11": 14
+   },
+   "EIGENUSDT": {
+    "2026-04": 2,
+    "2026-05": 1,
+    "2026-06": 15,
+    "2026-07": 6,
+    "2026-08": 9,
+    "2026-09": 12,
+    "2026-10": 4,
+    "2026-11": 1
+   },
+   "ENAUSDT": {
+    "2026-04": 2,
+    "2026-05": 6,
+    "2026-06": 17,
+    "2026-07": 6,
+    "2026-08": 22,
+    "2026-09": 44,
+    "2026-10": 64,
+    "2026-11": 18
+   },
+   "ENJUSDT": {
+    "2026-04": 25,
+    "2026-05": 15,
+    "2026-06": 6,
+    "2026-07": 2,
+    "2026-08": 3,
+    "2026-09": 14,
+    "2026-10": 18,
+    "2026-11": 8
+   },
+   "ENSUSD": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 1,
+    "2026-07": 1,
+    "2026-08": 1,
+    "2026-09": 4,
+    "2026-10": 2,
+    "2026-11": 1
+   },
+   "ENSUSDT": {
+    "2026-04": 3,
+    "2026-05": 2,
+    "2026-06": 2,
+    "2026-07": 0,
+    "2026-08": 2,
+    "2026-09": 3,
+    "2026-10": 3,
+    "2026-11": 3
+   },
+   "ETCUSD": {
+    "2026-04": 2,
+    "2026-05": 4,
+    "2026-06": 3,
+    "2026-07": 3,
+    "2026-08": 2,
+    "2026-09": 9,
+    "2026-10": 2,
+    "2026-11": 10
+   },
+   "ETCUSDT": {
+    "2026-04": 46,
+    "2026-05": 58,
+    "2026-06": 54,
+    "2026-07": 38,
+    "2026-08": 54,
+    "2026-09": 75,
+    "2026-10": 47,
+    "2026-11": 34
+   },
+   "ETHUSD": {
+    "2026-04": 496,
+    "2026-05": 917,
+    "2026-06": 1987,
+    "2026-07": 3150,
+    "2026-08": 2183,
+    "2026-09": 2539,
+    "2026-10": 4331,
+    "2026-11": 6486
+   },
+   "ETHUSDC": {
+    "2026-04": 90,
+    "2026-05": 49,
+    "2026-06": 209,
+    "2026-07": 150,
+    "2026-08": 202,
+    "2026-09": 180,
+    "2026-10": 127,
+    "2026-11": 306
+   },
+   "ETHUSDT": {
+    "2026-04": 1167,
+    "2026-05": 1735,
+    "2026-06": 2574,
+    "2026-07": 2056,
+    "2026-08": 3767,
+    "2026-09": 3061,
+    "2026-10": 4515,
+    "2026-11": 6429
+   },
+   "FARTCOINUSDT": {
+    "2026-04": 1,
+    "2026-05": 4,
+    "2026-06": 2,
+    "2026-07": 3,
+    "2026-08": 2,
+    "2026-09": 2,
+    "2026-10": 2,
+    "2026-11": 2
+   },
+   "FETUSD": {
+    "2026-04": 10,
+    "2026-05": 14,
+    "2026-06": 13,
+    "2026-07": 9,
+    "2026-08": 9,
+    "2026-09": 36,
+    "2026-10": 19,
+    "2026-11": 25
+   },
+   "FETUSDT": {
+    "2026-04": 78,
+    "2026-05": 193,
+    "2026-06": 271,
+    "2026-07": 61,
+    "2026-08": 134,
+    "2026-09": 86,
+    "2026-10": 113,
+    "2026-11": 67
+   },
+   "FILUSDT": {
+    "2026-04": 17,
+    "2026-05": 49,
+    "2026-06": 49,
+    "2026-07": 20,
+    "2026-08": 30,
+    "2026-09": 65,
+    "2026-10": 54,
+    "2026-11": 53
+   },
+   "FLOKIUSD": {
+    "2026-04": 1,
+    "2026-05": 2,
+    "2026-06": 2,
+    "2026-07": 2,
+    "2026-08": 4,
+    "2026-09": 6,
+    "2026-10": 11,
+    "2026-11": 0
+   },
+   "FLOKIUSDT": {
+    "2026-04": 74,
+    "2026-05": 82,
+    "2026-06": 66,
+    "2026-07": 23,
+    "2026-08": 37,
+    "2026-09": 47,
+    "2026-10": 34,
+    "2026-11": 29
+   },
+   "FLOWUSDT": {
+    "2026-04": 5,
+    "2026-05": 1,
+    "2026-06": 2,
+    "2026-07": 0,
+    "2026-08": 4,
+    "2026-09": 10,
+    "2026-10": 8,
+    "2026-11": 5
+   },
+   "FLUXUSDT": {
+    "2026-04": 3,
+    "2026-05": 4,
+    "2026-06": 4,
+    "2026-07": 4,
+    "2026-08": 3,
+    "2026-09": 13,
+    "2026-10": 9,
+    "2026-11": 3
+   },
+   "FORTHUSDT": {
+    "2026-04": 1,
+    "2026-05": 1,
+    "2026-06": 3,
+    "2026-07": 4,
+    "2026-08": 5,
+    "2026-09": 5,
+    "2026-10": 5,
+    "2026-11": 15
+   },
+   "FORTUSDT": {
+    "2026-04": 0,
+    "2026-05": 0,
+    "2026-06": 1,
+    "2026-07": 0,
+    "2026-08": 0,
+    "2026-09": 1,
+    "2026-10": 4,
+    "2026-11": 36
+   },
+   "GALAUSD": {
+    "2026-04": 0,
+    "2026-05": 5,
+    "2026-06": 3,
+    "2026-07": 2,
+    "2026-08": 6,
+    "2026-09": 6,
+    "2026-10": 4,
+    "2026-11": 5
+   },
+   "GALAUSDT": {
+    "2026-04": 8,
+    "2026-05": 12,
+    "2026-06": 8,
+    "2026-07": 4,
+    "2026-08": 13,
+    "2026-09": 20,
+    "2026-10": 17,
+    "2026-11": 16
+   },
+   "GASUSDT": {
+    "2026-04": 4,
+    "2026-05": 3,
+    "2026-06": 1,
+    "2026-07": 0,
+    "2026-08": 1,
+    "2026-09": 3,
+    "2026-10": 1,
+    "2026-11": 0
+   },
+   "GIGAUSDT": {
+    "2026-04": 45,
+    "2026-05": 69,
+    "2026-06": 2,
+    "2026-07": 1,
+    "2026-08": 1,
+    "2026-09": 4,
+    "2026-10": 4,
+    "2026-11": 22
+   },
+   "GLMUSDT": {
+    "2026-04": 0,
+    "2026-05": 11,
+    "2026-06": 1,
+    "2026-07": 4,
+    "2026-08": 3,
+    "2026-09": 5,
+    "2026-10": 2,
+    "2026-11": 2
+   },
+   "GRAMUSDT": {
+    "2026-08": 25,
+    "2026-09": 39,
+    "2026-10": 21,
+    "2026-11": 14
+   },
+   "GRTUSD": {
+    "2026-04": 1,
+    "2026-05": 3,
+    "2026-06": 10,
+    "2026-07": 3,
+    "2026-08": 4,
+    "2026-09": 14,
+    "2026-10": 4,
+    "2026-11": 1
+   },
+   "GRTUSDT": {
+    "2026-04": 19,
+    "2026-05": 44,
+    "2026-06": 97,
+    "2026-07": 47,
+    "2026-08": 23,
+    "2026-09": 28,
+    "2026-10": 16,
+    "2026-11": 9
+   },
+   "GTCUSDT": {
+    "2026-04": 0,
+    "2026-05": 6,
+    "2026-06": 1,
+    "2026-07": 4,
+    "2026-08": 2,
+    "2026-09": 1,
+    "2026-10": 50,
+    "2026-11": 24
+   },
+   "GUSDT": {
+    "2026-04": 1,
+    "2026-05": 0,
+    "2026-06": 2,
+    "2026-07": 4,
+    "2026-08": 2,
+    "2026-09": 14,
+    "2026-10": 5,
+    "2026-11": 5
+   },
+   "HBARUSD": {
+    "2026-04": 19,
+    "2026-05": 45,
+    "2026-06": 86,
+    "2026-07": 353,
+    "2026-08": 338,
+    "2026-09": 716,
+    "2026-10": 369,
+    "2026-11": 1229
+   },
+   "HBARUSDT": {
+    "2026-04": 101,
+    "2026-05": 250,
+    "2026-06": 346,
+    "2026-07": 508,
+    "2026-08": 1274,
+    "2026-09": 844,
+    "2026-10": 403,
+    "2026-11": 158
+   },
+   "HYPEUSD": {
+    "2026-04": 206,
+    "2026-05": 802,
+    "2026-06": 990,
+    "2026-07": 626,
+    "2026-08": 1166,
+    "2026-09": 756,
+    "2026-10": 618,
+    "2026-11": 566
+   },
+   "HYPEUSDT": {
+    "2026-04": 197,
+    "2026-05": 617,
+    "2026-06": 762,
+    "2026-07": 293,
+    "2026-08": 642,
+    "2026-09": 432,
+    "2026-10": 470,
+    "2026-11": 380
+   },
+   "ICPUSD": {
+    "2026-04": 9,
+    "2026-05": 58,
+    "2026-06": 39,
+    "2026-07": 18,
+    "2026-08": 32,
+    "2026-09": 24,
+    "2026-10": 151,
+    "2026-11": 34
+   },
+   "ICPUSDT": {
+    "2026-04": 46,
+    "2026-05": 116,
+    "2026-06": 91,
+    "2026-07": 70,
+    "2026-08": 259,
+    "2026-09": 146,
+    "2026-10": 135,
+    "2026-11": 36
+   },
+   "ILVUSDT": {
+    "2026-04": 6,
+    "2026-05": 1,
+    "2026-06": 1,
+    "2026-07": 6,
+    "2026-08": 2,
+    "2026-09": 6,
+    "2026-10": 2,
+    "2026-11": 8
+   },
+   "IMXUSDT": {
+    "2026-04": 4,
+    "2026-05": 4,
+    "2026-06": 2,
+    "2026-07": 3,
+    "2026-08": 3,
+    "2026-09": 9,
+    "2026-10": 8,
+    "2026-11": 4
+   },
+   "INJUSDT": {
+    "2026-05": 123,
+    "2026-06": 132,
+    "2026-07": 52,
+    "2026-08": 61,
+    "2026-09": 108,
+    "2026-10": 129,
+    "2026-11": 114
+   },
+   "IOSTUSDT": {
+    "2026-04": 1,
+    "2026-05": 2,
+    "2026-06": 2,
+    "2026-07": 3,
+    "2026-08": 2,
+    "2026-09": 12,
+    "2026-10": 7,
+    "2026-11": 5
+   },
+   "IOTAUSD": {
+    "2026-04": 9,
+    "2026-05": 9,
+    "2026-06": 19,
+    "2026-07": 101,
+    "2026-08": 16,
+    "2026-09": 7,
+    "2026-10": 62,
+    "2026-11": 3
+   },
+   "IOTAUSDT": {
+    "2026-04": 31,
+    "2026-05": 48,
+    "2026-06": 71,
+    "2026-07": 74,
+    "2026-08": 206,
+    "2026-09": 53,
+    "2026-10": 196,
+    "2026-11": 25
+   },
+   "IOTXUSDT": {
+    "2026-04": 1,
+    "2026-05": 3,
+    "2026-06": 2,
+    "2026-07": 0,
+    "2026-08": 2,
+    "2026-09": 15,
+    "2026-10": 12,
+    "2026-11": 2
+   },
+   "JTOUSDT": {
+    "2026-04": 1,
+    "2026-05": 2,
+    "2026-06": 15,
+    "2026-07": 25,
+    "2026-08": 6,
+    "2026-09": 12,
+    "2026-10": 5,
+    "2026-11": 2
+   },
+   "JUPUSD": {
+    "2026-04": 1,
+    "2026-05": 4,
+    "2026-06": 5,
+    "2026-07": 1,
+    "2026-08": 1,
+    "2026-09": 16,
+    "2026-10": 19,
+    "2026-11": 5
+   },
+   "JUPUSDT": {
+    "2026-04": 3,
+    "2026-05": 7,
+    "2026-06": 14,
+    "2026-07": 10,
+    "2026-08": 10,
+    "2026-09": 50,
+    "2026-10": 36,
+    "2026-11": 5
+   },
+   "KAITOUSDT": {
+    "2026-04": 1,
+    "2026-05": 3,
+    "2026-06": 3,
+    "2026-07": 29,
+    "2026-08": 18,
+    "2026-09": 5,
+    "2026-10": 15,
+    "2026-11": 1
+   },
+   "KAVAUSDT": {
+    "2026-04": 19,
+    "2026-05": 8,
+    "2026-06": 7,
+    "2026-07": 6,
+    "2026-08": 3,
+    "2026-09": 4,
+    "2026-10": 6,
+    "2026-11": 3
+   },
+   "KNCUSDT": {
+    "2026-04": 4,
+    "2026-05": 5,
+    "2026-06": 4,
+    "2026-07": 1,
+    "2026-08": 2,
+    "2026-09": 5,
+    "2026-10": 2,
+    "2026-11": 3
+   },
+   "KSMUSDT": {
+    "2026-04": 12,
+    "2026-05": 24,
+    "2026-06": 6,
+    "2026-07": 4,
+    "2026-08": 3,
+    "2026-09": 3,
+    "2026-10": 13,
+    "2026-11": 22
+   },
+   "LAYERUSDT": {
+    "2026-04": 0,
+    "2026-05": 2,
+    "2026-06": 1,
+    "2026-07": 1,
+    "2026-08": 0,
+    "2026-09": 1,
+    "2026-10": 1,
+    "2026-11": 0
+   },
+   "LAZIOUSDT": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 1,
+    "2026-07": 1,
+    "2026-08": 1,
+    "2026-09": 1,
+    "2026-10": 2,
+    "2026-11": 1
+   },
+   "LDOUSDT": {
+    "2026-04": 95,
+    "2026-05": 33,
+    "2026-06": 6,
+    "2026-07": 3,
+    "2026-08": 14,
+    "2026-09": 16,
+    "2026-10": 5,
+    "2026-11": 2
+   },
+   "LINKUSD": {
+    "2026-04": 86,
+    "2026-05": 120,
+    "2026-06": 171,
+    "2026-07": 143,
+    "2026-08": 570,
+    "2026-09": 851,
+    "2026-10": 270,
+    "2026-11": 298
+   },
+   "LINKUSDT": {
+    "2026-04": 161,
+    "2026-05": 244,
+    "2026-06": 304,
+    "2026-07": 201,
+    "2026-08": 473,
+    "2026-09": 1046,
+    "2026-10": 504,
+    "2026-11": 532
+   },
+   "LMWRUSDT": {
+    "2026-04": 20,
+    "2026-05": 13,
+    "2026-06": 4,
+    "2026-07": 4,
+    "2026-08": 4,
+    "2026-09": 8,
+    "2026-10": 4,
+    "2026-11": 57
+   },
+   "LOFIUSDT": {
+    "2026-04": 13,
+    "2026-05": 11,
+    "2026-06": 4,
+    "2026-07": 1,
+    "2026-08": 2,
+    "2026-09": 3,
+    "2026-10": 38,
+    "2026-11": 11
+   },
+   "LPTUSD": {
+    "2026-04": 11,
+    "2026-05": 5,
+    "2026-06": 5,
+    "2026-07": 6,
+    "2026-08": 23,
+    "2026-09": 77,
+    "2026-10": 28,
+    "2026-11": 44
+   },
+   "LPTUSDT": {
+    "2026-04": 41,
+    "2026-05": 32,
+    "2026-06": 19,
+    "2026-07": 24,
+    "2026-08": 223,
+    "2026-09": 40,
+    "2026-10": 98,
+    "2026-11": 10
+   },
+   "LSKUSDT": {
+    "2026-04": 0,
+    "2026-05": 0,
+    "2026-06": 1,
+    "2026-07": 1,
+    "2026-08": 1,
+    "2026-09": 18,
+    "2026-10": 4,
+    "2026-11": 2
+   },
+   "LTCUSD": {
+    "2026-04": 26,
+    "2026-05": 9,
+    "2026-06": 51,
+    "2026-07": 17,
+    "2026-08": 26,
+    "2026-09": 105,
+    "2026-10": 141,
+    "2026-11": 81
+   },
+   "LTCUSDT": {
+    "2026-04": 228,
+    "2026-05": 232,
+    "2026-06": 316,
+    "2026-07": 385,
+    "2026-08": 448,
+    "2026-09": 1113,
+    "2026-10": 825,
+    "2026-11": 1032
+   },
+   "MAGICUSDT": {
+    "2026-04": 0,
+    "2026-05": 0,
+    "2026-06": 0,
+    "2026-07": 0,
+    "2026-08": 0,
+    "2026-09": 1,
+    "2026-10": 13,
+    "2026-11": 2
+   },
+   "MANAUSDT": {
+    "2026-04": 5,
+    "2026-05": 6,
+    "2026-06": 9,
+    "2026-07": 5,
+    "2026-08": 6,
+    "2026-09": 11,
+    "2026-10": 19,
+    "2026-11": 10
+   },
+   "MASKUSDT": {
+    "2026-04": 2,
+    "2026-05": 1,
+    "2026-06": 0,
+    "2026-07": 0,
+    "2026-08": 1,
+    "2026-09": 1,
+    "2026-10": 8,
+    "2026-11": 0
+   },
+   "METISUSDT": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 1,
+    "2026-07": 0,
+    "2026-08": 5,
+    "2026-09": 3,
+    "2026-10": 2,
+    "2026-11": 1
+   },
+   "MEUSD": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 2,
+    "2026-07": 0,
+    "2026-08": 0,
+    "2026-09": 0,
+    "2026-10": 0,
+    "2026-11": 0
+   },
+   "MEUSDT": {
+    "2026-04": 1,
+    "2026-05": 0,
+    "2026-06": 3,
+    "2026-07": 1,
+    "2026-08": 1,
+    "2026-09": 0,
+    "2026-10": 0,
+    "2026-11": 1
+   },
+   "MEWUSDT": {
+    "2026-04": 0,
+    "2026-05": 0,
+    "2026-06": 1,
+    "2026-07": 1,
+    "2026-08": 0,
+    "2026-09": 1,
+    "2026-10": 1,
+    "2026-11": 0
+   },
+   "MOODENGUSDT": {
+    "2026-04": 0,
+    "2026-05": 0,
+    "2026-06": 1,
+    "2026-07": 0,
+    "2026-08": 0,
+    "2026-09": 0,
+    "2026-10": 0,
+    "2026-11": 0
+   },
+   "NEARUSD": {
+    "2026-04": 5,
+    "2026-05": 120,
+    "2026-06": 147,
+    "2026-07": 17,
+    "2026-08": 21,
+    "2026-09": 226,
+    "2026-10": 283,
+    "2026-11": 247
+   },
+   "NEARUSDT": {
+    "2026-04": 26,
+    "2026-05": 306,
+    "2026-06": 546,
+    "2026-07": 63,
+    "2026-08": 108,
+    "2026-09": 745,
+    "2026-10": 808,
+    "2026-11": 646
+   },
+   "NEIROUSDT": {
+    "2026-04": 5,
+    "2026-05": 2,
+    "2026-06": 1,
+    "2026-07": 4,
+    "2026-08": 4,
+    "2026-09": 6,
+    "2026-10": 6,
+    "2026-11": 14
+   },
+   "NEOUSDT": {
+    "2026-04": 27,
+    "2026-05": 49,
+    "2026-06": 49,
+    "2026-07": 41,
+    "2026-08": 43,
+    "2026-09": 46,
+    "2026-10": 51,
+    "2026-11": 36
+   },
+   "NMRUSDT": {
+    "2026-04": 3,
+    "2026-05": 2,
+    "2026-06": 1,
+    "2026-07": 2,
+    "2026-08": 2,
+    "2026-09": 17,
+    "2026-10": 23,
+    "2026-11": 2
+   },
+   "NOBODYUSDT": {
+    "2026-04": 19,
+    "2026-05": 95,
+    "2026-06": 172,
+    "2026-07": 159,
+    "2026-08": 1,
+    "2026-09": 12,
+    "2026-10": 3,
+    "2026-11": 32
+   },
+   "NPCUSDT": {
+    "2026-04": 101,
+    "2026-05": 188,
+    "2026-06": 152,
+    "2026-07": 203,
+    "2026-08": 275,
+    "2026-09": 222,
+    "2026-10": 106,
+    "2026-11": 213
+   },
+   "OCEANUSDT": {
+    "2026-04": 3,
+    "2026-05": 2,
+    "2026-06": 1,
+    "2026-07": 1,
+    "2026-08": 1,
+    "2026-09": 1,
+    "2026-10": 5,
+    "2026-11": 15
+   },
+   "OGNUSDT": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 12,
+    "2026-07": 1,
+    "2026-08": 2,
+    "2026-09": 2,
+    "2026-10": 20,
+    "2026-11": 17
+   },
+   "ONDOUSDT": {
+    "2026-04": 23,
+    "2026-05": 85,
+    "2026-06": 66,
+    "2026-07": 66,
+    "2026-08": 64,
+    "2026-09": 126,
+    "2026-10": 101,
+    "2026-11": 61
+   },
+   "ONEUSD": {
+    "2026-04": 9,
+    "2026-05": 6,
+    "2026-06": 15,
+    "2026-07": 12,
+    "2026-08": 71,
+    "2026-09": 83,
+    "2026-10": 77,
+    "2026-11": 149
+   },
+   "ONEUSDT": {
+    "2026-04": 59,
+    "2026-05": 35,
+    "2026-06": 55,
+    "2026-07": 54,
+    "2026-08": 97,
+    "2026-09": 351,
+    "2026-10": 85,
+    "2026-11": 263
+   },
+   "ONGUSDT": {
+    "2026-04": 2,
+    "2026-05": 2,
+    "2026-06": 1,
+    "2026-07": 2,
+    "2026-08": 11,
+    "2026-09": 6,
+    "2026-10": 4,
+    "2026-11": 10
+   },
+   "ONTUSDT": {
+    "2026-04": 11,
+    "2026-05": 25,
+    "2026-06": 14,
+    "2026-07": 14,
+    "2026-08": 28,
+    "2026-09": 25,
+    "2026-10": 14,
+    "2026-11": 11
+   },
+   "OPUSD": {
+    "2026-04": 1,
+    "2026-05": 3,
+    "2026-06": 2,
+    "2026-07": 2,
+    "2026-08": 2,
+    "2026-09": 3,
+    "2026-10": 3,
+    "2026-11": 3
+   },
+   "OPUSDT": {
+    "2026-04": 30,
+    "2026-05": 44,
+    "2026-06": 88,
+    "2026-07": 38,
+    "2026-08": 32,
+    "2026-09": 27,
+    "2026-10": 19,
+    "2026-11": 7
+   },
+   "ORBSUSDT": {
+    "2026-04": 1,
+    "2026-05": 1,
+    "2026-06": 1,
+    "2026-07": 1,
+    "2026-08": 0,
+    "2026-09": 0,
+    "2026-10": 0,
+    "2026-11": 1
+   },
+   "ORCAUSDT": {
+    "2026-04": 6,
+    "2026-05": 6,
+    "2026-06": 2,
+    "2026-07": 0,
+    "2026-08": 1,
+    "2026-09": 2,
+    "2026-10": 5,
+    "2026-11": 8
+   },
+   "PAXGUSDT": {
+    "2026-04": 44,
+    "2026-05": 28,
+    "2026-06": 17,
+    "2026-07": 10,
+    "2026-08": 44,
+    "2026-09": 20,
+    "2026-10": 18,
+    "2026-11": 39
+   },
+   "PENGUUSDT": {
+    "2026-04": 165,
+    "2026-05": 101,
+    "2026-06": 184,
+    "2026-07": 152,
+    "2026-08": 168,
+    "2026-09": 426,
+    "2026-10": 176,
+    "2026-11": 128
+   },
+   "PEPEUSD": {
+    "2026-04": 58,
+    "2026-05": 75,
+    "2026-06": 182,
+    "2026-07": 107,
+    "2026-08": 131,
+    "2026-09": 246,
+    "2026-10": 396,
+    "2026-11": 164
+   },
+   "PEPEUSDT": {
+    "2026-04": 82,
+    "2026-05": 102,
+    "2026-06": 95,
+    "2026-07": 91,
+    "2026-08": 127,
+    "2026-09": 87,
+    "2026-10": 123,
+    "2026-11": 110
+   },
+   "PNUTUSDT": {
+    "2026-04": 1,
+    "2026-05": 3,
+    "2026-06": 1,
+    "2026-07": 1,
+    "2026-08": 2,
+    "2026-09": 5,
+    "2026-10": 2,
+    "2026-11": 1
+   },
+   "POLUSD": {
+    "2026-04": 43,
+    "2026-05": 27,
+    "2026-06": 34,
+    "2026-07": 12,
+    "2026-08": 21,
+    "2026-09": 14,
+    "2026-10": 7,
+    "2026-11": 73
+   },
+   "POLUSDT": {
+    "2026-04": 170,
+    "2026-05": 74,
+    "2026-06": 184,
+    "2026-07": 120,
+    "2026-08": 133,
+    "2026-09": 96,
+    "2026-10": 144,
+    "2026-11": 436
+   },
+   "POLYXUSDT": {
+    "2026-04": 3,
+    "2026-05": 4,
+    "2026-06": 2,
+    "2026-07": 1,
+    "2026-08": 6,
+    "2026-09": 6,
+    "2026-10": 3,
+    "2026-11": 0
+   },
+   "POPCATUSDT": {
+    "2026-04": 0,
+    "2026-05": 2,
+    "2026-06": 1,
+    "2026-07": 0,
+    "2026-08": 1,
+    "2026-09": 4,
+    "2026-10": 4,
+    "2026-11": 1
+   },
+   "PORTOUSDT": {
+    "2026-04": 2,
+    "2026-05": 1,
+    "2026-06": 1,
+    "2026-07": 0,
+    "2026-08": 1,
+    "2026-09": 0,
+    "2026-10": 0,
+    "2026-11": 2
+   },
+   "PROMUSDT": {
+    "2026-04": 6,
+    "2026-05": 5,
+    "2026-06": 3,
+    "2026-07": 5,
+    "2026-08": 8,
+    "2026-09": 25,
+    "2026-10": 2,
+    "2026-11": 1
+   },
+   "PUMPUSDT": {
+    "2026-04": 32,
+    "2026-05": 43,
+    "2026-06": 233,
+    "2026-07": 286,
+    "2026-08": 598,
+    "2026-09": 969,
+    "2026-10": 2224,
+    "2026-11": 1053
+   },
+   "PURRUSDT": {
+    "2026-04": 0,
+    "2026-05": 17,
+    "2026-06": 5,
+    "2026-07": 2,
+    "2026-08": 8,
+    "2026-09": 3,
+    "2026-10": 1,
+    "2026-11": 1
+   },
+   "QNTUSDT": {
+    "2026-04": 7,
+    "2026-05": 10,
+    "2026-06": 14,
+    "2026-07": 9,
+    "2026-08": 8,
+    "2026-09": 191,
+    "2026-10": 264,
+    "2026-11": 72
+   },
+   "QTUMUSDT": {
+    "2026-04": 1,
+    "2026-05": 4,
+    "2026-06": 7,
+    "2026-07": 4,
+    "2026-08": 9,
+    "2026-09": 6,
+    "2026-10": 4,
+    "2026-11": 5
+   },
+   "RADUSDT": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 1,
+    "2026-07": 1,
+    "2026-08": 0,
+    "2026-09": 1,
+    "2026-10": 7,
+    "2026-11": 12
+   },
+   "RAREUSDT": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 2,
+    "2026-07": 1,
+    "2026-08": 4,
+    "2026-09": 9,
+    "2026-10": 6,
+    "2026-11": 5
+   },
+   "REEFUSDT": {
+    "2026-04": 12,
+    "2026-05": 11,
+    "2026-06": 4,
+    "2026-07": 9,
+    "2026-08": 5,
+    "2026-09": 11,
+    "2026-10": 3,
+    "2026-11": 2
+   },
+   "RENDERUSD": {
+    "2026-04": 11,
+    "2026-05": 32,
+    "2026-06": 44,
+    "2026-07": 20,
+    "2026-08": 35,
+    "2026-09": 38,
+    "2026-10": 28,
+    "2026-11": 22
+   },
+   "RENDERUSDT": {
+    "2026-04": 68,
+    "2026-05": 109,
+    "2026-06": 153,
+    "2026-07": 48,
+    "2026-08": 78,
+    "2026-09": 55,
+    "2026-10": 50,
+    "2026-11": 40
+   },
+   "REQUSDT": {
+    "2026-04": 3,
+    "2026-05": 1,
+    "2026-06": 2,
+    "2026-07": 2,
+    "2026-08": 2,
+    "2026-09": 3,
+    "2026-10": 7,
+    "2026-11": 13
+   },
+   "RHEAUSDT": {
+    "2026-04": 3,
+    "2026-05": 17,
+    "2026-06": 5,
+    "2026-07": 1,
+    "2026-08": 1,
+    "2026-09": 31,
+    "2026-10": 19,
+    "2026-11": 6
+   },
+   "RLCUSDT": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 1,
+    "2026-07": 0,
+    "2026-08": 1,
+    "2026-09": 1,
+    "2026-10": 46,
+    "2026-11": 28
+   },
+   "ROSEUSDT": {
+    "2026-04": 6,
+    "2026-05": 9,
+    "2026-06": 5,
+    "2026-07": 2,
+    "2026-08": 23,
+    "2026-09": 9,
+    "2026-10": 7,
+    "2026-11": 7
+   },
+   "RVNUSD": {
+    "2026-04": 8,
+    "2026-05": 5,
+    "2026-06": 4,
+    "2026-07": 4,
+    "2026-08": 14,
+    "2026-09": 13,
+    "2026-10": 17,
+    "2026-11": 6
+   },
+   "RVNUSDT": {
+    "2026-04": 73,
+    "2026-05": 37,
+    "2026-06": 40,
+    "2026-07": 42,
+    "2026-08": 64,
+    "2026-09": 46,
+    "2026-10": 53,
+    "2026-11": 69
+   },
+   "SANDUSD": {
+    "2026-04": 1,
+    "2026-05": 2,
+    "2026-06": 1,
+    "2026-07": 1,
+    "2026-08": 2,
+    "2026-09": 2,
+    "2026-10": 3,
+    "2026-11": 1
+   },
+   "SANDUSDT": {
+    "2026-04": 3,
+    "2026-05": 9,
+    "2026-06": 3,
+    "2026-07": 2,
+    "2026-08": 3,
+    "2026-09": 12,
+    "2026-10": 35,
+    "2026-11": 3
+   },
+   "SANTOSUSDT": {
+    "2026-04": 1,
+    "2026-05": 1,
+    "2026-06": 1,
+    "2026-07": 0,
+    "2026-08": 1,
+    "2026-09": 0,
+    "2026-10": 0,
+    "2026-11": 0
+   },
+   "SEIUSDT": {
+    "2026-04": 13,
+    "2026-05": 29,
+    "2026-06": 21,
+    "2026-07": 34,
+    "2026-08": 54,
+    "2026-09": 25,
+    "2026-10": 27,
+    "2026-11": 10
+   },
+   "SHIBUSD": {
+    "2026-04": 16,
+    "2026-05": 22,
+    "2026-06": 42,
+    "2026-07": 38,
+    "2026-08": 51,
+    "2026-09": 22,
+    "2026-10": 21,
+    "2026-11": 12
+   },
+   "SHIBUSDT": {
+    "2026-04": 74,
+    "2026-05": 72,
+    "2026-06": 92,
+    "2026-07": 99,
+    "2026-08": 109,
+    "2026-09": 81,
+    "2026-10": 52,
+    "2026-11": 406
+   },
+   "SKLUSDT": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 1,
+    "2026-07": 3,
+    "2026-08": 1,
+    "2026-09": 7,
+    "2026-10": 7,
+    "2026-11": 1
+   },
+   "SKYUSDT": {
+    "2026-04": 11,
+    "2026-05": 8,
+    "2026-06": 7,
+    "2026-07": 8,
+    "2026-08": 12,
+    "2026-09": 33,
+    "2026-10": 50,
+    "2026-11": 19
+   },
+   "SLPUSDT": {
+    "2026-04": 4,
+    "2026-05": 3,
+    "2026-06": 2,
+    "2026-07": 5,
+    "2026-08": 3,
+    "2026-09": 4,
+    "2026-10": 3,
+    "2026-11": 1
+   },
+   "SNXUSDT": {
+    "2026-04": 1,
+    "2026-05": 2,
+    "2026-06": 3,
+    "2026-07": 1,
+    "2026-08": 1,
+    "2026-09": 10,
+    "2026-10": 7,
+    "2026-11": 9
+   },
+   "SOLUSD": {
+    "2026-04": 330,
+    "2026-05": 880,
+    "2026-06": 1348,
+    "2026-07": 1225,
+    "2026-08": 1448,
+    "2026-09": 1556,
+    "2026-10": 1559,
+    "2026-11": 2187
+   },
+   "SOLUSDC": {
+    "2026-04": 63,
+    "2026-05": 47,
+    "2026-06": 121,
+    "2026-07": 80,
+    "2026-08": 204,
+    "2026-09": 403,
+    "2026-10": 142,
+    "2026-11": 339
+   },
+   "SOLUSDT": {
+    "2026-04": 585,
+    "2026-05": 1188,
+    "2026-06": 2138,
+    "2026-07": 1280,
+    "2026-08": 1657,
+    "2026-09": 2896,
+    "2026-10": 3472,
+    "2026-11": 5261
+   },
+   "SPXUSDT": {
+    "2026-04": 0,
+    "2026-05": 4,
+    "2026-06": 3,
+    "2026-07": 1,
+    "2026-08": 7,
+    "2026-09": 13,
+    "2026-10": 3,
+    "2026-11": 4
+   },
+   "STORJUSDT": {
+    "2026-04": 6,
+    "2026-05": 12,
+    "2026-06": 4,
+    "2026-07": 6,
+    "2026-08": 2,
+    "2026-09": 13,
+    "2026-10": 5,
+    "2026-11": 1
+   },
+   "SUIUSD": {
+    "2026-04": 28,
+    "2026-05": 100,
+    "2026-06": 81,
+    "2026-07": 94,
+    "2026-08": 249,
+    "2026-09": 515,
+    "2026-10": 163,
+    "2026-11": 99
+   },
+   "SUIUSDT": {
+    "2026-04": 119,
+    "2026-05": 343,
+    "2026-06": 458,
+    "2026-07": 209,
+    "2026-08": 599,
+    "2026-09": 1427,
+    "2026-10": 810,
+    "2026-11": 367
+   },
+   "SUSD": {
+    "2026-04": 0,
+    "2026-05": 3,
+    "2026-06": 2,
+    "2026-07": 1,
+    "2026-08": 4,
+    "2026-09": 6,
+    "2026-10": 2,
+    "2026-11": 4
+   },
+   "SUSDT": {
+    "2026-04": 1,
+    "2026-05": 5,
+    "2026-06": 5,
+    "2026-07": 1,
+    "2026-08": 3,
+    "2026-09": 14,
+    "2026-10": 18,
+    "2026-11": 21
+   },
+   "SUSHIUSD": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 4,
+    "2026-07": 0,
+    "2026-08": 1,
+    "2026-09": 1,
+    "2026-10": 1,
+    "2026-11": 0
+   },
+   "SUSHIUSDT": {
+    "2026-04": 4,
+    "2026-05": 3,
+    "2026-06": 6,
+    "2026-07": 6,
+    "2026-08": 5,
+    "2026-09": 9,
+    "2026-10": 6,
+    "2026-11": 9
+   },
+   "SYSUSDT": {
+    "2026-04": 0,
+    "2026-05": 12,
+    "2026-06": 10,
+    "2026-07": 5,
+    "2026-08": 4,
+    "2026-09": 10,
+    "2026-10": 7,
+    "2026-11": 8
+   },
+   "TFUELUSDT": {
+    "2026-04": 18,
+    "2026-05": 16,
+    "2026-06": 10,
+    "2026-07": 9,
+    "2026-08": 15,
+    "2026-09": 21,
+    "2026-10": 27,
+    "2026-11": 46
+   },
+   "THETAUSD": {
+    "2026-04": 13,
+    "2026-05": 9,
+    "2026-06": 24,
+    "2026-07": 109,
+    "2026-08": 128,
+    "2026-09": 175,
+    "2026-10": 57,
+    "2026-11": 13
+   },
+   "THETAUSDT": {
+    "2026-04": 17,
+    "2026-05": 23,
+    "2026-06": 34,
+    "2026-07": 45,
+    "2026-08": 334,
+    "2026-09": 359,
+    "2026-10": 21,
+    "2026-11": 23
+   },
+   "TIAUSDT": {
+    "2026-04": 6,
+    "2026-05": 9,
+    "2026-06": 11,
+    "2026-07": 4,
+    "2026-08": 3,
+    "2026-09": 19,
+    "2026-10": 21,
+    "2026-11": 14
+   },
+   "TLMUSDT": {
+    "2026-04": 1,
+    "2026-05": 1,
+    "2026-06": 2,
+    "2026-07": 9,
+    "2026-08": 2,
+    "2026-09": 1,
+    "2026-10": 2,
+    "2026-11": 1
+   },
+   "TOSHIUSDT": {
+    "2026-04": 1,
+    "2026-05": 12,
+    "2026-06": 5,
+    "2026-07": 3,
+    "2026-08": 8,
+    "2026-09": 8,
+    "2026-10": 5,
+    "2026-11": 7
+   },
+   "TRACUSDT": {
+    "2026-04": 15,
+    "2026-05": 23,
+    "2026-06": 12,
+    "2026-07": 11,
+    "2026-08": 16,
+    "2026-09": 5,
+    "2026-10": 7,
+    "2026-11": 15
+   },
+   "TROLLUSDT": {
+    "2026-04": 2,
+    "2026-05": 30,
+    "2026-06": 15,
+    "2026-07": 5,
+    "2026-08": 4,
+    "2026-09": 90,
+    "2026-10": 45,
+    "2026-11": 37
+   },
+   "TRUMPUSD": {
+    "2026-04": 22,
+    "2026-05": 7,
+    "2026-06": 16,
+    "2026-07": 8,
+    "2026-08": 11,
+    "2026-09": 38,
+    "2026-10": 27,
+    "2026-11": 56
+   },
+   "TRUMPUSDT": {
+    "2026-04": 59,
+    "2026-05": 26,
+    "2026-06": 34,
+    "2026-07": 12,
+    "2026-08": 53,
+    "2026-09": 85,
+    "2026-10": 46,
+    "2026-11": 91
+   },
+   "TRXUSD": {
+    "2026-04": 22,
+    "2026-05": 39,
+    "2026-06": 49,
+    "2026-07": 20,
+    "2026-08": 12,
+    "2026-09": 20,
+    "2026-10": 139,
+    "2026-11": 16
+   },
+   "TRXUSDT": {
+    "2026-04": 41,
+    "2026-05": 87,
+    "2026-06": 271,
+    "2026-07": 64,
+    "2026-08": 59,
+    "2026-09": 79,
+    "2026-10": 278,
+    "2026-11": 73
+   },
+   "TURBOUSDT": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 1,
+    "2026-07": 2,
+    "2026-08": 2,
+    "2026-09": 3,
+    "2026-10": 1,
+    "2026-11": 0
+   },
+   "TUSDT": {
+    "2026-04": 0,
+    "2026-05": 3,
+    "2026-06": 2,
+    "2026-07": 3,
+    "2026-08": 1,
+    "2026-09": 13,
+    "2026-10": 4,
+    "2026-11": 2
+   },
+   "TWTUSDT": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 1,
+    "2026-07": 0,
+    "2026-08": 0,
+    "2026-09": 2,
+    "2026-10": 0,
+    "2026-11": 0
+   },
+   "UNIUSD": {
+    "2026-04": 22,
+    "2026-05": 31,
+    "2026-06": 61,
+    "2026-07": 55,
+    "2026-08": 100,
+    "2026-09": 152,
+    "2026-10": 67,
+    "2026-11": 35
+   },
+   "UNIUSDT": {
+    "2026-04": 19,
+    "2026-05": 39,
+    "2026-06": 103,
+    "2026-07": 218,
+    "2026-08": 260,
+    "2026-09": 382,
+    "2026-10": 166,
+    "2026-11": 95
+   },
+   "USD1USDT": {
+    "2026-04": 6,
+    "2026-05": 1,
+    "2026-06": 51,
+    "2026-07": 23,
+    "2026-08": 2,
+    "2026-09": 3,
+    "2026-10": 1,
+    "2026-11": 2
+   },
+   "USDCUSD": {
+    "2026-04": 461,
+    "2026-05": 172,
+    "2026-06": 99,
+    "2026-07": 94,
+    "2026-08": 142,
+    "2026-09": 275,
+    "2026-10": 227,
+    "2026-11": 530
+   },
+   "USDCUSDT": {
+    "2026-04": 338,
+    "2026-05": 220,
+    "2026-06": 197,
+    "2026-07": 182,
+    "2026-08": 232,
+    "2026-09": 457,
+    "2026-10": 342,
+    "2026-11": 654
+   },
+   "USDTUSD": {
+    "2026-04": 2378,
+    "2026-05": 3166,
+    "2026-06": 3292,
+    "2026-07": 2446,
+    "2026-08": 3397,
+    "2026-09": 5371,
+    "2026-10": 5030,
+    "2026-11": 6600
+   },
+   "USDUCUSDT": {
+    "2026-05": 140,
+    "2026-06": 98,
+    "2026-07": 61,
+    "2026-08": 94,
+    "2026-09": 49,
+    "2026-10": 62,
+    "2026-11": 40
+   },
+   "USELESSUSDT": {
+    "2026-04": 1,
+    "2026-05": 2,
+    "2026-06": 2,
+    "2026-07": 1,
+    "2026-08": 1,
+    "2026-09": 16,
+    "2026-10": 5,
+    "2026-11": 5
+   },
+   "VELOUSDT": {
+    "2026-07": 6,
+    "2026-08": 10,
+    "2026-09": 93,
+    "2026-10": 33,
+    "2026-11": 43
+   },
+   "VETUSD": {
+    "2026-04": 21,
+    "2026-05": 26,
+    "2026-06": 80,
+    "2026-07": 165,
+    "2026-08": 679,
+    "2026-09": 175,
+    "2026-10": 243,
+    "2026-11": 1106
+   },
+   "VETUSDT": {
+    "2026-04": 57,
+    "2026-05": 80,
+    "2026-06": 47,
+    "2026-07": 127,
+    "2026-08": 325,
+    "2026-09": 785,
+    "2026-10": 617,
+    "2026-11": 271
+   },
+   "VIRTUALUSDT": {
+    "2026-04": 1,
+    "2026-05": 30,
+    "2026-06": 12,
+    "2026-07": 2,
+    "2026-08": 3,
+    "2026-09": 10,
+    "2026-10": 9,
+    "2026-11": 1
+   },
+   "VOXELUSDT": {
+    "2026-04": 0,
+    "2026-05": 1,
+    "2026-06": 3,
+    "2026-07": 2,
+    "2026-08": 1,
+    "2026-09": 3,
+    "2026-10": 2,
+    "2026-11": 26
+   },
+   "VTHOUSD": {
+    "2026-04": 2,
+    "2026-05": 6,
+    "2026-06": 8,
+    "2026-07": 5,
+    "2026-08": 13,
+    "2026-09": 42,
+    "2026-10": 12,
+    "2026-11": 4
+   },
+   "VTHOUSDT": {
+    "2026-04": 17,
+    "2026-05": 39,
+    "2026-06": 36,
+    "2026-07": 20,
+    "2026-08": 28,
+    "2026-09": 131,
+    "2026-10": 49,
+    "2026-11": 44
+   },
+   "WAXPUSDT": {
+    "2026-04": 2,
+    "2026-05": 2,
+    "2026-06": 3,
+    "2026-07": 2,
+    "2026-08": 1,
+    "2026-09": 3,
+    "2026-10": 3,
+    "2026-11": 1
+   },
+   "WIFUSDT": {
+    "2026-04": 6,
+    "2026-05": 15,
+    "2026-06": 9,
+    "2026-07": 6,
+    "2026-08": 6,
+    "2026-09": 11,
+    "2026-10": 6,
+    "2026-11": 4
+   },
+   "WLDUSDT": {
+    "2026-04": 6,
+    "2026-05": 6,
+    "2026-06": 47,
+    "2026-07": 23,
+    "2026-08": 20,
+    "2026-09": 62,
+    "2026-10": 21,
+    "2026-11": 13
+   },
+   "WLFIUSDT": {
+    "2026-04": 18,
+    "2026-05": 25,
+    "2026-06": 43,
+    "2026-07": 51,
+    "2026-08": 23,
+    "2026-09": 17,
+    "2026-10": 11,
+    "2026-11": 23
+   },
+   "WODUSDT": {
+    "2026-05": 85,
+    "2026-06": 81,
+    "2026-07": 7,
+    "2026-08": 7,
+    "2026-09": 7,
+    "2026-10": 5,
+    "2026-11": 4
+   },
+   "XDCUSDT": {
+    "2026-04": 75,
+    "2026-05": 60,
+    "2026-06": 57,
+    "2026-07": 45,
+    "2026-08": 35,
+    "2026-09": 59,
+    "2026-10": 47,
+    "2026-11": 24
+   },
+   "XECUSDT": {
+    "2026-04": 5,
+    "2026-05": 11,
+    "2026-06": 9,
+    "2026-07": 36,
+    "2026-08": 26,
+    "2026-09": 31,
+    "2026-10": 28,
+    "2026-11": 5
+   },
+   "XLMUSD": {
+    "2026-04": 25,
+    "2026-05": 116,
+    "2026-06": 339,
+    "2026-07": 390,
+    "2026-08": 492,
+    "2026-09": 710,
+    "2026-10": 416,
+    "2026-11": 288
+   },
+   "XLMUSDT": {
+    "2026-04": 122,
+    "2026-05": 453,
+    "2026-06": 763,
+    "2026-07": 773,
+    "2026-08": 760,
+    "2026-09": 877,
+    "2026-10": 317,
+    "2026-11": 667
+   },
+   "XNOUSDT": {
+    "2026-04": 14,
+    "2026-05": 8,
+    "2026-06": 17,
+    "2026-07": 22,
+    "2026-08": 10,
+    "2026-09": 22,
+    "2026-10": 14,
+    "2026-11": 12
+   },
+   "XRPUSD": {
+    "2026-04": 407,
+    "2026-05": 440,
+    "2026-06": 1054,
+    "2026-07": 675,
+    "2026-08": 2163,
+    "2026-09": 2479,
+    "2026-10": 2295,
+    "2026-11": 3001
+   },
+   "XRPUSDT": {
+    "2026-04": 710,
+    "2026-05": 946,
+    "2026-06": 1983,
+    "2026-07": 924,
+    "2026-08": 2778,
+    "2026-09": 4581,
+    "2026-10": 3866,
+    "2026-11": 5141
+   },
+   "XTZUSDT": {
+    "2026-04": 8,
+    "2026-05": 14,
+    "2026-06": 7,
+    "2026-07": 8,
+    "2026-08": 6,
+    "2026-09": 15,
+    "2026-10": 10,
+    "2026-11": 30
+   },
+   "YFIUSDT": {
+    "2026-04": 4,
+    "2026-05": 5,
+    "2026-06": 6,
+    "2026-07": 4,
+    "2026-08": 2,
+    "2026-09": 8,
+    "2026-10": 4,
+    "2026-11": 4
+   },
+   "ZECUSD": {
+    "2026-06": 56,
+    "2026-07": 67,
+    "2026-08": 246,
+    "2026-09": 563,
+    "2026-10": 452,
+    "2026-11": 888
+   },
+   "ZECUSDT": {
+    "2026-04": 527,
+    "2026-05": 1656,
+    "2026-06": 1512,
+    "2026-07": 1074,
+    "2026-08": 1954,
+    "2026-09": 4309,
+    "2026-10": 10290,
+    "2026-11": 16526
+   },
+   "ZENUSDT": {
+    "2026-04": 17,
+    "2026-05": 16,
+    "2026-06": 15,
+    "2026-07": 17,
+    "2026-08": 12,
+    "2026-09": 30,
+    "2026-10": 13,
+    "2026-11": 36
+   },
+   "ZILUSD": {
+    "2026-04": 4,
+    "2026-05": 2,
+    "2026-06": 5,
+    "2026-07": 4,
+    "2026-08": 3,
+    "2026-09": 2,
+    "2026-10": 2,
+    "2026-11": 1
+   },
+   "ZILUSDT": {
+    "2026-04": 82,
+    "2026-05": 41,
+    "2026-06": 41,
+    "2026-07": 41,
+    "2026-08": 65,
+    "2026-09": 83,
+    "2026-10": 57,
+    "2026-11": 37
+   },
+   "ZRXUSDT": {
+    "2026-04": 40,
+    "2026-05": 44,
+    "2026-06": 33,
+    "2026-07": 22,
+    "2026-08": 32,
+    "2026-09": 35,
+    "2026-10": 31,
+    "2026-11": 17
+   }
+  },
+  "klinesDay": "2026-11-10"
  },
  "coinbase": {
   "products": {
@@ -2850,10 +7107,10 @@
   },
   "productsDay": "2026-11-10",
   "cursors": {
-   "BTC": 1117868621,
-   "ETH": 853575584,
-   "SOL": 360122700,
-   "USDT": 149774473
+   "BTC": 1117871179,
+   "ETH": 853577118,
+   "SOL": 360123419,
+   "USDT": 149774612
   },
   "recordStart": {
    "BTC": 1794269437000,
@@ -2863,7 +7120,8 @@
   },
   "candlesUntil": {
    "BTC": 1794269400000,
-   "ETH": 1786410000000
+   "ETH": 1794269400000,
+   "SOL": 1793898000000
   }
  },
  "kraken": {
@@ -5368,24 +9626,24 @@
   "pairsDay": "2026-11-10",
   "cursors": {
    "BTC": {
-    "since": "1794269491000000000",
-    "lastId": 115015477
+    "since": "1794270145000000000",
+    "lastId": 115016177
    },
    "ETH": {
-    "since": "1794269492000000000",
-    "lastId": 68975539
+    "since": "1794270145000000000",
+    "lastId": 68975841
    },
    "SOL": {
-    "since": "1794269493000000000",
-    "lastId": 35395357
+    "since": "1794270146000000000",
+    "lastId": 35395560
    },
    "USDC": {
-    "since": "1794269494000000000",
-    "lastId": 24104257
+    "since": "1794270148000000000",
+    "lastId": 24104348
    },
    "USDT": {
-    "since": "1794269495000000000",
-    "lastId": 85580499
+    "since": "1794270149000000000",
+    "lastId": 85581158
    }
   }
  },
