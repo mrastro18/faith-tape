@@ -1,6 +1,6 @@
 {
- "at": "2026-11-10T02:34:27.327Z",
- "run": "42743677328",
+ "at": "2026-11-10T02:43:04.805Z",
+ "run": "42744633825",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 208,
+   "ms": 145,
    "markets": 127,
    "crypto": 20,
    "pages": 1,
@@ -21,37 +21,37 @@
     "Indices": 3
    }
   },
-  "coinbase": {
-   "ok": false,
-   "ms": 12051,
-   "error": "HTTP 429 api.exchange.coinbase.com/products/ETC-USD/trades",
-   "status": 429
-  },
   "kraken": {
    "ok": true,
-   "ms": 37511,
+   "ms": 17724,
    "bases": 15,
-   "bars": 8493
+   "bars": 1035
+  },
+  "coinbase": {
+   "ok": false,
+   "ms": 18309,
+   "error": "HTTP 429 api.exchange.coinbase.com/products/SOL-USD/trades",
+   "status": 429
   },
   "binanceus": {
    "ok": true,
-   "ms": 240129,
+   "ms": 240134,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 336067,
-   "symbolsBehind": 245
+   "tradesWritten": 1047525,
+   "symbolsBehind": 146
   }
  },
- "calls": 1629,
+ "calls": 1634,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/ETC-USD/trades",
+   "path": "/products/SOL-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 240133
+ "ms": 240137
 }
