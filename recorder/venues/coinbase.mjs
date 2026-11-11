@@ -61,3 +61,20 @@ export async function candles1m(f, product, startMs, endMs) {
     .filter((r) => r[0] >= startMs && r[0] < endMs)
     .sort((a, b) => a[0] - b[0]);
 }
+
+/**
+ * Best bid and ask from one /products/{id}/book?level=1 answer: [bid, bidQty, ask, askQty], null for an empty side.
+ * Documented shape: {"sequence": 13051505638, "bids": [["6247.58", "6.3578146", 2]], "asks": [["6251.52", "2", 1]],
+ * "time": "2021-02-12T01:09:23.334Z"}, each level [price, size, num-orders]. The ticker endpoint has no sizes.
+ */
+export function parseBook1(json) {
+  if (!Array.isArray(json?.bids) || !Array.isArray(json?.asks)) throw new Error("coinbase book: no bids/asks");
+  const side = (xs) => (xs.length ? [Number(xs[0][0]), Number(xs[0][1])] : [null, null]);
+  return [...side(json.bids), ...side(json.asks)];
+}
+
+/** Level-1 book of one product (one public call). */
+export async function book1(f, product) {
+  const { json } = await f.getJson(`${BASE}/products/${encodeURIComponent(product)}/book?level=1`);
+  return parseBook1(json);
+}

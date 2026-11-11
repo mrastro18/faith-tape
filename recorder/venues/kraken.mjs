@@ -50,3 +50,41 @@ export async function tradesSince(f, pair, state, { maxPages = 10, deadline, sta
   out.sort((a, b) => a.id - b.id);
   return { trades: out.filter((t, i) => i === 0 || t.id !== out[i - 1].id), last: since, caughtUp: !full, pages };
 }
+
+/** An error answer from Kraken (HTTP 200 with a non-empty `error` array). A rate-limit answer is marked as such. */
+function apiError(errors) {
+  const e = new Error(`kraken Ticker: ${errors.join(",")}`);
+  e.xStatus = errors.join(",");
+  e.rateLimited = /rate limit|too many requests|throttled/i.test(e.xStatus);
+  return e;
+}
+
+/**
+ * Best bid and ask for several pairs from one /0/public/Ticker answer. `pairs` is [[symbol, key]]: the symbol is the
+ * name asked for (an altname such as XBTUSD) and the key is how the answer names it (XXBTZUSD); a pair is found by
+ * either. Fields a and b are [price, wholeLotVolume, lotVolume]; the lot volume is kept as the size.
+ * Returns quotes [[symbol, bid, bidQty, ask, askQty]] in `pairs` order and the symbols the answer left out.
+ */
+export function parseTicker(json, pairs) {
+  if (json?.error?.length) throw apiError(json.error);
+  const res = json?.result;
+  if (!res || typeof res !== "object") throw new Error("kraken Ticker: no result");
+  const quotes = [];
+  const missing = [];
+  for (const [symbol, key] of pairs) {
+    const x = res[key] ?? res[symbol];
+    if (!Array.isArray(x?.a) || !Array.isArray(x?.b)) {
+      missing.push(symbol);
+      continue;
+    }
+    quotes.push([symbol, Number(x.b[0]), Number(x.b[2]), Number(x.a[0]), Number(x.a[2])]);
+  }
+  return { quotes, missing };
+}
+
+/** One call for every pair. */
+export async function tickers(f, pairs) {
+  const list = pairs.map(([s]) => encodeURIComponent(s)).join(","); // a literal comma, as the docs show
+  const { json } = await f.getJson(`${BASE}/0/public/Ticker?pair=${list}`);
+  return parseTicker(json, pairs);
+}

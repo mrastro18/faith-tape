@@ -71,7 +71,7 @@ jobs:
           else wait=$(( (67 - min) * 60 - sec )); fi
           echo "at=$(( now + wait ))" >> "$GITHUB_OUTPUT"
           echo "next run in ${wait}s"
-      # The wait would otherwise be idle: poll Binance.US best bid and ask until a minute before the slot.
+      # The wait would otherwise be idle: poll best bid and ask (Binance.US, Coinbase, Kraken) until a minute before the slot.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         continue-on-error: true
         with:
@@ -91,7 +91,10 @@ jobs:
         run: |
           git config user.name "faith-tape recorder"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/binanceus/quotes
+          # a venue that never answered this session has no directory yet, and git add fails on a missing path
+          for d in data/binanceus/quotes data/coinbase/quotes data/kraken/quotes; do
+            if [ -d "$d" ]; then git add "$d"; fi
+          done
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
           git commit -q -m "quotes: $(date -u +%Y-%m-%dT%H:%MZ) run ${GITHUB_RUN_ID}"
           for i in 1 2 3; do
