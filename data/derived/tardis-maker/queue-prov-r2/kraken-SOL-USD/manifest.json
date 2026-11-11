@@ -1,0 +1,1218 @@
+{
+ "schema": "faith-tape.maker-sim/1",
+ "run": "43085676746",
+ "sha": "b5ece3fd1449479f2eac57df4d3f3c40c467e954",
+ "spec": "queue-prov-r2@ba41621",
+ "config": {
+  "maxGapMs": 120000,
+  "latencyMs": 500,
+  "lookaheadMs": 250,
+  "restMs": 900000,
+  "fillWithinMin": [
+   1,
+   5,
+   15
+  ],
+  "placeEveryMs": 60000,
+  "placeFromMs": 60000,
+  "placeToMs": 84600000,
+  "notional": 50,
+  "horizonsMin": [
+   1,
+   5,
+   15
+  ],
+  "takerExitMin": 5,
+  "makerExitRestMs": 300000,
+  "variants": [
+   "join",
+   "improve"
+  ],
+  "cancels": [
+   "pessimistic",
+   "optimistic"
+  ],
+  "sides": [
+   "buy",
+   "sell"
+  ]
+ },
+ "fees": {
+  "coinbase": {
+   "makerBp": 40,
+   "takerBp": 60
+  },
+  "kraken": {
+   "makerBp": 40,
+   "takerBp": 80
+  }
+ },
+ "inputs": [
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-07-01",
+   "files": {
+    "quotes": {
+     "bytes": 2175436,
+     "sha256": "b7a5c714767840780f77f51afeabcd727cfa1df1289522c886a89aaf80b2de78"
+    },
+    "trades": {
+     "bytes": 22754,
+     "sha256": "a4ec8399327100c8b711aec069b517cbedfa3d4cc4025efaf2753b9ff0f3c681"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 132345,
+    "kept": 132345,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 1383,
+    "kept": 1383,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 2,
+    "coveredMin": 1425.4108,
+    "first": "2021-07-01T00:00:02.547Z",
+    "last": "2021-07-01T23:59:59.850Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-08-01",
+   "files": {
+    "quotes": {
+     "bytes": 2006010,
+     "sha256": "d9244a890833747060dbe3fdef340fd7fbc1441d7bbf035af0873918ac14712a"
+    },
+    "trades": {
+     "bytes": 42925,
+     "sha256": "fa4ca99f6932d06550a287099df024e701cb28926298a46f1118c32ed64234bd"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 121064,
+    "kept": 121064,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 2800,
+    "kept": 2800,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.8853,
+    "first": "2021-08-01T00:00:02.860Z",
+    "last": "2021-08-01T23:59:55.976Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-09-01",
+   "files": {
+    "quotes": {
+     "bytes": 3721030,
+     "sha256": "bcc1f27b2578764f5c590efca1dd45da3199dca37bfaccff524cdfe5f0f17569"
+    },
+    "trades": {
+     "bytes": 324537,
+     "sha256": "fe16241038ba73a22af5f43b187c353f92682b4832764cb6c0044e31f2f60bab"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 223249,
+    "kept": 223249,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 22309,
+    "kept": 22309,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 2,
+    "coveredMin": 1428.9586,
+    "first": "2021-09-01T00:00:02.030Z",
+    "last": "2021-09-01T23:59:58.651Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-10-01",
+   "files": {
+    "quotes": {
+     "bytes": 5136685,
+     "sha256": "e6f3ba30fcc52e4b2ba4a5f1897ab12c32cda2364bec1072f201276526cf639b"
+    },
+    "trades": {
+     "bytes": 285583,
+     "sha256": "7bd689ab0821f3ba90c4c661d40f8ff81a16ff3f6ddfe1490cea77b55791f2aa"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 320876,
+    "kept": 320876,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 19514,
+    "kept": 19514,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9539,
+    "first": "2021-10-01T00:00:02.406Z",
+    "last": "2021-10-01T23:59:59.640Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-11-01",
+   "files": {
+    "quotes": {
+     "bytes": 8558986,
+     "sha256": "1ddb1cc9525acfeb560c43a11fbed5904e3acb4cd0e7fd6017cac3f097042588"
+    },
+    "trades": {
+     "bytes": 200962,
+     "sha256": "35805f1f827e79952f9883b1fb6540b92b2db091416793854f0bb9ee57e1fe20"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 543468,
+    "kept": 543468,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 13289,
+    "kept": 13289,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9567,
+    "first": "2021-11-01T00:00:02.595Z",
+    "last": "2021-11-01T23:59:59.999Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-12-01",
+   "files": {
+    "quotes": {
+     "bytes": 7329995,
+     "sha256": "f0b99083e37026a1fef3f92939f2381c5171367dc385247edeaf6ed40b1e8db5"
+    },
+    "trades": {
+     "bytes": 226072,
+     "sha256": "67a90c3f916f527050faded68d41f69f1d6a49ba59db1fa6c9e8a14b6cbf6bdb"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 485869,
+    "kept": 485869,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 15462,
+    "kept": 15462,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9524,
+    "first": "2021-12-01T00:00:02.489Z",
+    "last": "2021-12-01T23:59:59.635Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2022-01-01",
+   "files": {
+    "quotes": {
+     "bytes": 4653360,
+     "sha256": "18f7149db2b237d62060fd31f5a299e0b2a93d9c0c07a7fc497e1b59b5b7aec4"
+    },
+    "trades": {
+     "bytes": 74215,
+     "sha256": "fb629d364360f9217dbe1962e74b01b6fa90b6639ee4d4ef2b3b6bcc7b903b79"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 307406,
+    "kept": 307406,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 4742,
+    "kept": 4742,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9523,
+    "first": "2022-01-01T00:00:02.311Z",
+    "last": "2022-01-01T23:59:59.449Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2022-02-01",
+   "files": {
+    "quotes": {
+     "bytes": 8575945,
+     "sha256": "eda8a97d1de4fafc833a9bd9b4242ca34d98e855c9d89432afc5d98a259c11b0"
+    },
+    "trades": {
+     "bytes": 332770,
+     "sha256": "41c721e285c178d4f2d22dfcf23b03ff8b01aeed8515a1a38f8cb291404247df"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 539968,
+    "kept": 539968,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 22263,
+    "kept": 22263,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9595,
+    "first": "2022-02-01T00:00:02.273Z",
+    "last": "2022-02-01T23:59:59.842Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2022-03-01",
+   "files": {
+    "quotes": {
+     "bytes": 6555733,
+     "sha256": "611b9653b483e68e237f86c10b36ae7495ea96a89e6e8547e2aa925e0e55630c"
+    },
+    "trades": {
+     "bytes": 571502,
+     "sha256": "1d3459f85ce80ad7c801d9c8a4a5a8badc5902b3adcc6c4c3fa8ad565bb95cf5"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 417241,
+    "kept": 417241,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 38340,
+    "kept": 38340,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.902,
+    "first": "2022-03-01T00:00:02.193Z",
+    "last": "2022-03-01T23:59:56.311Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2022-04-01",
+   "files": {
+    "quotes": {
+     "bytes": 8980286,
+     "sha256": "96397b527d2803847854099f8a4bcdcff5224684975f85b86b7c9c34b4242670"
+    },
+    "trades": {
+     "bytes": 729355,
+     "sha256": "7213c12e7f3c6352df19333e46fda94f2ee0801e42415dbebbdd66ece7d65e59"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 564179,
+    "kept": 564179,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 48757,
+    "kept": 48757,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9574,
+    "first": "2022-04-01T00:00:02.219Z",
+    "last": "2022-04-01T23:59:59.666Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2022-05-01",
+   "files": {
+    "quotes": {
+     "bytes": 6077936,
+     "sha256": "3a9c8ed747fe50ca0ff3efc052b37e9d00d768c0785a11a6a727f8d0110ec760"
+    },
+    "trades": {
+     "bytes": 198702,
+     "sha256": "cf886ddbc270257ff0e803e3b6880ab182c6f513c1f7f6a952697a689195b56b"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 380299,
+    "kept": 380299,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 13714,
+    "kept": 13714,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9569,
+    "first": "2022-05-01T00:00:02.255Z",
+    "last": "2022-05-01T23:59:59.670Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2022-06-01",
+   "files": {
+    "quotes": {
+     "bytes": 5168488,
+     "sha256": "c9fdb0e38c3191f328c7ddb0629d8b32f9dff26903bf8fddc0732bfa4bf42059"
+    },
+    "trades": {
+     "bytes": 166301,
+     "sha256": "3c1b3d5e35626188762ec320ff4ba0fb5d0d9c7759855edc0c47353b4a384ba6"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 320042,
+    "kept": 320042,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 10895,
+    "kept": 10895,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 4,
+    "coveredMin": 1409.7996,
+    "first": "2022-06-01T00:00:02.206Z",
+    "last": "2022-06-01T23:59:59.848Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2022-07-01",
+   "files": {
+    "quotes": {
+     "bytes": 7216997,
+     "sha256": "fc89fdfc99a09754b00ba0d86eac83065c218e17e9046493d6c8110a97324612"
+    },
+    "trades": {
+     "bytes": 154011,
+     "sha256": "9c3f6fc23f91f44a540977ab65c5ee8870d52283b83a1e0a935feafbe94734d2"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 447841,
+    "kept": 447841,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 10180,
+    "kept": 10180,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9608,
+    "first": "2022-07-01T00:00:02.234Z",
+    "last": "2022-07-01T23:59:59.882Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2022-08-01",
+   "files": {
+    "quotes": {
+     "bytes": 4372656,
+     "sha256": "010c383c2151e2455fbdbf53c421caa7f778cb4f58e5c295b1e8c0a5416e5f34"
+    },
+    "trades": {
+     "bytes": 146454,
+     "sha256": "399701cb8528df975e70c1026076f187c3efaf875cdea6a5ef62acf6aa1eeff5"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 285296,
+    "kept": 285296,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 9800,
+    "kept": 9800,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.952,
+    "first": "2022-08-01T00:00:02.323Z",
+    "last": "2022-08-01T23:59:59.441Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2022-09-01",
+   "files": {
+    "quotes": {
+     "bytes": 3115160,
+     "sha256": "bc45ebf2c07fb6a88d44877368af01e6c81f59d7f7be178befe9bda8b529f7e2"
+    },
+    "trades": {
+     "bytes": 72617,
+     "sha256": "fd199976016849f0dc6df32bf50d031e0daf1f624af2069f77925ea44df52a65"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 198068,
+    "kept": 198068,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 4688,
+    "kept": 4688,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 2,
+    "coveredMin": 1427.2872,
+    "first": "2022-09-01T00:00:02.517Z",
+    "last": "2022-09-01T23:59:59.733Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2022-10-01",
+   "files": {
+    "quotes": {
+     "bytes": 1703523,
+     "sha256": "024582a8ae4f59df9119c4dfab4bbb92788f20bcc0b07c339769110483fd3deb"
+    },
+    "trades": {
+     "bytes": 49521,
+     "sha256": "21aaef22ad30dda8a7491476308e9d613b066288d4c0c2618d9faeb73193d9e5"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 111398,
+    "kept": 111398,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 3315,
+    "kept": 3315,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9603,
+    "first": "2022-10-01T00:00:02.336Z",
+    "last": "2022-10-01T23:59:59.951Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2022-11-01",
+   "files": {
+    "quotes": {
+     "bytes": 2678013,
+     "sha256": "55bf5463a7d9068a57d66982490df4ce0efd2ed381f3cbf90b8b66afd8da2082"
+    },
+    "trades": {
+     "bytes": 59568,
+     "sha256": "fa78f11f1b2f68cb0e80fdb10c33e6a3b6f11f8c7269dcb894af0f19e8ac91bf"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 169440,
+    "kept": 169440,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 4263,
+    "kept": 4263,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9564,
+    "first": "2022-11-01T00:00:02.155Z",
+    "last": "2022-11-01T23:59:59.541Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2022-12-01",
+   "files": {
+    "quotes": {
+     "bytes": 1980357,
+     "sha256": "22458378383d1c9f174c68e4a9adc78f2b3d2c265119334d618d28f1c796aeaf"
+    },
+    "trades": {
+     "bytes": 60228,
+     "sha256": "8d3b1bd9ce67dc4b6fa2a1299d85785de3eae6c3a2c875295553b2e2568f3975"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 121767,
+    "kept": 121767,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 4012,
+    "kept": 4012,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9631,
+    "first": "2022-12-01T00:00:02.057Z",
+    "last": "2022-12-01T23:59:59.843Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2023-01-01",
+   "files": {
+    "quotes": {
+     "bytes": 1551664,
+     "sha256": "5272d3f1d2e548ab1b42eb405c9cb4419c6d057fa059c570e820abd135958301"
+    },
+    "trades": {
+     "bytes": 41726,
+     "sha256": "0feec510e679f6e1b41aa9e0a8fb996ad653e01e7e1dfa20aa4c3bc074b28059"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 95809,
+    "kept": 95809,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 2733,
+    "kept": 2733,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9225,
+    "first": "2023-01-01T00:00:02.032Z",
+    "last": "2023-01-01T23:59:57.383Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2023-02-01",
+   "files": {
+    "quotes": {
+     "bytes": 4869793,
+     "sha256": "efaebb1e8489380d19a8f662236569db0361e3897255f4eef428a675b1cde3ee"
+    },
+    "trades": {
+     "bytes": 141094,
+     "sha256": "ca7a318440d684bf619d7cacdd9f606f4ee2dc28537701aacf4a95820eb14070"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 315874,
+    "kept": 315874,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 9639,
+    "kept": 9639,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9487,
+    "first": "2023-02-01T00:00:02.306Z",
+    "last": "2023-02-01T23:59:59.226Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2023-03-01",
+   "files": {
+    "quotes": {
+     "bytes": 3316126,
+     "sha256": "a8b3569af5fd0209d5aa7686848aad246d6692c596786614f21d1d162bd4c208"
+    },
+    "trades": {
+     "bytes": 68262,
+     "sha256": "5323610fca79a329914f2f807282cc0a471f4effa0f30297d87ed22d64bdaf78"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 216829,
+    "kept": 216829,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 4580,
+    "kept": 4580,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9625,
+    "first": "2023-03-01T00:00:02.103Z",
+    "last": "2023-03-01T23:59:59.855Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2023-04-01",
+   "files": {
+    "quotes": {
+     "bytes": 2228554,
+     "sha256": "ef0fc1fc0d721625f45ea78cb78ba1fc6ee509fe12443a5df42f4710a7079a80"
+    },
+    "trades": {
+     "bytes": 46269,
+     "sha256": "00534f58161287646fcc6040099237aebcde818f0fbb06255f4a6f622288e7f6"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 142178,
+    "kept": 142178,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 3206,
+    "kept": 3206,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9357,
+    "first": "2023-04-01T00:00:02.310Z",
+    "last": "2023-04-01T23:59:58.455Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2023-05-01",
+   "files": {
+    "quotes": {
+     "bytes": 2731936,
+     "sha256": "26538d4a227d5cc123d4e4d59bd71b76211d73ec68628f1a8e1c0b8fbeac2ea3"
+    },
+    "trades": {
+     "bytes": 94894,
+     "sha256": "7ecacc44242240e0b731476b5e6ad4403154d5dc1650173b1145f7b14ad49139"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 169584,
+    "kept": 169584,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 6407,
+    "kept": 6407,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.8823,
+    "first": "2023-05-01T00:00:02.186Z",
+    "last": "2023-05-01T23:59:55.124Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2023-06-01",
+   "files": {
+    "quotes": {
+     "bytes": 1884787,
+     "sha256": "bf32a7b1c1118e1129972b28efe260fad2e7be6b7859af17b4432e3729c47fe9"
+    },
+    "trades": {
+     "bytes": 50699,
+     "sha256": "fb8a2900fc826f3d2842db70ac62b3f8fabde4920e7cab036eaec86af48476a7"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 113542,
+    "kept": 113542,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 3310,
+    "kept": 3310,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 3,
+    "coveredMin": 1430.357,
+    "first": "2023-06-01T00:00:02.046Z",
+    "last": "2023-06-01T23:59:58.277Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2023-07-01",
+   "files": {
+    "quotes": {
+     "bytes": 2679950,
+     "sha256": "df966ae8b38bf32e32f47a08d76d4e9e6ee9465c32a04969dee5a59f94f6bd3c"
+    },
+    "trades": {
+     "bytes": 76925,
+     "sha256": "2017a87cb8f40670dbfca0e409f67b2aa59ad4c04b7fdedef6eeb696e5683a69"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 161792,
+    "kept": 161792,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 5240,
+    "kept": 5240,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9477,
+    "first": "2023-07-01T00:00:02.104Z",
+    "last": "2023-07-01T23:59:58.969Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2023-08-01",
+   "files": {
+    "quotes": {
+     "bytes": 2894432,
+     "sha256": "40978c6d19fefe9ecfdf90a336dbfc85a72a9073eff1882c0ca0bedd33a24bd8"
+    },
+    "trades": {
+     "bytes": 84822,
+     "sha256": "f9da5349c91e78439977b0f33e76ee40a87337a91540e627a533750278b64282"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 176809,
+    "kept": 176809,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 5706,
+    "kept": 5706,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 10,
+    "coveredMin": 1407.6928,
+    "first": "2023-08-01T00:00:02.299Z",
+    "last": "2023-08-01T23:59:59.730Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2023-09-01",
+   "files": {
+    "quotes": {
+     "bytes": 2720408,
+     "sha256": "50b9ca6cc8e9964255bdf3f3003221fd2e1a241e6404c6dd6b48b54f1338887b"
+    },
+    "trades": {
+     "bytes": 94694,
+     "sha256": "b490e2fd553179e511beaa722fbc5a97f029ed38402caf0381c87b77070ae0c8"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 164673,
+    "kept": 164673,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 6540,
+    "kept": 6540,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9321,
+    "first": "2023-09-01T00:00:02.004Z",
+    "last": "2023-09-01T23:59:57.931Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2023-10-01",
+   "files": {
+    "quotes": {
+     "bytes": 3539869,
+     "sha256": "9be32fc89e7abffb211e03e3a53051558e38c313e9668acdd57efe0bbd6acad4"
+    },
+    "trades": {
+     "bytes": 189444,
+     "sha256": "5817d2ffa42d8294e0468ef33cdb9bd4750a6a4b8d03f13844d4da4993627416"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 216901,
+    "kept": 216901,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 12916,
+    "kept": 12916,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9535,
+    "first": "2023-10-01T00:00:02.284Z",
+    "last": "2023-10-01T23:59:59.494Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2023-11-01",
+   "files": {
+    "quotes": {
+     "bytes": 8612295,
+     "sha256": "13b0cb09176ceafd1c60ad3245a2d49a7d9e4f230153fd503150fc016644079c"
+    },
+    "trades": {
+     "bytes": 771774,
+     "sha256": "9d152a2be04a1b9b67540da966025e0b2542ae77592c76dd68a500aa8f09e031"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 539253,
+    "kept": 539253,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 55675,
+    "kept": 55675,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9639,
+    "first": "2023-11-01T00:00:02.116Z",
+    "last": "2023-11-01T23:59:59.953Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2023-12-01",
+   "files": {
+    "quotes": {
+     "bytes": 5587414,
+     "sha256": "fcc9464aab56e864c295eb542d3dcd3ca4a68e9ed45b9e465c19df95c7849bfe"
+    },
+    "trades": {
+     "bytes": 227275,
+     "sha256": "90fc58d7646dfc30baece48790225bc400e26d3b348ca548957938275b2e5a71"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 342431,
+    "kept": 342431,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 15714,
+    "kept": 15714,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9375,
+    "first": "2023-12-01T00:00:02.007Z",
+    "last": "2023-12-01T23:59:58.257Z"
+   }
+  }
+ ],
+ "missing": [
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-01-01",
+   "kind": "quotes",
+   "code": "400"
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-01-01",
+   "kind": "trades",
+   "code": "400"
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-02-01",
+   "kind": "quotes",
+   "code": "400"
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-02-01",
+   "kind": "trades",
+   "code": "400"
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-03-01",
+   "kind": "quotes",
+   "code": "400"
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-03-01",
+   "kind": "trades",
+   "code": "400"
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-04-01",
+   "kind": "quotes",
+   "code": "400"
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-04-01",
+   "kind": "trades",
+   "code": "400"
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-05-01",
+   "kind": "quotes",
+   "code": "400"
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-05-01",
+   "kind": "trades",
+   "code": "400"
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-06-01",
+   "kind": "quotes",
+   "code": "400"
+  },
+  {
+   "venue": "kraken",
+   "symbol": "SOL-USD",
+   "day": "2021-06-01",
+   "kind": "trades",
+   "code": "400"
+  }
+ ]
+}
