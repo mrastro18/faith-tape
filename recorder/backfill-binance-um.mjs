@@ -8,8 +8,9 @@
 //   klines:  data/binance-um/klines5m/<SYM>/<YYYY-MM>.ndjson.gz  [openMs, o, h, l, c, volume, quoteVolume, trades, takerBuyVolume]
 //   funding: data/binance-um/funding/<SYM>/<YYYY>.ndjson.gz      [fundingTimeMs, rate]
 //   metrics: data/binance-um/metrics/<SYM>/<YYYY-MM>.ndjson.gz   [ms, sumOpenInterest, sumOpenInterestValue, ...METRIC_RATIOS]
+//            (--metrics-cols oi: [ms, sumOpenInterest, sumOpenInterestValue]; sumoi: [ms, sumOpenInterest] only)
 // Usage: node recorder/backfill-binance-um.mjs [rootDir] [--syms BTCUSDT,ETHUSDT] [--kinds klines,funding,metrics]
-//          [--from 2021-01] [--to 2026-01] [--metrics-from 2021-01] [--metrics-cols full|oi]
+//          [--from 2021-01] [--to 2026-01] [--metrics-from 2021-01] [--metrics-cols full|oi|sumoi]
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { crc32, gzipSync, inflateRawSync } from "node:zlib";
 import { join, resolve } from "node:path";
@@ -19,6 +20,7 @@ import { sha256, sleep } from "./lib.mjs";
 const BASE = "https://data.binance.vision/data/futures/um";
 export const HOLDOUT = "2026-01"; // first month never fetched: 2026 is sealed
 export const KINDS = ["klines", "funding", "metrics"];
+export const METRIC_COLS = ["full", "oi", "sumoi"];
 export const METRIC_RATIOS = ["topTraderAccountLS", "topTraderPositionLS", "accountLS", "takerBuySellVolRatio"];
 const METRIC_SRC = ["count_toptrader_long_short_ratio", "sum_toptrader_long_short_ratio", "count_long_short_ratio", "sum_taker_long_short_vol_ratio"];
 
@@ -127,16 +129,17 @@ export function parseFunding(text) {
 /**
  * Daily metrics CSV (create_time "YYYY-MM-DD HH:MM:SS" UTC, symbol, sum_open_interest, sum_open_interest_value, and
  * the long/short ratio columns) to [ms, sumOpenInterest, sumOpenInterestValue, ...ratios]; a ratio the file lacks is
- * null. With cols "oi" the ratios are left out.
+ * null. With cols "oi" the ratios are left out; with "sumoi" only [ms, sumOpenInterest] is kept.
  */
 export function parseMetrics(text, cols = "full") {
+  if (!METRIC_COLS.includes(cols)) throw new Error(`unknown metrics cols ${cols}`);
   const { header, rows } = csv(text);
   const std = ["create_time", "symbol", "sum_open_interest", "sum_open_interest_value", ...METRIC_SRC];
   const h = header ?? std;
   const idx = (name) => h.indexOf(name);
   const [t, oi, oiv] = [idx("create_time"), idx("sum_open_interest"), idx("sum_open_interest_value")];
-  if (t < 0 || oi < 0 || oiv < 0) throw new Error(`metrics: unexpected header ${header}`);
-  const ratios = cols === "oi" ? [] : METRIC_SRC.map(idx);
+  if (t < 0 || oi < 0 || (oiv < 0 && cols !== "sumoi")) throw new Error(`metrics: unexpected header ${header}`);
+  const ratios = cols === "full" ? METRIC_SRC.map(idx) : [];
   const time = (s) => {
     const v = s.trim();
     return /^\d+$/.test(v) ? ms(v) : Date.parse(`${v.replace(" ", "T")}Z`);
@@ -145,6 +148,7 @@ export function parseMetrics(text, cols = "full") {
     rows.map((f) => {
       const at = time(f[t]);
       if (!Number.isFinite(at)) throw new Error(`metrics: bad time ${f[t]}`);
+      if (cols === "sumoi") return [at, num(f[oi])];
       return [at, num(f[oi]), num(f[oiv]), ...ratios.map((i) => (i < 0 ? null : num(f[i])))];
     }),
   );
@@ -222,6 +226,7 @@ export async function backfill({
 }) {
   checkRange(from, to);
   for (const k of kinds) if (!KINDS.includes(k)) throw new Error(`unknown kind ${k}`);
+  if (!METRIC_COLS.includes(metricsCols)) throw new Error(`unknown metrics cols ${metricsCols}`);
   const a = makeArchive({ fetchImpl, wait });
   const out = { written: 0, skipped: 0, failed: [], missing: {} };
   for (const sym of syms) {

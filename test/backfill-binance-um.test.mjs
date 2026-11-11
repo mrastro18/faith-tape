@@ -123,6 +123,9 @@ test("parsers handle header and headerless files, microsecond times and empty ra
   assert.deepEqual(q, [[Date.UTC(2021, 11, 1, 0, 5), 1.5, 2.5, null, 1.1, 1.2, null]]);
   assert.throws(() => parseMetrics(MHEAD + "\n2021-12-01 00:05:00,BTCUSDT,abc,2.5,1,1,1,1\n"), /not a number/);
   assert.deepEqual(parseMetrics(MHEAD + "\n2021-12-01 00:05:00,BTCUSDT,1.5,2.5,1,1,1,1\n", "oi")[0], [Date.UTC(2021, 11, 1, 0, 5), 1.5, 2.5]);
+  assert.deepEqual(parseMetrics(MHEAD + '\n"2021-12-01 00:05:00","BTCUSDT","1.5","",1,1,1,1\n', "sumoi")[0], [Date.UTC(2021, 11, 1, 0, 5), 1.5]);
+  assert.deepEqual(parseMetrics(MHEAD + "\n2021-12-01 00:05:00,BTCUSDT,,2.5,1,1,1,1\n", "sumoi")[0], [Date.UTC(2021, 11, 1, 0, 5), null]);
+  assert.throws(() => parseMetrics(MHEAD + "\n2021-12-01 00:05:00,BTCUSDT,1.5,2.5,1,1,1,1\n", "two"), /unknown metrics cols/);
 });
 
 test("refuses any month of the 2026 holdout", async () => {

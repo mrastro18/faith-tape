@@ -1,0 +1,122 @@
+name: pof2
+
+# Data preparation for a possible FAITH study, P-OF2 (recorder/pof2.mjs). Open-interest research data only: no
+# account, no key, no trading; any trading stays on US venues. 2026 is FAITH's holdout and is refused by the scripts.
+# Started by hand only.
+#   universe: picks the coins by the fixed rule from exchange metadata and commits data/universe/pof2.json.
+#   backfill: for the final list, in universe order, Coinbase five-minute candles (recorder/backfill.mjs) and USD-M
+#             daily metrics as [ms, sumOpenInterest] (recorder/backfill-binance-um.mjs --metrics-cols sumoi),
+#             2022-01 to 2025-12, one commit per coin; stops before the coin whose files would pass limit_mb in all.
+#             A file already on disk is skipped, so a cut-off run resumes. Then commits the coverage report.
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: "universe, backfill or all"
+        default: "all"
+      limit_mb:
+        description: "Size limit for all added P-OF2 data, MB (10^6 bytes) gzipped"
+        default: "150"
+
+concurrency:
+  group: pof2
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  universe:
+    if: inputs.stage == 'universe' || inputs.stage == 'all'
+    runs-on: ubuntu-26.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "22"
+      - name: Tests
+        run: node --test test/pof2.test.mjs
+      - name: Pick the universe and commit it
+        run: |
+          git config user.name "faith-tape recorder"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          node recorder/pof2.mjs universe . --run-id "$GITHUB_RUN_ID"
+          git add data/universe/pof2.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "universe: pof2 run ${GITHUB_RUN_ID}"
+          for i in 1 2 3 4; do
+            if git push -q origin HEAD:main; then exit 0; fi
+            git pull -q --rebase --depth=20 origin main || { git rebase --abort; exit 1; }
+            sleep $((i * 5))
+          done
+          exit 1
+
+  backfill:
+    needs: universe
+    if: always() && (inputs.stage == 'backfill' || (inputs.stage == 'all' && needs.universe.result == 'success'))
+    runs-on: ubuntu-26.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "22"
+      - name: Tests
+        run: node --test test/pof2.test.mjs test/backfill.test.mjs test/backfill-binance-um.test.mjs
+      - name: Fetch and commit, one coin at a time, in universe order
+        env:
+          LIMIT_MB: ${{ inputs.limit_mb }}
+        run: |
+          git config user.name "faith-tape recorder"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          push() {
+            for i in 1 2 3 4; do
+              if git push -q origin HEAD:main; then return 0; fi
+              git pull -q --rebase --depth=20 origin main || { git rebase --abort; return 1; }
+              sleep $((i * 5))
+            done
+            return 1
+          }
+          limit=$((LIMIT_MB * 1000000))
+          total=0
+          status=0
+          logs="$RUNNER_TEMP"
+          while read -r base perp <&3; do
+            [ -n "$base" ] || continue
+            before=$total
+            node recorder/backfill.mjs . --bases "$base" --from 2022-01 --to 2026-01 > "$logs/cb.log" 2>&1 & p1=$!
+            node recorder/backfill-binance-um.mjs . --syms "$perp" --kinds metrics --from 2022-01 --to 2026-01 --metrics-cols sumoi > "$logs/um.log" 2>&1 & p2=$!
+            wait $p1 || { status=1; echo "coinbase ${base} had failures"; }
+            wait $p2 || { status=1; echo "binance-um ${perp} had failures"; }
+            cat "$logs/cb.log" "$logs/um.log"
+            bytes=$(node recorder/pof2.mjs bytes . "$base" "$perp")
+            total=$((before + bytes))
+            echo "== ${base} ${perp}: ${bytes} bytes, total ${total} of ${limit}"
+            if [ "$total" -gt "$limit" ]; then
+              node recorder/pof2.mjs stop . "$base" "$before" "$total" "$limit" --run-id "$GITHUB_RUN_ID"
+              git checkout -q -- "data/coinbase/candles5m/${base}" "data/binance-um/metrics/${perp}" 2>/dev/null || true
+              git clean -fdq -- "data/coinbase/candles5m/${base}" "data/binance-um/metrics/${perp}"
+              git add data/universe/pof2-backfill.json
+              git commit -q -m "history: pof2 stopped before ${base} for size run ${GITHUB_RUN_ID}"
+              push || status=1
+              break
+            fi
+            for d in "data/coinbase/candles5m/${base}" "data/binance-um/metrics/${perp}"; do [ -e "$d" ] && git add "$d"; done
+            if git diff --cached --quiet; then continue; fi
+            git commit -q -m "history: pof2 coinbase candles5m ${base} and binance-um metrics ${perp} run ${GITHUB_RUN_ID}"
+            push || { echo "push failed for ${base}"; status=1; }
+          done 3< <(node recorder/pof2.mjs list .)
+          node recorder/pof2.mjs verify . --run-id "$GITHUB_RUN_ID"
+          git add data/universe
+          if ! git diff --cached --quiet; then
+            git commit -q -m "history: pof2 coverage run ${GITHUB_RUN_ID}"
+            push || status=1
+          fi
+          exit $status
