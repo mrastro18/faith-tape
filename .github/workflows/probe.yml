@@ -1,0 +1,27 @@
+name: probe
+# Read-only reachability probe for public data hosts from a GitHub-hosted runner. Writes nothing to the repo.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Probe public archives
+        run: |
+          probe() { code=$(curl -s -o /dev/null -w '%{http_code} %{size_download}' -r 0-1023 --max-time 30 "$1" || echo "fail"); echo "$code  $1"; }
+          probe "https://datasets.tardis.dev/v1/coinbase/quotes/2024/03/01/BTC-USD.csv.gz"
+          probe "https://datasets.tardis.dev/v1/coinbase/incremental_book_L2/2024/03/01/BTC-USD.csv.gz"
+          probe "https://datasets.tardis.dev/v1/coinbase/trades/2024/03/01/BTC-USD.csv.gz"
+          probe "https://datasets.tardis.dev/v1/kraken/quotes/2024/03/01/XBT-USD.csv.gz"
+          probe "https://datasets.tardis.dev/v1/binance-futures/liquidations/2024/06/01/BTCUSDT.csv.gz"
+          probe "https://datasets.tardis.dev/v1/binance-futures/derivative_ticker/2024/06/01/BTCUSDT.csv.gz"
+          probe "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2024-01.zip"
+          probe "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/5m/BTCUSDT-5m-2024-01.zip"
+          probe "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2024-01-01.zip"
+          probe "https://data.binance.vision/data/futures/um/daily/liquidationSnapshot/BTCUSDT/BTCUSDT-liquidationSnapshot-2024-01-01.zip"
+          probe "https://public.bybit.com/trading/BTCUSDT/"
+          echo "--- tardis sample head"
+          curl -s --max-time 30 "https://datasets.tardis.dev/v1/coinbase/quotes/2024/03/01/BTC-USD.csv.gz" | gunzip -c 2>/dev/null | head -3 || true
