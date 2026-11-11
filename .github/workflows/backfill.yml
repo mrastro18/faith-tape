@@ -1,0 +1,54 @@
+name: backfill
+
+# One-off history for FAITH's intraday screens: Coinbase five-minute candles, 2021-01 to 2025-12, for a few
+# liquid bases (recorder/backfill.mjs). Started by hand only. 2026 is FAITH's holdout and is refused by the
+# script. Each base is committed as soon as it is done, and a month already on disk is skipped, so a run
+# cut off by its time limit resumes where it stopped when started again.
+on:
+  workflow_dispatch:
+    inputs:
+      bases:
+        description: "Comma-separated bases"
+        default: "BTC,ETH,SOL,XRP,DOGE"
+
+concurrency:
+  group: backfill
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-26.04
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "22"
+      - name: Tests
+        run: node --test test/backfill.test.mjs
+      - name: Fetch and commit, one base at a time
+        env:
+          BASES: ${{ inputs.bases }}
+        run: |
+          git config user.name "faith-tape recorder"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          status=0
+          for b in ${BASES//,/ }; do
+            node recorder/backfill.mjs . --bases "$b" || status=1
+            git add data/coinbase/candles5m
+            if git diff --cached --quiet; then continue; fi
+            git commit -q -m "history: coinbase candles5m ${b} run ${GITHUB_RUN_ID}"
+            for i in 1 2 3 4; do
+              if git push -q origin HEAD:main; then break; fi
+              git fetch -q --depth=20 origin main
+              git rebase -q origin/main || { git rebase --abort; exit 1; }
+              sleep $((i * 5))
+            done
+          done
+          exit $status

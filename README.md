@@ -14,6 +14,7 @@ A data-only repository for FAITH (decision S5): a plain Node recorder that reads
 | Binance.US daily candles for every listed pair, rewritten daily | `/api/v3/klines` | `data/binanceus/klines1d/<SYMBOL>.json` | `[openMs, close, quoteVolume, trades]`, completed days only |
 | Reference price, one-second bars, from the start of recording | Coinbase Exchange `/products/{id}/trades` | `data/coinbase/bars1s/<day>/<BASE>.ndjson` | `[sec, open, high, low, close, volume, count, vwap]` |
 | Reference history before recording began, one-minute candles | Coinbase `/products/{id}/candles` | `data/coinbase/candles1m/<day>/<BASE>.ndjson` | `[ms, open, high, low, close, volume]` |
+| History for FAITH's intraday screens, five-minute candles, 2021-01 to 2025-12 (2026 is FAITH's holdout and is not fetched), one-off by hand (`backfill.yml`) | Coinbase `/products/{id}/candles` | `data/coinbase/candles5m/<BASE>/<YYYY-MM>.ndjson.gz` | `[ms, open, high, low, close, volume]` |
 | Second reference, one-second bars | Kraken `/0/public/Trades` | `data/kraken/bars1s/<day>/<BASE>.ndjson` | as Coinbase |
 | Kalshi perpetuals, crypto markets, once a run | `external-api.kalshi.com/trade-api/v2/margin/markets` | `data/kalshi/perps/<day>.ndjson` | `[ms, [market objects as served]]` |
 | Kalshi perpetuals, funding-rate history for every market, once a day | `external-api.kalshi.com/trade-api/v2/margin/funding_rates/historical` (public) | `data/kalshi/funding/history.json`, rewritten daily | `{at, json}`, the answer as served |
