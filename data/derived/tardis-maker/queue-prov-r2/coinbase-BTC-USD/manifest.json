@@ -1,0 +1,1349 @@
+{
+ "schema": "faith-tape.maker-sim/1",
+ "run": "43085676746",
+ "sha": "b5ece3fd1449479f2eac57df4d3f3c40c467e954",
+ "spec": "queue-prov-r2@ba41621",
+ "config": {
+  "maxGapMs": 120000,
+  "latencyMs": 500,
+  "lookaheadMs": 250,
+  "restMs": 900000,
+  "fillWithinMin": [
+   1,
+   5,
+   15
+  ],
+  "placeEveryMs": 60000,
+  "placeFromMs": 60000,
+  "placeToMs": 84600000,
+  "notional": 50,
+  "horizonsMin": [
+   1,
+   5,
+   15
+  ],
+  "takerExitMin": 5,
+  "makerExitRestMs": 300000,
+  "variants": [
+   "join",
+   "improve"
+  ],
+  "cancels": [
+   "pessimistic",
+   "optimistic"
+  ],
+  "sides": [
+   "buy",
+   "sell"
+  ]
+ },
+ "fees": {
+  "coinbase": {
+   "makerBp": 40,
+   "takerBp": 60
+  },
+  "kraken": {
+   "makerBp": 40,
+   "takerBp": 80
+  }
+ },
+ "inputs": [
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2021-01-01",
+   "files": {
+    "quotes": {
+     "bytes": 37197640,
+     "sha256": "c6486294d35d441a223a04dae0446b0537ad4befb090d7c04c31e2cd475f353a"
+    },
+    "trades": {
+     "bytes": 3966637,
+     "sha256": "63e2d24295e0655a530b1d2c2b67f9e425aa1d0d760bd0cded2374bc1d792f72"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 2773130,
+    "kept": 2773130,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 218961,
+    "kept": 218961,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9532,
+    "first": "2021-01-01T00:00:02.770Z",
+    "last": "2021-01-01T23:59:59.962Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2021-02-01",
+   "files": {
+    "quotes": {
+     "bytes": 57170448,
+     "sha256": "272a95c167d0a0f8268bf18cf30b5a512a1fdf22d765429785a4d2001cd2a356"
+    },
+    "trades": {
+     "bytes": 4712822,
+     "sha256": "8a5d37c4837e3a0ea170dbe7c2319ecd5b0e932979881167a37d4b1e920b3a89"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 4222929,
+    "kept": 4222929,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 255606,
+    "kept": 255606,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.984,
+    "first": "2021-02-01T00:00:00.948Z",
+    "last": "2021-02-01T23:59:59.989Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2021-03-01",
+   "files": {
+    "quotes": {
+     "bytes": 70042006,
+     "sha256": "fcd4fc5f9fba4f993e0962bed850d5ec9f9050db4dba67c3848a01523c6f1393"
+    },
+    "trades": {
+     "bytes": 7725108,
+     "sha256": "6d1d6cfe419395e09e009dc450062bef5d7ab65e3157efda825e6d5e3ba4536e"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 5316251,
+    "kept": 5316251,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 448309,
+    "kept": 448309,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9946,
+    "first": "2021-03-01T00:00:00.317Z",
+    "last": "2021-03-01T23:59:59.994Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2021-04-01",
+   "files": {
+    "quotes": {
+     "bytes": 36058090,
+     "sha256": "7173fed961cfdab92c6bf7a453818be9c9e9b9896c231afa8b87c74669e7296c"
+    },
+    "trades": {
+     "bytes": 5586544,
+     "sha256": "880f4d4147f329d435524a9c7f5eb561904bd737921d975478d812f44cfcaf20"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 2665042,
+    "kept": 2665042,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 331664,
+    "kept": 331664,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9764,
+    "first": "2021-04-01T00:00:01.035Z",
+    "last": "2021-04-01T23:59:59.618Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2021-05-01",
+   "files": {
+    "quotes": {
+     "bytes": 32034613,
+     "sha256": "562a8fd402e0197fbd6e7c9e374bc413eadb2e2b6ce88187f493f68a9ef1f94e"
+    },
+    "trades": {
+     "bytes": 6296384,
+     "sha256": "e8d2d1b2944d233aec5616d552aa4144045a0816f1112bdd4a4133c368ff5892"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 2324854,
+    "kept": 2324854,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 376817,
+    "kept": 376817,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9931,
+    "first": "2021-05-01T00:00:00.327Z",
+    "last": "2021-05-01T23:59:59.911Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2021-06-01",
+   "files": {
+    "quotes": {
+     "bytes": 39863308,
+     "sha256": "5a38b8f6bfe3be5f8ba795e57908b18cb96371571becdfa18ac5d4feed00e271"
+    },
+    "trades": {
+     "bytes": 6163776,
+     "sha256": "523d2082f5886f9d758955a198944719a3e35a706437cd923f545ae631e1a551"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 2773747,
+    "kept": 2773747,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 349500,
+    "kept": 349500,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.982,
+    "first": "2021-06-01T00:00:01.037Z",
+    "last": "2021-06-01T23:59:59.956Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2021-07-01",
+   "files": {
+    "quotes": {
+     "bytes": 43932292,
+     "sha256": "dbdf74f27b7ce4fda1fd112004b3f319e86525b2392e038b08085ab41256c95e"
+    },
+    "trades": {
+     "bytes": 4861754,
+     "sha256": "95903ffe7e4ea655b08802d9f12814e7fa14625a3193fca90320b023f2ad8e41"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 3261958,
+    "kept": 3261958,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 275894,
+    "kept": 275894,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9917,
+    "first": "2021-07-01T00:00:00.467Z",
+    "last": "2021-07-01T23:59:59.971Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2021-08-01",
+   "files": {
+    "quotes": {
+     "bytes": 37100429,
+     "sha256": "3de38e66bf106708568e32e1566c769ffb74372a898ee4ee1400e493d49835a1"
+    },
+    "trades": {
+     "bytes": 4097728,
+     "sha256": "5eb0fcebe0378b1700b782e427b66a8e2217a237861112d7e6e554d386e8a523"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 2709701,
+    "kept": 2709701,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 226034,
+    "kept": 226034,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9934,
+    "first": "2021-08-01T00:00:00.373Z",
+    "last": "2021-08-01T23:59:59.974Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2021-09-01",
+   "files": {
+    "quotes": {
+     "bytes": 51637842,
+     "sha256": "f37528d6cca8a0833dfd105c0aead23c18b2667030eb6f50709915ff44e371ad"
+    },
+    "trades": {
+     "bytes": 5875052,
+     "sha256": "4cd3a1e09253f29098adcbba7bdf0d82bc6a27ccf7265c6f4ae5ca012f36a697"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 3632365,
+    "kept": 3632365,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 336679,
+    "kept": 336679,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9121,
+    "first": "2021-09-01T00:00:05.223Z",
+    "last": "2021-09-01T23:59:59.948Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2021-10-01",
+   "files": {
+    "quotes": {
+     "bytes": 34409964,
+     "sha256": "b65594150a297a9dca0d3accac304a5c85dea0671b95c3103999541311e2088d"
+    },
+    "trades": {
+     "bytes": 6736313,
+     "sha256": "36b8f7239b1aa840af0d75817897bb634117b5420d9e0cdd4e926316048edd7a"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 2389603,
+    "kept": 2389603,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 381364,
+    "kept": 381364,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9941,
+    "first": "2021-10-01T00:00:00.304Z",
+    "last": "2021-10-01T23:59:59.951Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2021-11-01",
+   "files": {
+    "quotes": {
+     "bytes": 42428376,
+     "sha256": "15ba2ba698b8e6bcd14de13415738497b14209f44b73b95d683e8ee6ffa7d45b"
+    },
+    "trades": {
+     "bytes": 8300260,
+     "sha256": "8c281e4790d39a45b3cd9c06524fbc27e923dedee3f69473b832da7c793b9fd4"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 2905169,
+    "kept": 2905169,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 471717,
+    "kept": 471717,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9952,
+    "first": "2021-11-01T00:00:00.282Z",
+    "last": "2021-11-01T23:59:59.992Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2021-12-01",
+   "files": {
+    "quotes": {
+     "bytes": 48479283,
+     "sha256": "212f6a8e652313d4b5290832b1d93a90a24eaad287d2bb67bf7a827c386ea539"
+    },
+    "trades": {
+     "bytes": 9785507,
+     "sha256": "b1aa4736629dc79a00427aa081e1823db09289612869a7d6202066b1c1a788cf"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 3347655,
+    "kept": 3347655,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 564573,
+    "kept": 564573,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9847,
+    "first": "2021-12-01T00:00:00.836Z",
+    "last": "2021-12-01T23:59:59.917Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2022-01-01",
+   "files": {
+    "quotes": {
+     "bytes": 41117546,
+     "sha256": "efc3e5447aca17aa2518e4fe7149bac6f15a9dd1a3b0699ad68cbace64b4d59b"
+    },
+    "trades": {
+     "bytes": 6093417,
+     "sha256": "9f7d81998b5e5d811491d52f2a93375455b8694c076c025fd27e7036d8d02f76"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 2821081,
+    "kept": 2821081,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 367010,
+    "kept": 367010,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9935,
+    "first": "2022-01-01T00:00:00.252Z",
+    "last": "2022-01-01T23:59:59.860Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2022-02-01",
+   "files": {
+    "quotes": {
+     "bytes": 45818142,
+     "sha256": "91610735b541810ca3658665bf2a99b562ce05538bd4f5be0ca4a4c6dc8021df"
+    },
+    "trades": {
+     "bytes": 9111578,
+     "sha256": "29babd9ce35e91cc49621ec554a628d7a50f6d7ec4b8fc4a8f738f3acf6e7326"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 3171820,
+    "kept": 3171820,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 547036,
+    "kept": 547036,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9926,
+    "first": "2022-02-01T00:00:00.382Z",
+    "last": "2022-02-01T23:59:59.937Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2022-03-01",
+   "files": {
+    "quotes": {
+     "bytes": 55382321,
+     "sha256": "e8ce15224c8393050367762d5e32b8c543619cbbcd1262e42f65573722eb9302"
+    },
+    "trades": {
+     "bytes": 11162922,
+     "sha256": "662c8e7f00d0b025739764566dccb5b136d567505782d64a108f45f0737a3803"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 3828342,
+    "kept": 3828342,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 678733,
+    "kept": 678733,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9954,
+    "first": "2022-03-01T00:00:00.251Z",
+    "last": "2022-03-01T23:59:59.975Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2022-04-01",
+   "files": {
+    "quotes": {
+     "bytes": 72408000,
+     "sha256": "6676aa6f7c4ab3f96f8e4892faed2d5692b8c69e608e33e02ea122c5c741bcd5"
+    },
+    "trades": {
+     "bytes": 10952008,
+     "sha256": "bc61afa12e685326a78f7788960c6606c09a9fb3d644dd1a0343220e7a322b48"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 5156867,
+    "kept": 5156867,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 664965,
+    "kept": 664965,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9948,
+    "first": "2022-04-01T00:00:00.248Z",
+    "last": "2022-04-01T23:59:59.939Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2022-05-01",
+   "files": {
+    "quotes": {
+     "bytes": 50526341,
+     "sha256": "5780168aca0b2629d5ae38cd1f2b538c330159574549f123228dcb45ae05ec9a"
+    },
+    "trades": {
+     "bytes": 7164440,
+     "sha256": "cea077511c31a682171980bbdf9d61fd114ec28343753b9d0e5a4fdc545c27b9"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 3479772,
+    "kept": 3479772,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 423034,
+    "kept": 423034,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9958,
+    "first": "2022-05-01T00:00:00.245Z",
+    "last": "2022-05-01T23:59:59.996Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2022-06-01",
+   "files": {
+    "quotes": {
+     "bytes": 52957232,
+     "sha256": "fbb7cafc608026872f26e93e0af8666df9710566a7d05f57e41998feb5d1d4a7"
+    },
+    "trades": {
+     "bytes": 10979977,
+     "sha256": "a734e44d61ed08e05631df791358077c9ae3af574e0f11b2f68cc367c92364bb"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 3731382,
+    "kept": 3731382,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 678094,
+    "kept": 678094,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9617,
+    "first": "2022-06-01T00:00:02.300Z",
+    "last": "2022-06-01T23:59:59.999Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2022-07-01",
+   "files": {
+    "quotes": {
+     "bytes": 119651180,
+     "sha256": "28ae7089b1d03779207567d41e9d4ccddca53996f51a02484bc60f3df19efaaf"
+    },
+    "trades": {
+     "bytes": 11661631,
+     "sha256": "d2b5bd6a22acdb4be716d0ce3661d864ae5f40183c129451275d945307623e63"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 8468985,
+    "kept": 8468985,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 690155,
+    "kept": 690155,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.981,
+    "first": "2022-07-01T00:00:01.133Z",
+    "last": "2022-07-01T23:59:59.990Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2022-08-01",
+   "files": {
+    "quotes": {
+     "bytes": 122055252,
+     "sha256": "dcd704ca0e8c96b1b9361de03c652ce9e5eb1817ee31d213fd2ed5b2bff2f3b4"
+    },
+    "trades": {
+     "bytes": 6753533,
+     "sha256": "f7a2dfebe584b6fb9b99f0b977737a7a84f774aa7a7443eed53f6002b17e2cea"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 8811425,
+    "kept": 8811425,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 393786,
+    "kept": 393786,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9924,
+    "first": "2022-08-01T00:00:00.352Z",
+    "last": "2022-08-01T23:59:59.893Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2022-09-01",
+   "files": {
+    "quotes": {
+     "bytes": 104348880,
+     "sha256": "d6898b4aefa0988922cbf38e49f9428230b1bb1c40332a4d2bcd81e8e8060ed1"
+    },
+    "trades": {
+     "bytes": 10325713,
+     "sha256": "cfc53ae048595b67829fa659ecfcf67ec741f517b950b24001b69611c584adfa"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 7441862,
+    "kept": 7441862,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 630244,
+    "kept": 630244,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9929,
+    "first": "2022-09-01T00:00:00.288Z",
+    "last": "2022-09-01T23:59:59.860Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2022-10-01",
+   "files": {
+    "quotes": {
+     "bytes": 99558084,
+     "sha256": "b98630eaeed7b2bbec308bdb2d02b7cd2caa2e26c4b4c4a30f53834515ec60d5"
+    },
+    "trades": {
+     "bytes": 8834079,
+     "sha256": "ab37dd524dd19e937179ad4bc347719dc51ebb2b408e56f1ae9149e6d2f2adab"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 7255986,
+    "kept": 7255986,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 530995,
+    "kept": 530995,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9942,
+    "first": "2022-10-01T00:00:00.268Z",
+    "last": "2022-10-01T23:59:59.922Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2022-11-01",
+   "files": {
+    "quotes": {
+     "bytes": 67058274,
+     "sha256": "0af82df1c083fbad7413b3395e007ad3fb65e1345b17e1a6f29a94fcb2971407"
+    },
+    "trades": {
+     "bytes": 9179175,
+     "sha256": "ba67beacd8b0070ad98c02becd17f9b12756a1a449f9d2182b821e5405833f1b"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 4929493,
+    "kept": 4929493,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 560726,
+    "kept": 560726,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9952,
+    "first": "2022-11-01T00:00:00.284Z",
+    "last": "2022-11-01T23:59:59.997Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2022-12-01",
+   "files": {
+    "quotes": {
+     "bytes": 60450254,
+     "sha256": "5e6c4e1dc441d24c95a4ed4fd98136928bc0a3c9276772dfc0bfca0e6d9e30fc"
+    },
+    "trades": {
+     "bytes": 9790241,
+     "sha256": "15c92ac5d683c4d7cca6ae841ca65eacf4ed040826794d94969799a885d3539e"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 4417468,
+    "kept": 4417468,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 597178,
+    "kept": 597178,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9949,
+    "first": "2022-12-01T00:00:00.302Z",
+    "last": "2022-12-01T23:59:59.993Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2023-01-01",
+   "files": {
+    "quotes": {
+     "bytes": 35308454,
+     "sha256": "894648cdf8f7c632ef423c70b6d1364e44ffd947545202e99c73eb582b8a1400"
+    },
+    "trades": {
+     "bytes": 4491909,
+     "sha256": "54971b0173eea125a1fc15bd81be08d94af07c02338ce6adb6e79c430c6e6d4e"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 2714043,
+    "kept": 2714043,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 269059,
+    "kept": 269059,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9923,
+    "first": "2023-01-01T00:00:00.273Z",
+    "last": "2023-01-01T23:59:59.813Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2023-02-01",
+   "files": {
+    "quotes": {
+     "bytes": 67065623,
+     "sha256": "cd2b172d7eee45711a6d57f9cb92431a0e36f0164de9c514af5b81ca7bc014ac"
+    },
+    "trades": {
+     "bytes": 7947286,
+     "sha256": "b69352b2a57b39bbc8cd0f1623c1826b4014e79f600a8aba2f576c55224e3891"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 4922370,
+    "kept": 4922370,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 488618,
+    "kept": 488618,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9958,
+    "first": "2023-02-01T00:00:00.234Z",
+    "last": "2023-02-01T23:59:59.983Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2023-03-01",
+   "files": {
+    "quotes": {
+     "bytes": 89025489,
+     "sha256": "2dafc2bcb339dc78a6605bb3a8f18edafe39c1b673e6fca9928376cdda0c3f96"
+    },
+    "trades": {
+     "bytes": 6034417,
+     "sha256": "21a358ad1bc77856a55599f74b9526d937a2515dd8d78a52e3ecb828c4bdf472"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 6558806,
+    "kept": 6558806,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 349975,
+    "kept": 349975,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9931,
+    "first": "2023-03-01T00:00:00.339Z",
+    "last": "2023-03-01T23:59:59.925Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2023-04-01",
+   "files": {
+    "quotes": {
+     "bytes": 51970548,
+     "sha256": "710ee80ef6b43bbc637845eacda992e0010146b0ee405cf1175de3724f270eb9"
+    },
+    "trades": {
+     "bytes": 4701029,
+     "sha256": "2755fe33389d8cc0fa43bea37c8a626acff8917ccdb9a97c0f4fc30d0a5460e5"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 3826223,
+    "kept": 3826223,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 272231,
+    "kept": 272231,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9927,
+    "first": "2023-04-01T00:00:00.231Z",
+    "last": "2023-04-01T23:59:59.796Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2023-05-01",
+   "files": {
+    "quotes": {
+     "bytes": 81704051,
+     "sha256": "3676b06bfdbcbc1157378ff353e1f81969580c92ba446017fdc82264e9591cca"
+    },
+    "trades": {
+     "bytes": 6575353,
+     "sha256": "0be485efdd4209d30fb83fdaae29f07a73eab443ec1ebca99a33897e1bdd0bb0"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 5774980,
+    "kept": 5774980,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 385893,
+    "kept": 385893,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9949,
+    "first": "2023-05-01T00:00:00.301Z",
+    "last": "2023-05-01T23:59:59.997Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2023-06-01",
+   "files": {
+    "quotes": {
+     "bytes": 71293918,
+     "sha256": "864acba5b89cce4cba85759f7391c1c6f023c287c45999c026d4ebf3e39fa783"
+    },
+    "trades": {
+     "bytes": 5116064,
+     "sha256": "867551d4c609fade1f47a4beaaeb2d94e74f5bc543da31bf86172b2b23021e89"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 5168078,
+    "kept": 5168078,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 307552,
+    "kept": 307552,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9961,
+    "first": "2023-06-01T00:00:00.229Z",
+    "last": "2023-06-01T23:59:59.996Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2023-07-01",
+   "files": {
+    "quotes": {
+     "bytes": 38203958,
+     "sha256": "5390fcb649e0eb41dc10846a5b8d52c2c233b48c1bb70a52293e29bf11b04c0b"
+    },
+    "trades": {
+     "bytes": 3446672,
+     "sha256": "39a5980098150d2f41a15b72602ea527c03bb8503a0b1712b2fe00ca3e33828c"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 2760299,
+    "kept": 2760299,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 198268,
+    "kept": 198268,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9932,
+    "first": "2023-07-01T00:00:00.270Z",
+    "last": "2023-07-01T23:59:59.864Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2023-08-01",
+   "files": {
+    "quotes": {
+     "bytes": 76347975,
+     "sha256": "12082d29a26ddc513337f605e762f4bfa478fa505fff61fa08945a48a0db5e84"
+    },
+    "trades": {
+     "bytes": 5298262,
+     "sha256": "67fa3a3540e73078565c974f80d89d684206face63056b2f08bf985e633c00e9"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 5564719,
+    "kept": 5564719,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 316577,
+    "kept": 316577,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9944,
+    "first": "2023-08-01T00:00:00.304Z",
+    "last": "2023-08-01T23:59:59.967Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2023-09-01",
+   "files": {
+    "quotes": {
+     "bytes": 56750452,
+     "sha256": "8ebc01886495ca9b126b3ae3832da7e153eac3f43023f6c17a9dc6187b92c340"
+    },
+    "trades": {
+     "bytes": 5034615,
+     "sha256": "26e984e4ef3ba293be8ea8fd3703af02f530b3ec20f28fd809f76eba06a033bc"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 4191324,
+    "kept": 4191324,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 309609,
+    "kept": 309609,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9955,
+    "first": "2023-09-01T00:00:00.241Z",
+    "last": "2023-09-01T23:59:59.974Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2023-10-01",
+   "files": {
+    "quotes": {
+     "bytes": 31136602,
+     "sha256": "0978abcb419327a9bc6a821a39b9e7f1fa81e451acdb328c5607699380014013"
+    },
+    "trades": {
+     "bytes": 3327262,
+     "sha256": "d05b55001fc5d68cfe6d0d1f997437dc2439d439d2de628aeac16a8f50ac7874"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 2364479,
+    "kept": 2364479,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 197914,
+    "kept": 197914,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9925,
+    "first": "2023-10-01T00:00:00.322Z",
+    "last": "2023-10-01T23:59:59.869Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2023-11-01",
+   "files": {
+    "quotes": {
+     "bytes": 76926541,
+     "sha256": "56cb61f81b68500bda0cd815c70fb4a0992ba54db6f5da00b0e6f985aa96eef0"
+    },
+    "trades": {
+     "bytes": 5206637,
+     "sha256": "a18347020ca24f321e684371932e9e1d1658763f2ebe79b4140b2af6ceaed7aa"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 5942793,
+    "kept": 5942793,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 303582,
+    "kept": 303582,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9955,
+    "first": "2023-11-01T00:00:00.241Z",
+    "last": "2023-11-01T23:59:59.970Z"
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "BTC-USD",
+   "day": "2023-12-01",
+   "files": {
+    "quotes": {
+     "bytes": 76659254,
+     "sha256": "690af9161b8b2dbc91f34ac2f80687d074f1be86771889b307c9949f4a397c12"
+    },
+    "trades": {
+     "bytes": 5943872,
+     "sha256": "0df978acbb6f539fa788eb6a48896b04e92dc924d198395fe26444e64b17ecf1"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 5724342,
+    "kept": 5724342,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 343877,
+    "kept": 343877,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9892,
+    "first": "2023-12-01T00:00:00.304Z",
+    "last": "2023-12-01T23:59:59.655Z"
+   }
+  }
+ ],
+ "missing": []
+}
