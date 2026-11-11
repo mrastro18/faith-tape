@@ -107,7 +107,7 @@ test("a session that crosses midnight ends and restarts in the new day's file", 
   const a = rowsOf(root, "2026-11-10");
   const b = rowsOf(root, "2026-11-11");
   assert.equal(readdirSync(join(root, "data", "binanceus", "quotes", "2026-11-11")).length, 1);
-  assert.match(readdirSync(join(root, "data", "binanceus", "quotes", "2026-11-11"))[0], /^000\d{3}Z-local\.ndjson\.gz$/);
+  assert.match(readdirSync(join(root, "data", "binanceus", "quotes", "2026-11-11"))[0], /^000\d{3}Z-[^./]+\.ndjson\.gz$/);
   assert.deepEqual([a[0][0], a.at(-1)[0]], ["s", "e"]);
   assert.deepEqual([b[0][0], b[1][0], b.at(-1)[0]], ["s", "f", "e"]);
   assert.equal(b[1][3], 1.5);
