@@ -23,5 +23,12 @@ jobs:
           probe "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2024-01-01.zip"
           probe "https://data.binance.vision/data/futures/um/daily/liquidationSnapshot/BTCUSDT/BTCUSDT-liquidationSnapshot-2024-01-01.zip"
           probe "https://public.bybit.com/trading/BTCUSDT/"
+          echo "--- live offshore endpoints (floor 4: a live signal readable from a US address)"
+          probe "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=BTCUSDT"
+          probe "https://api.bybit.com/v5/market/tickers?category=linear&symbol=BTCUSDT"
+          probe "https://www.okx.com/api/v5/public/funding-rate?instId=BTC-USDT-SWAP"
+          probe "https://api.hyperliquid.xyz/info"
+          curl -s -o /dev/null -w '%{http_code}  hyperliquid POST metaAndAssetCtxs\n' --max-time 30 -X POST -H 'Content-Type: application/json' -d '{"type":"metaAndAssetCtxs"}' https://api.hyperliquid.xyz/info || true
+          probe "https://www.deribit.com/api/v2/public/get_index_price?index_name=btc_usd"
           echo "--- tardis sample head"
           curl -s --max-time 30 "https://datasets.tardis.dev/v1/coinbase/quotes/2024/03/01/BTC-USD.csv.gz" | gunzip -c 2>/dev/null | head -3 || true
