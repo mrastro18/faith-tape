@@ -1,0 +1,952 @@
+{
+ "schema": "faith-tape.maker-sim/1",
+ "run": "43085676746",
+ "sha": "b5ece3fd1449479f2eac57df4d3f3c40c467e954",
+ "spec": "queue-prov-r2@ba41621",
+ "config": {
+  "maxGapMs": 120000,
+  "latencyMs": 500,
+  "lookaheadMs": 250,
+  "restMs": 900000,
+  "fillWithinMin": [
+   1,
+   5,
+   15
+  ],
+  "placeEveryMs": 60000,
+  "placeFromMs": 60000,
+  "placeToMs": 84600000,
+  "notional": 50,
+  "horizonsMin": [
+   1,
+   5,
+   15
+  ],
+  "takerExitMin": 5,
+  "makerExitRestMs": 300000,
+  "variants": [
+   "join",
+   "improve"
+  ],
+  "cancels": [
+   "pessimistic",
+   "optimistic"
+  ],
+  "sides": [
+   "buy",
+   "sell"
+  ]
+ },
+ "fees": {
+  "coinbase": {
+   "makerBp": 40,
+   "takerBp": 60
+  },
+  "kraken": {
+   "makerBp": 40,
+   "takerBp": 80
+  }
+ },
+ "days": [
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2021-01-01",
+   "tick": 0.01,
+   "quoteRows": 3659797,
+   "prints": 122931,
+   "coveredMin": 1439.9797,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.7738,
+     "5m": 0.9143,
+     "15m": 0.9579
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1906,
+     "through": 0.4691,
+     "cross": 0.3403
+    },
+    "midMove5m": -0.9516,
+    "makerExitNet": -86.0179
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2021-02-01",
+   "tick": 0.01,
+   "quoteRows": 4125939,
+   "prints": 201500,
+   "coveredMin": 1439.9544,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8301,
+     "5m": 0.9287,
+     "15m": 0.9582
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.135,
+     "through": 0.441,
+     "cross": 0.4239
+    },
+    "midMove5m": -1.8246,
+    "makerExitNet": -86.2975
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2021-03-01",
+   "tick": 0.01,
+   "quoteRows": 4382391,
+   "prints": 251760,
+   "coveredMin": 1439.9877,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.832,
+     "5m": 0.9209,
+     "15m": 0.9557
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1183,
+     "through": 0.5624,
+     "cross": 0.3193
+    },
+    "midMove5m": -2.4895,
+    "makerExitNet": -86.4204
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2021-04-01",
+   "tick": 0.01,
+   "quoteRows": 2799148,
+   "prints": 244641,
+   "coveredMin": 1439.9946,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8272,
+     "5m": 0.9344,
+     "15m": 0.9631
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1941,
+     "through": 0.4963,
+     "cross": 0.3095
+    },
+    "midMove5m": -1.015,
+    "makerExitNet": -85.7735
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2021-05-01",
+   "tick": 0.01,
+   "quoteRows": 2257944,
+   "prints": 364458,
+   "coveredMin": 1439.9899,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8487,
+     "5m": 0.9346,
+     "15m": 0.9602
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1664,
+     "through": 0.5757,
+     "cross": 0.2579
+    },
+    "midMove5m": -0.9932,
+    "makerExitNet": -84.4948
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2021-06-01",
+   "tick": 0.01,
+   "quoteRows": 3740655,
+   "prints": 423518,
+   "coveredMin": 1439.9953,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8393,
+     "5m": 0.9319,
+     "15m": 0.965
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1083,
+     "through": 0.5305,
+     "cross": 0.3612
+    },
+    "midMove5m": -2.5224,
+    "makerExitNet": -87.7902
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2021-07-01",
+   "tick": 0.01,
+   "quoteRows": 3567388,
+   "prints": 252850,
+   "coveredMin": 1439.996,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8332,
+     "5m": 0.9277,
+     "15m": 0.9599
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1259,
+     "through": 0.3871,
+     "cross": 0.487
+    },
+    "midMove5m": -1.7163,
+    "makerExitNet": -87.3796
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2021-08-01",
+   "tick": 0.01,
+   "quoteRows": 5089684,
+   "prints": 284529,
+   "coveredMin": 1439.9889,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8521,
+     "5m": 0.9334,
+     "15m": 0.9613
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1361,
+     "through": 0.402,
+     "cross": 0.4619
+    },
+    "midMove5m": -0.9087,
+    "makerExitNet": -87.5737
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2021-09-01",
+   "tick": 0.01,
+   "quoteRows": 5223108,
+   "prints": 489876,
+   "coveredMin": 1439.995,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8758,
+     "5m": 0.9433,
+     "15m": 0.9704
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1239,
+     "through": 0.5262,
+     "cross": 0.3498
+    },
+    "midMove5m": -1.0193,
+    "makerExitNet": -86.9986
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2021-10-01",
+   "tick": 0.01,
+   "quoteRows": 3701939,
+   "prints": 358380,
+   "coveredMin": 1439.9949,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8924,
+     "5m": 0.9565,
+     "15m": 0.9757
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.0983,
+     "through": 0.553,
+     "cross": 0.3487
+    },
+    "midMove5m": -0.4454,
+    "makerExitNet": -85.4779
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2021-11-01",
+   "tick": 0.01,
+   "quoteRows": 3595209,
+   "prints": 453974,
+   "coveredMin": 1439.9957,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8886,
+     "5m": 0.9523,
+     "15m": 0.9714
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1358,
+     "through": 0.5946,
+     "cross": 0.2697
+    },
+    "midMove5m": -0.218,
+    "makerExitNet": -84.8785
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2021-12-01",
+   "tick": 0.01,
+   "quoteRows": 4122413,
+   "prints": 607985,
+   "coveredMin": 1439.9915,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8857,
+     "5m": 0.9527,
+     "15m": 0.9696
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1415,
+     "through": 0.5696,
+     "cross": 0.2889
+    },
+    "midMove5m": -0.6244,
+    "makerExitNet": -86.2461
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2022-01-01",
+   "tick": 0.01,
+   "quoteRows": 3509018,
+   "prints": 330380,
+   "coveredMin": 1439.9884,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8837,
+     "5m": 0.9523,
+     "15m": 0.9728
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1292,
+     "through": 0.5318,
+     "cross": 0.339
+    },
+    "midMove5m": -0.4078,
+    "makerExitNet": -85.445
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2022-02-01",
+   "tick": 0.01,
+   "quoteRows": 4057716,
+   "prints": 599033,
+   "coveredMin": 1439.9963,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8996,
+     "5m": 0.9512,
+     "15m": 0.9695
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.148,
+     "through": 0.5994,
+     "cross": 0.2525
+    },
+    "midMove5m": -0.2848,
+    "makerExitNet": -85.1997
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2022-03-01",
+   "tick": 0.01,
+   "quoteRows": 5604027,
+   "prints": 739234,
+   "coveredMin": 1439.9803,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.9009,
+     "5m": 0.9596,
+     "15m": 0.9779
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.0845,
+     "through": 0.7024,
+     "cross": 0.2132
+    },
+    "midMove5m": -0.3635,
+    "makerExitNet": -84.5829
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2022-04-01",
+   "tick": 0.01,
+   "quoteRows": 6100993,
+   "prints": 639098,
+   "coveredMin": 1439.9944,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.908,
+     "5m": 0.9616,
+     "15m": 0.976
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.0768,
+     "through": 0.7146,
+     "cross": 0.2086
+    },
+    "midMove5m": -0.6777,
+    "makerExitNet": -84.06
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2022-05-01",
+   "tick": 0.01,
+   "quoteRows": 4881507,
+   "prints": 436640,
+   "coveredMin": 1439.9958,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.907,
+     "5m": 0.9585,
+     "15m": 0.9722
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.0675,
+     "through": 0.6933,
+     "cross": 0.2392
+    },
+    "midMove5m": -0.1983,
+    "makerExitNet": -83.2601
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2022-06-01",
+   "tick": 0.01,
+   "quoteRows": 5074561,
+   "prints": 710685,
+   "coveredMin": 1439.9952,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8994,
+     "5m": 0.9557,
+     "15m": 0.9772
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.107,
+     "through": 0.7008,
+     "cross": 0.1921
+    },
+    "midMove5m": -0.8646,
+    "makerExitNet": -84.2101
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2022-07-01",
+   "tick": 0.01,
+   "quoteRows": 5671897,
+   "prints": 541810,
+   "coveredMin": 1439.9734,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.9071,
+     "5m": 0.9609,
+     "15m": 0.9752
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1057,
+     "through": 0.6642,
+     "cross": 0.2302
+    },
+    "midMove5m": -0.9492,
+    "makerExitNet": -85.5514
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2022-08-01",
+   "tick": 0.01,
+   "quoteRows": 5773564,
+   "prints": 407893,
+   "coveredMin": 1439.9953,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.9195,
+     "5m": 0.97,
+     "15m": 0.983
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.0797,
+     "through": 0.6317,
+     "cross": 0.2886
+    },
+    "midMove5m": 0.233,
+    "makerExitNet": -83.9617
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2022-09-01",
+   "tick": 0.01,
+   "quoteRows": 5308804,
+   "prints": 493982,
+   "coveredMin": 1439.9956,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8907,
+     "5m": 0.9482,
+     "15m": 0.9695
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.0913,
+     "through": 0.7641,
+     "cross": 0.1446
+    },
+    "midMove5m": -0.4262,
+    "makerExitNet": -84.1067
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2022-10-01",
+   "tick": 0.01,
+   "quoteRows": 3191216,
+   "prints": 327355,
+   "coveredMin": 1439.9946,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8809,
+     "5m": 0.9498,
+     "15m": 0.9722
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1754,
+     "through": 0.7236,
+     "cross": 0.101
+    },
+    "midMove5m": -0.1044,
+    "makerExitNet": -82.6842
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2022-11-01",
+   "tick": 0.01,
+   "quoteRows": 4552006,
+   "prints": 435998,
+   "coveredMin": 1439.9948,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.9153,
+     "5m": 0.9682,
+     "15m": 0.9829
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1118,
+     "through": 0.7945,
+     "cross": 0.0936
+    },
+    "midMove5m": -0.1054,
+    "makerExitNet": -82.7454
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2022-12-01",
+   "tick": 0.01,
+   "quoteRows": 3895482,
+   "prints": 483828,
+   "coveredMin": 1439.9939,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8969,
+     "5m": 0.9528,
+     "15m": 0.976
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2042,
+     "through": 0.7553,
+     "cross": 0.0405
+    },
+    "midMove5m": -0.264,
+    "makerExitNet": -81.8912
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2023-01-01",
+   "tick": 0.01,
+   "quoteRows": 1892223,
+   "prints": 247688,
+   "coveredMin": 1439.9919,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8811,
+     "5m": 0.9512,
+     "15m": 0.976
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.276,
+     "through": 0.5521,
+     "cross": 0.1719
+    },
+    "midMove5m": -0.0963,
+    "makerExitNet": -82.8952
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2023-02-01",
+   "tick": 0.01,
+   "quoteRows": 3005000,
+   "prints": 383412,
+   "coveredMin": 1439.9944,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8659,
+     "5m": 0.9421,
+     "15m": 0.9674
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.219,
+     "through": 0.689,
+     "cross": 0.092
+    },
+    "midMove5m": -0.6553,
+    "makerExitNet": -83.3972
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2023-03-01",
+   "tick": 0.01,
+   "quoteRows": 3345650,
+   "prints": 335479,
+   "coveredMin": 1439.9956,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8432,
+     "5m": 0.9323,
+     "15m": 0.9598
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2784,
+     "through": 0.5573,
+     "cross": 0.1642
+    },
+    "midMove5m": -0.6882,
+    "makerExitNet": -84.5963
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2023-04-01",
+   "tick": 0.01,
+   "quoteRows": 2681059,
+   "prints": 209582,
+   "coveredMin": 1439.9919,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8644,
+     "5m": 0.9453,
+     "15m": 0.9699
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2764,
+     "through": 0.5094,
+     "cross": 0.2142
+    },
+    "midMove5m": -0.308,
+    "makerExitNet": -84.0599
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2023-05-01",
+   "tick": 0.01,
+   "quoteRows": 3817176,
+   "prints": 256189,
+   "coveredMin": 1439.9956,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.868,
+     "5m": 0.9367,
+     "15m": 0.9647
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1647,
+     "through": 0.6409,
+     "cross": 0.1944
+    },
+    "midMove5m": -0.6532,
+    "makerExitNet": -83.5467
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2023-06-01",
+   "tick": 0.01,
+   "quoteRows": 3509957,
+   "prints": 200301,
+   "coveredMin": 1439.9945,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8272,
+     "5m": 0.9301,
+     "15m": 0.9587
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2196,
+     "through": 0.5497,
+     "cross": 0.2307
+    },
+    "midMove5m": -0.4067,
+    "makerExitNet": -83.8339
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2023-07-01",
+   "tick": 0.01,
+   "quoteRows": 1964380,
+   "prints": 148638,
+   "coveredMin": 1439.9818,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8453,
+     "5m": 0.9296,
+     "15m": 0.9636
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2118,
+     "through": 0.4663,
+     "cross": 0.3218
+    },
+    "midMove5m": -0.4448,
+    "makerExitNet": -83.4611
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2023-08-01",
+   "tick": 0.01,
+   "quoteRows": 2845850,
+   "prints": 187478,
+   "coveredMin": 1439.9957,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8177,
+     "5m": 0.9206,
+     "15m": 0.9536
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2215,
+     "through": 0.4699,
+     "cross": 0.3086
+    },
+    "midMove5m": -0.4592,
+    "makerExitNet": -85.0086
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2023-09-01",
+   "tick": 0.01,
+   "quoteRows": 2687011,
+   "prints": 147297,
+   "coveredMin": 1439.9881,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.7692,
+     "5m": 0.903,
+     "15m": 0.9467
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1993,
+     "through": 0.4021,
+     "cross": 0.3986
+    },
+    "midMove5m": -0.5317,
+    "makerExitNet": -85.5696
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2023-10-01",
+   "tick": 0.01,
+   "quoteRows": 2884386,
+   "prints": 129393,
+   "coveredMin": 1439.9954,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.7132,
+     "5m": 0.8757,
+     "15m": 0.9364
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2805,
+     "through": 0.3372,
+     "cross": 0.3823
+    },
+    "midMove5m": -0.7667,
+    "makerExitNet": -86.8564
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2023-11-01",
+   "tick": 0.01,
+   "quoteRows": 5793906,
+   "prints": 195553,
+   "coveredMin": 1439.9961,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.84,
+     "5m": 0.937,
+     "15m": 0.9693
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.156,
+     "through": 0.3769,
+     "cross": 0.4671
+    },
+    "midMove5m": -0.7015,
+    "makerExitNet": -85.0332
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "ETH-USD",
+   "day": "2023-12-01",
+   "tick": 0.01,
+   "quoteRows": 4367407,
+   "prints": 230560,
+   "coveredMin": 1439.9939,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8646,
+     "5m": 0.9471,
+     "15m": 0.9783
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1972,
+     "through": 0.4527,
+     "cross": 0.3501
+    },
+    "midMove5m": -0.2146,
+    "makerExitNet": -84.6801
+   }
+  }
+ ]
+}
