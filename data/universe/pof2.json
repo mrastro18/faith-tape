@@ -1,0 +1,4242 @@
+{
+ "study": "P-OF2",
+ "note": "Open-interest research data for a possible FAITH study; research only; trading stays on US venues; 2026 is FAITH's holdout. Metadata and existence probes only: no price, return or open-interest value was read.",
+ "rule": [
+  "a. Base assets with a Binance.US spot pair against USD or USDT in status TRADING (api.binance.us /api/v3/exchangeInfo). Excluded: stablecoins and fiat-like or asset-pegged tokens, wrapped or staked duplicates, and BTC, ETH, SOL, DOGE and XRP (already used).",
+  "b. Keep bases with a Coinbase Exchange <BASE>-USD product (api.exchange.coinbase.com /products) with status online and trading not disabled, whose five-minute candles exist on the first day of 2022-01 and on the first day of 2025-12 (existence only: the number of candles returned, never a price).",
+  "c. Keep bases where data.binance.vision has the USD-M perp daily metrics zip for both 2022-01-01 and 2025-12-31 (HEAD, existence only). The perp symbol tried is <BASE>USDT, then 1000<BASE>USDT, 1000000<BASE>USDT and 1M<BASE>USDT; the first with both days is used.",
+  "d. If more than 15 remain, keep the 15 whose USD-M monthly 5m klines archive starts earliest (first available month, from the archive listing), ties broken alphabetically by base. That same order (earliest first month, then base) is the universe order used if the backfill must stop for size."
+ ],
+ "range": {
+  "from": "2022-01",
+  "to": "2025-12"
+ },
+ "runId": "43089445553",
+ "at": "2026-11-11T19:43:04.072Z",
+ "steps": {
+  "a": {
+   "source": "https://api.binance.us/api/v3/exchangeInfo",
+   "candidates": [
+    {
+     "base": "0G",
+     "pairs": [
+      "0GUSDT"
+     ]
+    },
+    {
+     "base": "1000MOG",
+     "pairs": [
+      "1000MOGUSDT"
+     ]
+    },
+    {
+     "base": "1000REKT",
+     "pairs": [
+      "1000REKTUSDT"
+     ]
+    },
+    {
+     "base": "1INCH",
+     "pairs": [
+      "1INCHUSDT"
+     ]
+    },
+    {
+     "base": "1MWOJAK",
+     "pairs": [
+      "1MWOJAKUSDT"
+     ]
+    },
+    {
+     "base": "A",
+     "pairs": [
+      "AUSDT"
+     ]
+    },
+    {
+     "base": "AAVE",
+     "pairs": [
+      "AAVEUSD",
+      "AAVEUSDT"
+     ]
+    },
+    {
+     "base": "ACH",
+     "pairs": [
+      "ACHUSDT"
+     ]
+    },
+    {
+     "base": "ADA",
+     "pairs": [
+      "ADAUSD",
+      "ADAUSDT"
+     ]
+    },
+    {
+     "base": "ADX",
+     "pairs": [
+      "ADXUSDT"
+     ]
+    },
+    {
+     "base": "AIXBT",
+     "pairs": [
+      "AIXBTUSDT"
+     ]
+    },
+    {
+     "base": "ALGO",
+     "pairs": [
+      "ALGOUSD",
+      "ALGOUSDT"
+     ]
+    },
+    {
+     "base": "ALICE",
+     "pairs": [
+      "ALICEUSDT"
+     ]
+    },
+    {
+     "base": "ALPINE",
+     "pairs": [
+      "ALPINEUSDT"
+     ]
+    },
+    {
+     "base": "ANIME",
+     "pairs": [
+      "ANIMEUSDT"
+     ]
+    },
+    {
+     "base": "ANKR",
+     "pairs": [
+      "ANKRUSDT"
+     ]
+    },
+    {
+     "base": "APE",
+     "pairs": [
+      "APEUSDT"
+     ]
+    },
+    {
+     "base": "API3",
+     "pairs": [
+      "API3USDT"
+     ]
+    },
+    {
+     "base": "APT",
+     "pairs": [
+      "APTUSDT"
+     ]
+    },
+    {
+     "base": "ARB",
+     "pairs": [
+      "ARBUSDT"
+     ]
+    },
+    {
+     "base": "ASTER",
+     "pairs": [
+      "ASTERUSDT"
+     ]
+    },
+    {
+     "base": "ASTR",
+     "pairs": [
+      "ASTRUSDT"
+     ]
+    },
+    {
+     "base": "ATOM",
+     "pairs": [
+      "ATOMUSD",
+      "ATOMUSDT"
+     ]
+    },
+    {
+     "base": "AUDIO",
+     "pairs": [
+      "AUDIOUSDT"
+     ]
+    },
+    {
+     "base": "AVAX",
+     "pairs": [
+      "AVAXUSD",
+      "AVAXUSDT"
+     ]
+    },
+    {
+     "base": "AVNT",
+     "pairs": [
+      "AVNTUSDT"
+     ]
+    },
+    {
+     "base": "AXL",
+     "pairs": [
+      "AXLUSDT"
+     ]
+    },
+    {
+     "base": "AXS",
+     "pairs": [
+      "AXSUSDT"
+     ]
+    },
+    {
+     "base": "BAND",
+     "pairs": [
+      "BANDUSDT"
+     ]
+    },
+    {
+     "base": "BAT",
+     "pairs": [
+      "BATUSDT"
+     ]
+    },
+    {
+     "base": "BCH",
+     "pairs": [
+      "BCHUSD",
+      "BCHUSDT"
+     ]
+    },
+    {
+     "base": "BERT",
+     "pairs": [
+      "BERTUSDT"
+     ]
+    },
+    {
+     "base": "BICO",
+     "pairs": [
+      "BICOUSDT"
+     ]
+    },
+    {
+     "base": "BLUR",
+     "pairs": [
+      "BLURUSDT"
+     ]
+    },
+    {
+     "base": "BMT",
+     "pairs": [
+      "BMTUSDT"
+     ]
+    },
+    {
+     "base": "BNB",
+     "pairs": [
+      "BNBUSD",
+      "BNBUSDT"
+     ]
+    },
+    {
+     "base": "BNT",
+     "pairs": [
+      "BNTUSDT"
+     ]
+    },
+    {
+     "base": "BONK",
+     "pairs": [
+      "BONKUSD",
+      "BONKUSDT"
+     ]
+    },
+    {
+     "base": "BOSON",
+     "pairs": [
+      "BOSONUSDT"
+     ]
+    },
+    {
+     "base": "BRETT",
+     "pairs": [
+      "BRETTUSDT"
+     ]
+    },
+    {
+     "base": "BTC",
+     "pairs": [
+      "BTCUSD",
+      "BTCUSDT"
+     ]
+    },
+    {
+     "base": "BTRST",
+     "pairs": [
+      "BTRSTUSDT"
+     ]
+    },
+    {
+     "base": "BTTC",
+     "pairs": [
+      "BTTCUSDT"
+     ]
+    },
+    {
+     "base": "CAKE",
+     "pairs": [
+      "CAKEUSDT"
+     ]
+    },
+    {
+     "base": "CELO",
+     "pairs": [
+      "CELOUSDT"
+     ]
+    },
+    {
+     "base": "CELR",
+     "pairs": [
+      "CELRUSDT"
+     ]
+    },
+    {
+     "base": "CHZ",
+     "pairs": [
+      "CHZUSDT"
+     ]
+    },
+    {
+     "base": "COMP",
+     "pairs": [
+      "COMPUSDT"
+     ]
+    },
+    {
+     "base": "COTI",
+     "pairs": [
+      "COTIUSDT"
+     ]
+    },
+    {
+     "base": "CRV",
+     "pairs": [
+      "CRVUSD",
+      "CRVUSDT"
+     ]
+    },
+    {
+     "base": "CTSI",
+     "pairs": [
+      "CTSIUSDT"
+     ]
+    },
+    {
+     "base": "DASH",
+     "pairs": [
+      "DASHUSDT"
+     ]
+    },
+    {
+     "base": "DGB",
+     "pairs": [
+      "DGBUSD",
+      "DGBUSDT"
+     ]
+    },
+    {
+     "base": "DIA",
+     "pairs": [
+      "DIAUSDT"
+     ]
+    },
+    {
+     "base": "DOGE",
+     "pairs": [
+      "DOGEUSD",
+      "DOGEUSDT"
+     ]
+    },
+    {
+     "base": "DOOD",
+     "pairs": [
+      "DOODUSDT"
+     ]
+    },
+    {
+     "base": "DOT",
+     "pairs": [
+      "DOTUSD",
+      "DOTUSDT"
+     ]
+    },
+    {
+     "base": "DUSK",
+     "pairs": [
+      "DUSKUSDT"
+     ]
+    },
+    {
+     "base": "EGLD",
+     "pairs": [
+      "EGLDUSDT"
+     ]
+    },
+    {
+     "base": "EIGEN",
+     "pairs": [
+      "EIGENUSDT"
+     ]
+    },
+    {
+     "base": "ENA",
+     "pairs": [
+      "ENAUSDT"
+     ]
+    },
+    {
+     "base": "ENJ",
+     "pairs": [
+      "ENJUSDT"
+     ]
+    },
+    {
+     "base": "ENS",
+     "pairs": [
+      "ENSUSD",
+      "ENSUSDT"
+     ]
+    },
+    {
+     "base": "ETC",
+     "pairs": [
+      "ETCUSD",
+      "ETCUSDT"
+     ]
+    },
+    {
+     "base": "ETH",
+     "pairs": [
+      "ETHUSD",
+      "ETHUSDT"
+     ]
+    },
+    {
+     "base": "FARTCOIN",
+     "pairs": [
+      "FARTCOINUSDT"
+     ]
+    },
+    {
+     "base": "FET",
+     "pairs": [
+      "FETUSD",
+      "FETUSDT"
+     ]
+    },
+    {
+     "base": "FIL",
+     "pairs": [
+      "FILUSDT"
+     ]
+    },
+    {
+     "base": "FLOKI",
+     "pairs": [
+      "FLOKIUSD",
+      "FLOKIUSDT"
+     ]
+    },
+    {
+     "base": "FLOW",
+     "pairs": [
+      "FLOWUSDT"
+     ]
+    },
+    {
+     "base": "FLUX",
+     "pairs": [
+      "FLUXUSDT"
+     ]
+    },
+    {
+     "base": "FORT",
+     "pairs": [
+      "FORTUSDT"
+     ]
+    },
+    {
+     "base": "FORTH",
+     "pairs": [
+      "FORTHUSDT"
+     ]
+    },
+    {
+     "base": "G",
+     "pairs": [
+      "GUSDT"
+     ]
+    },
+    {
+     "base": "GALA",
+     "pairs": [
+      "GALAUSD",
+      "GALAUSDT"
+     ]
+    },
+    {
+     "base": "GAS",
+     "pairs": [
+      "GASUSDT"
+     ]
+    },
+    {
+     "base": "GIGA",
+     "pairs": [
+      "GIGAUSDT"
+     ]
+    },
+    {
+     "base": "GLM",
+     "pairs": [
+      "GLMUSDT"
+     ]
+    },
+    {
+     "base": "GRAM",
+     "pairs": [
+      "GRAMUSDT"
+     ]
+    },
+    {
+     "base": "GRT",
+     "pairs": [
+      "GRTUSD",
+      "GRTUSDT"
+     ]
+    },
+    {
+     "base": "GTC",
+     "pairs": [
+      "GTCUSDT"
+     ]
+    },
+    {
+     "base": "HBAR",
+     "pairs": [
+      "HBARUSD",
+      "HBARUSDT"
+     ]
+    },
+    {
+     "base": "HYPE",
+     "pairs": [
+      "HYPEUSD",
+      "HYPEUSDT"
+     ]
+    },
+    {
+     "base": "ICP",
+     "pairs": [
+      "ICPUSD",
+      "ICPUSDT"
+     ]
+    },
+    {
+     "base": "ILV",
+     "pairs": [
+      "ILVUSDT"
+     ]
+    },
+    {
+     "base": "IMX",
+     "pairs": [
+      "IMXUSDT"
+     ]
+    },
+    {
+     "base": "INJ",
+     "pairs": [
+      "INJUSDT"
+     ]
+    },
+    {
+     "base": "IOST",
+     "pairs": [
+      "IOSTUSDT"
+     ]
+    },
+    {
+     "base": "IOTA",
+     "pairs": [
+      "IOTAUSD",
+      "IOTAUSDT"
+     ]
+    },
+    {
+     "base": "IOTX",
+     "pairs": [
+      "IOTXUSDT"
+     ]
+    },
+    {
+     "base": "JTO",
+     "pairs": [
+      "JTOUSDT"
+     ]
+    },
+    {
+     "base": "JUP",
+     "pairs": [
+      "JUPUSD",
+      "JUPUSDT"
+     ]
+    },
+    {
+     "base": "KAITO",
+     "pairs": [
+      "KAITOUSDT"
+     ]
+    },
+    {
+     "base": "KAVA",
+     "pairs": [
+      "KAVAUSDT"
+     ]
+    },
+    {
+     "base": "KNC",
+     "pairs": [
+      "KNCUSDT"
+     ]
+    },
+    {
+     "base": "KSM",
+     "pairs": [
+      "KSMUSDT"
+     ]
+    },
+    {
+     "base": "LAYER",
+     "pairs": [
+      "LAYERUSDT"
+     ]
+    },
+    {
+     "base": "LAZIO",
+     "pairs": [
+      "LAZIOUSDT"
+     ]
+    },
+    {
+     "base": "LDO",
+     "pairs": [
+      "LDOUSDT"
+     ]
+    },
+    {
+     "base": "LINK",
+     "pairs": [
+      "LINKUSD",
+      "LINKUSDT"
+     ]
+    },
+    {
+     "base": "LMWR",
+     "pairs": [
+      "LMWRUSDT"
+     ]
+    },
+    {
+     "base": "LOFI",
+     "pairs": [
+      "LOFIUSDT"
+     ]
+    },
+    {
+     "base": "LPT",
+     "pairs": [
+      "LPTUSD",
+      "LPTUSDT"
+     ]
+    },
+    {
+     "base": "LSK",
+     "pairs": [
+      "LSKUSDT"
+     ]
+    },
+    {
+     "base": "LTC",
+     "pairs": [
+      "LTCUSD",
+      "LTCUSDT"
+     ]
+    },
+    {
+     "base": "MAGIC",
+     "pairs": [
+      "MAGICUSDT"
+     ]
+    },
+    {
+     "base": "MANA",
+     "pairs": [
+      "MANAUSDT"
+     ]
+    },
+    {
+     "base": "MASK",
+     "pairs": [
+      "MASKUSDT"
+     ]
+    },
+    {
+     "base": "ME",
+     "pairs": [
+      "MEUSD",
+      "MEUSDT"
+     ]
+    },
+    {
+     "base": "METIS",
+     "pairs": [
+      "METISUSDT"
+     ]
+    },
+    {
+     "base": "MEW",
+     "pairs": [
+      "MEWUSDT"
+     ]
+    },
+    {
+     "base": "MOODENG",
+     "pairs": [
+      "MOODENGUSDT"
+     ]
+    },
+    {
+     "base": "NEAR",
+     "pairs": [
+      "NEARUSD",
+      "NEARUSDT"
+     ]
+    },
+    {
+     "base": "NEIRO",
+     "pairs": [
+      "NEIROUSDT"
+     ]
+    },
+    {
+     "base": "NEO",
+     "pairs": [
+      "NEOUSDT"
+     ]
+    },
+    {
+     "base": "NMR",
+     "pairs": [
+      "NMRUSDT"
+     ]
+    },
+    {
+     "base": "NOBODY",
+     "pairs": [
+      "NOBODYUSDT"
+     ]
+    },
+    {
+     "base": "NPC",
+     "pairs": [
+      "NPCUSDT"
+     ]
+    },
+    {
+     "base": "OCEAN",
+     "pairs": [
+      "OCEANUSDT"
+     ]
+    },
+    {
+     "base": "OGN",
+     "pairs": [
+      "OGNUSDT"
+     ]
+    },
+    {
+     "base": "ONDO",
+     "pairs": [
+      "ONDOUSDT"
+     ]
+    },
+    {
+     "base": "ONE",
+     "pairs": [
+      "ONEUSD",
+      "ONEUSDT"
+     ]
+    },
+    {
+     "base": "ONG",
+     "pairs": [
+      "ONGUSDT"
+     ]
+    },
+    {
+     "base": "ONT",
+     "pairs": [
+      "ONTUSDT"
+     ]
+    },
+    {
+     "base": "OP",
+     "pairs": [
+      "OPUSD",
+      "OPUSDT"
+     ]
+    },
+    {
+     "base": "ORBS",
+     "pairs": [
+      "ORBSUSDT"
+     ]
+    },
+    {
+     "base": "ORCA",
+     "pairs": [
+      "ORCAUSDT"
+     ]
+    },
+    {
+     "base": "PAXG",
+     "pairs": [
+      "PAXGUSDT"
+     ]
+    },
+    {
+     "base": "PENGU",
+     "pairs": [
+      "PENGUUSDT"
+     ]
+    },
+    {
+     "base": "PEPE",
+     "pairs": [
+      "PEPEUSD",
+      "PEPEUSDT"
+     ]
+    },
+    {
+     "base": "PNUT",
+     "pairs": [
+      "PNUTUSDT"
+     ]
+    },
+    {
+     "base": "POL",
+     "pairs": [
+      "POLUSD",
+      "POLUSDT"
+     ]
+    },
+    {
+     "base": "POLYX",
+     "pairs": [
+      "POLYXUSDT"
+     ]
+    },
+    {
+     "base": "POPCAT",
+     "pairs": [
+      "POPCATUSDT"
+     ]
+    },
+    {
+     "base": "PORTO",
+     "pairs": [
+      "PORTOUSDT"
+     ]
+    },
+    {
+     "base": "PROM",
+     "pairs": [
+      "PROMUSDT"
+     ]
+    },
+    {
+     "base": "PUMP",
+     "pairs": [
+      "PUMPUSDT"
+     ]
+    },
+    {
+     "base": "PURR",
+     "pairs": [
+      "PURRUSDT"
+     ]
+    },
+    {
+     "base": "QNT",
+     "pairs": [
+      "QNTUSDT"
+     ]
+    },
+    {
+     "base": "QTUM",
+     "pairs": [
+      "QTUMUSDT"
+     ]
+    },
+    {
+     "base": "RAD",
+     "pairs": [
+      "RADUSDT"
+     ]
+    },
+    {
+     "base": "RARE",
+     "pairs": [
+      "RAREUSDT"
+     ]
+    },
+    {
+     "base": "REEF",
+     "pairs": [
+      "REEFUSDT"
+     ]
+    },
+    {
+     "base": "RENDER",
+     "pairs": [
+      "RENDERUSD",
+      "RENDERUSDT"
+     ]
+    },
+    {
+     "base": "REQ",
+     "pairs": [
+      "REQUSDT"
+     ]
+    },
+    {
+     "base": "RHEA",
+     "pairs": [
+      "RHEAUSDT"
+     ]
+    },
+    {
+     "base": "RLC",
+     "pairs": [
+      "RLCUSDT"
+     ]
+    },
+    {
+     "base": "ROSE",
+     "pairs": [
+      "ROSEUSDT"
+     ]
+    },
+    {
+     "base": "RVN",
+     "pairs": [
+      "RVNUSD",
+      "RVNUSDT"
+     ]
+    },
+    {
+     "base": "S",
+     "pairs": [
+      "SUSD",
+      "SUSDT"
+     ]
+    },
+    {
+     "base": "SAND",
+     "pairs": [
+      "SANDUSD",
+      "SANDUSDT"
+     ]
+    },
+    {
+     "base": "SANTOS",
+     "pairs": [
+      "SANTOSUSDT"
+     ]
+    },
+    {
+     "base": "SEI",
+     "pairs": [
+      "SEIUSDT"
+     ]
+    },
+    {
+     "base": "SHIB",
+     "pairs": [
+      "SHIBUSD",
+      "SHIBUSDT"
+     ]
+    },
+    {
+     "base": "SKL",
+     "pairs": [
+      "SKLUSDT"
+     ]
+    },
+    {
+     "base": "SKY",
+     "pairs": [
+      "SKYUSDT"
+     ]
+    },
+    {
+     "base": "SLP",
+     "pairs": [
+      "SLPUSDT"
+     ]
+    },
+    {
+     "base": "SNX",
+     "pairs": [
+      "SNXUSDT"
+     ]
+    },
+    {
+     "base": "SOL",
+     "pairs": [
+      "SOLUSD",
+      "SOLUSDT"
+     ]
+    },
+    {
+     "base": "SPX",
+     "pairs": [
+      "SPXUSDT"
+     ]
+    },
+    {
+     "base": "STORJ",
+     "pairs": [
+      "STORJUSDT"
+     ]
+    },
+    {
+     "base": "SUI",
+     "pairs": [
+      "SUIUSD",
+      "SUIUSDT"
+     ]
+    },
+    {
+     "base": "SUSHI",
+     "pairs": [
+      "SUSHIUSD",
+      "SUSHIUSDT"
+     ]
+    },
+    {
+     "base": "SYS",
+     "pairs": [
+      "SYSUSDT"
+     ]
+    },
+    {
+     "base": "T",
+     "pairs": [
+      "TUSDT"
+     ]
+    },
+    {
+     "base": "TFUEL",
+     "pairs": [
+      "TFUELUSDT"
+     ]
+    },
+    {
+     "base": "THETA",
+     "pairs": [
+      "THETAUSD",
+      "THETAUSDT"
+     ]
+    },
+    {
+     "base": "TIA",
+     "pairs": [
+      "TIAUSDT"
+     ]
+    },
+    {
+     "base": "TLM",
+     "pairs": [
+      "TLMUSDT"
+     ]
+    },
+    {
+     "base": "TOSHI",
+     "pairs": [
+      "TOSHIUSDT"
+     ]
+    },
+    {
+     "base": "TRAC",
+     "pairs": [
+      "TRACUSDT"
+     ]
+    },
+    {
+     "base": "TROLL",
+     "pairs": [
+      "TROLLUSDT"
+     ]
+    },
+    {
+     "base": "TRUMP",
+     "pairs": [
+      "TRUMPUSD",
+      "TRUMPUSDT"
+     ]
+    },
+    {
+     "base": "TRX",
+     "pairs": [
+      "TRXUSD",
+      "TRXUSDT"
+     ]
+    },
+    {
+     "base": "TURBO",
+     "pairs": [
+      "TURBOUSDT"
+     ]
+    },
+    {
+     "base": "TWT",
+     "pairs": [
+      "TWTUSDT"
+     ]
+    },
+    {
+     "base": "UNI",
+     "pairs": [
+      "UNIUSD",
+      "UNIUSDT"
+     ]
+    },
+    {
+     "base": "USD1",
+     "pairs": [
+      "USD1USDT"
+     ]
+    },
+    {
+     "base": "USDC",
+     "pairs": [
+      "USDCUSD",
+      "USDCUSDT"
+     ]
+    },
+    {
+     "base": "USDT",
+     "pairs": [
+      "USDTUSD"
+     ]
+    },
+    {
+     "base": "USDUC",
+     "pairs": [
+      "USDUCUSDT"
+     ]
+    },
+    {
+     "base": "USELESS",
+     "pairs": [
+      "USELESSUSDT"
+     ]
+    },
+    {
+     "base": "VELO",
+     "pairs": [
+      "VELOUSDT"
+     ]
+    },
+    {
+     "base": "VET",
+     "pairs": [
+      "VETUSD",
+      "VETUSDT"
+     ]
+    },
+    {
+     "base": "VIRTUAL",
+     "pairs": [
+      "VIRTUALUSDT"
+     ]
+    },
+    {
+     "base": "VOXEL",
+     "pairs": [
+      "VOXELUSDT"
+     ]
+    },
+    {
+     "base": "VTHO",
+     "pairs": [
+      "VTHOUSD",
+      "VTHOUSDT"
+     ]
+    },
+    {
+     "base": "WAXP",
+     "pairs": [
+      "WAXPUSDT"
+     ]
+    },
+    {
+     "base": "WIF",
+     "pairs": [
+      "WIFUSDT"
+     ]
+    },
+    {
+     "base": "WLD",
+     "pairs": [
+      "WLDUSDT"
+     ]
+    },
+    {
+     "base": "WLFI",
+     "pairs": [
+      "WLFIUSDT"
+     ]
+    },
+    {
+     "base": "WOD",
+     "pairs": [
+      "WODUSDT"
+     ]
+    },
+    {
+     "base": "XDC",
+     "pairs": [
+      "XDCUSDT"
+     ]
+    },
+    {
+     "base": "XEC",
+     "pairs": [
+      "XECUSDT"
+     ]
+    },
+    {
+     "base": "XLM",
+     "pairs": [
+      "XLMUSD",
+      "XLMUSDT"
+     ]
+    },
+    {
+     "base": "XNO",
+     "pairs": [
+      "XNOUSDT"
+     ]
+    },
+    {
+     "base": "XRP",
+     "pairs": [
+      "XRPUSD",
+      "XRPUSDT"
+     ]
+    },
+    {
+     "base": "XTZ",
+     "pairs": [
+      "XTZUSDT"
+     ]
+    },
+    {
+     "base": "YFI",
+     "pairs": [
+      "YFIUSDT"
+     ]
+    },
+    {
+     "base": "ZEC",
+     "pairs": [
+      "ZECUSD",
+      "ZECUSDT"
+     ]
+    },
+    {
+     "base": "ZEN",
+     "pairs": [
+      "ZENUSDT"
+     ]
+    },
+    {
+     "base": "ZIL",
+     "pairs": [
+      "ZILUSD",
+      "ZILUSDT"
+     ]
+    },
+    {
+     "base": "ZRX",
+     "pairs": [
+      "ZRXUSDT"
+     ]
+    }
+   ],
+   "kept": [
+    "0G",
+    "1000MOG",
+    "1000REKT",
+    "1INCH",
+    "1MWOJAK",
+    "A",
+    "AAVE",
+    "ACH",
+    "ADA",
+    "ADX",
+    "AIXBT",
+    "ALGO",
+    "ALICE",
+    "ALPINE",
+    "ANIME",
+    "ANKR",
+    "APE",
+    "API3",
+    "APT",
+    "ARB",
+    "ASTER",
+    "ASTR",
+    "ATOM",
+    "AUDIO",
+    "AVAX",
+    "AVNT",
+    "AXL",
+    "AXS",
+    "BAND",
+    "BAT",
+    "BCH",
+    "BERT",
+    "BICO",
+    "BLUR",
+    "BMT",
+    "BNB",
+    "BNT",
+    "BONK",
+    "BOSON",
+    "BRETT",
+    "BTRST",
+    "BTTC",
+    "CAKE",
+    "CELO",
+    "CELR",
+    "CHZ",
+    "COMP",
+    "COTI",
+    "CRV",
+    "CTSI",
+    "DASH",
+    "DGB",
+    "DIA",
+    "DOOD",
+    "DOT",
+    "DUSK",
+    "EGLD",
+    "EIGEN",
+    "ENA",
+    "ENJ",
+    "ENS",
+    "ETC",
+    "FARTCOIN",
+    "FET",
+    "FIL",
+    "FLOKI",
+    "FLOW",
+    "FLUX",
+    "FORT",
+    "FORTH",
+    "G",
+    "GALA",
+    "GAS",
+    "GIGA",
+    "GLM",
+    "GRAM",
+    "GRT",
+    "GTC",
+    "HBAR",
+    "HYPE",
+    "ICP",
+    "ILV",
+    "IMX",
+    "INJ",
+    "IOST",
+    "IOTA",
+    "IOTX",
+    "JTO",
+    "JUP",
+    "KAITO",
+    "KAVA",
+    "KNC",
+    "KSM",
+    "LAYER",
+    "LAZIO",
+    "LDO",
+    "LINK",
+    "LMWR",
+    "LOFI",
+    "LPT",
+    "LSK",
+    "LTC",
+    "MAGIC",
+    "MANA",
+    "MASK",
+    "ME",
+    "METIS",
+    "MEW",
+    "MOODENG",
+    "NEAR",
+    "NEIRO",
+    "NEO",
+    "NMR",
+    "NOBODY",
+    "NPC",
+    "OCEAN",
+    "OGN",
+    "ONDO",
+    "ONE",
+    "ONG",
+    "ONT",
+    "OP",
+    "ORBS",
+    "ORCA",
+    "PENGU",
+    "PEPE",
+    "PNUT",
+    "POL",
+    "POLYX",
+    "POPCAT",
+    "PORTO",
+    "PROM",
+    "PUMP",
+    "PURR",
+    "QNT",
+    "QTUM",
+    "RAD",
+    "RARE",
+    "REEF",
+    "RENDER",
+    "REQ",
+    "RHEA",
+    "RLC",
+    "ROSE",
+    "RVN",
+    "S",
+    "SAND",
+    "SANTOS",
+    "SEI",
+    "SHIB",
+    "SKL",
+    "SKY",
+    "SLP",
+    "SNX",
+    "SPX",
+    "STORJ",
+    "SUI",
+    "SUSHI",
+    "SYS",
+    "T",
+    "TFUEL",
+    "THETA",
+    "TIA",
+    "TLM",
+    "TOSHI",
+    "TRAC",
+    "TROLL",
+    "TRUMP",
+    "TRX",
+    "TURBO",
+    "TWT",
+    "UNI",
+    "USDUC",
+    "USELESS",
+    "VELO",
+    "VET",
+    "VIRTUAL",
+    "VOXEL",
+    "VTHO",
+    "WAXP",
+    "WIF",
+    "WLD",
+    "WLFI",
+    "WOD",
+    "XDC",
+    "XEC",
+    "XLM",
+    "XNO",
+    "XTZ",
+    "YFI",
+    "ZEC",
+    "ZEN",
+    "ZIL",
+    "ZRX"
+   ],
+   "dropped": [
+    {
+     "base": "BTC",
+     "why": "already used (BTC, ETH, SOL, DOGE, XRP)"
+    },
+    {
+     "base": "DOGE",
+     "why": "already used (BTC, ETH, SOL, DOGE, XRP)"
+    },
+    {
+     "base": "ETH",
+     "why": "already used (BTC, ETH, SOL, DOGE, XRP)"
+    },
+    {
+     "base": "PAXG",
+     "why": "asset-pegged (gold-backed)"
+    },
+    {
+     "base": "SOL",
+     "why": "already used (BTC, ETH, SOL, DOGE, XRP)"
+    },
+    {
+     "base": "USD1",
+     "why": "stablecoin or fiat-like"
+    },
+    {
+     "base": "USDC",
+     "why": "stablecoin or fiat-like"
+    },
+    {
+     "base": "USDT",
+     "why": "stablecoin or fiat-like"
+    },
+    {
+     "base": "XRP",
+     "why": "already used (BTC, ETH, SOL, DOGE, XRP)"
+    }
+   ]
+  },
+  "b": {
+   "source": "https://api.exchange.coinbase.com/products and /products/<id>/candles",
+   "candidates": [
+    "0G",
+    "1000MOG",
+    "1000REKT",
+    "1INCH",
+    "1MWOJAK",
+    "A",
+    "AAVE",
+    "ACH",
+    "ADA",
+    "ADX",
+    "AIXBT",
+    "ALGO",
+    "ALICE",
+    "ALPINE",
+    "ANIME",
+    "ANKR",
+    "APE",
+    "API3",
+    "APT",
+    "ARB",
+    "ASTER",
+    "ASTR",
+    "ATOM",
+    "AUDIO",
+    "AVAX",
+    "AVNT",
+    "AXL",
+    "AXS",
+    "BAND",
+    "BAT",
+    "BCH",
+    "BERT",
+    "BICO",
+    "BLUR",
+    "BMT",
+    "BNB",
+    "BNT",
+    "BONK",
+    "BOSON",
+    "BRETT",
+    "BTRST",
+    "BTTC",
+    "CAKE",
+    "CELO",
+    "CELR",
+    "CHZ",
+    "COMP",
+    "COTI",
+    "CRV",
+    "CTSI",
+    "DASH",
+    "DGB",
+    "DIA",
+    "DOOD",
+    "DOT",
+    "DUSK",
+    "EGLD",
+    "EIGEN",
+    "ENA",
+    "ENJ",
+    "ENS",
+    "ETC",
+    "FARTCOIN",
+    "FET",
+    "FIL",
+    "FLOKI",
+    "FLOW",
+    "FLUX",
+    "FORT",
+    "FORTH",
+    "G",
+    "GALA",
+    "GAS",
+    "GIGA",
+    "GLM",
+    "GRAM",
+    "GRT",
+    "GTC",
+    "HBAR",
+    "HYPE",
+    "ICP",
+    "ILV",
+    "IMX",
+    "INJ",
+    "IOST",
+    "IOTA",
+    "IOTX",
+    "JTO",
+    "JUP",
+    "KAITO",
+    "KAVA",
+    "KNC",
+    "KSM",
+    "LAYER",
+    "LAZIO",
+    "LDO",
+    "LINK",
+    "LMWR",
+    "LOFI",
+    "LPT",
+    "LSK",
+    "LTC",
+    "MAGIC",
+    "MANA",
+    "MASK",
+    "ME",
+    "METIS",
+    "MEW",
+    "MOODENG",
+    "NEAR",
+    "NEIRO",
+    "NEO",
+    "NMR",
+    "NOBODY",
+    "NPC",
+    "OCEAN",
+    "OGN",
+    "ONDO",
+    "ONE",
+    "ONG",
+    "ONT",
+    "OP",
+    "ORBS",
+    "ORCA",
+    "PENGU",
+    "PEPE",
+    "PNUT",
+    "POL",
+    "POLYX",
+    "POPCAT",
+    "PORTO",
+    "PROM",
+    "PUMP",
+    "PURR",
+    "QNT",
+    "QTUM",
+    "RAD",
+    "RARE",
+    "REEF",
+    "RENDER",
+    "REQ",
+    "RHEA",
+    "RLC",
+    "ROSE",
+    "RVN",
+    "S",
+    "SAND",
+    "SANTOS",
+    "SEI",
+    "SHIB",
+    "SKL",
+    "SKY",
+    "SLP",
+    "SNX",
+    "SPX",
+    "STORJ",
+    "SUI",
+    "SUSHI",
+    "SYS",
+    "T",
+    "TFUEL",
+    "THETA",
+    "TIA",
+    "TLM",
+    "TOSHI",
+    "TRAC",
+    "TROLL",
+    "TRUMP",
+    "TRX",
+    "TURBO",
+    "TWT",
+    "UNI",
+    "USDUC",
+    "USELESS",
+    "VELO",
+    "VET",
+    "VIRTUAL",
+    "VOXEL",
+    "VTHO",
+    "WAXP",
+    "WIF",
+    "WLD",
+    "WLFI",
+    "WOD",
+    "XDC",
+    "XEC",
+    "XLM",
+    "XNO",
+    "XTZ",
+    "YFI",
+    "ZEC",
+    "ZEN",
+    "ZIL",
+    "ZRX"
+   ],
+   "kept": [
+    "1INCH",
+    "AAVE",
+    "ACH",
+    "ADA",
+    "ALGO",
+    "ANKR",
+    "API3",
+    "ATOM",
+    "AVAX",
+    "AXS",
+    "BAND",
+    "BAT",
+    "BCH",
+    "BICO",
+    "BNT",
+    "BTRST",
+    "CHZ",
+    "COMP",
+    "COTI",
+    "CRV",
+    "CTSI",
+    "DASH",
+    "DOT",
+    "ENS",
+    "ETC",
+    "FET",
+    "FIL",
+    "FORTH",
+    "GRT",
+    "GTC",
+    "ICP",
+    "IMX",
+    "KNC",
+    "LINK",
+    "LPT",
+    "LTC",
+    "MANA",
+    "MASK",
+    "NMR",
+    "OGN",
+    "QNT",
+    "RAD",
+    "REQ",
+    "RLC",
+    "SHIB",
+    "SKL",
+    "SNX",
+    "SUSHI",
+    "TRAC",
+    "UNI",
+    "XLM",
+    "XTZ",
+    "YFI",
+    "ZEC",
+    "ZEN",
+    "ZRX"
+   ],
+   "dropped": [
+    {
+     "base": "0G",
+     "why": "no Coinbase product 0G-USD"
+    },
+    {
+     "base": "1000MOG",
+     "why": "no Coinbase product 1000MOG-USD"
+    },
+    {
+     "base": "1000REKT",
+     "why": "no Coinbase product 1000REKT-USD"
+    },
+    {
+     "base": "1MWOJAK",
+     "why": "no Coinbase product 1MWOJAK-USD"
+    },
+    {
+     "base": "A",
+     "why": "no Coinbase product A-USD"
+    },
+    {
+     "base": "ADX",
+     "why": "no Coinbase product ADX-USD"
+    },
+    {
+     "base": "AIXBT",
+     "why": "no Coinbase product AIXBT-USD"
+    },
+    {
+     "base": "ALICE",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "ALPINE",
+     "why": "no Coinbase product ALPINE-USD"
+    },
+    {
+     "base": "ANIME",
+     "why": "no Coinbase product ANIME-USD"
+    },
+    {
+     "base": "APE",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "APT",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "ARB",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "ASTER",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "ASTR",
+     "why": "no Coinbase product ASTR-USD"
+    },
+    {
+     "base": "AUDIO",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "AVNT",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "AXL",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "BERT",
+     "why": "no Coinbase product BERT-USD"
+    },
+    {
+     "base": "BLUR",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "BMT",
+     "why": "no Coinbase product BMT-USD"
+    },
+    {
+     "base": "BNB",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "BONK",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "BOSON",
+     "why": "no Coinbase product BOSON-USD"
+    },
+    {
+     "base": "BRETT",
+     "why": "no Coinbase product BRETT-USD"
+    },
+    {
+     "base": "BTTC",
+     "why": "no Coinbase product BTTC-USD"
+    },
+    {
+     "base": "CAKE",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "CELO",
+     "why": "no Coinbase product CELO-USD"
+    },
+    {
+     "base": "CELR",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "DGB",
+     "why": "no Coinbase product DGB-USD"
+    },
+    {
+     "base": "DIA",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "DOOD",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "DUSK",
+     "why": "no Coinbase product DUSK-USD"
+    },
+    {
+     "base": "EGLD",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "EIGEN",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "ENA",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "ENJ",
+     "why": "Coinbase ENJ-USD status delisted, trading disabled"
+    },
+    {
+     "base": "FARTCOIN",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "FLOKI",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "FLOW",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "FLUX",
+     "why": "no Coinbase product FLUX-USD"
+    },
+    {
+     "base": "FORT",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "G",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "GALA",
+     "why": "Coinbase GALA-USD status delisted, trading disabled"
+    },
+    {
+     "base": "GAS",
+     "why": "no Coinbase product GAS-USD"
+    },
+    {
+     "base": "GIGA",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "GLM",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "GRAM",
+     "why": "no Coinbase product GRAM-USD"
+    },
+    {
+     "base": "HBAR",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "HYPE",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "ILV",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "INJ",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "IOST",
+     "why": "no Coinbase product IOST-USD"
+    },
+    {
+     "base": "IOTA",
+     "why": "no Coinbase product IOTA-USD"
+    },
+    {
+     "base": "IOTX",
+     "why": "Coinbase IOTX-USD status delisted, trading disabled"
+    },
+    {
+     "base": "JTO",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "JUP",
+     "why": "Coinbase JUP-USD status delisted, trading disabled"
+    },
+    {
+     "base": "KAITO",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "KAVA",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "KSM",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "LAYER",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "LAZIO",
+     "why": "no Coinbase product LAZIO-USD"
+    },
+    {
+     "base": "LDO",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "LMWR",
+     "why": "no Coinbase product LMWR-USD"
+    },
+    {
+     "base": "LOFI",
+     "why": "no Coinbase product LOFI-USD"
+    },
+    {
+     "base": "LSK",
+     "why": "no Coinbase product LSK-USD"
+    },
+    {
+     "base": "MAGIC",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "ME",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "METIS",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "MEW",
+     "why": "no Coinbase product MEW-USD"
+    },
+    {
+     "base": "MOODENG",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "NEAR",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "NEIRO",
+     "why": "no Coinbase product NEIRO-USD"
+    },
+    {
+     "base": "NEO",
+     "why": "no Coinbase product NEO-USD"
+    },
+    {
+     "base": "NOBODY",
+     "why": "no Coinbase product NOBODY-USD"
+    },
+    {
+     "base": "NPC",
+     "why": "no Coinbase product NPC-USD"
+    },
+    {
+     "base": "OCEAN",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "ONDO",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "ONE",
+     "why": "no Coinbase product ONE-USD"
+    },
+    {
+     "base": "ONG",
+     "why": "no Coinbase product ONG-USD"
+    },
+    {
+     "base": "ONT",
+     "why": "no Coinbase product ONT-USD"
+    },
+    {
+     "base": "OP",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "ORBS",
+     "why": "no Coinbase product ORBS-USD"
+    },
+    {
+     "base": "ORCA",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "PENGU",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "PEPE",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "PNUT",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "POL",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "POLYX",
+     "why": "no Coinbase product POLYX-USD"
+    },
+    {
+     "base": "POPCAT",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "PORTO",
+     "why": "no Coinbase product PORTO-USD"
+    },
+    {
+     "base": "PROM",
+     "why": "no Coinbase product PROM-USD"
+    },
+    {
+     "base": "PUMP",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "PURR",
+     "why": "no Coinbase product PURR-USD"
+    },
+    {
+     "base": "QTUM",
+     "why": "no Coinbase product QTUM-USD"
+    },
+    {
+     "base": "RARE",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "REEF",
+     "why": "no Coinbase product REEF-USD"
+    },
+    {
+     "base": "RENDER",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "RHEA",
+     "why": "no Coinbase product RHEA-USD"
+    },
+    {
+     "base": "ROSE",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "RVN",
+     "why": "no Coinbase product RVN-USD"
+    },
+    {
+     "base": "S",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "SAND",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "SANTOS",
+     "why": "no Coinbase product SANTOS-USD"
+    },
+    {
+     "base": "SEI",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "SKY",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "SLP",
+     "why": "no Coinbase product SLP-USD"
+    },
+    {
+     "base": "SPX",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "STORJ",
+     "why": "Coinbase STORJ-USD status delisted, trading disabled"
+    },
+    {
+     "base": "SUI",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "SYS",
+     "why": "no Coinbase product SYS-USD"
+    },
+    {
+     "base": "T",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "TFUEL",
+     "why": "no Coinbase product TFUEL-USD"
+    },
+    {
+     "base": "THETA",
+     "why": "no Coinbase product THETA-USD"
+    },
+    {
+     "base": "TIA",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "TLM",
+     "why": "no Coinbase product TLM-USD"
+    },
+    {
+     "base": "TOSHI",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "TROLL",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "TRUMP",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "TRX",
+     "why": "no Coinbase product TRX-USD"
+    },
+    {
+     "base": "TURBO",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "TWT",
+     "why": "no Coinbase product TWT-USD"
+    },
+    {
+     "base": "USDUC",
+     "why": "no Coinbase product USDUC-USD"
+    },
+    {
+     "base": "USELESS",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "VELO",
+     "why": "Coinbase VELO-USD status delisted, trading disabled"
+    },
+    {
+     "base": "VET",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "VIRTUAL",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "VOXEL",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "VTHO",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "WAXP",
+     "why": "no Coinbase product WAXP-USD"
+    },
+    {
+     "base": "WIF",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "WLD",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "WLFI",
+     "why": "no Coinbase 5m candles on 2022-01-01 (0 returned)"
+    },
+    {
+     "base": "WOD",
+     "why": "no Coinbase product WOD-USD"
+    },
+    {
+     "base": "XDC",
+     "why": "no Coinbase product XDC-USD"
+    },
+    {
+     "base": "XEC",
+     "why": "no Coinbase product XEC-USD"
+    },
+    {
+     "base": "XNO",
+     "why": "no Coinbase product XNO-USD"
+    },
+    {
+     "base": "ZIL",
+     "why": "no Coinbase product ZIL-USD"
+    }
+   ],
+   "probes": {
+    "1INCH": {
+     "product": "1INCH-USD",
+     "candles20220101": 277,
+     "candles20251201": 189
+    },
+    "AAVE": {
+     "product": "AAVE-USD",
+     "candles20220101": 288,
+     "candles20251201": 288
+    },
+    "ACH": {
+     "product": "ACH-USD",
+     "candles20220101": 288,
+     "candles20251201": 214
+    },
+    "ADA": {
+     "product": "ADA-USD",
+     "candles20220101": 288,
+     "candles20251201": 288
+    },
+    "ALGO": {
+     "product": "ALGO-USD",
+     "candles20220101": 288,
+     "candles20251201": 283
+    },
+    "ALICE": {
+     "product": "ALICE-USD",
+     "candles20220101": 0,
+     "candles20251201": 82
+    },
+    "ANKR": {
+     "product": "ANKR-USD",
+     "candles20220101": 288,
+     "candles20251201": 124
+    },
+    "APE": {
+     "product": "APE-USD",
+     "candles20220101": 0,
+     "candles20251201": 217
+    },
+    "API3": {
+     "product": "API3-USD",
+     "candles20220101": 186,
+     "candles20251201": 159
+    },
+    "APT": {
+     "product": "APT-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "ARB": {
+     "product": "ARB-USD",
+     "candles20220101": 0,
+     "candles20251201": 287
+    },
+    "ASTER": {
+     "product": "ASTER-USD",
+     "candles20220101": 0,
+     "candles20251201": 268
+    },
+    "ATOM": {
+     "product": "ATOM-USD",
+     "candles20220101": 288,
+     "candles20251201": 288
+    },
+    "AUDIO": {
+     "product": "AUDIO-USD",
+     "candles20220101": 0,
+     "candles20251201": 57
+    },
+    "AVAX": {
+     "product": "AVAX-USD",
+     "candles20220101": 288,
+     "candles20251201": 288
+    },
+    "AVNT": {
+     "product": "AVNT-USD",
+     "candles20220101": 0,
+     "candles20251201": 287
+    },
+    "AXL": {
+     "product": "AXL-USD",
+     "candles20220101": 0,
+     "candles20251201": 192
+    },
+    "AXS": {
+     "product": "AXS-USD",
+     "candles20220101": 288,
+     "candles20251201": 136
+    },
+    "BAND": {
+     "product": "BAND-USD",
+     "candles20220101": 235,
+     "candles20251201": 214
+    },
+    "BAT": {
+     "product": "BAT-USD",
+     "candles20220101": 284,
+     "candles20251201": 287
+    },
+    "BCH": {
+     "product": "BCH-USD",
+     "candles20220101": 288,
+     "candles20251201": 288
+    },
+    "BICO": {
+     "product": "BICO-USD",
+     "candles20220101": 287,
+     "candles20251201": 59
+    },
+    "BLUR": {
+     "product": "BLUR-USD",
+     "candles20220101": 0,
+     "candles20251201": 36
+    },
+    "BNB": {
+     "product": "BNB-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "BNT": {
+     "product": "BNT-USD",
+     "candles20220101": 184,
+     "candles20251201": 71
+    },
+    "BONK": {
+     "product": "BONK-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "BTRST": {
+     "product": "BTRST-USD",
+     "candles20220101": 215,
+     "candles20251201": 104
+    },
+    "CAKE": {
+     "product": "CAKE-USD",
+     "candles20220101": 0,
+     "candles20251201": 196
+    },
+    "CELR": {
+     "product": "CELR-USD",
+     "candles20220101": 0,
+     "candles20251201": 72
+    },
+    "CHZ": {
+     "product": "CHZ-USD",
+     "candles20220101": 288,
+     "candles20251201": 44
+    },
+    "COMP": {
+     "product": "COMP-USD",
+     "candles20220101": 288,
+     "candles20251201": 285
+    },
+    "COTI": {
+     "product": "COTI-USD",
+     "candles20220101": 283,
+     "candles20251201": 151
+    },
+    "CRV": {
+     "product": "CRV-USD",
+     "candles20220101": 288,
+     "candles20251201": 287
+    },
+    "CTSI": {
+     "product": "CTSI-USD",
+     "candles20220101": 285,
+     "candles20251201": 102
+    },
+    "DASH": {
+     "product": "DASH-USD",
+     "candles20220101": 286,
+     "candles20251201": 288
+    },
+    "DIA": {
+     "product": "DIA-USD",
+     "candles20220101": 0,
+     "candles20251201": 215
+    },
+    "DOOD": {
+     "product": "DOOD-USD",
+     "candles20220101": 0,
+     "candles20251201": 0
+    },
+    "DOT": {
+     "product": "DOT-USD",
+     "candles20220101": 288,
+     "candles20251201": 288
+    },
+    "EGLD": {
+     "product": "EGLD-USD",
+     "candles20220101": 0,
+     "candles20251201": 203
+    },
+    "EIGEN": {
+     "product": "EIGEN-USD",
+     "candles20220101": 0,
+     "candles20251201": 262
+    },
+    "ENA": {
+     "product": "ENA-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "ENS": {
+     "product": "ENS-USD",
+     "candles20220101": 286,
+     "candles20251201": 244
+    },
+    "ETC": {
+     "product": "ETC-USD",
+     "candles20220101": 288,
+     "candles20251201": 263
+    },
+    "FARTCOIN": {
+     "product": "FARTCOIN-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "FET": {
+     "product": "FET-USD",
+     "candles20220101": 288,
+     "candles20251201": 288
+    },
+    "FIL": {
+     "product": "FIL-USD",
+     "candles20220101": 288,
+     "candles20251201": 286
+    },
+    "FLOKI": {
+     "product": "FLOKI-USD",
+     "candles20220101": 0,
+     "candles20251201": 183
+    },
+    "FLOW": {
+     "product": "FLOW-USD",
+     "candles20220101": 0,
+     "candles20251201": 28
+    },
+    "FORT": {
+     "product": "FORT-USD",
+     "candles20220101": 0,
+     "candles20251201": 193
+    },
+    "FORTH": {
+     "product": "FORTH-USD",
+     "candles20220101": 259,
+     "candles20251201": 202
+    },
+    "G": {
+     "product": "G-USD",
+     "candles20220101": 0,
+     "candles20251201": 25
+    },
+    "GIGA": {
+     "product": "GIGA-USD",
+     "candles20220101": 0,
+     "candles20251201": 186
+    },
+    "GLM": {
+     "product": "GLM-USD",
+     "candles20220101": 0,
+     "candles20251201": 113
+    },
+    "GRT": {
+     "product": "GRT-USD",
+     "candles20220101": 288,
+     "candles20251201": 183
+    },
+    "GTC": {
+     "product": "GTC-USD",
+     "candles20220101": 288,
+     "candles20251201": 27
+    },
+    "HBAR": {
+     "product": "HBAR-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "HYPE": {
+     "product": "HYPE-USD",
+     "candles20220101": 0,
+     "candles20251201": 0
+    },
+    "ICP": {
+     "product": "ICP-USD",
+     "candles20220101": 288,
+     "candles20251201": 288
+    },
+    "ILV": {
+     "product": "ILV-USD",
+     "candles20220101": 0,
+     "candles20251201": 200
+    },
+    "IMX": {
+     "product": "IMX-USD",
+     "candles20220101": 283,
+     "candles20251201": 277
+    },
+    "INJ": {
+     "product": "INJ-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "JTO": {
+     "product": "JTO-USD",
+     "candles20220101": 0,
+     "candles20251201": 265
+    },
+    "KAITO": {
+     "product": "KAITO-USD",
+     "candles20220101": 0,
+     "candles20251201": 197
+    },
+    "KAVA": {
+     "product": "KAVA-USD",
+     "candles20220101": 0,
+     "candles20251201": 136
+    },
+    "KNC": {
+     "product": "KNC-USD",
+     "candles20220101": 270,
+     "candles20251201": 59
+    },
+    "KSM": {
+     "product": "KSM-USD",
+     "candles20220101": 0,
+     "candles20251201": 245
+    },
+    "LAYER": {
+     "product": "LAYER-USD",
+     "candles20220101": 0,
+     "candles20251201": 173
+    },
+    "LDO": {
+     "product": "LDO-USD",
+     "candles20220101": 0,
+     "candles20251201": 259
+    },
+    "LINK": {
+     "product": "LINK-USD",
+     "candles20220101": 288,
+     "candles20251201": 288
+    },
+    "LPT": {
+     "product": "LPT-USD",
+     "candles20220101": 279,
+     "candles20251201": 153
+    },
+    "LTC": {
+     "product": "LTC-USD",
+     "candles20220101": 288,
+     "candles20251201": 288
+    },
+    "MAGIC": {
+     "product": "MAGIC-USD",
+     "candles20220101": 0,
+     "candles20251201": 136
+    },
+    "MANA": {
+     "product": "MANA-USD",
+     "candles20220101": 288,
+     "candles20251201": 185
+    },
+    "MASK": {
+     "product": "MASK-USD",
+     "candles20220101": 275,
+     "candles20251201": 55
+    },
+    "ME": {
+     "product": "ME-USD",
+     "candles20220101": 0,
+     "candles20251201": 41
+    },
+    "METIS": {
+     "product": "METIS-USD",
+     "candles20220101": 0,
+     "candles20251201": 172
+    },
+    "MOODENG": {
+     "product": "MOODENG-USD",
+     "candles20220101": 0,
+     "candles20251201": 276
+    },
+    "NEAR": {
+     "product": "NEAR-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "NMR": {
+     "product": "NMR-USD",
+     "candles20220101": 244,
+     "candles20251201": 166
+    },
+    "OCEAN": {
+     "product": "OCEAN-USD",
+     "candles20220101": 0,
+     "candles20251201": 56
+    },
+    "OGN": {
+     "product": "OGN-USD",
+     "candles20220101": 269,
+     "candles20251201": 103
+    },
+    "ONDO": {
+     "product": "ONDO-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "OP": {
+     "product": "OP-USD",
+     "candles20220101": 0,
+     "candles20251201": 219
+    },
+    "ORCA": {
+     "product": "ORCA-USD",
+     "candles20220101": 0,
+     "candles20251201": 277
+    },
+    "PENGU": {
+     "product": "PENGU-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "PEPE": {
+     "product": "PEPE-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "PNUT": {
+     "product": "PNUT-USD",
+     "candles20220101": 0,
+     "candles20251201": 225
+    },
+    "POL": {
+     "product": "POL-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "POPCAT": {
+     "product": "POPCAT-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "PUMP": {
+     "product": "PUMP-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "QNT": {
+     "product": "QNT-USD",
+     "candles20220101": 288,
+     "candles20251201": 288
+    },
+    "RAD": {
+     "product": "RAD-USD",
+     "candles20220101": 194,
+     "candles20251201": 18
+    },
+    "RARE": {
+     "product": "RARE-USD",
+     "candles20220101": 0,
+     "candles20251201": 133
+    },
+    "RENDER": {
+     "product": "RENDER-USD",
+     "candles20220101": 0,
+     "candles20251201": 287
+    },
+    "REQ": {
+     "product": "REQ-USD",
+     "candles20220101": 287,
+     "candles20251201": 35
+    },
+    "RLC": {
+     "product": "RLC-USD",
+     "candles20220101": 284,
+     "candles20251201": 125
+    },
+    "ROSE": {
+     "product": "ROSE-USD",
+     "candles20220101": 0,
+     "candles20251201": 209
+    },
+    "S": {
+     "product": "S-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "SAND": {
+     "product": "SAND-USD",
+     "candles20220101": 0,
+     "candles20251201": 243
+    },
+    "SEI": {
+     "product": "SEI-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "SHIB": {
+     "product": "SHIB-USD",
+     "candles20220101": 288,
+     "candles20251201": 285
+    },
+    "SKL": {
+     "product": "SKL-USD",
+     "candles20220101": 286,
+     "candles20251201": 185
+    },
+    "SKY": {
+     "product": "SKY-USD",
+     "candles20220101": 0,
+     "candles20251201": 253
+    },
+    "SNX": {
+     "product": "SNX-USD",
+     "candles20220101": 275,
+     "candles20251201": 253
+    },
+    "SPX": {
+     "product": "SPX-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "SUI": {
+     "product": "SUI-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "SUSHI": {
+     "product": "SUSHI-USD",
+     "candles20220101": 288,
+     "candles20251201": 234
+    },
+    "T": {
+     "product": "T-USD",
+     "candles20220101": 0,
+     "candles20251201": 37
+    },
+    "TIA": {
+     "product": "TIA-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "TOSHI": {
+     "product": "TOSHI-USD",
+     "candles20220101": 0,
+     "candles20251201": 287
+    },
+    "TRAC": {
+     "product": "TRAC-USD",
+     "candles20220101": 286,
+     "candles20251201": 153
+    },
+    "TROLL": {
+     "product": "TROLL-USD",
+     "candles20220101": 0,
+     "candles20251201": 118
+    },
+    "TRUMP": {
+     "product": "TRUMP-USD",
+     "candles20220101": 0,
+     "candles20251201": 280
+    },
+    "TURBO": {
+     "product": "TURBO-USD",
+     "candles20220101": 0,
+     "candles20251201": 285
+    },
+    "UNI": {
+     "product": "UNI-USD",
+     "candles20220101": 288,
+     "candles20251201": 288
+    },
+    "USELESS": {
+     "product": "USELESS-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "VET": {
+     "product": "VET-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "VIRTUAL": {
+     "product": "VIRTUAL-USD",
+     "candles20220101": 0,
+     "candles20251201": 0
+    },
+    "VOXEL": {
+     "product": "VOXEL-USD",
+     "candles20220101": 0,
+     "candles20251201": 137
+    },
+    "VTHO": {
+     "product": "VTHO-USD",
+     "candles20220101": 0,
+     "candles20251201": 99
+    },
+    "WIF": {
+     "product": "WIF-USD",
+     "candles20220101": 0,
+     "candles20251201": 260
+    },
+    "WLD": {
+     "product": "WLD-USD",
+     "candles20220101": 0,
+     "candles20251201": 277
+    },
+    "WLFI": {
+     "product": "WLFI-USD",
+     "candles20220101": 0,
+     "candles20251201": 288
+    },
+    "XLM": {
+     "product": "XLM-USD",
+     "candles20220101": 288,
+     "candles20251201": 288
+    },
+    "XTZ": {
+     "product": "XTZ-USD",
+     "candles20220101": 288,
+     "candles20251201": 177
+    },
+    "YFI": {
+     "product": "YFI-USD",
+     "candles20220101": 288,
+     "candles20251201": 184
+    },
+    "ZEC": {
+     "product": "ZEC-USD",
+     "candles20220101": 288,
+     "candles20251201": 288
+    },
+    "ZEN": {
+     "product": "ZEN-USD",
+     "candles20220101": 215,
+     "candles20251201": 288
+    },
+    "ZRX": {
+     "product": "ZRX-USD",
+     "candles20220101": 288,
+     "candles20251201": 216
+    }
+   }
+  },
+  "c": {
+   "source": "https://data.binance.vision/data/futures/um/daily/metrics/",
+   "candidates": [
+    "1INCH",
+    "AAVE",
+    "ACH",
+    "ADA",
+    "ALGO",
+    "ANKR",
+    "API3",
+    "ATOM",
+    "AVAX",
+    "AXS",
+    "BAND",
+    "BAT",
+    "BCH",
+    "BICO",
+    "BNT",
+    "BTRST",
+    "CHZ",
+    "COMP",
+    "COTI",
+    "CRV",
+    "CTSI",
+    "DASH",
+    "DOT",
+    "ENS",
+    "ETC",
+    "FET",
+    "FIL",
+    "FORTH",
+    "GRT",
+    "GTC",
+    "ICP",
+    "IMX",
+    "KNC",
+    "LINK",
+    "LPT",
+    "LTC",
+    "MANA",
+    "MASK",
+    "NMR",
+    "OGN",
+    "QNT",
+    "RAD",
+    "REQ",
+    "RLC",
+    "SHIB",
+    "SKL",
+    "SNX",
+    "SUSHI",
+    "TRAC",
+    "UNI",
+    "XLM",
+    "XTZ",
+    "YFI",
+    "ZEC",
+    "ZEN",
+    "ZRX"
+   ],
+   "kept": [
+    "1INCH",
+    "AAVE",
+    "ADA",
+    "ALGO",
+    "ANKR",
+    "ATOM",
+    "AVAX",
+    "AXS",
+    "BAND",
+    "BAT",
+    "BCH",
+    "CHZ",
+    "COMP",
+    "COTI",
+    "CRV",
+    "CTSI",
+    "DASH",
+    "DOT",
+    "ENS",
+    "ETC",
+    "FIL",
+    "GRT",
+    "GTC",
+    "KNC",
+    "LINK",
+    "LPT",
+    "LTC",
+    "MANA",
+    "MASK",
+    "OGN",
+    "RLC",
+    "SHIB",
+    "SKL",
+    "SNX",
+    "SUSHI",
+    "UNI",
+    "XLM",
+    "XTZ",
+    "YFI",
+    "ZEC",
+    "ZEN",
+    "ZRX"
+   ],
+   "dropped": [
+    {
+     "base": "ACH",
+     "why": "ACHUSDT has 2025-12-31 only"
+    },
+    {
+     "base": "API3",
+     "why": "API3USDT has 2025-12-31 only"
+    },
+    {
+     "base": "BICO",
+     "why": "BICOUSDT has 2025-12-31 only"
+    },
+    {
+     "base": "BNT",
+     "why": "BNTUSDT has 2025-12-31 only"
+    },
+    {
+     "base": "BTRST",
+     "why": "no USD-M daily metrics for 2022-01-01 or 2025-12-31 under any tried symbol"
+    },
+    {
+     "base": "FET",
+     "why": "FETUSDT has 2025-12-31 only"
+    },
+    {
+     "base": "FORTH",
+     "why": "FORTHUSDT has 2025-12-31 only"
+    },
+    {
+     "base": "ICP",
+     "why": "ICPUSDT has 2025-12-31 only"
+    },
+    {
+     "base": "IMX",
+     "why": "IMXUSDT has 2025-12-31 only"
+    },
+    {
+     "base": "NMR",
+     "why": "NMRUSDT has 2025-12-31 only"
+    },
+    {
+     "base": "QNT",
+     "why": "QNTUSDT has 2025-12-31 only"
+    },
+    {
+     "base": "RAD",
+     "why": "no USD-M daily metrics for 2022-01-01 or 2025-12-31 under any tried symbol"
+    },
+    {
+     "base": "REQ",
+     "why": "no USD-M daily metrics for 2022-01-01 or 2025-12-31 under any tried symbol"
+    },
+    {
+     "base": "TRAC",
+     "why": "no USD-M daily metrics for 2022-01-01 or 2025-12-31 under any tried symbol"
+    }
+   ],
+   "probes": {
+    "1INCH": [
+     {
+      "sym": "1INCHUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "AAVE": [
+     {
+      "sym": "AAVEUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "ACH": [
+     {
+      "sym": "ACHUSDT",
+      "metrics20220101": false,
+      "metrics20251231": true
+     },
+     {
+      "sym": "1000ACHUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000000ACHUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1MACHUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     }
+    ],
+    "ADA": [
+     {
+      "sym": "ADAUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "ALGO": [
+     {
+      "sym": "ALGOUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "ANKR": [
+     {
+      "sym": "ANKRUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "API3": [
+     {
+      "sym": "API3USDT",
+      "metrics20220101": false,
+      "metrics20251231": true
+     },
+     {
+      "sym": "1000API3USDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000000API3USDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1MAPI3USDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     }
+    ],
+    "ATOM": [
+     {
+      "sym": "ATOMUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "AVAX": [
+     {
+      "sym": "AVAXUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "AXS": [
+     {
+      "sym": "AXSUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "BAND": [
+     {
+      "sym": "BANDUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "BAT": [
+     {
+      "sym": "BATUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "BCH": [
+     {
+      "sym": "BCHUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "BICO": [
+     {
+      "sym": "BICOUSDT",
+      "metrics20220101": false,
+      "metrics20251231": true
+     },
+     {
+      "sym": "1000BICOUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000000BICOUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1MBICOUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     }
+    ],
+    "BNT": [
+     {
+      "sym": "BNTUSDT",
+      "metrics20220101": false,
+      "metrics20251231": true
+     },
+     {
+      "sym": "1000BNTUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000000BNTUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1MBNTUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     }
+    ],
+    "BTRST": [
+     {
+      "sym": "BTRSTUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000BTRSTUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000000BTRSTUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1MBTRSTUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     }
+    ],
+    "CHZ": [
+     {
+      "sym": "CHZUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "COMP": [
+     {
+      "sym": "COMPUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "COTI": [
+     {
+      "sym": "COTIUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "CRV": [
+     {
+      "sym": "CRVUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "CTSI": [
+     {
+      "sym": "CTSIUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "DASH": [
+     {
+      "sym": "DASHUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "DOT": [
+     {
+      "sym": "DOTUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "ENS": [
+     {
+      "sym": "ENSUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "ETC": [
+     {
+      "sym": "ETCUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "FET": [
+     {
+      "sym": "FETUSDT",
+      "metrics20220101": false,
+      "metrics20251231": true
+     },
+     {
+      "sym": "1000FETUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000000FETUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1MFETUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     }
+    ],
+    "FIL": [
+     {
+      "sym": "FILUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "FORTH": [
+     {
+      "sym": "FORTHUSDT",
+      "metrics20220101": false,
+      "metrics20251231": true
+     },
+     {
+      "sym": "1000FORTHUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000000FORTHUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1MFORTHUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     }
+    ],
+    "GRT": [
+     {
+      "sym": "GRTUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "GTC": [
+     {
+      "sym": "GTCUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "ICP": [
+     {
+      "sym": "ICPUSDT",
+      "metrics20220101": false,
+      "metrics20251231": true
+     },
+     {
+      "sym": "1000ICPUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000000ICPUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1MICPUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     }
+    ],
+    "IMX": [
+     {
+      "sym": "IMXUSDT",
+      "metrics20220101": false,
+      "metrics20251231": true
+     },
+     {
+      "sym": "1000IMXUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000000IMXUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1MIMXUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     }
+    ],
+    "KNC": [
+     {
+      "sym": "KNCUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "LINK": [
+     {
+      "sym": "LINKUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "LPT": [
+     {
+      "sym": "LPTUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "LTC": [
+     {
+      "sym": "LTCUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "MANA": [
+     {
+      "sym": "MANAUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "MASK": [
+     {
+      "sym": "MASKUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "NMR": [
+     {
+      "sym": "NMRUSDT",
+      "metrics20220101": false,
+      "metrics20251231": true
+     },
+     {
+      "sym": "1000NMRUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000000NMRUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1MNMRUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     }
+    ],
+    "OGN": [
+     {
+      "sym": "OGNUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "QNT": [
+     {
+      "sym": "QNTUSDT",
+      "metrics20220101": false,
+      "metrics20251231": true
+     },
+     {
+      "sym": "1000QNTUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000000QNTUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1MQNTUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     }
+    ],
+    "RAD": [
+     {
+      "sym": "RADUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000RADUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000000RADUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1MRADUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     }
+    ],
+    "REQ": [
+     {
+      "sym": "REQUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000REQUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000000REQUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1MREQUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     }
+    ],
+    "RLC": [
+     {
+      "sym": "RLCUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "SHIB": [
+     {
+      "sym": "SHIBUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000SHIBUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "SKL": [
+     {
+      "sym": "SKLUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "SNX": [
+     {
+      "sym": "SNXUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "SUSHI": [
+     {
+      "sym": "SUSHIUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "TRAC": [
+     {
+      "sym": "TRACUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000TRACUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1000000TRACUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     },
+     {
+      "sym": "1MTRACUSDT",
+      "metrics20220101": false,
+      "metrics20251231": false
+     }
+    ],
+    "UNI": [
+     {
+      "sym": "UNIUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "XLM": [
+     {
+      "sym": "XLMUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "XTZ": [
+     {
+      "sym": "XTZUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "YFI": [
+     {
+      "sym": "YFIUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "ZEC": [
+     {
+      "sym": "ZECUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "ZEN": [
+     {
+      "sym": "ZENUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ],
+    "ZRX": [
+     {
+      "sym": "ZRXUSDT",
+      "metrics20220101": true,
+      "metrics20251231": true
+     }
+    ]
+   },
+   "symbolDiffers": [
+    {
+     "base": "SHIB",
+     "perp": "1000SHIBUSDT"
+    }
+   ]
+  },
+  "d": {
+   "source": "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision?prefix=data/futures/um/monthly/klines/<SYM>/5m/",
+   "candidates": [
+    {
+     "base": "ADA",
+     "perp": "ADAUSDT",
+     "firstKlinesMonth": "2020-01",
+     "method": "listing"
+    },
+    {
+     "base": "BCH",
+     "perp": "BCHUSDT",
+     "firstKlinesMonth": "2020-01",
+     "method": "listing"
+    },
+    {
+     "base": "ETC",
+     "perp": "ETCUSDT",
+     "firstKlinesMonth": "2020-01",
+     "method": "listing"
+    },
+    {
+     "base": "LINK",
+     "perp": "LINKUSDT",
+     "firstKlinesMonth": "2020-01",
+     "method": "listing"
+    },
+    {
+     "base": "LTC",
+     "perp": "LTCUSDT",
+     "firstKlinesMonth": "2020-01",
+     "method": "listing"
+    },
+    {
+     "base": "XLM",
+     "perp": "XLMUSDT",
+     "firstKlinesMonth": "2020-01",
+     "method": "listing"
+    },
+    {
+     "base": "ATOM",
+     "perp": "ATOMUSDT",
+     "firstKlinesMonth": "2020-02",
+     "method": "listing"
+    },
+    {
+     "base": "BAT",
+     "perp": "BATUSDT",
+     "firstKlinesMonth": "2020-02",
+     "method": "listing"
+    },
+    {
+     "base": "DASH",
+     "perp": "DASHUSDT",
+     "firstKlinesMonth": "2020-02",
+     "method": "listing"
+    },
+    {
+     "base": "XTZ",
+     "perp": "XTZUSDT",
+     "firstKlinesMonth": "2020-02",
+     "method": "listing"
+    },
+    {
+     "base": "ZEC",
+     "perp": "ZECUSDT",
+     "firstKlinesMonth": "2020-02",
+     "method": "listing"
+    },
+    {
+     "base": "ALGO",
+     "perp": "ALGOUSDT",
+     "firstKlinesMonth": "2020-06",
+     "method": "listing"
+    },
+    {
+     "base": "COMP",
+     "perp": "COMPUSDT",
+     "firstKlinesMonth": "2020-06",
+     "method": "listing"
+    },
+    {
+     "base": "KNC",
+     "perp": "KNCUSDT",
+     "firstKlinesMonth": "2020-06",
+     "method": "listing"
+    },
+    {
+     "base": "ZRX",
+     "perp": "ZRXUSDT",
+     "firstKlinesMonth": "2020-06",
+     "method": "listing"
+    },
+    {
+     "base": "BAND",
+     "perp": "BANDUSDT",
+     "firstKlinesMonth": "2020-07",
+     "method": "listing"
+    },
+    {
+     "base": "RLC",
+     "perp": "RLCUSDT",
+     "firstKlinesMonth": "2020-07",
+     "method": "listing"
+    },
+    {
+     "base": "DOT",
+     "perp": "DOTUSDT",
+     "firstKlinesMonth": "2020-08",
+     "method": "listing"
+    },
+    {
+     "base": "SNX",
+     "perp": "SNXUSDT",
+     "firstKlinesMonth": "2020-08",
+     "method": "listing"
+    },
+    {
+     "base": "YFI",
+     "perp": "YFIUSDT",
+     "firstKlinesMonth": "2020-08",
+     "method": "listing"
+    },
+    {
+     "base": "AVAX",
+     "perp": "AVAXUSDT",
+     "firstKlinesMonth": "2020-09",
+     "method": "listing"
+    },
+    {
+     "base": "CRV",
+     "perp": "CRVUSDT",
+     "firstKlinesMonth": "2020-09",
+     "method": "listing"
+    },
+    {
+     "base": "SUSHI",
+     "perp": "SUSHIUSDT",
+     "firstKlinesMonth": "2020-09",
+     "method": "listing"
+    },
+    {
+     "base": "UNI",
+     "perp": "UNIUSDT",
+     "firstKlinesMonth": "2020-09",
+     "method": "listing"
+    },
+    {
+     "base": "AAVE",
+     "perp": "AAVEUSDT",
+     "firstKlinesMonth": "2020-10",
+     "method": "listing"
+    },
+    {
+     "base": "FIL",
+     "perp": "FILUSDT",
+     "firstKlinesMonth": "2020-10",
+     "method": "listing"
+    },
+    {
+     "base": "AXS",
+     "perp": "AXSUSDT",
+     "firstKlinesMonth": "2020-11",
+     "method": "listing"
+    },
+    {
+     "base": "ZEN",
+     "perp": "ZENUSDT",
+     "firstKlinesMonth": "2020-11",
+     "method": "listing"
+    },
+    {
+     "base": "1INCH",
+     "perp": "1INCHUSDT",
+     "firstKlinesMonth": "2020-12",
+     "method": "listing"
+    },
+    {
+     "base": "GRT",
+     "perp": "GRTUSDT",
+     "firstKlinesMonth": "2020-12",
+     "method": "listing"
+    },
+    {
+     "base": "SKL",
+     "perp": "SKLUSDT",
+     "firstKlinesMonth": "2020-12",
+     "method": "listing"
+    },
+    {
+     "base": "ANKR",
+     "perp": "ANKRUSDT",
+     "firstKlinesMonth": "2021-01",
+     "method": "listing"
+    },
+    {
+     "base": "CHZ",
+     "perp": "CHZUSDT",
+     "firstKlinesMonth": "2021-01",
+     "method": "listing"
+    },
+    {
+     "base": "COTI",
+     "perp": "COTIUSDT",
+     "firstKlinesMonth": "2021-03",
+     "method": "listing"
+    },
+    {
+     "base": "MANA",
+     "perp": "MANAUSDT",
+     "firstKlinesMonth": "2021-03",
+     "method": "listing"
+    },
+    {
+     "base": "OGN",
+     "perp": "OGNUSDT",
+     "firstKlinesMonth": "2021-04",
+     "method": "listing"
+    },
+    {
+     "base": "SHIB",
+     "perp": "1000SHIBUSDT",
+     "firstKlinesMonth": "2021-05",
+     "method": "listing"
+    },
+    {
+     "base": "GTC",
+     "perp": "GTCUSDT",
+     "firstKlinesMonth": "2021-06",
+     "method": "listing"
+    },
+    {
+     "base": "MASK",
+     "perp": "MASKUSDT",
+     "firstKlinesMonth": "2021-08",
+     "method": "listing"
+    },
+    {
+     "base": "CTSI",
+     "perp": "CTSIUSDT",
+     "firstKlinesMonth": "2021-10",
+     "method": "listing"
+    },
+    {
+     "base": "ENS",
+     "perp": "ENSUSDT",
+     "firstKlinesMonth": "2021-11",
+     "method": "listing"
+    },
+    {
+     "base": "LPT",
+     "perp": "LPTUSDT",
+     "firstKlinesMonth": "2021-11",
+     "method": "listing"
+    }
+   ],
+   "applied": true,
+   "kept": [
+    "ADA",
+    "BCH",
+    "ETC",
+    "LINK",
+    "LTC",
+    "XLM",
+    "ATOM",
+    "BAT",
+    "DASH",
+    "XTZ",
+    "ZEC",
+    "ALGO",
+    "COMP",
+    "KNC",
+    "ZRX"
+   ],
+   "cut": [
+    {
+     "base": "BAND",
+     "why": "rank 16 of 42 by first klines month (2020-07)"
+    },
+    {
+     "base": "RLC",
+     "why": "rank 17 of 42 by first klines month (2020-07)"
+    },
+    {
+     "base": "DOT",
+     "why": "rank 18 of 42 by first klines month (2020-08)"
+    },
+    {
+     "base": "SNX",
+     "why": "rank 19 of 42 by first klines month (2020-08)"
+    },
+    {
+     "base": "YFI",
+     "why": "rank 20 of 42 by first klines month (2020-08)"
+    },
+    {
+     "base": "AVAX",
+     "why": "rank 21 of 42 by first klines month (2020-09)"
+    },
+    {
+     "base": "CRV",
+     "why": "rank 22 of 42 by first klines month (2020-09)"
+    },
+    {
+     "base": "SUSHI",
+     "why": "rank 23 of 42 by first klines month (2020-09)"
+    },
+    {
+     "base": "UNI",
+     "why": "rank 24 of 42 by first klines month (2020-09)"
+    },
+    {
+     "base": "AAVE",
+     "why": "rank 25 of 42 by first klines month (2020-10)"
+    },
+    {
+     "base": "FIL",
+     "why": "rank 26 of 42 by first klines month (2020-10)"
+    },
+    {
+     "base": "AXS",
+     "why": "rank 27 of 42 by first klines month (2020-11)"
+    },
+    {
+     "base": "ZEN",
+     "why": "rank 28 of 42 by first klines month (2020-11)"
+    },
+    {
+     "base": "1INCH",
+     "why": "rank 29 of 42 by first klines month (2020-12)"
+    },
+    {
+     "base": "GRT",
+     "why": "rank 30 of 42 by first klines month (2020-12)"
+    },
+    {
+     "base": "SKL",
+     "why": "rank 31 of 42 by first klines month (2020-12)"
+    },
+    {
+     "base": "ANKR",
+     "why": "rank 32 of 42 by first klines month (2021-01)"
+    },
+    {
+     "base": "CHZ",
+     "why": "rank 33 of 42 by first klines month (2021-01)"
+    },
+    {
+     "base": "COTI",
+     "why": "rank 34 of 42 by first klines month (2021-03)"
+    },
+    {
+     "base": "MANA",
+     "why": "rank 35 of 42 by first klines month (2021-03)"
+    },
+    {
+     "base": "OGN",
+     "why": "rank 36 of 42 by first klines month (2021-04)"
+    },
+    {
+     "base": "SHIB",
+     "why": "rank 37 of 42 by first klines month (2021-05)"
+    },
+    {
+     "base": "GTC",
+     "why": "rank 38 of 42 by first klines month (2021-06)"
+    },
+    {
+     "base": "MASK",
+     "why": "rank 39 of 42 by first klines month (2021-08)"
+    },
+    {
+     "base": "CTSI",
+     "why": "rank 40 of 42 by first klines month (2021-10)"
+    },
+    {
+     "base": "ENS",
+     "why": "rank 41 of 42 by first klines month (2021-11)"
+    },
+    {
+     "base": "LPT",
+     "why": "rank 42 of 42 by first klines month (2021-11)"
+    }
+   ]
+  }
+ },
+ "final": [
+  {
+   "base": "ADA",
+   "coinbase": "ADA-USD",
+   "perp": "ADAUSDT",
+   "firstKlinesMonth": "2020-01"
+  },
+  {
+   "base": "BCH",
+   "coinbase": "BCH-USD",
+   "perp": "BCHUSDT",
+   "firstKlinesMonth": "2020-01"
+  },
+  {
+   "base": "ETC",
+   "coinbase": "ETC-USD",
+   "perp": "ETCUSDT",
+   "firstKlinesMonth": "2020-01"
+  },
+  {
+   "base": "LINK",
+   "coinbase": "LINK-USD",
+   "perp": "LINKUSDT",
+   "firstKlinesMonth": "2020-01"
+  },
+  {
+   "base": "LTC",
+   "coinbase": "LTC-USD",
+   "perp": "LTCUSDT",
+   "firstKlinesMonth": "2020-01"
+  },
+  {
+   "base": "XLM",
+   "coinbase": "XLM-USD",
+   "perp": "XLMUSDT",
+   "firstKlinesMonth": "2020-01"
+  },
+  {
+   "base": "ATOM",
+   "coinbase": "ATOM-USD",
+   "perp": "ATOMUSDT",
+   "firstKlinesMonth": "2020-02"
+  },
+  {
+   "base": "BAT",
+   "coinbase": "BAT-USD",
+   "perp": "BATUSDT",
+   "firstKlinesMonth": "2020-02"
+  },
+  {
+   "base": "DASH",
+   "coinbase": "DASH-USD",
+   "perp": "DASHUSDT",
+   "firstKlinesMonth": "2020-02"
+  },
+  {
+   "base": "XTZ",
+   "coinbase": "XTZ-USD",
+   "perp": "XTZUSDT",
+   "firstKlinesMonth": "2020-02"
+  },
+  {
+   "base": "ZEC",
+   "coinbase": "ZEC-USD",
+   "perp": "ZECUSDT",
+   "firstKlinesMonth": "2020-02"
+  },
+  {
+   "base": "ALGO",
+   "coinbase": "ALGO-USD",
+   "perp": "ALGOUSDT",
+   "firstKlinesMonth": "2020-06"
+  },
+  {
+   "base": "COMP",
+   "coinbase": "COMP-USD",
+   "perp": "COMPUSDT",
+   "firstKlinesMonth": "2020-06"
+  },
+  {
+   "base": "KNC",
+   "coinbase": "KNC-USD",
+   "perp": "KNCUSDT",
+   "firstKlinesMonth": "2020-06"
+  },
+  {
+   "base": "ZRX",
+   "coinbase": "ZRX-USD",
+   "perp": "ZRXUSDT",
+   "firstKlinesMonth": "2020-06"
+  }
+ ],
+ "calls": 260
+}
