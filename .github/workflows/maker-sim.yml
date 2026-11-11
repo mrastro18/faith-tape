@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "structure (print shape only) or run (simulate and commit summaries)"
+        description: "structure (print shape only), run (simulate and commit summaries) or lead (feed-order diagnostic, commit lead.ndjson)"
         default: "structure"
       days:
         description: "Comma-separated YYYY-MM-DD; empty = 1st of each month 2021-01 to 2023-12"
@@ -65,9 +65,10 @@ jobs:
           SPEC: ${{ inputs.spec }}
         run: |
           set -u
-          case "$MODE" in structure|run) ;; *) echo "mode must be structure or run"; exit 2;; esac
+          case "$MODE" in structure|run|lead) ;; *) echo "mode must be structure, run or lead"; exit 2;; esac
           dest="data/derived/tardis-maker/${OUTNAME}/${VENUE}-${SYMBOL}"
           if [ "$MODE" = run ] && [ -e "$dest/summary.json" ]; then echo "$dest exists: a result is spent once written"; exit 1; fi
+          if [ "$MODE" = lead ] && [ -e "$dest/lead.ndjson" ]; then echo "$dest/lead.ndjson exists"; exit 1; fi
           raw="$RUNNER_TEMP/raw"; out="$RUNNER_TEMP/out"; mkdir -p "$raw" "$out"
           missing="$RUNNER_TEMP/missing.tsv"; : > "$missing"
           if [ -z "$DAYS" ]; then
@@ -87,7 +88,9 @@ jobs:
                 ok=0
               fi
             done
-            if [ "$ok" = 1 ]; then
+            if [ "$ok" = 1 ] && [ "$MODE" = lead ]; then
+              node --max-old-space-size=12000 tools/maker-sim/lead.mjs --day "$d" --quotes "$raw/quotes.csv.gz" --trades "$raw/trades.csv.gz" >> "$RUNNER_TEMP/lead.ndjson" || status=1
+            elif [ "$ok" = 1 ]; then
               if ! node --max-old-space-size=12000 tools/maker-sim/run.mjs --venue "$VENUE" --symbol "$SYMBOL" --day "$d" \
                   --quotes "$raw/quotes.csv.gz" --trades "$raw/trades.csv.gz" --out "$out/${VENUE}-${SYMBOL}-${d}.json.gz" $flag; then
                 printf '%s\t%s\t%s\t%s\t%s\n' "$VENUE" "$SYMBOL" "$d" "run" "error" >> "$missing"
@@ -97,9 +100,13 @@ jobs:
             rm -f "$raw"/*
           done
           echo "--- missing"; cat "$missing"
-          [ "$MODE" = run ] || exit $status
+          [ "$MODE" = structure ] && exit $status
+          if [ "$MODE" = lead ]; then
+            mkdir -p "$dest"; cp "$RUNNER_TEMP/lead.ndjson" "$dest/lead.ndjson"
+          else
           node tools/maker-sim/agg.mjs --in "$out" --out "$dest" --missing "$missing" \
             --meta "run=${GITHUB_RUN_ID}" --meta "sha=${GITHUB_SHA}" --meta "spec=${SPEC}"
+          fi
           git config user.name "faith-tape recorder"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "$dest"
