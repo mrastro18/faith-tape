@@ -1,8 +1,8 @@
 {
  "study": "P-OF2",
- "note": "From timestamps only (the first field of each row). slotShare: five-minute slots of 2022-01-01 to 2025-12-31 with a row. hourPairShare: whole hours T (01:00 2022-01-01 to 23:00 2025-12-31) with a metrics row at both T and T-1h. offGrid: rows not on a five-minute boundary.",
+ "note": "From timestamps only (the first field of each row). slotShare: five-minute slots of 2022-01-01 to 2025-12-31 with a row (Coinbase writes no candle for five minutes without a trade, so a thin coin's empty slots are mostly quiet minutes, not outages). longestGapMinutes/longestGapFrom: the longest stretch with no row; daysWithoutRow: UTC days with none. hourPairShare: whole hours T (01:00 2022-01-01 to 23:00 2025-12-31) with a metrics row at both T and T-1h. offGrid: rows not on a five-minute boundary.",
  "runId": "43099687978",
- "at": "2026-11-11T21:03:50.704Z",
+ "at": "2026-11-11T21:07:43.117Z",
  "stoppedAt": null,
  "totalBytes": 130121726,
  "coins": [
@@ -18,6 +18,9 @@
     "slots": 420768,
     "slotShare": 0.9995,
     "offGrid": 0,
+    "longestGapMinutes": 355,
+    "longestGapFrom": "2025-10-25T15:15Z",
+    "daysWithoutRow": 0,
     "bytes": 6741885
    },
    "metrics": {
@@ -27,6 +30,9 @@
     "rows": 420635,
     "slotShare": 0.9997,
     "offGrid": 0,
+    "longestGapMinutes": 625,
+    "longestGapFrom": "2024-02-16T13:35Z",
+    "daysWithoutRow": 0,
     "hours": 35063,
     "hoursWithTandTminus1h": 35052,
     "hourPairShare": 0.9997,
@@ -45,6 +51,9 @@
     "slots": 420768,
     "slotShare": 0.9993,
     "offGrid": 0,
+    "longestGapMinutes": 355,
+    "longestGapFrom": "2025-10-25T15:15Z",
+    "daysWithoutRow": 0,
     "bytes": 7385980
    },
    "metrics": {
@@ -54,6 +63,9 @@
     "rows": 420598,
     "slotShare": 0.9996,
     "offGrid": 0,
+    "longestGapMinutes": 625,
+    "longestGapFrom": "2024-02-16T13:35Z",
+    "daysWithoutRow": 0,
     "hours": 35063,
     "hoursWithTandTminus1h": 35043,
     "hourPairShare": 0.9994,
@@ -72,6 +84,9 @@
     "slots": 420768,
     "slotShare": 0.9239,
     "offGrid": 0,
+    "longestGapMinutes": 360,
+    "longestGapFrom": "2025-10-25T15:10Z",
+    "daysWithoutRow": 0,
     "bytes": 5668383
    },
    "metrics": {
@@ -81,6 +96,9 @@
     "rows": 420498,
     "slotShare": 0.9994,
     "offGrid": 0,
+    "longestGapMinutes": 625,
+    "longestGapFrom": "2024-02-16T13:35Z",
+    "daysWithoutRow": 0,
     "hours": 35063,
     "hoursWithTandTminus1h": 35032,
     "hourPairShare": 0.9991,
@@ -99,6 +117,9 @@
     "slots": 420768,
     "slotShare": 0.9995,
     "offGrid": 0,
+    "longestGapMinutes": 355,
+    "longestGapFrom": "2025-10-25T15:15Z",
+    "daysWithoutRow": 0,
     "bytes": 5979294
    },
    "metrics": {
@@ -108,6 +129,9 @@
     "rows": 420635,
     "slotShare": 0.9997,
     "offGrid": 0,
+    "longestGapMinutes": 625,
+    "longestGapFrom": "2024-02-16T13:35Z",
+    "daysWithoutRow": 0,
     "hours": 35063,
     "hoursWithTandTminus1h": 35052,
     "hourPairShare": 0.9997,
@@ -126,6 +150,9 @@
     "slots": 420768,
     "slotShare": 0.9996,
     "offGrid": 0,
+    "longestGapMinutes": 355,
+    "longestGapFrom": "2025-10-25T15:15Z",
+    "daysWithoutRow": 0,
     "bytes": 7098482
    },
    "metrics": {
@@ -135,6 +162,9 @@
     "rows": 420592,
     "slotShare": 0.9996,
     "offGrid": 0,
+    "longestGapMinutes": 625,
+    "longestGapFrom": "2024-02-16T13:35Z",
+    "daysWithoutRow": 0,
     "hours": 35063,
     "hoursWithTandTminus1h": 35050,
     "hourPairShare": 0.9996,
@@ -153,6 +183,9 @@
     "slots": 420768,
     "slotShare": 0.9996,
     "offGrid": 0,
+    "longestGapMinutes": 355,
+    "longestGapFrom": "2025-10-25T15:15Z",
+    "daysWithoutRow": 0,
     "bytes": 8067688
    },
    "metrics": {
@@ -164,6 +197,9 @@
     "rows": 420347,
     "slotShare": 0.999,
     "offGrid": 0,
+    "longestGapMinutes": 1440,
+    "longestGapFrom": "2023-12-13T00:00Z",
+    "daysWithoutRow": 1,
     "hours": 35063,
     "hoursWithTandTminus1h": 35027,
     "hourPairShare": 0.999,
@@ -182,6 +218,9 @@
     "slots": 420768,
     "slotShare": 0.9978,
     "offGrid": 0,
+    "longestGapMinutes": 365,
+    "longestGapFrom": "2025-10-25T15:15Z",
+    "daysWithoutRow": 0,
     "bytes": 5546491
    },
    "metrics": {
@@ -191,6 +230,9 @@
     "rows": 420634,
     "slotShare": 0.9997,
     "offGrid": 0,
+    "longestGapMinutes": 625,
+    "longestGapFrom": "2024-02-16T13:35Z",
+    "daysWithoutRow": 0,
     "hours": 35063,
     "hoursWithTandTminus1h": 35052,
     "hourPairShare": 0.9997,
@@ -209,6 +251,9 @@
     "slots": 420768,
     "slotShare": 0.7797,
     "offGrid": 0,
+    "longestGapMinutes": 365,
+    "longestGapFrom": "2025-10-25T15:05Z",
+    "daysWithoutRow": 0,
     "bytes": 4446258
    },
    "metrics": {
@@ -218,6 +263,9 @@
     "rows": 420607,
     "slotShare": 0.9996,
     "offGrid": 0,
+    "longestGapMinutes": 625,
+    "longestGapFrom": "2024-02-16T13:35Z",
+    "daysWithoutRow": 0,
     "hours": 35063,
     "hoursWithTandTminus1h": 35044,
     "hourPairShare": 0.9995,
@@ -236,6 +284,9 @@
     "slots": 420768,
     "slotShare": 0.7509,
     "offGrid": 0,
+    "longestGapMinutes": 355,
+    "longestGapFrom": "2025-10-25T15:15Z",
+    "daysWithoutRow": 0,
     "bytes": 3984187
    },
    "metrics": {
@@ -245,6 +296,9 @@
     "rows": 420635,
     "slotShare": 0.9997,
     "offGrid": 0,
+    "longestGapMinutes": 625,
+    "longestGapFrom": "2024-02-16T13:35Z",
+    "daysWithoutRow": 0,
     "hours": 35063,
     "hoursWithTandTminus1h": 35052,
     "hourPairShare": 0.9997,
@@ -263,6 +317,9 @@
     "slots": 420768,
     "slotShare": 0.893,
     "offGrid": 0,
+    "longestGapMinutes": 360,
+    "longestGapFrom": "2025-10-25T15:10Z",
+    "daysWithoutRow": 0,
     "bytes": 3856235
    },
    "metrics": {
@@ -274,6 +331,9 @@
     "rows": 420346,
     "slotShare": 0.999,
     "offGrid": 0,
+    "longestGapMinutes": 1440,
+    "longestGapFrom": "2023-12-08T00:00Z",
+    "daysWithoutRow": 1,
     "hours": 35063,
     "hoursWithTandTminus1h": 35027,
     "hourPairShare": 0.999,
@@ -292,6 +352,9 @@
     "slots": 420768,
     "slotShare": 0.8728,
     "offGrid": 0,
+    "longestGapMinutes": 365,
+    "longestGapFrom": "2025-10-25T15:15Z",
+    "daysWithoutRow": 0,
     "bytes": 5201685
    },
    "metrics": {
@@ -303,6 +366,9 @@
     "rows": 420347,
     "slotShare": 0.999,
     "offGrid": 0,
+    "longestGapMinutes": 1440,
+    "longestGapFrom": "2023-12-13T00:00Z",
+    "daysWithoutRow": 1,
     "hours": 35063,
     "hoursWithTandTminus1h": 35027,
     "hourPairShare": 0.999,
@@ -321,6 +387,9 @@
     "slots": 420768,
     "slotShare": 0.9873,
     "offGrid": 0,
+    "longestGapMinutes": 355,
+    "longestGapFrom": "2025-10-25T15:15Z",
+    "daysWithoutRow": 0,
     "bytes": 5046089
    },
    "metrics": {
@@ -330,6 +399,9 @@
     "rows": 420635,
     "slotShare": 0.9997,
     "offGrid": 0,
+    "longestGapMinutes": 625,
+    "longestGapFrom": "2024-02-16T13:35Z",
+    "daysWithoutRow": 0,
     "hours": 35063,
     "hoursWithTandTminus1h": 35052,
     "hourPairShare": 0.9997,
@@ -348,6 +420,9 @@
     "slots": 420768,
     "slotShare": 0.9076,
     "offGrid": 0,
+    "longestGapMinutes": 365,
+    "longestGapFrom": "2025-10-25T15:05Z",
+    "daysWithoutRow": 0,
     "bytes": 4825577
    },
    "metrics": {
@@ -357,6 +432,9 @@
     "rows": 420583,
     "slotShare": 0.9996,
     "offGrid": 0,
+    "longestGapMinutes": 625,
+    "longestGapFrom": "2024-02-16T13:35Z",
+    "daysWithoutRow": 0,
     "hours": 35063,
     "hoursWithTandTminus1h": 35046,
     "hourPairShare": 0.9995,
@@ -375,6 +453,9 @@
     "slots": 420768,
     "slotShare": 0.5681,
     "offGrid": 0,
+    "longestGapMinutes": 440,
+    "longestGapFrom": "2025-10-25T14:40Z",
+    "daysWithoutRow": 0,
     "bytes": 3041169
    },
    "metrics": {
@@ -384,6 +465,9 @@
     "rows": 420533,
     "slotShare": 0.9994,
     "offGrid": 0,
+    "longestGapMinutes": 625,
+    "longestGapFrom": "2024-02-16T13:35Z",
+    "daysWithoutRow": 0,
     "hours": 35063,
     "hoursWithTandTminus1h": 35036,
     "hourPairShare": 0.9992,
@@ -402,6 +486,9 @@
     "slots": 420768,
     "slotShare": 0.8406,
     "offGrid": 0,
+    "longestGapMinutes": 375,
+    "longestGapFrom": "2025-10-25T15:00Z",
+    "daysWithoutRow": 0,
     "bytes": 6774830
    },
    "metrics": {
@@ -411,6 +498,9 @@
     "rows": 420635,
     "slotShare": 0.9997,
     "offGrid": 0,
+    "longestGapMinutes": 625,
+    "longestGapFrom": "2024-02-16T13:35Z",
+    "daysWithoutRow": 0,
     "hours": 35063,
     "hoursWithTandTminus1h": 35052,
     "hourPairShare": 0.9997,

@@ -74,4 +74,7 @@ test("coverage counts months, five-minute slots and hour pairs from timestamps o
   assert.equal(c.metrics.hoursWithTandTminus1h, 2);
   assert.equal(c.metrics.offGrid, 1);
   assert.deepEqual(c.metrics.archiveMissing, ["2022-02-03"]);
+  assert.equal(c.coinbase.daysWithoutRow, 1460);
+  assert.equal(c.coinbase.longestGapFrom, "2022-01-01T00:10Z");
+  assert.equal(c.coinbase.longestGapMinutes, 1461 * 1440 - 10);
 });

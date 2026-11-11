@@ -274,6 +274,17 @@ export function coverage(root, base, perp) {
   const cb = read(cbDir);
   const me = read(mDir);
   const onGrid = (ts) => [...ts].filter((t) => t % 300_000 === 0).length;
+  // Longest stretch with no row (from the range start, between rows, to the range end) and UTC days with no row.
+  const gaps = (ts) => {
+    const s = [lo - 300_000, ...[...ts].sort((x, y) => x - y), hi];
+    let best = { minutes: 0, from: null };
+    for (let i = 1; i < s.length; i += 1) {
+      const m = (s[i] - s[i - 1]) / 60_000 - 5;
+      if (m > best.minutes) best = { minutes: m, from: new Date(s[i - 1] + 300_000).toISOString().slice(0, 16) + "Z" };
+    }
+    const days = new Set([...ts].map((t) => Math.floor(t / 86_400_000)));
+    return { longestGapMinutes: best.minutes, longestGapFrom: best.from, daysWithoutRow: (hi - lo) / 86_400_000 - days.size };
+  };
   let hours = 0;
   let both = 0;
   for (let t = lo + 3_600_000; t < hi; t += 3_600_000) {
@@ -294,6 +305,7 @@ export function coverage(root, base, perp) {
       slots,
       slotShare: r4(onGrid(cb.ts) / slots),
       offGrid: cb.offGrid,
+      ...gaps(cb.ts),
       bytes: cb.bytes,
     },
     metrics: {
@@ -303,6 +315,7 @@ export function coverage(root, base, perp) {
       rows: me.ts.size,
       slotShare: r4(onGrid(me.ts) / slots),
       offGrid: me.offGrid,
+      ...gaps(me.ts),
       hours,
       hoursWithTandTminus1h: both,
       hourPairShare: r4(both / hours),
@@ -320,7 +333,7 @@ function verify(root, runId) {
   const total = rows.reduce((s, r) => s + r.coinbase.bytes + r.metrics.bytes, 0);
   writeJson(join(root, "data", "universe", "pof2-coverage.json"), {
     study: "P-OF2",
-    note: "From timestamps only (the first field of each row). slotShare: five-minute slots of 2022-01-01 to 2025-12-31 with a row. hourPairShare: whole hours T (01:00 2022-01-01 to 23:00 2025-12-31) with a metrics row at both T and T-1h. offGrid: rows not on a five-minute boundary.",
+    note: "From timestamps only (the first field of each row). slotShare: five-minute slots of 2022-01-01 to 2025-12-31 with a row (Coinbase writes no candle for five minutes without a trade, so a thin coin's empty slots are mostly quiet minutes, not outages). longestGapMinutes/longestGapFrom: the longest stretch with no row; daysWithoutRow: UTC days with none. hourPairShare: whole hours T (01:00 2022-01-01 to 23:00 2025-12-31) with a metrics row at both T and T-1h. offGrid: rows not on a five-minute boundary.",
     runId: runId ?? null,
     at: new Date().toISOString(),
     stoppedAt: bf.stoppedAt ?? null,
