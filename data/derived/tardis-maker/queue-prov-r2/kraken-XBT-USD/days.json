@@ -1,0 +1,952 @@
+{
+ "schema": "faith-tape.maker-sim/1",
+ "run": "43085676746",
+ "sha": "b5ece3fd1449479f2eac57df4d3f3c40c467e954",
+ "spec": "queue-prov-r2@ba41621",
+ "config": {
+  "maxGapMs": 120000,
+  "latencyMs": 500,
+  "lookaheadMs": 250,
+  "restMs": 900000,
+  "fillWithinMin": [
+   1,
+   5,
+   15
+  ],
+  "placeEveryMs": 60000,
+  "placeFromMs": 60000,
+  "placeToMs": 84600000,
+  "notional": 50,
+  "horizonsMin": [
+   1,
+   5,
+   15
+  ],
+  "takerExitMin": 5,
+  "makerExitRestMs": 300000,
+  "variants": [
+   "join",
+   "improve"
+  ],
+  "cancels": [
+   "pessimistic",
+   "optimistic"
+  ],
+  "sides": [
+   "buy",
+   "sell"
+  ]
+ },
+ "fees": {
+  "coinbase": {
+   "makerBp": 40,
+   "takerBp": 60
+  },
+  "kraken": {
+   "makerBp": 40,
+   "takerBp": 80
+  }
+ },
+ "days": [
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2021-01-01",
+   "tick": 0.1,
+   "quoteRows": 457911,
+   "prints": 33284,
+   "coveredMin": 1439.9581,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6269,
+     "5m": 0.8238,
+     "15m": 0.892
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1182,
+     "through": 0.3053,
+     "cross": 0.5765
+    },
+    "midMove5m": -2.8036,
+    "makerExitNet": -96.3255
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2021-02-01",
+   "tick": 0.1,
+   "quoteRows": 740451,
+   "prints": 43954,
+   "coveredMin": 1439.9622,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.7013,
+     "5m": 0.872,
+     "15m": 0.9298
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.0815,
+     "through": 0.2627,
+     "cross": 0.6558
+    },
+    "midMove5m": -3.6791,
+    "makerExitNet": -94.3475
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2021-03-01",
+   "tick": 0.1,
+   "quoteRows": 888815,
+   "prints": 61653,
+   "coveredMin": 1439.9609,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.7257,
+     "5m": 0.8725,
+     "15m": 0.9234
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1139,
+     "through": 0.3285,
+     "cross": 0.5576
+    },
+    "midMove5m": -4.3528,
+    "makerExitNet": -95.9342
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2021-04-01",
+   "tick": 0.1,
+   "quoteRows": 700428,
+   "prints": 37981,
+   "coveredMin": 1439.9501,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6129,
+     "5m": 0.8238,
+     "15m": 0.9017
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2282,
+     "through": 0.3174,
+     "cross": 0.4544
+    },
+    "midMove5m": -2.5415,
+    "makerExitNet": -97.3024
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2021-05-01",
+   "tick": 0.1,
+   "quoteRows": 648751,
+   "prints": 39746,
+   "coveredMin": 1423.6049,
+   "placements": 1393,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6182,
+     "5m": 0.8128,
+     "15m": 0.8783
+    },
+    "unknownShare": 0.0074,
+    "fillTypeShare": {
+     "queue": 0.2242,
+     "through": 0.2966,
+     "cross": 0.4792
+    },
+    "midMove5m": -2.9308,
+    "makerExitNet": -98.9184
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2021-06-01",
+   "tick": 0.1,
+   "quoteRows": 833732,
+   "prints": 42879,
+   "coveredMin": 1439.9621,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.683,
+     "5m": 0.8535,
+     "15m": 0.919
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1322,
+     "through": 0.2804,
+     "cross": 0.5873
+    },
+    "midMove5m": -3.9474,
+    "makerExitNet": -97.0858
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2021-07-01",
+   "tick": 0.1,
+   "quoteRows": 754524,
+   "prints": 29006,
+   "coveredMin": 1425.416,
+   "placements": 1395,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6693,
+     "5m": 0.8506,
+     "15m": 0.9181
+    },
+    "unknownShare": 0.0026,
+    "fillTypeShare": {
+     "queue": 0.088,
+     "through": 0.2625,
+     "cross": 0.6494
+    },
+    "midMove5m": -2.8087,
+    "makerExitNet": -95.336
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2021-08-01",
+   "tick": 0.1,
+   "quoteRows": 796392,
+   "prints": 28294,
+   "coveredMin": 1439.9602,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6328,
+     "5m": 0.8245,
+     "15m": 0.9014
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1183,
+     "through": 0.2756,
+     "cross": 0.6061
+    },
+    "midMove5m": -3.2278,
+    "makerExitNet": -97.201
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2021-09-01",
+   "tick": 0.1,
+   "quoteRows": 717014,
+   "prints": 26879,
+   "coveredMin": 1429.5453,
+   "placements": 1399,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6036,
+     "5m": 0.8288,
+     "15m": 0.9071
+    },
+    "unknownShare": 0.0026,
+    "fillTypeShare": {
+     "queue": 0.1377,
+     "through": 0.3633,
+     "cross": 0.499
+    },
+    "midMove5m": -2.8652,
+    "makerExitNet": -97.7507
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2021-10-01",
+   "tick": 0.1,
+   "quoteRows": 767051,
+   "prints": 39543,
+   "coveredMin": 1439.9621,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6373,
+     "5m": 0.8335,
+     "15m": 0.906
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1254,
+     "through": 0.3431,
+     "cross": 0.5315
+    },
+    "midMove5m": -3.1778,
+    "makerExitNet": -96.8207
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2021-11-01",
+   "tick": 0.1,
+   "quoteRows": 639003,
+   "prints": 31588,
+   "coveredMin": 1439.9598,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6116,
+     "5m": 0.8138,
+     "15m": 0.8955
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1609,
+     "through": 0.411,
+     "cross": 0.4281
+    },
+    "midMove5m": -3.4081,
+    "makerExitNet": -97.9367
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2021-12-01",
+   "tick": 0.1,
+   "quoteRows": 681419,
+   "prints": 41435,
+   "coveredMin": 1439.9568,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.639,
+     "5m": 0.8367,
+     "15m": 0.9066
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1781,
+     "through": 0.3809,
+     "cross": 0.441
+    },
+    "midMove5m": -3.6393,
+    "makerExitNet": -98.7945
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2022-01-01",
+   "tick": 0.1,
+   "quoteRows": 380898,
+   "prints": 19092,
+   "coveredMin": 1439.955,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.4444,
+     "5m": 0.7339,
+     "15m": 0.8469
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2919,
+     "through": 0.2695,
+     "cross": 0.4387
+    },
+    "midMove5m": -4.3304,
+    "makerExitNet": -104.5238
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2022-02-01",
+   "tick": 0.1,
+   "quoteRows": 557549,
+   "prints": 27133,
+   "coveredMin": 1439.9668,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.5882,
+     "5m": 0.7987,
+     "15m": 0.8886
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1472,
+     "through": 0.3462,
+     "cross": 0.5066
+    },
+    "midMove5m": -3.0688,
+    "makerExitNet": -98.1752
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2022-03-01",
+   "tick": 0.1,
+   "quoteRows": 764512,
+   "prints": 68728,
+   "coveredMin": 1439.9652,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.7301,
+     "5m": 0.8722,
+     "15m": 0.9306
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1046,
+     "through": 0.4207,
+     "cross": 0.4747
+    },
+    "midMove5m": -2.622,
+    "makerExitNet": -93.5023
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2022-04-01",
+   "tick": 0.1,
+   "quoteRows": 380397,
+   "prints": 36541,
+   "coveredMin": 1439.9588,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.5908,
+     "5m": 0.8213,
+     "15m": 0.9
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1945,
+     "through": 0.3798,
+     "cross": 0.4257
+    },
+    "midMove5m": -3.0234,
+    "makerExitNet": -98.8651
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2022-05-01",
+   "tick": 0.1,
+   "quoteRows": 355734,
+   "prints": 21895,
+   "coveredMin": 1439.9641,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.5426,
+     "5m": 0.7888,
+     "15m": 0.8736
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1277,
+     "through": 0.357,
+     "cross": 0.5153
+    },
+    "midMove5m": -2.8525,
+    "makerExitNet": -98.9168
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2022-06-01",
+   "tick": 0.1,
+   "quoteRows": 382373,
+   "prints": 30702,
+   "coveredMin": 1409.8429,
+   "placements": 1378,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.5335,
+     "5m": 0.7581,
+     "15m": 0.87
+    },
+    "unknownShare": 0.0066,
+    "fillTypeShare": {
+     "queue": 0.2232,
+     "through": 0.3573,
+     "cross": 0.4195
+    },
+    "midMove5m": -5.0039,
+    "makerExitNet": -104.203
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2022-07-01",
+   "tick": 0.1,
+   "quoteRows": 682892,
+   "prints": 32005,
+   "coveredMin": 1439.9712,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6785,
+     "5m": 0.8491,
+     "15m": 0.911
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.0924,
+     "through": 0.3023,
+     "cross": 0.6053
+    },
+    "midMove5m": -4.145,
+    "makerExitNet": -97.8676
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2022-08-01",
+   "tick": 0.1,
+   "quoteRows": 645461,
+   "prints": 21989,
+   "coveredMin": 1439.9691,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6482,
+     "5m": 0.8444,
+     "15m": 0.9108
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.0629,
+     "through": 0.3453,
+     "cross": 0.5918
+    },
+    "midMove5m": -1.5497,
+    "makerExitNet": -92.6518
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2022-09-01",
+   "tick": 0.1,
+   "quoteRows": 825438,
+   "prints": 23094,
+   "coveredMin": 1427.3075,
+   "placements": 1396,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.7113,
+     "5m": 0.8749,
+     "15m": 0.9208
+    },
+    "unknownShare": 0.0007,
+    "fillTypeShare": {
+     "queue": 0.0498,
+     "through": 0.2709,
+     "cross": 0.6793
+    },
+    "midMove5m": -1.521,
+    "makerExitNet": -91.7864
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2022-10-01",
+   "tick": 0.1,
+   "quoteRows": 417463,
+   "prints": 19047,
+   "coveredMin": 1439.9672,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.4789,
+     "5m": 0.7243,
+     "15m": 0.8559
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1099,
+     "through": 0.3385,
+     "cross": 0.5516
+    },
+    "midMove5m": -1.2659,
+    "makerExitNet": -98.7264
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2022-11-01",
+   "tick": 0.1,
+   "quoteRows": 444067,
+   "prints": 14305,
+   "coveredMin": 1439.9572,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.5084,
+     "5m": 0.7608,
+     "15m": 0.8704
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1629,
+     "through": 0.4027,
+     "cross": 0.4344
+    },
+    "midMove5m": -1.7286,
+    "makerExitNet": -97.7734
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2022-12-01",
+   "tick": 0.1,
+   "quoteRows": 356788,
+   "prints": 22032,
+   "coveredMin": 1439.9603,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.4853,
+     "5m": 0.7385,
+     "15m": 0.8446
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1878,
+     "through": 0.4157,
+     "cross": 0.3965
+    },
+    "midMove5m": -2.0449,
+    "makerExitNet": -99.7516
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2023-01-01",
+   "tick": 0.1,
+   "quoteRows": 206390,
+   "prints": 15823,
+   "coveredMin": 1439.9631,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.2545,
+     "5m": 0.514,
+     "15m": 0.7092
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3048,
+     "through": 0.416,
+     "cross": 0.2792
+    },
+    "midMove5m": -1.5083,
+    "makerExitNet": -108.236
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2023-02-01",
+   "tick": 0.1,
+   "quoteRows": 543950,
+   "prints": 38182,
+   "coveredMin": 1439.9674,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.5752,
+     "5m": 0.7959,
+     "15m": 0.8777
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.152,
+     "through": 0.4671,
+     "cross": 0.3809
+    },
+    "midMove5m": -2.1352,
+    "makerExitNet": -96.8242
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2023-03-01",
+   "tick": 0.1,
+   "quoteRows": 476574,
+   "prints": 35797,
+   "coveredMin": 1439.9568,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.5848,
+     "5m": 0.796,
+     "15m": 0.8727
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1707,
+     "through": 0.528,
+     "cross": 0.3013
+    },
+    "midMove5m": -2.8397,
+    "makerExitNet": -98.5306
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2023-04-01",
+   "tick": 0.1,
+   "quoteRows": 330375,
+   "prints": 28641,
+   "coveredMin": 1439.8829,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.5565,
+     "5m": 0.7859,
+     "15m": 0.8783
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1378,
+     "through": 0.4777,
+     "cross": 0.3845
+    },
+    "midMove5m": -1.6522,
+    "makerExitNet": -97.3903
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2023-05-01",
+   "tick": 0.1,
+   "quoteRows": 402004,
+   "prints": 41037,
+   "coveredMin": 1439.9733,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.5779,
+     "5m": 0.7942,
+     "15m": 0.8766
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.1789,
+     "through": 0.4692,
+     "cross": 0.352
+    },
+    "midMove5m": -3.8736,
+    "makerExitNet": -100.5533
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2023-06-01",
+   "tick": 0.1,
+   "quoteRows": 306900,
+   "prints": 31298,
+   "coveredMin": 1429.8798,
+   "placements": 1399,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.46,
+     "5m": 0.7376,
+     "15m": 0.8348
+    },
+    "unknownShare": 0.0029,
+    "fillTypeShare": {
+     "queue": 0.262,
+     "through": 0.4337,
+     "cross": 0.3043
+    },
+    "midMove5m": -2.8079,
+    "makerExitNet": -102.5642
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2023-07-01",
+   "tick": 0.1,
+   "quoteRows": 193679,
+   "prints": 15722,
+   "coveredMin": 1439.9682,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.2746,
+     "5m": 0.5662,
+     "15m": 0.7333
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.4939,
+     "through": 0.322,
+     "cross": 0.1841
+    },
+    "midMove5m": -1.9536,
+    "makerExitNet": -109.7873
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2023-08-01",
+   "tick": 0.1,
+   "quoteRows": 203083,
+   "prints": 25470,
+   "coveredMin": 1407.683,
+   "placements": 1373,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.2852,
+     "5m": 0.5698,
+     "15m": 0.7243
+    },
+    "unknownShare": 0.0026,
+    "fillTypeShare": {
+     "queue": 0.4749,
+     "through": 0.332,
+     "cross": 0.1931
+    },
+    "midMove5m": -3.3911,
+    "makerExitNet": -111.4436
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2023-09-01",
+   "tick": 0.1,
+   "quoteRows": 265139,
+   "prints": 35311,
+   "coveredMin": 1439.9476,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.3594,
+     "5m": 0.6306,
+     "15m": 0.7837
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3968,
+     "through": 0.3739,
+     "cross": 0.2293
+    },
+    "midMove5m": -3.464,
+    "makerExitNet": -108.363
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2023-10-01",
+   "tick": 0.1,
+   "quoteRows": 183097,
+   "prints": 21223,
+   "coveredMin": 1439.9588,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.1816,
+     "5m": 0.4649,
+     "15m": 0.6472
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.5787,
+     "through": 0.2145,
+     "cross": 0.2068
+    },
+    "midMove5m": -4.4511,
+    "makerExitNet": -116.6182
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2023-11-01",
+   "tick": 0.1,
+   "quoteRows": 419918,
+   "prints": 45518,
+   "coveredMin": 1439.9418,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.3781,
+     "5m": 0.6089,
+     "15m": 0.7581
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.4855,
+     "through": 0.3623,
+     "cross": 0.1522
+    },
+    "midMove5m": -4.7296,
+    "makerExitNet": -110.2087
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "XBT-USD",
+   "day": "2023-12-01",
+   "tick": 0.1,
+   "quoteRows": 414220,
+   "prints": 34052,
+   "coveredMin": 1439.9587,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.4122,
+     "5m": 0.7031,
+     "15m": 0.8281
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.4529,
+     "through": 0.282,
+     "cross": 0.2651
+    },
+    "midMove5m": -3.2921,
+    "makerExitNet": -106.1154
+   }
+  }
+ ]
+}
