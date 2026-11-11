@@ -1,0 +1,1349 @@
+{
+ "schema": "faith-tape.maker-sim/1",
+ "run": "43085676746",
+ "sha": "b5ece3fd1449479f2eac57df4d3f3c40c467e954",
+ "spec": "queue-prov-r2@ba41621",
+ "config": {
+  "maxGapMs": 120000,
+  "latencyMs": 500,
+  "lookaheadMs": 250,
+  "restMs": 900000,
+  "fillWithinMin": [
+   1,
+   5,
+   15
+  ],
+  "placeEveryMs": 60000,
+  "placeFromMs": 60000,
+  "placeToMs": 84600000,
+  "notional": 50,
+  "horizonsMin": [
+   1,
+   5,
+   15
+  ],
+  "takerExitMin": 5,
+  "makerExitRestMs": 300000,
+  "variants": [
+   "join",
+   "improve"
+  ],
+  "cancels": [
+   "pessimistic",
+   "optimistic"
+  ],
+  "sides": [
+   "buy",
+   "sell"
+  ]
+ },
+ "fees": {
+  "coinbase": {
+   "makerBp": 40,
+   "takerBp": 60
+  },
+  "kraken": {
+   "makerBp": 40,
+   "takerBp": 80
+  }
+ },
+ "inputs": [
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2021-01-01",
+   "files": {
+    "quotes": {
+     "bytes": 6098321,
+     "sha256": "e685324619dcb6c9f39908ae3b0a09e923e7ea1758a93b0a0bc65817dec9eea6"
+    },
+    "trades": {
+     "bytes": 236139,
+     "sha256": "2d0d14cf9bddbcec87a1d6416f6a3d5549f943d3a95df663cb9984a850b071f1"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 406725,
+    "kept": 406725,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 15448,
+    "kept": 15448,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9636,
+    "first": "2021-01-01T00:00:02.172Z",
+    "last": "2021-01-01T23:59:59.986Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2021-02-01",
+   "files": {
+    "quotes": {
+     "bytes": 7746459,
+     "sha256": "411a905de94ea6b51e29e5bbd8eebf4d28713a937b7c83f8eda77c97831e8cb4"
+    },
+    "trades": {
+     "bytes": 509960,
+     "sha256": "479f0bc6e7b3c4ee1528dd6d480d84fec1247479f08582b6231c943db4fe8d1a"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 523503,
+    "kept": 523503,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 34196,
+    "kept": 34196,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9583,
+    "first": "2021-02-01T00:00:02.476Z",
+    "last": "2021-02-01T23:59:59.975Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2021-03-01",
+   "files": {
+    "quotes": {
+     "bytes": 11008986,
+     "sha256": "519544631444d4786d374b1c27d7a293d6063ea39a6c3fda98311da30c3ef084"
+    },
+    "trades": {
+     "bytes": 576679,
+     "sha256": "1a946a91451c5f20e1d7e28b8020c33c912f07dca77cf72e5bc3b4fb2dcc6393"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 748333,
+    "kept": 748333,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 39134,
+    "kept": 39134,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9653,
+    "first": "2021-03-01T00:00:02.043Z",
+    "last": "2021-03-01T23:59:59.960Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2021-04-01",
+   "files": {
+    "quotes": {
+     "bytes": 9954832,
+     "sha256": "448058348472856bb2c2a986c1318103e0a7d73681e041b8ea4104e748f016ff"
+    },
+    "trades": {
+     "bytes": 510267,
+     "sha256": "7dd07c9828d84913964a139f30d6d52ae4b0aa0885baf83c547d2bf25cb5b995"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 676804,
+    "kept": 676804,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 34695,
+    "kept": 34695,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9648,
+    "first": "2021-04-01T00:00:01.966Z",
+    "last": "2021-04-01T23:59:59.856Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2021-05-01",
+   "files": {
+    "quotes": {
+     "bytes": 9601046,
+     "sha256": "b5f188a05223a54a7f2337903c1225735cab658f5cd63feaa78d0cadc90ccedd"
+    },
+    "trades": {
+     "bytes": 567967,
+     "sha256": "a1e19c6aeda81a8a1399d04275a3218e8fb3a7197ad8220a6ea03ab0bc1101c2"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 662383,
+    "kept": 662383,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 39794,
+    "kept": 39794,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 5,
+    "coveredMin": 1421.131,
+    "first": "2021-05-01T00:00:02.707Z",
+    "last": "2021-05-01T23:59:59.814Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2021-06-01",
+   "files": {
+    "quotes": {
+     "bytes": 12228307,
+     "sha256": "297cfe1630c64a9c2d930f9102c055ba9fdb9a4a67581821c3d1aff47be8b2f0"
+    },
+    "trades": {
+     "bytes": 733219,
+     "sha256": "6b3b6acd373e9c9b6083501243ca2feed839ee42ae98055e39ec4cbfaceee7b2"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 822328,
+    "kept": 822328,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 50508,
+    "kept": 50508,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9667,
+    "first": "2021-06-01T00:00:01.921Z",
+    "last": "2021-06-01T23:59:59.926Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2021-07-01",
+   "files": {
+    "quotes": {
+     "bytes": 9357673,
+     "sha256": "60e8301db65e4c3bc4201be4f13dac70e387dd5574fb31b2c2b20c68a843feea"
+    },
+    "trades": {
+     "bytes": 401930,
+     "sha256": "e28452b04674c767c47f23f87049e781811839b210abdca826fcfdbf9873adae"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 635796,
+    "kept": 635796,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 27678,
+    "kept": 27678,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 3,
+    "coveredMin": 1425.4148,
+    "first": "2021-07-01T00:00:02.164Z",
+    "last": "2021-07-01T23:59:59.807Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2021-08-01",
+   "files": {
+    "quotes": {
+     "bytes": 9341096,
+     "sha256": "abd8441868d59012bc1254b47e4693ce83521b84fdeca8e969ad35e0e5eb02a9"
+    },
+    "trades": {
+     "bytes": 557977,
+     "sha256": "d919ffdba2b89c67b10de466b2f8c5d2789709d2a1390a4e97fc99c8d412d1c4"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 639880,
+    "kept": 639880,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 38401,
+    "kept": 38401,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9629,
+    "first": "2021-08-01T00:00:01.985Z",
+    "last": "2021-08-01T23:59:59.756Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2021-09-01",
+   "files": {
+    "quotes": {
+     "bytes": 10474531,
+     "sha256": "3ac0a7c3c4b9a611b95a8007b1f6cf9e6f95c4d6d2f65af2f1a59ac7d9d6c422"
+    },
+    "trades": {
+     "bytes": 593395,
+     "sha256": "d4d9454625432641f8c0589558c897ccfae8c3199e32030445ff3075577022be"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 688859,
+    "kept": 688859,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 40708,
+    "kept": 40708,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 2,
+    "coveredMin": 1428.993,
+    "first": "2021-09-01T00:00:01.907Z",
+    "last": "2021-09-01T23:59:59.836Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2021-10-01",
+   "files": {
+    "quotes": {
+     "bytes": 9439469,
+     "sha256": "1319eb75f37ac841408ce5b8993a76a709385ed46bc7ebfbc70fbd08769a963b"
+    },
+    "trades": {
+     "bytes": 408919,
+     "sha256": "da5d48a2b31557d025bf92f95973aed2cd4465e91936cb606898fbca21bf7bb7"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 608383,
+    "kept": 608383,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 27564,
+    "kept": 27564,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.964,
+    "first": "2021-10-01T00:00:01.892Z",
+    "last": "2021-10-01T23:59:59.731Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2021-11-01",
+   "files": {
+    "quotes": {
+     "bytes": 7998741,
+     "sha256": "1dfabb0ee4d17e45c60281bbf922e536bfc236587e0e8f549d4ca653ae274ca9"
+    },
+    "trades": {
+     "bytes": 401436,
+     "sha256": "effdac9eb0c16dbeb0b59623e906e21a4258bede2a58beb1475f5053fc377692"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 524031,
+    "kept": 524031,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 27189,
+    "kept": 27189,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9602,
+    "first": "2021-11-01T00:00:02.081Z",
+    "last": "2021-11-01T23:59:59.692Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2021-12-01",
+   "files": {
+    "quotes": {
+     "bytes": 10315822,
+     "sha256": "cff011bdeb63e0d3ecac9940365d2dc75670fef48340fdd3520486f93d77d8f4"
+    },
+    "trades": {
+     "bytes": 666860,
+     "sha256": "9c9e926940412c8466499acf53ca2e77bd33d76d7647f67d0b22b65854ea4f8e"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 667115,
+    "kept": 667115,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 44946,
+    "kept": 44946,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9665,
+    "first": "2021-12-01T00:00:01.905Z",
+    "last": "2021-12-01T23:59:59.893Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2022-01-01",
+   "files": {
+    "quotes": {
+     "bytes": 7202433,
+     "sha256": "cebe858239173623d7f00d9ec348c3e930364d146b7c5ef297b52a3e99285261"
+    },
+    "trades": {
+     "bytes": 159250,
+     "sha256": "3018b54a5e35b58865ef90e257155325ff50b6b7a053e9be0d818feda89362d3"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 476002,
+    "kept": 476002,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 10698,
+    "kept": 10698,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9328,
+    "first": "2022-01-01T00:00:02.187Z",
+    "last": "2022-01-01T23:59:58.154Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2022-02-01",
+   "files": {
+    "quotes": {
+     "bytes": 11725813,
+     "sha256": "9f7d6ef411b95c4cbc4f6586efcb5d762074eff69c28b2fa092bf681a7b3d125"
+    },
+    "trades": {
+     "bytes": 363767,
+     "sha256": "d381e09cc109632a29eb673a11eb5a26ad7a3b4fb3a8b7814ffc898695dc8b5b"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 766245,
+    "kept": 766245,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 23932,
+    "kept": 23932,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9645,
+    "first": "2022-02-01T00:00:02.037Z",
+    "last": "2022-02-01T23:59:59.906Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2022-03-01",
+   "files": {
+    "quotes": {
+     "bytes": 11452999,
+     "sha256": "1cb258b9e321d3be3c908cdff5c4f169e858e699ddd3f42e87ca1c0510193ffc"
+    },
+    "trades": {
+     "bytes": 657699,
+     "sha256": "ddea41ef902295cff7f21fccf893551f485bab0e0a303add19d2935117229ed7"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 734083,
+    "kept": 734083,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 44737,
+    "kept": 44737,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.905,
+    "first": "2022-03-01T00:00:02.040Z",
+    "last": "2022-03-01T23:59:56.339Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2022-04-01",
+   "files": {
+    "quotes": {
+     "bytes": 7491595,
+     "sha256": "09c47be1eecbfb83da5dda42f410d223133696acb02a5de38f72b3597735347c"
+    },
+    "trades": {
+     "bytes": 377274,
+     "sha256": "23cdef77bc9dcefda783b879c381e84af1fbf6caf65b1800f6607c6d86292982"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 485689,
+    "kept": 485689,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 26037,
+    "kept": 26037,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9588,
+    "first": "2022-04-01T00:00:01.988Z",
+    "last": "2022-04-01T23:59:59.516Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2022-05-01",
+   "files": {
+    "quotes": {
+     "bytes": 5602263,
+     "sha256": "e980e99c4b80301448005ac141b7ab2d5d3ff3da7bad5e9cef18c6ae54dc56cd"
+    },
+    "trades": {
+     "bytes": 221410,
+     "sha256": "03e40d84d894dfe405e2a9bf0453da0aa46702325895f3373943801ebd30abae"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 355915,
+    "kept": 355915,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 14864,
+    "kept": 14864,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9714,
+    "first": "2022-05-01T00:00:01.694Z",
+    "last": "2022-05-01T23:59:59.977Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2022-06-01",
+   "files": {
+    "quotes": {
+     "bytes": 6412781,
+     "sha256": "b0ead6ce434042ced01eaf17d3fe28b6259dd405636223b9537dcd6b1d84ec98"
+    },
+    "trades": {
+     "bytes": 369919,
+     "sha256": "a3a4a96b83b5e9db6b512340474bc8a2d18ace81d6544fff94b79479f983fd77"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 406071,
+    "kept": 406071,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 23954,
+    "kept": 23954,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 4,
+    "coveredMin": 1409.8539,
+    "first": "2022-06-01T00:00:01.994Z",
+    "last": "2022-06-01T23:59:59.968Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2022-07-01",
+   "files": {
+    "quotes": {
+     "bytes": 13268234,
+     "sha256": "b7cbb7afc7158bd847e1411c643d2b37b9f0111d71b17679e2705105930503d5"
+    },
+    "trades": {
+     "bytes": 393790,
+     "sha256": "b0a3b34353dbbec0783509009346aedf323dc0eb7d6cd7bd3b7b6c7ea96b1a4f"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 852055,
+    "kept": 852055,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 25532,
+    "kept": 25532,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.962,
+    "first": "2022-07-01T00:00:01.750Z",
+    "last": "2022-07-01T23:59:59.472Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2022-08-01",
+   "files": {
+    "quotes": {
+     "bytes": 9505321,
+     "sha256": "28f9508f48e384dc8e8a6647b020d8ed6177ed7d4445a4b675e1f1d0b40d4d99"
+    },
+    "trades": {
+     "bytes": 285545,
+     "sha256": "40d653696ee439f9971ee15d5a84dbc879d7972724eea7d7023b362038384369"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 621973,
+    "kept": 621973,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 19440,
+    "kept": 19440,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9644,
+    "first": "2022-08-01T00:00:01.969Z",
+    "last": "2022-08-01T23:59:59.831Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2022-09-01",
+   "files": {
+    "quotes": {
+     "bytes": 12107541,
+     "sha256": "fe1606130df14367a472fd8dbeab8b278b15eedb8b0c660bb5b527f9bdbb221e"
+    },
+    "trades": {
+     "bytes": 266926,
+     "sha256": "b79abc25d6cf20569e5e2174958527e80d4468c730a5c726173b7655c9f74094"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 795463,
+    "kept": 795463,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 17568,
+    "kept": 17568,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 2,
+    "coveredMin": 1427.3084,
+    "first": "2022-09-01T00:00:02.049Z",
+    "last": "2022-09-01T23:59:59.539Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2022-10-01",
+   "files": {
+    "quotes": {
+     "bytes": 4514739,
+     "sha256": "d38382c5e30315ee8cfcbe90cb5fdee253477623a4e3e9ddbfdd9d4d0b25215f"
+    },
+    "trades": {
+     "bytes": 122844,
+     "sha256": "99817ecede19c8eecc60d4da7e7c4fb124dc1348453d48c36e3afaf86c85f4cc"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 305675,
+    "kept": 305675,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 8904,
+    "kept": 8904,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9605,
+    "first": "2022-10-01T00:00:01.817Z",
+    "last": "2022-10-01T23:59:59.446Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2022-11-01",
+   "files": {
+    "quotes": {
+     "bytes": 5992516,
+     "sha256": "d81cf466d88eb32a79e4c861e3e4a70d4f68a1322a0bc12654e3d8bfe3433e25"
+    },
+    "trades": {
+     "bytes": 210319,
+     "sha256": "26cf47b2e90bb9e046f0087238de3f4e92a053ce99a2ce5093ba1be06ea94363"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 411309,
+    "kept": 411309,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 15659,
+    "kept": 15659,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9614,
+    "first": "2022-11-01T00:00:01.905Z",
+    "last": "2022-11-01T23:59:59.586Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2022-12-01",
+   "files": {
+    "quotes": {
+     "bytes": 5131871,
+     "sha256": "c49078d2885222e631497592cec2c5b40f783af68c1e42e4e9cfa64f046da9a5"
+    },
+    "trades": {
+     "bytes": 255883,
+     "sha256": "888db4836012cc61bbdbd57c6bdb98edc28fe80eb9f974c79e03417c6766db95"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 338311,
+    "kept": 338311,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 19550,
+    "kept": 19550,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9595,
+    "first": "2022-12-01T00:00:01.722Z",
+    "last": "2022-12-01T23:59:59.293Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2023-01-01",
+   "files": {
+    "quotes": {
+     "bytes": 3051894,
+     "sha256": "90ca2c1a64ebcb268c35dc625a5938e7a84818cb866c9ad2e2d20fe16524430c"
+    },
+    "trades": {
+     "bytes": 60094,
+     "sha256": "783152955bdd26de3f10f30b30a10953fe8a1ee739edc057bb602868d5329ed4"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 225639,
+    "kept": 225639,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 4088,
+    "kept": 4088,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9568,
+    "first": "2023-01-01T00:00:01.730Z",
+    "last": "2023-01-01T23:59:59.140Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2023-02-01",
+   "files": {
+    "quotes": {
+     "bytes": 5449701,
+     "sha256": "cde9ec0dfad4402c4c6106c0fb4287b16121c8096c3b741e6d26472aa47edf6b"
+    },
+    "trades": {
+     "bytes": 259478,
+     "sha256": "4ecc3af70ff7aa287bb6d46624ee982250d583e52c7ae4b6e4b987263de72959"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 354661,
+    "kept": 354661,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 18634,
+    "kept": 18634,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9244,
+    "first": "2023-02-01T00:00:01.654Z",
+    "last": "2023-02-01T23:59:57.119Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2023-03-01",
+   "files": {
+    "quotes": {
+     "bytes": 6979396,
+     "sha256": "e39a348f7e39058759d535402186f43d31cb1d4043d66481a8428849714f3551"
+    },
+    "trades": {
+     "bytes": 162394,
+     "sha256": "3f418216ffbb02b9eb732b57a1b077dcde9af91744eb072579d4f98fc8dab79a"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 452776,
+    "kept": 452776,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 10542,
+    "kept": 10542,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9651,
+    "first": "2023-03-01T00:00:01.980Z",
+    "last": "2023-03-01T23:59:59.886Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2023-04-01",
+   "files": {
+    "quotes": {
+     "bytes": 4614329,
+     "sha256": "df1142107da0a32520dda9a79e6658a68f8ef3a2afa651bd7d0a1e86e28135a5"
+    },
+    "trades": {
+     "bytes": 104852,
+     "sha256": "7d15dcb93c5c60d7ac8c9276b43a1fd07a3fdad98a5238cee48d09e5d671d26f"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 304650,
+    "kept": 304650,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 6977,
+    "kept": 6977,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9599,
+    "first": "2023-04-01T00:00:01.531Z",
+    "last": "2023-04-01T23:59:59.123Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2023-05-01",
+   "files": {
+    "quotes": {
+     "bytes": 6347022,
+     "sha256": "1630a00470b9599d0323dab02357785f14656641243e279fa599a04137b892ca"
+    },
+    "trades": {
+     "bytes": 185786,
+     "sha256": "fbb4830dfc0226c5cb34f72613718f980e1962ed605dea527d204916ef71bc5b"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 410376,
+    "kept": 410376,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 12486,
+    "kept": 12486,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9565,
+    "first": "2023-05-01T00:00:01.565Z",
+    "last": "2023-05-01T23:59:58.953Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2023-06-01",
+   "files": {
+    "quotes": {
+     "bytes": 3879605,
+     "sha256": "599f431b483874f57c67945de58c9df42a8ec50a90321b10a2a8aaf438eb71e5"
+    },
+    "trades": {
+     "bytes": 184122,
+     "sha256": "42c72e386dc230610b7df091794961ff849aefb66ca151561ff31d5855809e0a"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 259100,
+    "kept": 259100,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 11880,
+    "kept": 11880,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 3,
+    "coveredMin": 1430.4807,
+    "first": "2023-06-01T00:00:01.853Z",
+    "last": "2023-06-01T23:59:59.047Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2023-07-01",
+   "files": {
+    "quotes": {
+     "bytes": 3651800,
+     "sha256": "7e2e0b86143fd82864757badb2874b0a60dcdccedf4c337ef95d44cd04d66c27"
+    },
+    "trades": {
+     "bytes": 193559,
+     "sha256": "897a9b5348e776a0b132482e595172b896aee98becc18ccf820522e1b0205159"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 236319,
+    "kept": 236319,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 12178,
+    "kept": 12178,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9497,
+    "first": "2023-07-01T00:00:02.125Z",
+    "last": "2023-07-01T23:59:59.106Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2023-08-01",
+   "files": {
+    "quotes": {
+     "bytes": 3684857,
+     "sha256": "da4b30d341c85dc911dbf029775ee5d5a0e333c02c89f9254b210d10420fa7d9"
+    },
+    "trades": {
+     "bytes": 126407,
+     "sha256": "55255bf9e9571e50ea9fd7b4a91cfe4e93826b5f5b97fd8322b5e9ba9821af88"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 241892,
+    "kept": 241892,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 7975,
+    "kept": 7975,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 10,
+    "coveredMin": 1407.6587,
+    "first": "2023-08-01T00:00:02.173Z",
+    "last": "2023-08-01T23:59:59.936Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2023-09-01",
+   "files": {
+    "quotes": {
+     "bytes": 5615117,
+     "sha256": "120ff6121af9b7795afdeb988fa97fdb9c518dad9b9728d0b791f41fd5f147ed"
+    },
+    "trades": {
+     "bytes": 138491,
+     "sha256": "81696ace7dbbc7d17d077e651736fab9e2c9c46408a89ca8cdcf289b4c518be8"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 379212,
+    "kept": 379212,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 8754,
+    "kept": 8754,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9369,
+    "first": "2023-09-01T00:00:01.860Z",
+    "last": "2023-09-01T23:59:58.074Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2023-10-01",
+   "files": {
+    "quotes": {
+     "bytes": 3413968,
+     "sha256": "2cf5c8630ce08e0ef0d44ff56ac2994883595004d2799f4b09c85677c6cbcd9c"
+    },
+    "trades": {
+     "bytes": 121385,
+     "sha256": "f18237165717bbce0a5268a4e527bf5a5ca2d277b70729ea6496131484d06b6d"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 225098,
+    "kept": 225098,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 7714,
+    "kept": 7714,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.9652,
+    "first": "2023-10-01T00:00:01.873Z",
+    "last": "2023-10-01T23:59:59.782Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2023-11-01",
+   "files": {
+    "quotes": {
+     "bytes": 9020026,
+     "sha256": "0ff649b6dd59ccd8ca90797a5d94fc30ce7f8b371268572097bc16a4f730cff4"
+    },
+    "trades": {
+     "bytes": 188440,
+     "sha256": "7f0da8e33649a3e9fee88994911becb25074475c9469049c7e99f1fcfd7e7bee"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 612723,
+    "kept": 612723,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 11598,
+    "kept": 11598,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.933,
+    "first": "2023-11-01T00:00:01.974Z",
+    "last": "2023-11-01T23:59:57.955Z"
+   }
+  },
+  {
+   "venue": "kraken",
+   "symbol": "ETH-USD",
+   "day": "2023-12-01",
+   "files": {
+    "quotes": {
+     "bytes": 6728528,
+     "sha256": "959c25065737f05b2502dc7622ad2158fab77f4c594a61cceea2f1cb29b5c201"
+    },
+    "trades": {
+     "bytes": 204622,
+     "sha256": "0834a980e3b10efd09baa550ffc9b7b51628678c6e2896345d16801eb24b242f"
+    }
+   },
+   "tick": 0.01,
+   "quotes": {
+    "rows": 445829,
+    "kept": 445829,
+    "crossed": 0,
+    "outOfOrder": 0,
+    "emptySide": 0,
+    "maxDecimals": 2
+   },
+   "trades": {
+    "rows": 12892,
+    "kept": 12892,
+    "noSide": 0,
+    "outOfOrder": 0
+   },
+   "coverage": {
+    "stretches": 1,
+    "coveredMin": 1439.962,
+    "first": "2023-12-01T00:00:01.870Z",
+    "last": "2023-12-01T23:59:59.590Z"
+   }
+  }
+ ],
+ "missing": []
+}
