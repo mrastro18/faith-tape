@@ -1,0 +1,113 @@
+name: maker-sim
+
+# Offline research for FAITH: the resting-order (maker) fill simulator (tools/maker-sim, copied from FAITH)
+# on Tardis.dev's free first-of-month tick data for Coinbase and Kraken BTC, ETH and SOL against USD.
+# Started by hand only. Each job downloads one pair's days into the runner's temp dir, simulates them and
+# deletes the raw files; raw Tardis files are never committed (they are large and Tardis's terms apply to
+# them). In "run" mode each job commits only its small summary under data/derived/tardis-maker/<out>/.
+# "structure" mode prints the shape of each day (rows, tick, coverage, run time) and commits nothing.
+# Days are 2019 to 2023 only: 2026 is FAITH's holdout and 2024-2025 are reserved (run.mjs refuses them).
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "structure (print shape only) or run (simulate and commit summaries)"
+        default: "structure"
+      days:
+        description: "Comma-separated YYYY-MM-DD; empty = 1st of each month 2021-01 to 2023-12"
+        default: ""
+      out:
+        description: "Output name under data/derived/tardis-maker/ (run mode)"
+        default: "queue-prov-r2"
+      spec:
+        description: "FAITH spec id and commit this run serves (recorded in the summary)"
+        default: ""
+
+concurrency:
+  group: maker-sim
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sim:
+    runs-on: ubuntu-26.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        include:
+          - { venue: coinbase, symbol: BTC-USD }
+          - { venue: coinbase, symbol: ETH-USD }
+          - { venue: coinbase, symbol: SOL-USD }
+          - { venue: kraken, symbol: XBT-USD }
+          - { venue: kraken, symbol: ETH-USD }
+          - { venue: kraken, symbol: SOL-USD }
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "22"
+      - name: Tests
+        run: node --test tools/maker-sim/*.test.mjs
+      - name: Download, simulate, delete raw
+        env:
+          MODE: ${{ inputs.mode }}
+          DAYS: ${{ inputs.days }}
+          OUTNAME: ${{ inputs.out }}
+          VENUE: ${{ matrix.venue }}
+          SYMBOL: ${{ matrix.symbol }}
+          SPEC: ${{ inputs.spec }}
+        run: |
+          set -u
+          case "$MODE" in structure|run) ;; *) echo "mode must be structure or run"; exit 2;; esac
+          dest="data/derived/tardis-maker/${OUTNAME}/${VENUE}-${SYMBOL}"
+          if [ "$MODE" = run ] && [ -e "$dest/summary.json" ]; then echo "$dest exists: a result is spent once written"; exit 1; fi
+          raw="$RUNNER_TEMP/raw"; out="$RUNNER_TEMP/out"; mkdir -p "$raw" "$out"
+          missing="$RUNNER_TEMP/missing.tsv"; : > "$missing"
+          if [ -z "$DAYS" ]; then
+            DAYS=$(for y in 2021 2022 2023; do for m in 01 02 03 04 05 06 07 08 09 10 11 12; do printf '%s-%s-01,' "$y" "$m"; done; done)
+          fi
+          flag=""; [ "$MODE" = structure ] && flag="--structure"
+          status=0
+          for d in ${DAYS//,/ }; do
+            y=${d:0:4}; m=${d:5:2}; dd=${d:8:2}
+            ok=1
+            for kind in quotes trades; do
+              url="https://datasets.tardis.dev/v1/${VENUE}/${kind}/${y}/${m}/${dd}/${SYMBOL}.csv.gz"
+              code=$(curl -sS -L --retry 5 --retry-delay 15 --max-time 1800 -o "$raw/${kind}.csv.gz" -w '%{http_code}' "$url" || echo fail)
+              if [ "$code" != "200" ]; then
+                printf '%s\t%s\t%s\t%s\t%s\n' "$VENUE" "$SYMBOL" "$d" "$kind" "$code" >> "$missing"
+                echo "missing: $kind $d ($code)"
+                ok=0
+              fi
+            done
+            if [ "$ok" = 1 ]; then
+              if ! node --max-old-space-size=12000 tools/maker-sim/run.mjs --venue "$VENUE" --symbol "$SYMBOL" --day "$d" \
+                  --quotes "$raw/quotes.csv.gz" --trades "$raw/trades.csv.gz" --out "$out/${VENUE}-${SYMBOL}-${d}.json.gz" $flag; then
+                printf '%s\t%s\t%s\t%s\t%s\n' "$VENUE" "$SYMBOL" "$d" "run" "error" >> "$missing"
+                status=1
+              fi
+            fi
+            rm -f "$raw"/*
+          done
+          echo "--- missing"; cat "$missing"
+          [ "$MODE" = run ] || exit $status
+          node tools/maker-sim/agg.mjs --in "$out" --out "$dest" --missing "$missing" \
+            --meta "run=${GITHUB_RUN_ID}" --meta "sha=${GITHUB_SHA}" --meta "spec=${SPEC}"
+          git config user.name "faith-tape recorder"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$dest"
+          git commit -q -m "derived: maker-sim ${OUTNAME} ${VENUE} ${SYMBOL} run ${GITHUB_RUN_ID}"
+          for i in 1 2 3 4 5 6; do
+            if git push -q origin HEAD:main; then exit $status; fi
+            git fetch -q --depth=20 origin main
+            git rebase -q origin/main || { git rebase --abort; exit 1; }
+            sleep $((i * 7 + RANDOM % 10))
+          done
+          exit 1
