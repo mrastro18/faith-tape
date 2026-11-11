@@ -1,6 +1,6 @@
 {
- "at": "2026-11-11T21:08:48.233Z",
- "run": "43100450082",
+ "at": "2026-11-11T21:37:43.036Z",
+ "run": "43104622131",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 316,
+   "ms": 304,
    "markets": 127,
    "crypto": 20,
    "pages": 1,
@@ -24,58 +24,40 @@
   },
   "coinbase": {
    "ok": true,
-   "ms": 32368,
+   "ms": 26231,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 23631,
+   "bars": 11130,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "kraken": {
    "ok": true,
-   "ms": 36429,
+   "ms": 26572,
    "bases": 15,
-   "bars": 8671
+   "bars": 3862
   },
   "binanceus": {
    "ok": true,
-   "ms": 82304,
+   "ms": 58420,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 1532,
+   "tradesWritten": 591,
    "symbolsBehind": 0
   }
  },
- "calls": 762,
+ "calls": 700,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/ETH-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/HBAR-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/PENGU-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/SOL-USD/trades",
+   "path": "/products/POL-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 82307
+ "ms": 58423
 }
