@@ -1,0 +1,802 @@
+{
+ "schema": "faith-tape.maker-sim/1",
+ "run": "43085676746",
+ "sha": "b5ece3fd1449479f2eac57df4d3f3c40c467e954",
+ "spec": "queue-prov-r2@ba41621",
+ "config": {
+  "maxGapMs": 120000,
+  "latencyMs": 500,
+  "lookaheadMs": 250,
+  "restMs": 900000,
+  "fillWithinMin": [
+   1,
+   5,
+   15
+  ],
+  "placeEveryMs": 60000,
+  "placeFromMs": 60000,
+  "placeToMs": 84600000,
+  "notional": 50,
+  "horizonsMin": [
+   1,
+   5,
+   15
+  ],
+  "takerExitMin": 5,
+  "makerExitRestMs": 300000,
+  "variants": [
+   "join",
+   "improve"
+  ],
+  "cancels": [
+   "pessimistic",
+   "optimistic"
+  ],
+  "sides": [
+   "buy",
+   "sell"
+  ]
+ },
+ "fees": {
+  "coinbase": {
+   "makerBp": 40,
+   "takerBp": 60
+  },
+  "kraken": {
+   "makerBp": 40,
+   "takerBp": 80
+  }
+ },
+ "days": [
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2021-07-01",
+   "tick": 0.001,
+   "quoteRows": 301428,
+   "prints": 18505,
+   "coveredMin": 1439.9809,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.644,
+     "5m": 0.841,
+     "15m": 0.9203
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.0352,
+     "through": 0.6271,
+     "cross": 0.3377
+    },
+    "midMove5m": -2.8296,
+    "makerExitNet": -89.6064
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2021-08-01",
+   "tick": 0.001,
+   "quoteRows": 506449,
+   "prints": 34833,
+   "coveredMin": 1439.9826,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6958,
+     "5m": 0.8678,
+     "15m": 0.923
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.0586,
+     "through": 0.4977,
+     "cross": 0.4437
+    },
+    "midMove5m": -3.2201,
+    "makerExitNet": -90.5593
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2021-09-01",
+   "tick": 0.001,
+   "quoteRows": 2275945,
+   "prints": 422178,
+   "coveredMin": 1439.9957,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8658,
+     "5m": 0.9406,
+     "15m": 0.9684
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.0481,
+     "through": 0.8311,
+     "cross": 0.1207
+    },
+    "midMove5m": -2.4434,
+    "makerExitNet": -86.7576
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2021-10-01",
+   "tick": 0.001,
+   "quoteRows": 2339967,
+   "prints": 212972,
+   "coveredMin": 1439.994,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.852,
+     "5m": 0.9284,
+     "15m": 0.9558
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.0512,
+     "through": 0.6549,
+     "cross": 0.2939
+    },
+    "midMove5m": -1.6205,
+    "makerExitNet": -86.0393
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2021-11-01",
+   "tick": 0.001,
+   "quoteRows": 2666798,
+   "prints": 207545,
+   "coveredMin": 1439.9965,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8611,
+     "5m": 0.9422,
+     "15m": 0.9644
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.048,
+     "through": 0.6159,
+     "cross": 0.3361
+    },
+    "midMove5m": -1.08,
+    "makerExitNet": -84.8529
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2021-12-01",
+   "tick": 0.001,
+   "quoteRows": 2565748,
+   "prints": 301358,
+   "coveredMin": 1439.9909,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8765,
+     "5m": 0.9392,
+     "15m": 0.9653
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.069,
+     "through": 0.7026,
+     "cross": 0.2284
+    },
+    "midMove5m": -2.0067,
+    "makerExitNet": -86.4979
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2022-01-01",
+   "tick": 0.01,
+   "quoteRows": 1352987,
+   "prints": 96427,
+   "coveredMin": 1439.9964,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8461,
+     "5m": 0.9336,
+     "15m": 0.9618
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2184,
+     "through": 0.2457,
+     "cross": 0.536
+    },
+    "midMove5m": -0.4528,
+    "makerExitNet": -85.2078
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2022-02-01",
+   "tick": 0.01,
+   "quoteRows": 2926612,
+   "prints": 320944,
+   "coveredMin": 1439.9923,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8909,
+     "5m": 0.9456,
+     "15m": 0.968
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3159,
+     "through": 0.3892,
+     "cross": 0.2949
+    },
+    "midMove5m": -0.992,
+    "makerExitNet": -85.5494
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2022-03-01",
+   "tick": 0.01,
+   "quoteRows": 2534358,
+   "prints": 186503,
+   "coveredMin": 1439.9816,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8531,
+     "5m": 0.932,
+     "15m": 0.9616
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2843,
+     "through": 0.3121,
+     "cross": 0.4036
+    },
+    "midMove5m": -2.3512,
+    "makerExitNet": -87.0896
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2022-04-01",
+   "tick": 0.01,
+   "quoteRows": 2367527,
+   "prints": 246871,
+   "coveredMin": 1439.9949,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8648,
+     "5m": 0.9421,
+     "15m": 0.9671
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2353,
+     "through": 0.4932,
+     "cross": 0.2714
+    },
+    "midMove5m": -2.0063,
+    "makerExitNet": -84.9789
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2022-05-01",
+   "tick": 0.01,
+   "quoteRows": 1453032,
+   "prints": 114651,
+   "coveredMin": 1439.9958,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8475,
+     "5m": 0.9383,
+     "15m": 0.9632
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2694,
+     "through": 0.3577,
+     "cross": 0.3729
+    },
+    "midMove5m": -1.0678,
+    "makerExitNet": -84.4539
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2022-06-01",
+   "tick": 0.01,
+   "quoteRows": 1842597,
+   "prints": 165128,
+   "coveredMin": 1439.9701,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8311,
+     "5m": 0.922,
+     "15m": 0.9592
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3966,
+     "through": 0.2639,
+     "cross": 0.3395
+    },
+    "midMove5m": -1.6741,
+    "makerExitNet": -85.7552
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2022-07-01",
+   "tick": 0.01,
+   "quoteRows": 2184445,
+   "prints": 142826,
+   "coveredMin": 1439.9722,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8479,
+     "5m": 0.9287,
+     "15m": 0.9586
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3494,
+     "through": 0.2439,
+     "cross": 0.4067
+    },
+    "midMove5m": -1.0698,
+    "makerExitNet": -86.4677
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2022-08-01",
+   "tick": 0.01,
+   "quoteRows": 1231453,
+   "prints": 71283,
+   "coveredMin": 1439.9955,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.7834,
+     "5m": 0.9048,
+     "15m": 0.9473
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2933,
+     "through": 0.2341,
+     "cross": 0.4726
+    },
+    "midMove5m": -0.5749,
+    "makerExitNet": -84.8784
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2022-09-01",
+   "tick": 0.01,
+   "quoteRows": 1202865,
+   "prints": 92228,
+   "coveredMin": 1439.9852,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.7405,
+     "5m": 0.8943,
+     "15m": 0.9379
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3851,
+     "through": 0.1447,
+     "cross": 0.4702
+    },
+    "midMove5m": -0.0833,
+    "makerExitNet": -84.6797
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2022-10-01",
+   "tick": 0.01,
+   "quoteRows": 724149,
+   "prints": 122025,
+   "coveredMin": 1439.9949,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6168,
+     "5m": 0.8314,
+     "15m": 0.8981
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.5527,
+     "through": 0.0985,
+     "cross": 0.3488
+    },
+    "midMove5m": -1.0018,
+    "makerExitNet": -86.3537
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2022-11-01",
+   "tick": 0.01,
+   "quoteRows": 1403086,
+   "prints": 134378,
+   "coveredMin": 1439.9787,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.7063,
+     "5m": 0.8817,
+     "15m": 0.9328
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3808,
+     "through": 0.1043,
+     "cross": 0.5149
+    },
+    "midMove5m": -0.1654,
+    "makerExitNet": -87.1097
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2022-12-01",
+   "tick": 0.01,
+   "quoteRows": 857089,
+   "prints": 49314,
+   "coveredMin": 1439.9917,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.5447,
+     "5m": 0.782,
+     "15m": 0.8775
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3594,
+     "through": 0.0501,
+     "cross": 0.5905
+    },
+    "midMove5m": 0.2741,
+    "makerExitNet": -86.4796
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2023-01-01",
+   "tick": 0.01,
+   "quoteRows": 914450,
+   "prints": 37495,
+   "coveredMin": 1439.9909,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.4152,
+     "5m": 0.7214,
+     "15m": 0.8376
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3224,
+     "through": 0.0927,
+     "cross": 0.585
+    },
+    "midMove5m": 0.9916,
+    "makerExitNet": -89.2087
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2023-02-01",
+   "tick": 0.01,
+   "quoteRows": 3905415,
+   "prints": 155218,
+   "coveredMin": 1439.9964,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.7107,
+     "5m": 0.8762,
+     "15m": 0.9305
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2921,
+     "through": 0.1224,
+     "cross": 0.5855
+    },
+    "midMove5m": -0.1642,
+    "makerExitNet": -87.1113
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2023-03-01",
+   "tick": 0.01,
+   "quoteRows": 931715,
+   "prints": 31305,
+   "coveredMin": 1439.9935,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6256,
+     "5m": 0.8304,
+     "15m": 0.9078
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2372,
+     "through": 0.1144,
+     "cross": 0.6484
+    },
+    "midMove5m": 0.2192,
+    "makerExitNet": -85.2725
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2023-04-01",
+   "tick": 0.01,
+   "quoteRows": 271491,
+   "prints": 19869,
+   "coveredMin": 1439.9899,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.5018,
+     "5m": 0.7709,
+     "15m": 0.8701
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.315,
+     "through": 0.2219,
+     "cross": 0.4631
+    },
+    "midMove5m": -0.6346,
+    "makerExitNet": -86.6634
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2023-05-01",
+   "tick": 0.01,
+   "quoteRows": 538530,
+   "prints": 42101,
+   "coveredMin": 1439.9676,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.5889,
+     "5m": 0.8031,
+     "15m": 0.8916
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3888,
+     "through": 0.1457,
+     "cross": 0.4655
+    },
+    "midMove5m": -1.3442,
+    "makerExitNet": -86.5971
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2023-06-01",
+   "tick": 0.01,
+   "quoteRows": 302830,
+   "prints": 24784,
+   "coveredMin": 1439.939,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.5002,
+     "5m": 0.7625,
+     "15m": 0.869
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3474,
+     "through": 0.0915,
+     "cross": 0.5611
+    },
+    "midMove5m": -0.7577,
+    "makerExitNet": -86.9145
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2023-07-01",
+   "tick": 0.01,
+   "quoteRows": 469384,
+   "prints": 28742,
+   "coveredMin": 1439.9918,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6125,
+     "5m": 0.8295,
+     "15m": 0.9137
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3226,
+     "through": 0.2136,
+     "cross": 0.4637
+    },
+    "midMove5m": -0.4045,
+    "makerExitNet": -85.8986
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2023-08-01",
+   "tick": 0.01,
+   "quoteRows": 457589,
+   "prints": 48498,
+   "coveredMin": 1439.9934,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6218,
+     "5m": 0.8416,
+     "15m": 0.9206
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3609,
+     "through": 0.1006,
+     "cross": 0.5385
+    },
+    "midMove5m": 0.5261,
+    "makerExitNet": -85.9034
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2023-09-01",
+   "tick": 0.01,
+   "quoteRows": 397635,
+   "prints": 40629,
+   "coveredMin": 1439.9583,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.524,
+     "5m": 0.7795,
+     "15m": 0.8774
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3803,
+     "through": 0.078,
+     "cross": 0.5417
+    },
+    "midMove5m": -0.0212,
+    "makerExitNet": -87.0076
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2023-10-01",
+   "tick": 0.01,
+   "quoteRows": 1036357,
+   "prints": 56356,
+   "coveredMin": 1439.9912,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.6071,
+     "5m": 0.8182,
+     "15m": 0.892
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3086,
+     "through": 0.0973,
+     "cross": 0.5942
+    },
+    "midMove5m": -2.0449,
+    "makerExitNet": -91.8596
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2023-11-01",
+   "tick": 0.01,
+   "quoteRows": 2761026,
+   "prints": 246756,
+   "coveredMin": 1439.9901,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.8351,
+     "5m": 0.9114,
+     "15m": 0.9471
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.3397,
+     "through": 0.1753,
+     "cross": 0.485
+    },
+    "midMove5m": -2.8786,
+    "makerExitNet": -87.979
+   }
+  },
+  {
+   "venue": "coinbase",
+   "symbol": "SOL-USD",
+   "day": "2023-12-01",
+   "tick": 0.01,
+   "quoteRows": 1131621,
+   "prints": 63325,
+   "coveredMin": 1439.9881,
+   "placements": 1409,
+   "joinPess": {
+    "fillWithin": {
+     "1m": 0.7921,
+     "5m": 0.9183,
+     "15m": 0.9558
+    },
+    "unknownShare": 0,
+    "fillTypeShare": {
+     "queue": 0.2822,
+     "through": 0.1572,
+     "cross": 0.5606
+    },
+    "midMove5m": -0.086,
+    "makerExitNet": -84.7632
+   }
+  }
+ ]
+}
