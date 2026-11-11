@@ -1,0 +1,423 @@
+{
+ "study": "P-OF2",
+ "note": "From timestamps only (the first field of each row). slotShare: five-minute slots of 2022-01-01 to 2025-12-31 with a row. hourPairShare: whole hours T (01:00 2022-01-01 to 23:00 2025-12-31) with a metrics row at both T and T-1h. offGrid: rows not on a five-minute boundary.",
+ "runId": "43089887829",
+ "at": "2026-11-11T20:32:55.065Z",
+ "stoppedAt": null,
+ "totalBytes": 129980796,
+ "coins": [
+  {
+   "base": "ADA",
+   "perp": "ADAUSDT",
+   "coinbase": {
+    "months": 48,
+    "missingMonths": [],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 420569,
+    "slots": 420768,
+    "slotShare": 0.9995,
+    "offGrid": 0,
+    "bytes": 6741885
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [],
+    "rows": 420635,
+    "slotShare": 0.9997,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35052,
+    "hourPairShare": 0.9997,
+    "bytes": 2962925
+   }
+  },
+  {
+   "base": "BCH",
+   "perp": "BCHUSDT",
+   "coinbase": {
+    "months": 48,
+    "missingMonths": [],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 420489,
+    "slots": 420768,
+    "slotShare": 0.9993,
+    "offGrid": 0,
+    "bytes": 7385980
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [],
+    "rows": 420598,
+    "slotShare": 0.9996,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35043,
+    "hourPairShare": 0.9994,
+    "bytes": 3192070
+   }
+  },
+  {
+   "base": "ETC",
+   "perp": "ETCUSDT",
+   "coinbase": {
+    "months": 48,
+    "missingMonths": [],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 388734,
+    "slots": 420768,
+    "slotShare": 0.9239,
+    "offGrid": 0,
+    "bytes": 5668383
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [],
+    "rows": 420498,
+    "slotShare": 0.9994,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35032,
+    "hourPairShare": 0.9991,
+    "bytes": 3128634
+   }
+  },
+  {
+   "base": "LINK",
+   "perp": "LINKUSDT",
+   "coinbase": {
+    "months": 48,
+    "missingMonths": [],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 420565,
+    "slots": 420768,
+    "slotShare": 0.9995,
+    "offGrid": 0,
+    "bytes": 5979294
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [],
+    "rows": 420635,
+    "slotShare": 0.9997,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35052,
+    "hourPairShare": 0.9997,
+    "bytes": 3251259
+   }
+  },
+  {
+   "base": "LTC",
+   "perp": "LTCUSDT",
+   "coinbase": {
+    "months": 47,
+    "missingMonths": [
+     "2023-10"
+    ],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 411661,
+    "slots": 420768,
+    "slotShare": 0.9784,
+    "offGrid": 0,
+    "bytes": 6957552
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [],
+    "rows": 420592,
+    "slotShare": 0.9996,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35050,
+    "hourPairShare": 0.9996,
+    "bytes": 3343031
+   }
+  },
+  {
+   "base": "XLM",
+   "perp": "XLMUSDT",
+   "coinbase": {
+    "months": 48,
+    "missingMonths": [],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 420586,
+    "slots": 420768,
+    "slotShare": 0.9996,
+    "offGrid": 0,
+    "bytes": 8067688
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [
+     "2023-12-13"
+    ],
+    "rows": 420347,
+    "slotShare": 0.999,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35027,
+    "hourPairShare": 0.999,
+    "bytes": 2948820
+   }
+  },
+  {
+   "base": "ATOM",
+   "perp": "ATOMUSDT",
+   "coinbase": {
+    "months": 48,
+    "missingMonths": [],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 419860,
+    "slots": 420768,
+    "slotShare": 0.9978,
+    "offGrid": 0,
+    "bytes": 5546491
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [],
+    "rows": 420634,
+    "slotShare": 0.9997,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35052,
+    "hourPairShare": 0.9997,
+    "bytes": 3192139
+   }
+  },
+  {
+   "base": "BAT",
+   "perp": "BATUSDT",
+   "coinbase": {
+    "months": 48,
+    "missingMonths": [],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 328084,
+    "slots": 420768,
+    "slotShare": 0.7797,
+    "offGrid": 0,
+    "bytes": 4446258
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [],
+    "rows": 420607,
+    "slotShare": 0.9996,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35044,
+    "hourPairShare": 0.9995,
+    "bytes": 3038802
+   }
+  },
+  {
+   "base": "DASH",
+   "perp": "DASHUSDT",
+   "coinbase": {
+    "months": 48,
+    "missingMonths": [],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 315972,
+    "slots": 420768,
+    "slotShare": 0.7509,
+    "offGrid": 0,
+    "bytes": 3984187
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [],
+    "rows": 420635,
+    "slotShare": 0.9997,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35052,
+    "hourPairShare": 0.9997,
+    "bytes": 3172472
+   }
+  },
+  {
+   "base": "XTZ",
+   "perp": "XTZUSDT",
+   "coinbase": {
+    "months": 48,
+    "missingMonths": [],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 375756,
+    "slots": 420768,
+    "slotShare": 0.893,
+    "offGrid": 0,
+    "bytes": 3856235
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [
+     "2023-12-08"
+    ],
+    "rows": 420346,
+    "slotShare": 0.999,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35027,
+    "hourPairShare": 0.999,
+    "bytes": 2953663
+   }
+  },
+  {
+   "base": "ZEC",
+   "perp": "ZECUSDT",
+   "coinbase": {
+    "months": 48,
+    "missingMonths": [],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 367236,
+    "slots": 420768,
+    "slotShare": 0.8728,
+    "offGrid": 0,
+    "bytes": 5201685
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [
+     "2023-12-13"
+    ],
+    "rows": 420347,
+    "slotShare": 0.999,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35027,
+    "hourPairShare": 0.999,
+    "bytes": 3213044
+   }
+  },
+  {
+   "base": "ALGO",
+   "perp": "ALGOUSDT",
+   "coinbase": {
+    "months": 48,
+    "missingMonths": [],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 415439,
+    "slots": 420768,
+    "slotShare": 0.9873,
+    "offGrid": 0,
+    "bytes": 5046089
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [],
+    "rows": 420635,
+    "slotShare": 0.9997,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35052,
+    "hourPairShare": 0.9997,
+    "bytes": 3157865
+   }
+  },
+  {
+   "base": "COMP",
+   "perp": "COMPUSDT",
+   "coinbase": {
+    "months": 48,
+    "missingMonths": [],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 381893,
+    "slots": 420768,
+    "slotShare": 0.9076,
+    "offGrid": 0,
+    "bytes": 4825577
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [],
+    "rows": 420583,
+    "slotShare": 0.9996,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35046,
+    "hourPairShare": 0.9995,
+    "bytes": 3192622
+   }
+  },
+  {
+   "base": "KNC",
+   "perp": "KNCUSDT",
+   "coinbase": {
+    "months": 48,
+    "missingMonths": [],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 239046,
+    "slots": 420768,
+    "slotShare": 0.5681,
+    "offGrid": 0,
+    "bytes": 3041169
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [],
+    "rows": 420533,
+    "slotShare": 0.9994,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35036,
+    "hourPairShare": 0.9992,
+    "bytes": 2673107
+   }
+  },
+  {
+   "base": "ZRX",
+   "perp": "ZRXUSDT",
+   "coinbase": {
+    "months": 48,
+    "missingMonths": [],
+    "firstMonth": "2022-01",
+    "lastMonth": "2025-12",
+    "candles": 353718,
+    "slots": 420768,
+    "slotShare": 0.8406,
+    "offGrid": 0,
+    "bytes": 6774830
+   },
+   "metrics": {
+    "months": 48,
+    "missingMonths": [],
+    "archiveMissing": [],
+    "rows": 420635,
+    "slotShare": 0.9997,
+    "offGrid": 0,
+    "hours": 35063,
+    "hoursWithTandTminus1h": 35052,
+    "hourPairShare": 0.9997,
+    "bytes": 3037040
+   }
+  }
+ ]
+}
