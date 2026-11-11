@@ -1,10 +1,10 @@
 {
  "study": "P-OF2",
  "note": "From timestamps only (the first field of each row). slotShare: five-minute slots of 2022-01-01 to 2025-12-31 with a row. hourPairShare: whole hours T (01:00 2022-01-01 to 23:00 2025-12-31) with a metrics row at both T and T-1h. offGrid: rows not on a five-minute boundary.",
- "runId": "43089887829",
- "at": "2026-11-11T20:32:55.065Z",
+ "runId": "43099687978",
+ "at": "2026-11-11T21:03:50.704Z",
  "stoppedAt": null,
- "totalBytes": 129980796,
+ "totalBytes": 130121726,
  "coins": [
   {
    "base": "ADA",
@@ -118,17 +118,15 @@
    "base": "LTC",
    "perp": "LTCUSDT",
    "coinbase": {
-    "months": 47,
-    "missingMonths": [
-     "2023-10"
-    ],
+    "months": 48,
+    "missingMonths": [],
     "firstMonth": "2022-01",
     "lastMonth": "2025-12",
-    "candles": 411661,
+    "candles": 420587,
     "slots": 420768,
-    "slotShare": 0.9784,
+    "slotShare": 0.9996,
     "offGrid": 0,
-    "bytes": 6957552
+    "bytes": 7098482
    },
    "metrics": {
     "months": 48,
