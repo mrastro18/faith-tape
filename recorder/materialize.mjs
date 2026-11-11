@@ -36,18 +36,27 @@ export function manifestLines(root, { from, to } = {}) {
   return out;
 }
 
+// REST only (gh api): `gh release download` and `gh release list` go through GraphQL, which some research
+// sessions cannot reach.
 export function ghReader(repo) {
-  const gh = (args) => execFileSync("gh", args, { encoding: "utf8", maxBuffer: 1 << 28, stdio: ["ignore", "pipe", "pipe"], env: { ...process.env, GH_REPO: repo } });
+  const api = (path, args = []) => execFileSync("gh", ["api", ...args, path], { maxBuffer: 1 << 30, stdio: ["ignore", "pipe", "pipe"] });
+  const release = (tag) => JSON.parse(api(`repos/${repo}/releases/tags/${tag}`).toString("utf8"));
   return {
     download(tag, name, dir) {
-      gh(["release", "download", tag, "--pattern", name, "--dir", dir, "--clobber"]);
-      return join(dir, name);
+      const a = release(tag).assets.find((x) => x.name === name);
+      if (!a) throw new Error(`${tag}/${name}: no such asset`);
+      const p = join(dir, name);
+      writeFileSync(p, api(`repos/${repo}/releases/assets/${a.id}`, ["-H", "Accept: application/octet-stream"]));
+      return p;
     },
     releases() {
-      return gh(["release", "list", "--limit", "2000", "--json", "tagName", "--jq", ".[].tagName"]).split("\n").filter((t) => t.startsWith("tape-"));
+      return api(`repos/${repo}/releases?per_page=100`, ["--paginate", "--jq", ".[].tag_name"])
+        .toString("utf8")
+        .split("\n")
+        .filter((t) => t.startsWith("tape-"));
     },
     assets(tag) {
-      return JSON.parse(gh(["release", "view", tag, "--json", "assets"])).assets.map((a) => ({ name: a.name, size: a.size }));
+      return release(tag).assets.map((a) => ({ name: a.name, size: a.size }));
     },
   };
 }
