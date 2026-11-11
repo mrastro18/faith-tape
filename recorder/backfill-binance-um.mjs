@@ -79,13 +79,20 @@ export function unzipSingle(buf) {
   return { name, data };
 }
 
+// Some archive days quote their fields ("" for an empty ratio); none has a comma inside a field.
+const unquote = (f) => {
+  const v = f.trim();
+  return v.length >= 2 && v.startsWith('"') && v.endsWith('"') ? v.slice(1, -1) : v;
+};
+
 /** Split CSV text into rows of fields and the header (null when the first line starts with a number). */
 export function csv(text) {
   const lines = text.split(/\r?\n/).filter((l) => l.trim() !== "");
   if (!lines.length) return { header: null, rows: [] };
-  const first = lines[0].split(",");
+  const split = (l) => l.split(",").map(unquote);
+  const first = split(lines[0]);
   const header = Number.isFinite(Number(first[0])) && first[0].trim() !== "" ? null : first.map((h) => h.trim());
-  return { header, rows: (header ? lines.slice(1) : lines).map((l) => l.split(",")) };
+  return { header, rows: (header ? lines.slice(1) : lines).map(split) };
 }
 
 const num = (s) => {
@@ -278,9 +285,10 @@ export async function backfill({
           if (existsSync(join(dir, `${ym}.ndjson.gz`))) { out.skipped += 1; continue; }
           const days = daysOf(ym);
           let failed = null;
-          const texts = await pool(days, concurrency, async (d) => {
+          const parsed = await pool(days, concurrency, async (d) => {
             try {
-              return await a.fetchCsv(`${BASE}/daily/metrics/${sym}/${sym}-metrics-${d}.zip`);
+              const text = await a.fetchCsv(`${BASE}/daily/metrics/${sym}/${sym}-metrics-${d}.zip`);
+              return text === null ? null : parseMetrics(text, metricsCols);
             } catch (e) {
               failed ??= `${d}: ${e.message}`;
               return undefined;
@@ -291,10 +299,8 @@ export async function backfill({
             log(`${sym} ${kind} ${ym} failed: ${failed}`);
             continue;
           }
-          const gone = days.filter((d, i) => texts[i] === null);
-          const rows = sortDedupe(
-            texts.filter((t) => t).flatMap((t) => parseMetrics(t, metricsCols)).filter((r) => r[0] >= monthStart(ym) && r[0] < monthStart(nextMonth(ym))),
-          );
+          const gone = days.filter((d, i) => parsed[i] === null);
+          const rows = sortDedupe(parsed.filter((p) => p).flat().filter((r) => r[0] >= monthStart(ym) && r[0] < monthStart(nextMonth(ym))));
           for (const d of days) missing.delete(d);
           missing.delete(ym);
           if (gone.length === days.length || !rows.length) { missing.add(ym); continue; }

@@ -119,6 +119,9 @@ test("parsers handle header and headerless files, microsecond times and empty ra
   assert.deepEqual(parseFunding("calc_time,funding_interval_hours,last_funding_rate\n1704067200000,8,-0.00012\n"), [[1704067200000, -0.00012]]);
   const m = parseMetrics(MHEAD + "\n2021-12-01 00:05:00,BTCUSDT,1.5,2.5,,1.1,1.2,\n");
   assert.deepEqual(m, [[Date.UTC(2021, 11, 1, 0, 5), 1.5, 2.5, null, 1.1, 1.2, null]]);
+  const q = parseMetrics(MHEAD + '\n2021-12-01 00:05:00,BTCUSDT,1.5,2.5,"",1.1,"1.2",""\n');
+  assert.deepEqual(q, [[Date.UTC(2021, 11, 1, 0, 5), 1.5, 2.5, null, 1.1, 1.2, null]]);
+  assert.throws(() => parseMetrics(MHEAD + "\n2021-12-01 00:05:00,BTCUSDT,abc,2.5,1,1,1,1\n"), /not a number/);
   assert.deepEqual(parseMetrics(MHEAD + "\n2021-12-01 00:05:00,BTCUSDT,1.5,2.5,1,1,1,1\n", "oi")[0], [Date.UTC(2021, 11, 1, 0, 5), 1.5, 2.5]);
 });
 
@@ -187,6 +190,12 @@ test("metrics: daily files joined per month, missing days and months listed, rat
   assert.equal(feb.length, 27 * 288);
   assert.deepEqual(feb[0], [Date.UTC(2021, 1, 1), 75832.133, 3267094839.24937, 1.789654, 1.5, 2.1, 0.95]);
   assert.ok(feb.every((r, i) => i === 0 || r[0] > feb[i - 1][0]));
+
+  const root3 = mkdtempSync(join(tmpdir(), "bum-"));
+  const w3 = fake({ csvFor: (p) => (p.includes("2021-02-05") ? MHEAD + "\n2021-02-05 00:00:00,BTCUSDT,x,1,1,1,1,1\n" : csvFor(p)) });
+  const bad = await backfill({ root: root3, syms: ["BTCUSDT"], kinds: ["metrics"], from: "2021-02", to: "2021-03", fetchImpl: w3.fetchImpl, ...opts });
+  assert.equal(bad.written, 0);
+  assert.match(bad.failed[0], /2021-02-05: not a number/);
 
   const root2 = mkdtempSync(join(tmpdir(), "bum-"));
   const w2 = fake({ csvFor });
