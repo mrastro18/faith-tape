@@ -39,6 +39,12 @@ jobs:
         run: node --test test/*.test.mjs
       - name: Record
         run: node recorder/record.mjs .
+      # FAITH P-OF3 q2 forward check: whole days of Coinbase five-minute candles from 2026-11-01 (after the
+      # holdout), skipped when already on disk. A failure here must not stop the recorder's own commit.
+      - name: Forward candles
+        continue-on-error: true
+        timeout-minutes: 3
+        run: node recorder/forward.mjs .
       - name: Commit data
         run: |
           git config user.name "faith-tape recorder"
