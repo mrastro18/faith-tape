@@ -20,7 +20,11 @@ import { sha256 } from "./lib.mjs";
 export const KINDS = {
   quotes: ["data/binanceus/quotes", "data/coinbase/quotes", "data/kraken/quotes"],
   bars: ["data/coinbase/bars1s", "data/kraken/bars1s"],
+  bridge: ["data/binanceus/quotes-bridge", "data/coinbase/quotes-bridge", "data/kraken/quotes-bridge"],
 };
+// The bridge workflow commits at the same time as the record chain, so its manifest lines go to their own files
+// and the two never edit the same file (a rebase would otherwise conflict).
+export const MANIFESTS = { quotes: "manifests", bars: "manifests", bridge: "manifests/bridge" };
 export const tagOf = (day) => `tape-${day}`;
 // data/<venue>/<stream>/<YYYY-MM-DD>/<file>: the day is the fourth segment
 export const dayOfPath = (p) => {
@@ -120,7 +124,7 @@ export function offload(root, { kind, run, client, now = Date.now, log = console
         files: list.map((it) => ({ path: it.path, mode: it.mode, bytes: it.bytes.length, sha256: sha256(it.bytes) })),
       };
       // the manifest line first: if removing a file failed, git would commit it and the line, never neither
-      const mf = join(root, "manifests", `${day}.ndjson`);
+      const mf = join(root, MANIFESTS[kind], `${day}.ndjson`);
       mkdirSync(dirname(mf), { recursive: true });
       appendFileSync(mf, JSON.stringify(line) + "\n");
       for (const it of list) {

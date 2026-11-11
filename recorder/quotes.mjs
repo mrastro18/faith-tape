@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 // Best bid and ask, polled while the chain waits for its next run: Binance.US for the recorded pairs, and
 // Coinbase Exchange and Kraken spot for the products listed in config.json under quotes.venues.
-// Usage: node recorder/quotes.mjs [rootDir] --until <ISO time or epoch ms>
+// Usage: node recorder/quotes.mjs [rootDir] --until <ISO time or epoch ms> [--stream quotes|quotes-bridge]
+// --stream quotes-bridge writes the same files under data/<venue>/quotes-bridge/: the bridge workflow polls across
+// each half-hourly handover, when the chain's own sessions stop for about two minutes (CHANGES 2026-11-12b).
 // One call to /api/v3/ticker/bookTicker returns every pair, so a poll costs the same for 1 pair or 260.
 // One file per session, data/binanceus/quotes/<day>/<HHMMSS>Z-<run>.ndjson.gz: written as the same name without
 // .gz while the session runs, compressed when it ends. Rows:
@@ -199,7 +201,9 @@ function krakenPoll(f, pairs) {
   };
 }
 
-export async function pollQuotes({ root, config, untilMs, fetchImpl, now = Date.now, wait = sleep, log = console.log }) {
+export const STREAMS = ["quotes", "quotes-bridge"];
+export async function pollQuotes({ root, config, untilMs, stream = "quotes", fetchImpl, now = Date.now, wait = sleep, log = console.log }) {
+  if (!STREAMS.includes(stream)) throw new Error(`unknown stream ${stream}`);
   const qc = config.quotes ?? {};
   const everyMs = qc.everyMs ?? 5000;
   const snapshotEveryMs = qc.snapshotEveryMs ?? 600_000;
@@ -229,7 +233,7 @@ export async function pollQuotes({ root, config, untilMs, fetchImpl, now = Date.
       return { quotes: list.filter((x) => symbols.has(x.symbol)).map((x) => [x.symbol, ...quote(x)]) };
     };
     const r = runTape({
-      ...common, name: "bookTicker", dir: join(root, "data", "binanceus", "quotes"), everyMs, snapshotEveryMs, maxBytesPerSession, poll, fatal: httpFatal,
+      ...common, name: "bookTicker", dir: join(root, "data", "binanceus", stream), everyMs, snapshotEveryMs, maxBytesPerSession, poll, fatal: httpFatal,
     }).then(({ misses, ...rest }) => rest);
     tasks.push(guard(out, r));
   }
@@ -239,7 +243,7 @@ export async function pollQuotes({ root, config, untilMs, fetchImpl, now = Date.
     const r = runTape({
       ...common,
       name,
-      dir: join(root, "data", name, "quotes"),
+      dir: join(root, "data", name, stream),
       everyMs: vc.everyMs ?? everyMs,
       snapshotEveryMs: vc.snapshotEveryMs ?? snapshotEveryMs,
       maxBytesPerSession: vc.maxBytesPerSession ?? 250_000,
@@ -287,9 +291,10 @@ function parseUntil(s) {
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const args = process.argv.slice(2);
-  const root = resolve(args.find((a, i) => !a.startsWith("--") && args[i - 1] !== "--until") ?? ".");
+  const root = resolve(args.find((a, i) => !a.startsWith("--") && args[i - 1] !== "--until" && args[i - 1] !== "--stream") ?? ".");
   const untilMs = parseUntil(args[args.indexOf("--until") + 1]);
+  const stream = args.includes("--stream") ? args[args.indexOf("--stream") + 1] : "quotes";
   const config = JSON.parse(readFileSync(join(root, "recorder", "config.json"), "utf8"));
-  const out = await pollQuotes({ root, config, untilMs });
+  const out = await pollQuotes({ root, config, untilMs, stream });
   console.log(JSON.stringify(out));
 }

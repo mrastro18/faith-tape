@@ -149,3 +149,18 @@ test("does nothing without a universe", async () => {
   const out = await pollQuotes({ root, config, untilMs: Date.now() + 1e6, fetchImpl: async () => assert.fail("no call") });
   assert.equal(out.stopped, "no symbols");
 });
+
+test("the bridge stream writes the same rows under quotes-bridge and leaves quotes alone", async () => {
+  const root = setup();
+  const T0 = Date.parse("2026-11-10T12:00:00Z");
+  const w = world(T0, () => [["THINUSD", 1, 1, 2, 1]]);
+  await pollQuotes({ root, config, untilMs: T0 + 20_000, stream: "quotes-bridge", fetchImpl: w.fetchImpl, now: w.now, wait: w.wait, log: () => {} });
+  assert.equal(existsSync(join(root, "data", "binanceus", "quotes")), false);
+  const dir = join(root, "data", "binanceus", "quotes-bridge", "2026-11-10");
+  const names = readdirSync(dir);
+  assert.equal(names.length, 1);
+  const rows = gunzipSync(readFileSync(join(dir, names[0]))).toString("utf8").trim().split("\n").map((l) => JSON.parse(l));
+  assert.equal(rows[0][0], "s");
+  assert.equal(rows.at(-1)[0], "e");
+  await assert.rejects(pollQuotes({ root, config, untilMs: T0, stream: "../x", fetchImpl: w.fetchImpl, now: w.now, wait: w.wait, log: () => {} }), /unknown stream/);
+});

@@ -178,3 +178,19 @@ test("check lists assets no manifest names and lines whose asset is gone", () =>
   assert.deepEqual(r.missing, ["tape-2026-11-12/quotes-2026-11-12-4.tar.gz"]);
   rmSync(root, { recursive: true, force: true });
 });
+
+test("bridge quotes get their own manifest files, and materialize reads both", () => {
+  const root = repo();
+  const client = store();
+  put(root, "data/binanceus/quotes/2026-11-12/a.ndjson.gz", "main");
+  put(root, "data/binanceus/quotes-bridge/2026-11-12/b.ndjson.gz", "bridge");
+  offload(root, { kind: "quotes", run: "1", client, log: quiet });
+  offload(root, { kind: "bridge", run: "2", client, log: quiet });
+  assert.ok(existsSync(join(root, "manifests/2026-11-12.ndjson")));
+  assert.ok(existsSync(join(root, "manifests/bridge/2026-11-12.ndjson")));
+  assert.deepEqual(manifestLines(root).map((m) => m.kind), ["quotes", "bridge"]);
+  materialize(root, { client, log: quiet });
+  assert.equal(readFileSync(join(root, "data/binanceus/quotes-bridge/2026-11-12/b.ndjson.gz"), "utf8"), "bridge");
+  assert.equal(readFileSync(join(root, "data/binanceus/quotes/2026-11-12/a.ndjson.gz"), "utf8"), "main");
+  rmSync(root, { recursive: true, force: true });
+});

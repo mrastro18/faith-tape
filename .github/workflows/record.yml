@@ -96,10 +96,21 @@ jobs:
         continue-on-error: true
         with:
           node-version: "22"
+      # Four minutes before the slot, start the bridge workflow, which polls across the handover until five
+      # minutes after it (bridge.yml). Its start failing costs only the bridge, never this session.
       - name: Poll quotes
         continue-on-error: true
         timeout-minutes: 32
-        run: node recorder/quotes.mjs . --until "$(( (${{ steps.slot.outputs.at }} - 60) * 1000 ))"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          at=${{ steps.slot.outputs.at }}
+          d=$(( at - 240 - $(date -u +%s) ))
+          if [ "$d" -gt 0 ]; then
+            ( sleep "$d"; gh workflow run bridge.yml --ref main -f until="$(( (at + 300) * 1000 ))" || echo "bridge start failed" ) &
+          fi
+          node recorder/quotes.mjs . --until "$(( (at - 60) * 1000 ))"
       # The session's quote files leave git the same way; on failure they are committed as before.
       - name: Offload quotes
         continue-on-error: true

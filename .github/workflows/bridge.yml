@@ -1,0 +1,68 @@
+name: bridge
+
+# Quote bridge across the record chain's half-hourly handover. The chain's own quote sessions stop a minute before
+# each slot and the next run's start about a minute after it, so every half hour lost about 110 s (median on
+# 2026-11-11) of best bid and ask: too long for FAITH's paper rules, which close a position over a gap of more than
+# two polls. The chain's wait job starts this workflow about four minutes before each slot; it polls the same
+# venues into data/<venue>/quotes-bridge/ until about five minutes after it, overlapping both sessions. It runs
+# outside the chain's concurrency group, so it can poll while the chain hands over. Its files are kept like the
+# chain's quotes: release assets, with manifest lines in manifests/bridge/ (CHANGES 2026-11-12b). Public
+# endpoints only, no secrets.
+on:
+  workflow_dispatch:
+    inputs:
+      until:
+        description: "stop time, epoch ms (at most 15 minutes ahead)"
+        required: true
+
+concurrency:
+  group: bridge
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  bridge:
+    runs-on: ubuntu-26.04
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "22"
+      - name: Poll quotes across the handover
+        continue-on-error: true
+        timeout-minutes: 13
+        env:
+          UNTIL: ${{ inputs.until }}
+        run: |
+          case "$UNTIL" in ''|*[!0-9]*) echo "until must be epoch ms"; exit 1;; esac
+          now=$(( $(date -u +%s) * 1000 ))
+          if [ "$UNTIL" -gt $(( now + 900000 )) ] || [ "$UNTIL" -le "$now" ]; then echo "until out of range"; exit 1; fi
+          node recorder/quotes.mjs . --stream quotes-bridge --until "$UNTIL"
+      - name: Offload bridge quotes
+        continue-on-error: true
+        timeout-minutes: 4
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node recorder/offload.mjs . --kind bridge --run "${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+      - name: Commit bridge
+        run: |
+          git config user.name "faith-tape recorder"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for d in data/binanceus/quotes-bridge data/coinbase/quotes-bridge data/kraken/quotes-bridge manifests/bridge; do
+            if [ -d "$d" ]; then git add "$d"; fi
+          done
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -q -m "bridge: $(date -u +%Y-%m-%dT%H:%MZ) run ${GITHUB_RUN_ID}"
+          for i in 1 2 3 4 5; do
+            if git push -q origin HEAD:main; then exit 0; fi
+            git fetch -q --depth=20 origin main
+            git rebase -q origin/main || { git rebase --abort; exit 1; }
+            sleep $((i * 5))
+          done
+          exit 1

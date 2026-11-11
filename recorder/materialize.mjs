@@ -3,7 +3,8 @@
 //
 //   node recorder/materialize.mjs <root> [--from YYYY-MM-DD] [--to YYYY-MM-DD] [--check]
 //
-// Reads manifests/<day>.ndjson in day order and, within a day, line order (the order the runs wrote them). For
+// Reads manifests/<day>.ndjson in day order and, within a day, line order (the order the runs wrote them), then
+// manifests/bridge/<day>.ndjson. For
 // each bundle not yet applied it downloads the asset, checks its size and sha256, unpacks it, checks each file's
 // sha256, then applies the entries: a "file" entry is written and must be absent or byte-identical; an "append"
 // entry is added to the end of its file, which rebuilds a one-second bar day file chunk by chunk. Applied bundles
@@ -21,18 +22,26 @@ import { sha256 } from "./lib.mjs";
 
 const STATE = ".materialized.json";
 
+// manifests/<day>.ndjson (record chain: quotes and bars, in run order) and manifests/bridge/<day>.ndjson (bridge
+// quotes, whole files only, so their order against the chain's lines does not matter).
+const MANIFEST_DIRS = ["manifests", "manifests/bridge"];
 export function manifestLines(root, { from, to } = {}) {
-  const dir = join(root, "manifests");
-  if (!existsSync(dir)) return [];
-  const days = readdirSync(dir)
-    .filter((f) => /^\d{4}-\d{2}-\d{2}\.ndjson$/.test(f))
-    .map((f) => f.slice(0, 10))
-    .filter((d) => (!from || d >= from) && (!to || d <= to))
-    .sort();
   const out = [];
-  for (const d of days)
-    for (const l of readFileSync(join(dir, `${d}.ndjson`), "utf8").split("\n"))
-      if (l.trim()) out.push({ day: d, ...JSON.parse(l) });
+  const byDay = new Map();
+  for (const sub of MANIFEST_DIRS) {
+    const dir = join(root, sub);
+    if (!existsSync(dir)) continue;
+    for (const f of readdirSync(dir)) {
+      if (!/^\d{4}-\d{2}-\d{2}\.ndjson$/.test(f)) continue;
+      const d = f.slice(0, 10);
+      if ((from && d < from) || (to && d > to)) continue;
+      if (!byDay.has(d)) byDay.set(d, []);
+      byDay.get(d).push(join(dir, f));
+    }
+  }
+  for (const d of [...byDay.keys()].sort())
+    for (const file of byDay.get(d))
+      for (const l of readFileSync(file, "utf8").split("\n")) if (l.trim()) out.push({ day: d, ...JSON.parse(l) });
   return out;
 }
 
