@@ -40,6 +40,17 @@ A data-only repository for FAITH (decision S5): a plain Node recorder that reads
 - **Run times are not exact.** GitHub may start a scheduled run late or skip one. Nothing here depends on the run time.
 - **Runner location.** GitHub-hosted runners are US data centres in practice, not by promise. A venue that refuses the runner shows its answer in `data/health/` and `data/probes/`.
 
+## Data kept in release assets
+
+From 2026-11-12, quote session files (`data/*/quotes/`) and one-second bars (`data/*/bars1s/`) are no longer committed. Each run packs what it wrote into one `tar.gz` per UTC day and uploads it to the release tagged `tape-<day>`; the repository keeps one line per bundle in `manifests/<day>.ndjson` (asset name, run, size, sha256, and every file with its path, mode and sha256). Bar day files committed before the switch stay in git, and later rows are bundled as appended chunks. To read these streams, first rebuild them in a checkout you do not commit from:
+
+```
+node recorder/materialize.mjs .                      # every day; --from/--to YYYY-MM-DD to limit
+node recorder/materialize.mjs . --check              # assets no manifest names, lines with no asset
+```
+
+Every bundle and file is checked against its sha256 before anything is written, and a file entry never overwrites different content. The result is byte for byte what the old commits would have held. Reason: these two streams grew the repository by about 27 MB a day, which would pass GitHub's recommended 1 GB in late November 2026.
+
 ## Running locally
 
 ```
