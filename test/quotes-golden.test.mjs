@@ -81,19 +81,21 @@ const RUNS = {
 };
 
 /** One fixed run; returns sha256 of every quotes file of its venue (name and gunzipped content, in name order). */
-export async function goldenRun(name, { stream = "quotes", extra = {} } = {}) {
+export async function goldenRun(name, { stream = "quotes", extra = {}, prepare = null } = {}) {
   const r = RUNS[name];
   const venue = r.venue ?? name;
   const root = mkdtempSync(join(tmpdir(), "quotes-golden-"));
   mkdirSync(join(root, "state"), { recursive: true });
   writeFileSync(join(root, "state", "state.json"), JSON.stringify(r.state));
+  if (prepare) prepare(root);
   const T0 = Date.parse("2026-11-12T23:57:31.250Z");
   const w = world(T0);
   const config = { spacingMs: {}, quotes: { everyMs: 5000, snapshotEveryMs: 60_000, ...r.quotes, ...extra } };
   const before = process.env.GITHUB_RUN_ID;
   process.env.GITHUB_RUN_ID = "4242";
+  let out;
   try {
-    await pollQuotes({ root, config, untilMs: T0 + 6 * 60_000, stream, fetchImpl: w.fetchImpl, now: w.now, wait: w.wait, log: () => {} });
+    out = await pollQuotes({ root, config, untilMs: T0 + 6 * 60_000, stream, fetchImpl: w.fetchImpl, now: w.now, wait: w.wait, log: () => {} });
   } finally {
     if (before === undefined) delete process.env.GITHUB_RUN_ID;
     else process.env.GITHUB_RUN_ID = before;
@@ -107,7 +109,7 @@ export async function goldenRun(name, { stream = "quotes", extra = {} } = {}) {
       h.update(`${d}/${f}\n`);
       h.update(gunzipSync(readFileSync(join(base, d, f))));
     }
-  return { root, files, sha256: h.digest("hex") };
+  return { root, files, out, sha256: h.digest("hex") };
 }
 
 // Written by recorder/quotes.mjs at dedac40 (the commit before the size stream), same runs.
@@ -146,5 +148,32 @@ test("golden: turning the size stream off changes no quotes byte, and on it writ
     assert.deepEqual(readdirSync(join(on.root, "data", "binanceus")).sort(), ["quotes", "quotesz"]);
   } finally {
     rmSync(on.root, { recursive: true, force: true });
+  }
+});
+
+test("golden: a size stream that cannot be written stops alone; the quotes files and the run are as before", async () => {
+  const cases = {
+    // the size directory is a plain file: its first flush fails
+    "no size directory": (root) => {
+      mkdirSync(join(root, "data", "binanceus"), { recursive: true });
+      writeFileSync(join(root, "data", "binanceus", "quotesz"), "not a directory");
+    },
+    // the second day's size directory is a plain file: the size stream fails after midnight, mid-run
+    "no second day": (root) => {
+      mkdirSync(join(root, "data", "binanceus", "quotesz"), { recursive: true });
+      writeFileSync(join(root, "data", "binanceus", "quotesz", "2026-11-13"), "not a directory");
+    },
+  };
+  for (const [label, prepare] of Object.entries(cases)) {
+    const g = await goldenRun("binanceus", { prepare });
+    try {
+      assert.equal(g.sha256, GOLDEN.binanceus, label);
+      assert.deepEqual(g.files, ["2026-11-12/235731Z-4242.ndjson.gz", "2026-11-13/000001Z-4242.ndjson.gz"], label);
+      assert.match(g.out.sizeStopped, /^error: /, label);
+      assert.equal(g.out.stopped, null, label);
+      assert.ok(g.out.polls >= 60, `${label}: polls ${g.out.polls}`);
+    } finally {
+      rmSync(g.root, { recursive: true, force: true });
+    }
   }
 });

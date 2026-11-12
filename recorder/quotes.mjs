@@ -108,8 +108,21 @@ function sessionWriter(dir, run) {
  */
 async function runTape({ dir, szDir = null, run, everyMs, snapshotEveryMs, maxBytesPerSession, maxSzBytesPerSession = maxBytesPerSession, maxFailures, untilMs, poll, fatal, now, wait, log, name }) {
   const qw = sessionWriter(dir, run);
-  const zw = szDir ? sessionWriter(szDir, run) : null;
+  let zw = szDir ? sessionWriter(szDir, run) : null;
   const push = (r) => qw.push(r);
+  // Every size-stream step goes through sz(): a failure there (a full disk, a path that cannot be made) is logged
+  // once and ends the size stream for the rest of the run, and never reaches the quotes file or the polling loop.
+  // The size stream always comes after the quotes file's own step, so the quotes file is written first regardless.
+  const sz = (fn) => {
+    if (!zw) return;
+    try {
+      fn(zw);
+    } catch (e) {
+      zw = null;
+      out.sizeStopped = `error: ${e.message}`;
+      log(`${name} size stream stopped for this run: ${e.message}`);
+    }
+  };
 
   const out = { polls: 0, failures: 0, misses: 0, rows: 0, sessions: 0, capped: false, stopped: null, ...(zw ? { sizeRows: 0, sizeCapped: false } : {}) };
   let last = new Map(); // symbol -> [bid, bidQty, ask, askQty]
@@ -126,11 +139,11 @@ async function runTape({ dir, szDir = null, run, everyMs, snapshotEveryMs, maxBy
     qw.open(t);
     capped = false;
     push(["s", t, run, everyMs]);
-    if (zw) {
-      zw.open(t);
-      zCapped = false;
-      zw.push(["s", t, run, everyMs]);
-    }
+    zCapped = false;
+    sz((w) => {
+      w.open(t);
+      w.push(["s", t, run, everyMs]);
+    });
     out.sessions += 1;
     last = new Map();
     lastSnap = -Infinity;
@@ -140,26 +153,28 @@ async function runTape({ dir, szDir = null, run, everyMs, snapshotEveryMs, maxBy
   const close = (t) => {
     push(["e", t, polls, failures, capped]);
     if (capped) out.capped = true;
-    if (zw) {
-      zw.push(["e", t, polls, failures, zCapped]);
+    sz((w) => {
+      w.push(["e", t, polls, failures, zCapped]);
       if (zCapped) out.sizeCapped = true;
-    }
+    });
   };
   const flushAll = () => {
     out.rows += qw.pending;
     qw.flush();
-    if (zw) {
-      out.sizeRows += zw.pending;
-      zw.flush();
-    }
+    sz((w) => {
+      const n = w.pending;
+      w.flush();
+      out.sizeRows += n;
+    });
   };
   const sealAll = () => {
     out.rows += qw.pending;
     qw.seal();
-    if (zw) {
-      out.sizeRows += zw.pending;
-      zw.seal();
-    }
+    sz((w) => {
+      const n = w.pending;
+      w.seal();
+      out.sizeRows += n;
+    });
   };
 
   let nextAt = now();
@@ -178,7 +193,7 @@ async function runTape({ dir, szDir = null, run, everyMs, snapshotEveryMs, maxBy
         failures += 1;
         const x = ["x", now(), e.xStatus ?? e.status ?? null];
         push(x);
-        if (zw) zw.push(x);
+        sz((w) => w.push(x));
       }
       inRow += 1;
       log(`${name} failed: ${e.message}`);
@@ -203,22 +218,24 @@ async function runTape({ dir, szDir = null, run, everyMs, snapshotEveryMs, maxBy
       capped = true;
       push(["c", t]);
     }
-    if (zw && !zCapped && zw.bytes > maxSzBytesPerSession) {
-      zCapped = true;
-      zw.push(["c", t]);
-    }
+    sz((w) => {
+      if (!zCapped && w.bytes > maxSzBytesPerSession) {
+        zCapped = true;
+        w.push(["c", t]);
+      }
+    });
     for (const [symbol, ...q] of got.quotes) {
       const p = last.get(symbol);
       last.set(symbol, q);
       if (full) push(["f", t, symbol, ...q]);
       else if (!capped && (!p || p[0] !== q[0] || p[2] !== q[2])) push(["q", t, symbol, ...q]);
       // size stream: both prices as at the last poll, a size not; never a pair's first poll or a snapshot poll
-      if (zw && !full && !zCapped && p && p[0] === q[0] && p[2] === q[2] && (p[1] !== q[1] || p[3] !== q[3])) zw.push(["z", t, symbol, ...q]);
+      if (!full && !zCapped && p && p[0] === q[0] && p[2] === q[2] && (p[1] !== q[1] || p[3] !== q[3])) sz((w) => w.push(["z", t, symbol, ...q]));
     }
     for (const [symbol, status] of got.misses ?? []) {
       out.misses += 1;
       push(["x", t, status, symbol]);
-      if (zw) zw.push(["x", t, status, symbol]);
+      sz((w) => w.push(["x", t, status, symbol]));
     }
     if (now() - lastFlush >= 60_000) {
       flushAll();

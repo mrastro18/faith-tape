@@ -599,3 +599,30 @@ test("size streams: a failed upload leaves the size files for git, and the quote
   assert.deepEqual(manifestLines(root).map((m) => m.kind), ["quotes"]);
   rmSync(root, { recursive: true, force: true });
 });
+
+test("materialize --kinds rebuilds only the named kinds and downloads nothing else", () => {
+  const root = repo();
+  const client = store();
+  const files = {
+    quotes: "data/binanceus/quotes/2026-11-12/000003Z-1.ndjson.gz",
+    quotesz: "data/binanceus/quotesz/2026-11-12/000003Z-1.ndjson.gz",
+    bridge: "data/binanceus/quotes-bridge/2026-11-12/002603Z-2.ndjson.gz",
+    bridgesz: "data/binanceus/quotesz-bridge/2026-11-12/002603Z-2.ndjson.gz",
+  };
+  for (const [kind, p] of Object.entries(files)) {
+    put(root, p, kind);
+    offload(root, { kind, run: "1", client, log: quiet });
+  }
+  commitAll(root, "offloaded");
+  const asked = [];
+  const spy = { ...client, download: (tag, name, dir) => (asked.push(name), client.download(tag, name, dir)) };
+  assert.equal(materialize(root, { client: spy, kinds: "quotes,bridge", log: quiet }).applied, 2);
+  assert.deepEqual(asked.sort(), ["bridge-2026-11-12-1.tar.gz", "quotes-2026-11-12-1.tar.gz"]);
+  assert.ok(existsSync(join(root, files.quotes)) && existsSync(join(root, files.bridge)));
+  assert.ok(!existsSync(join(root, files.quotesz)) && !existsSync(join(root, files.bridgesz)));
+  // a later run without the filter fetches only what is left
+  assert.equal(materialize(root, { client: spy, log: quiet }).applied, 2);
+  assert.equal(readFileSync(join(root, files.bridgesz), "utf8"), "bridgesz");
+  assert.throws(() => materialize(root, { client, kinds: "quotes,nope", log: quiet }), /unknown kind nope/);
+  rmSync(root, { recursive: true, force: true });
+});
