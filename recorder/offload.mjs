@@ -164,17 +164,6 @@ const writeAtomic = (p, bytes) => {
   renameSync(p + ".tmp", p);
 };
 
-/**
- * Before a bars day gets offsets: deal with bar assets in its release that no manifest line names (a run whose
- * commit was lost, or one killed between removing its parks and writing its line). Their chunk would otherwise be
- * overtaken by this run's chunk at the same offset and drop out of the rebuilt file. Decided chunk by chunk: each
- * orphan chunk must start where its file now ends. If this run's parked rows for that file (the part carried over
- * from earlier runs, never this run's fresh rows) overlap it, the overlap is cut from this run's bytes and its park
- * rewritten; then the orphan is adopted (its line written) and this run's rows go after it. A chunk at another
- * offset, parked rows that diverge from it, an orphan that cannot be read, or a listing error other than "no such
- * release" holds the day: its chunks stay parked (in git) and the hold is recorded in state/offload-held.json.
- * Returns {adopted, blocked}; `list` items are trimmed in place and emptied items removed.
- */
 // a chunk's rows, each with its newline
 const rows = (buf) => {
   const out = [];
@@ -188,6 +177,17 @@ const rows = (buf) => {
   return out;
 };
 
+/**
+ * Before a bars day gets offsets: deal with bar assets in its release that no manifest line names (a run whose
+ * commit was lost, or one killed between removing its parks and writing its line). Their chunk would otherwise be
+ * overtaken by this run's chunk at the same offset and drop out of the rebuilt file. Decided chunk by chunk: each
+ * orphan chunk must start where its file now ends. If this run's parked rows for that file (the part carried over
+ * from earlier runs, never this run's fresh rows) overlap it, the overlap is cut from this run's bytes and its park
+ * rewritten; then the orphan is adopted (its line written) and this run's rows go after it. A chunk at another
+ * offset, parked rows that diverge from it, an orphan that cannot be read, or a listing error other than "no such
+ * release" holds the day: its chunks stay parked (in git) and the hold is recorded in state/offload-held.json.
+ * Returns {adopted, blocked}; `list` items are trimmed in place and emptied items removed.
+ */
 export function reconcile(root, { day, tag, list, client, log = () => {} }) {
   let assets;
   try {
