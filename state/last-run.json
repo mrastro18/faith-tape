@@ -1,15 +1,10 @@
 {
- "at": "2026-11-11T23:37:38.770Z",
- "run": "43121188912",
+ "at": "2026-11-12T00:07:35.927Z",
+ "run": "43124893427",
  "tasks": {
-  "daily": {
-   "ok": true,
-   "ms": 1,
-   "skipped": true
-  },
   "kalshi": {
    "ok": true,
-   "ms": 262,
+   "ms": 618,
    "markets": 127,
    "crypto": 20,
    "pages": 1,
@@ -20,68 +15,42 @@
     "Energy": 4,
     "Indices": 3
    },
-   "funding": "skipped"
+   "funding": 909088
+  },
+  "daily": {
+   "ok": true,
+   "ms": 3911,
+   "items": 14
   },
   "kraken": {
    "ok": true,
-   "ms": 28722,
+   "ms": 27655,
    "bases": 15,
-   "bars": 4470
+   "bars": 3817
   },
   "coinbase": {
    "ok": true,
-   "ms": 32930,
+   "ms": 35536,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 22882,
+   "bars": 13248,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 85065,
+   "ms": 119444,
    "pairs": 260,
    "tracked": 253,
-   "klineSymbols": 0,
+   "klineSymbols": 260,
    "depthRows": 253,
-   "tradesWritten": 2169,
+   "tradesWritten": 578,
    "symbolsBehind": 0
   }
  },
- "calls": 753,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/ETH-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/JTO-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/OGN-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/SKY-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/WLFI-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 85068
+ "calls": 985,
+ "http": [],
+ "ms": 119446
 }
