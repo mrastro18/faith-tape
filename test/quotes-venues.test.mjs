@@ -289,3 +289,25 @@ test("a venue that keeps failing stops alone: Binance.US and the other venue go 
   assert.equal(rowsOf(root, "coinbase", "2026-11-11").at(-1)[0], "e");
   assert.deepEqual(filesOf(root, "kraken", "2026-11-11"), []); // never had a good answer, so no session file
 });
+
+test("coinbase and kraken: a size change alone goes to the venue's quotesz file, a miss is mirrored there", async () => {
+  for (const venue of ["coinbase", "kraken"]) {
+    const root = setup();
+    const T0 = Date.parse("2026-11-11T12:00:00Z");
+    const [A, B] = sym[venue];
+    const w = world(T0, (t, n, s) => {
+      const k = Math.floor((t - T0) / 5000); // the poll's index
+      if (s === B && k === 2) return venue === "kraken" ? null : 500; // B alone misses one poll
+      return s === A ? [100, k >= 3 ? 4 : 1, 102, 1] : [10, 1, 11, 1];
+    });
+    await run(root, VENUES[venue], w, T0 + 30_000);
+    const dir = join(root, "data", venue, "quotesz", "2026-11-11");
+    assert.deepEqual(readdirSync(dir), filesOf(root, venue, "2026-11-11"));
+    const z = readdirSync(dir).flatMap((n) => gunzipSync(readFileSync(join(dir, n))).toString("utf8").trim().split("\n").map((l) => JSON.parse(l)));
+    assert.deepEqual(z.filter((r) => r[0] === "z").map((r) => r.slice(2)), [[A, 100, 4, 102, 1]], venue);
+    const qx = rowsOf(root, venue, "2026-11-11").filter((r) => r[0] === "x");
+    assert.equal(qx.length, 1, venue);
+    assert.deepEqual(z.filter((r) => r[0] === "x"), qx, venue);
+    assert.equal(rowsOf(root, venue, "2026-11-11").filter((r) => r[0] === "q").length, 0, venue);
+  }
+});

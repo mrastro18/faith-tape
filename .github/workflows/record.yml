@@ -73,7 +73,7 @@ jobs:
     needs: record
     if: always() # a failed record must not stop the chain
     runs-on: ubuntu-26.04
-    timeout-minutes: 40
+    timeout-minutes: 44 # poll 32 + offload 4 + commit 3 + sizes 1 + 2, then the wait
     steps:
       - name: Work out the next slot (minute 7 or 37)
         id: slot
@@ -130,6 +130,32 @@ jobs:
           done
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
           git commit -q -m "quotes: $(date -u +%Y-%m-%dT%H:%MZ) run ${GITHUB_RUN_ID}"
+          for i in 1 2 3; do
+            if git push -q origin HEAD:main; then exit 0; fi
+            git fetch -q --depth=20 origin main
+            git rebase -q origin/main || { git rebase --abort; exit 1; }
+            sleep $((i * 5))
+          done
+          exit 1
+      # The size stream (data/<venue>/quotesz/, CHANGES 2026-11-12e) only once the quotes are pushed, with short
+      # timeouts, so a slow or failing size step can neither hold back the quotes commit nor the next run by much.
+      - name: Offload quote sizes
+        continue-on-error: true
+        timeout-minutes: 1
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node recorder/offload.mjs . --kind quotesz --run "${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+      - name: Commit quote sizes
+        continue-on-error: true
+        timeout-minutes: 2
+        run: |
+          git config user.name "faith-tape recorder"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for d in data/binanceus/quotesz data/coinbase/quotesz data/kraken/quotesz manifests; do
+            if [ -d "$d" ]; then git add "$d"; fi
+          done
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -q -m "quotesz: $(date -u +%Y-%m-%dT%H:%MZ) run ${GITHUB_RUN_ID}"
           for i in 1 2 3; do
             if git push -q origin HEAD:main; then exit 0; fi
             git fetch -q --depth=20 origin main

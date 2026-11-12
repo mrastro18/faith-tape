@@ -9,7 +9,11 @@
 // uses (it counts minutes with a poll), so it is an early warning: a day under 720 estimated minutes will not
 // count for r3, and a day over it usually will.
 //
-//   node recorder/coverage.mjs [root] [--from YYYY-MM-DD] [--to YYYY-MM-DD] [--venue binanceus] [--json]
+//   node recorder/coverage.mjs [root] [--from YYYY-MM-DD] [--to YYYY-MM-DD] [--venue binanceus] [--stream S] [--json]
+//
+// --stream picks the stream directory, quotes by default; quotes-bridge, quotesz (size stream, CHANGES 2026-11-12e)
+// and quotesz-bridge are read the same way. A size file shares its quotes file's name, so its coverage is the same
+// unless one of the two was lost.
 import { existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -20,7 +24,9 @@ export const DAY_MIN = 720;
 const NAME = /^(\d{2})(\d{2})(\d{2})Z-[^/]+\.ndjson(\.gz)?$/;
 
 /** Session starts as minutes after midnight, per "venue|day", from manifests and from files in the checkout. */
-export function sessionStarts(root, { from, to } = {}) {
+export const STREAMS = ["quotes", "quotes-bridge", "quotesz", "quotesz-bridge"];
+export function sessionStarts(root, { from, to, stream = "quotes" } = {}) {
+  if (!STREAMS.includes(stream)) throw new Error(`unknown stream ${stream}`);
   const out = new Map();
   const add = (venue, day, name) => {
     const m = NAME.exec(name);
@@ -32,12 +38,12 @@ export function sessionStarts(root, { from, to } = {}) {
   for (const line of manifestLines(root, { from, to }))
     for (const f of line.files ?? []) {
       const p = f.path.split("/");
-      if (p[0] === "data" && p[2] === "quotes" && p.length === 5) add(p[1], p[3], p[4]);
+      if (p[0] === "data" && p[2] === stream && p.length === 5) add(p[1], p[3], p[4]);
     }
   const data = join(root, "data");
   if (existsSync(data))
     for (const venue of readdirSync(data)) {
-      const q = join(data, venue, "quotes");
+      const q = join(data, venue, stream);
       if (!existsSync(q)) continue;
       for (const day of readdirSync(q)) {
         if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) continue;
@@ -61,11 +67,11 @@ export function dayCoverage(starts, { endMin = 1440 } = {}) {
   return { sessions: s.length, minutes: Math.round(covered), longestGapMin: Math.round(longestGap) };
 }
 
-export function coverage(root, { from, to, venue, now = new Date() } = {}) {
+export function coverage(root, { from, to, venue, stream = "quotes", now = new Date() } = {}) {
   const today = now.toISOString().slice(0, 10);
   const nowMin = now.getUTCHours() * 60 + now.getUTCMinutes();
   const rows = [];
-  for (const [key, starts] of sessionStarts(root, { from, to })) {
+  for (const [key, starts] of sessionStarts(root, { from, to, stream })) {
     const [v, day] = key.split("|");
     if (venue && v !== venue) continue;
     const partial = day === today;
@@ -83,7 +89,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     return i >= 0 ? args[i + 1] : undefined;
   };
   const root = args[0] && !args[0].startsWith("--") ? args[0] : ".";
-  const rows = coverage(root, { from: opt("--from"), to: opt("--to"), venue: opt("--venue") });
+  const rows = coverage(root, { from: opt("--from"), to: opt("--to"), venue: opt("--venue"), stream: opt("--stream") ?? "quotes" });
   if (args.includes("--json")) console.log(JSON.stringify(rows, null, 2));
   else {
     for (const r of rows)

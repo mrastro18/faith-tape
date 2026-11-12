@@ -100,7 +100,8 @@
   "note": "Best bid and ask polled while the chain waits for its next run (recorder/quotes.mjs).",
   "everyMs": 5000,
   "snapshotEveryMs": 600000,
-  "maxBytesPerSession": 3000000,
+  "maxBytesPerSession": 12000000,
+  "sizes": true,
   "maxFailuresInRow": 6,
   "venues": {
    "note": "Best bid and ask on more venues, written beside Binance.US (data/<venue>/quotes/). Public endpoints, no key. Coinbase is one call per product (public limit 10 req/s per IP; 5 products every 5 s is 1 req/s, spaced 200 ms so a poll never bursts past 5 req/s); Kraken is one call for every pair (public guidance 1 req/s per IP; this is 0.2 req/s). Kraken pairs map the name asked for to the key the answer uses; the recorder prefers the key from its own daily AssetPairs read in state.json. A per-session budget in raw bytes, as for Binance.US.",

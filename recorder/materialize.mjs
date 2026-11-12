@@ -1,7 +1,7 @@
 // Materialize: rebuild the files that recorder/offload.mjs moved into release assets, so a checkout reads exactly
 // as it would have if every run had committed its data to git (CHANGES 2026-11-12, 2026-11-12c).
 //
-//   node recorder/materialize.mjs <root> [--from YYYY-MM-DD] [--to YYYY-MM-DD]
+//   node recorder/materialize.mjs <root> [--from YYYY-MM-DD] [--to YYYY-MM-DD] [--kinds quotes,bridge]
 //   node recorder/materialize.mjs <root> --check
 //   node recorder/materialize.mjs <root> --adopt
 //
@@ -12,7 +12,8 @@
 //   it must be in place (the HEAD content, for the first chunk); a chunk already in place is skipped. So a run
 //   applies each chunk once and only where it belongs, whatever .materialized.json says.
 // Applied bundles are listed in .materialized.json (not tracked), so a second run only looks at what is new.
-// --from/--to limit the days.
+// --from/--to limit the days. --kinds limits the bundle kinds (quotes, quotesz, bars, bridge, bridgesz; all by
+// default), so a reader of one stream downloads only its bundles: queue-prov-r3 needs only quotes and bridge.
 //
 // --check applies nothing. It lists release assets that no manifest names, manifest lines whose asset is missing
 // or at another size, and bar chunks parked in state/offload-retry (in git, not yet in any asset). Exit 1 if any
@@ -98,11 +99,23 @@ function fetchBundle(client, release, asset, work, expect) {
   return { dir, buf };
 }
 
-export function materialize(root, { client, from, to, log = console.log } = {}) {
+/** "quotes,bridge" or ["quotes", "bridge"] -> a Set of known kinds, or null for all. */
+export function parseKinds(kinds) {
+  if (kinds == null) return null;
+  const list = (Array.isArray(kinds) ? kinds : String(kinds).split(",")).map((k) => k.trim()).filter(Boolean);
+  for (const k of list) if (!MANIFESTS[k]) throw new Error(`unknown kind ${k} (known: ${Object.keys(MANIFESTS).join(", ")})`);
+  if (!list.length) throw new Error("--kinds names no kind");
+  return new Set(list);
+}
+
+export function materialize(root, { client, from, to, kinds = null, log = console.log } = {}) {
   const statePath = join(root, STATE);
   const state = existsSync(statePath) ? JSON.parse(readFileSync(statePath, "utf8")) : { applied: [] };
   const done = new Set(state.applied);
-  const { lines } = appendLayout(root, manifestLines(root, { from, to }));
+  const only = parseKinds(kinds);
+  // the layout is worked out over every line, so a bar chunk's offset never depends on the filter
+  const { lines: all } = appendLayout(root, manifestLines(root, { from, to }));
+  const lines = only ? all.filter((m) => only.has(m.kind)) : all;
   // the chunk before each chunk of the same file, for the prefix check
   const prevOf = new Map();
   const last = new Map();
@@ -235,5 +248,5 @@ if (isMain) {
     const r = check(root, { client });
     process.exitCode = r.missing.length ? 1 : 0;
   } else if (process.argv.includes("--adopt")) adopt(root, { client });
-  else materialize(root, { client, from: arg("--from"), to: arg("--to") });
+  else materialize(root, { client, from: arg("--from"), to: arg("--to"), kinds: arg("--kinds") });
 }

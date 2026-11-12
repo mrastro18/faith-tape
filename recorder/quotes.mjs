@@ -16,10 +16,22 @@
 //   ["e", ms, polls, failures, capped]             the session ends
 // ms is when the answer arrived. Between an "s" and its "e", outside "x" polls and before any "c", every change
 // of best price is here at poll resolution: a price that came and went between two polls is not, and a size
-// change alone is not a row. Outside sessions nothing is known; a killed session has no "e" row and stays
-// uncompressed. A session that crosses midnight ends and restarts at the boundary. The budget (raw bytes) is per
-// session, so a cap never costs the same hours of every day. Sessions on 2026-11-10 up to about 18:07 UTC (before
+// change alone is not a row in this file. Outside sessions nothing is known; a killed session has no "e" row and
+// stays uncompressed. A session that crosses midnight ends and restarts at the boundary. The budget (raw bytes) is
+// per session, so a cap never costs the same hours of every day; from 2026-11-12e it is 12 MB for Binance.US, above
+// what a session can write (a safety valve, not a budget). Sessions on 2026-11-10 up to about 18:07 UTC (before
 // this format) are one plain 2026-11-10.ndjson.
+//
+// Size stream (CHANGES 2026-11-12e): beside each session file, data/<venue>/quotesz/<day>/<same name> (quotesz-bridge
+// for the bridge) holds what the quotes file leaves out, with its own budget (by default the quotes file's):
+//   ["s", ms, run, everyMs]                        the same row as the quotes file's
+//   ["z", ms, symbol, bid, bidQty, ask, askQty]    neither price changed since the last poll, a size did; never on
+//                                                  a snapshot poll or a pair's first poll (the quotes file has those)
+//   ["x", ...]                                     the same failed polls and misses as the quotes file
+//   ["c", ms]                                      this file's budget ran out: no "z" rows from here
+//   ["e", ms, polls, failures, capped]             as the quotes file's, with this file's own capped flag
+// The quotes file's "f" and "q" rows plus these "z" rows are every change of best price or size at poll
+// resolution. The quotes file is written exactly as it would be without the size stream.
 //
 // Coinbase (data/coinbase/quotes/...) and Kraken (data/kraken/quotes/...) use the same files and rows, with their own
 // session, budget and failure count, each venue polled by its own loop so a venue that fails or hangs never stops
@@ -49,13 +61,9 @@ export function quoteSymbols(state) {
 
 const quote = (x) => [Number(x.bidPrice), Number(x.bidQty), Number(x.askPrice), Number(x.askQty)];
 
-/**
- * One venue's polling loop and session files, until `untilMs`. `poll()` returns {quotes: [[symbol, bid, bidQty,
- * ask, askQty]], misses: [[symbol, status]]} or throws; `fatal(e)` says whether a failure stops this venue.
- */
-async function runTape({ dir, run, everyMs, snapshotEveryMs, maxBytesPerSession, maxFailures, untilMs, poll, fatal, now, wait, log, name }) {
+/** One session file at a time under `dir`: rows buffered, appended on flush, gzipped and the plain file removed on seal. */
+function sessionWriter(dir, run) {
   const fileFor = (t) => join(dir, dayOf(t), `${new Date(t).toISOString().slice(11, 19).replace(/:/g, "")}Z-${run}.ndjson`);
-
   let rows = [];
   let bytes = 0; // bytes written in the current session
   let cur = null; // the current session's file, uncompressed while it runs
@@ -66,33 +74,76 @@ async function runTape({ dir, run, everyMs, snapshotEveryMs, maxBytesPerSession,
     }
     rows = [];
   };
-  const seal = () => {
-    flush();
-    if (!cur) return;
-    writeFileSync(`${cur}.gz`, gzipSync(readFileSync(cur), { level: 9 }));
-    unlinkSync(cur);
-    cur = null;
+  return {
+    open(t) {
+      cur = fileFor(t);
+      bytes = 0;
+    },
+    push(r) {
+      rows.push(r);
+      bytes += JSON.stringify(r).length + 1;
+    },
+    get bytes() {
+      return bytes;
+    },
+    get pending() {
+      return rows.length;
+    },
+    flush,
+    seal() {
+      flush();
+      if (!cur) return;
+      writeFileSync(`${cur}.gz`, gzipSync(readFileSync(cur), { level: 9 }));
+      unlinkSync(cur);
+      cur = null;
+    },
   };
-  const push = (r) => {
-    rows.push(r);
-    bytes += JSON.stringify(r).length + 1;
+}
+
+/**
+ * One venue's polling loop and session files, until `untilMs`. `poll()` returns {quotes: [[symbol, bid, bidQty,
+ * ask, askQty]], misses: [[symbol, status]]} or throws; `fatal(e)` says whether a failure stops this venue.
+ * With `szDir`, a second file per session under it (same name) gets the size-only changes ("z" rows), with its
+ * own budget `maxSzBytesPerSession`; the quotes file's rows, budget and cap are exactly what they are without it.
+ */
+async function runTape({ dir, szDir = null, run, everyMs, snapshotEveryMs, maxBytesPerSession, maxSzBytesPerSession = maxBytesPerSession, maxFailures, untilMs, poll, fatal, now, wait, log, name }) {
+  const qw = sessionWriter(dir, run);
+  let zw = szDir ? sessionWriter(szDir, run) : null;
+  const push = (r) => qw.push(r);
+  // Every size-stream step goes through sz(): a failure there (a full disk, a path that cannot be made) is logged
+  // once and ends the size stream for the rest of the run, and never reaches the quotes file or the polling loop.
+  // The size stream always comes after the quotes file's own step, so the quotes file is written first regardless.
+  const sz = (fn) => {
+    if (!zw) return;
+    try {
+      fn(zw);
+    } catch (e) {
+      zw = null;
+      out.sizeStopped = `error: ${e.message}`;
+      log(`${name} size stream stopped for this run: ${e.message}`);
+    }
   };
 
-  const out = { polls: 0, failures: 0, misses: 0, rows: 0, sessions: 0, capped: false, stopped: null };
+  const out = { polls: 0, failures: 0, misses: 0, rows: 0, sessions: 0, capped: false, stopped: null, ...(zw ? { sizeRows: 0, sizeCapped: false } : {}) };
   let last = new Map(); // symbol -> [bid, bidQty, ask, askQty]
   let day = null;
   let lastSnap = -Infinity;
   let lastT = null;
   let capped = false;
+  let zCapped = false;
   let inRow = 0;
   let polls = 0;
   let failures = 0;
   const open = (t) => {
     day = dayOf(t);
-    cur = fileFor(t);
-    bytes = 0;
+    qw.open(t);
     capped = false;
     push(["s", t, run, everyMs]);
+    zCapped = false;
+    sz((w) => {
+      w.open(t);
+      w.push(["s", t, run, everyMs]);
+    });
     out.sessions += 1;
     last = new Map();
     lastSnap = -Infinity;
@@ -102,6 +153,28 @@ async function runTape({ dir, run, everyMs, snapshotEveryMs, maxBytesPerSession,
   const close = (t) => {
     push(["e", t, polls, failures, capped]);
     if (capped) out.capped = true;
+    sz((w) => {
+      w.push(["e", t, polls, failures, zCapped]);
+      if (zCapped) out.sizeCapped = true;
+    });
+  };
+  const flushAll = () => {
+    out.rows += qw.pending;
+    qw.flush();
+    sz((w) => {
+      const n = w.pending;
+      w.flush();
+      out.sizeRows += n;
+    });
+  };
+  const sealAll = () => {
+    out.rows += qw.pending;
+    qw.seal();
+    sz((w) => {
+      const n = w.pending;
+      w.seal();
+      out.sizeRows += n;
+    });
   };
 
   let nextAt = now();
@@ -118,7 +191,9 @@ async function runTape({ dir, run, everyMs, snapshotEveryMs, maxBytesPerSession,
       out.failures += 1;
       if (day) {
         failures += 1;
-        push(["x", now(), e.xStatus ?? e.status ?? null]);
+        const x = ["x", now(), e.xStatus ?? e.status ?? null];
+        push(x);
+        sz((w) => w.push(x));
       }
       inRow += 1;
       log(`${name} failed: ${e.message}`);
@@ -131,8 +206,7 @@ async function runTape({ dir, run, everyMs, snapshotEveryMs, maxBytesPerSession,
     const t = now();
     if (day && dayOf(t) !== day) {
       close(lastT ?? t);
-      out.rows += rows.length;
-      seal();
+      sealAll();
     }
     if (!day || dayOf(t) !== day) open(t);
     polls += 1;
@@ -140,29 +214,36 @@ async function runTape({ dir, run, everyMs, snapshotEveryMs, maxBytesPerSession,
     lastT = t;
     const full = t - lastSnap >= snapshotEveryMs;
     if (full) lastSnap = t;
-    if (!capped && bytes > maxBytesPerSession) {
+    if (!capped && qw.bytes > maxBytesPerSession) {
       capped = true;
       push(["c", t]);
     }
+    sz((w) => {
+      if (!zCapped && w.bytes > maxSzBytesPerSession) {
+        zCapped = true;
+        w.push(["c", t]);
+      }
+    });
     for (const [symbol, ...q] of got.quotes) {
       const p = last.get(symbol);
       last.set(symbol, q);
       if (full) push(["f", t, symbol, ...q]);
       else if (!capped && (!p || p[0] !== q[0] || p[2] !== q[2])) push(["q", t, symbol, ...q]);
+      // size stream: both prices as at the last poll, a size not; never a pair's first poll or a snapshot poll
+      if (!full && !zCapped && p && p[0] === q[0] && p[2] === q[2] && (p[1] !== q[1] || p[3] !== q[3])) sz((w) => w.push(["z", t, symbol, ...q]));
     }
     for (const [symbol, status] of got.misses ?? []) {
       out.misses += 1;
       push(["x", t, status, symbol]);
+      sz((w) => w.push(["x", t, status, symbol]));
     }
     if (now() - lastFlush >= 60_000) {
-      out.rows += rows.length;
-      flush();
+      flushAll();
       lastFlush = now();
     }
   }
   if (day) close(lastT ?? now());
-  out.rows += rows.length;
-  seal();
+  sealAll();
   return out;
 }
 
@@ -202,12 +283,21 @@ function krakenPoll(f, pairs) {
 }
 
 export const STREAMS = ["quotes", "quotes-bridge"];
+// Each quote stream's size stream (CHANGES 2026-11-12e): its own directory, never inside the quotes one.
+export const SIZE_STREAMS = { quotes: "quotesz", "quotes-bridge": "quotesz-bridge" };
+// Binance.US raw bytes per session (CHANGES 2026-11-12e). The most a session can write is about one row of 58 bytes
+// per pair per poll: 259 pairs x 360 polls is about 5.4 MB, so 12 MB is a safety valve that a market alone does
+// not reach until the recorded pairs pass about 550, not a budget.
+export const MAX_BYTES_PER_SESSION = 12_000_000;
 export async function pollQuotes({ root, config, untilMs, stream = "quotes", fetchImpl, now = Date.now, wait = sleep, log = console.log }) {
   if (!STREAMS.includes(stream)) throw new Error(`unknown stream ${stream}`);
   const qc = config.quotes ?? {};
   const everyMs = qc.everyMs ?? 5000;
   const snapshotEveryMs = qc.snapshotEveryMs ?? 600_000;
-  const maxBytesPerSession = qc.maxBytesPerSession ?? 3_000_000;
+  const maxBytesPerSession = qc.maxBytesPerSession ?? MAX_BYTES_PER_SESSION;
+  // the size stream: on unless config says sizes: false; its budget defaults to the quotes stream's
+  const sizesOn = qc.sizes !== false;
+  const szDirOf = (venue) => (sizesOn ? join(root, "data", venue, SIZE_STREAMS[stream]) : null);
   const maxFailures = qc.maxFailuresInRow ?? 6;
   const run = process.env.GITHUB_RUN_ID ?? "local";
   const state = readJson(join(root, "state", "state.json"), {});
@@ -233,20 +323,24 @@ export async function pollQuotes({ root, config, untilMs, stream = "quotes", fet
       return { quotes: list.filter((x) => symbols.has(x.symbol)).map((x) => [x.symbol, ...quote(x)]) };
     };
     const r = runTape({
-      ...common, name: "bookTicker", dir: join(root, "data", "binanceus", stream), everyMs, snapshotEveryMs, maxBytesPerSession, poll, fatal: httpFatal,
+      ...common, name: "bookTicker", dir: join(root, "data", "binanceus", stream), szDir: szDirOf("binanceus"), everyMs, snapshotEveryMs, maxBytesPerSession,
+      maxSzBytesPerSession: qc.sizeMaxBytesPerSession ?? maxBytesPerSession, poll, fatal: httpFatal,
     }).then(({ misses, ...rest }) => rest);
     tasks.push(guard(out, r));
   }
 
   const venue = (name, vc, poll, fatal) => {
     const vo = (out.venues[name] = { symbols: vc.n, polls: 0, failures: 0, misses: 0, rows: 0, sessions: 0, capped: false, stopped: null });
+    const vmax = vc.maxBytesPerSession ?? 250_000;
     const r = runTape({
       ...common,
       name,
       dir: join(root, "data", name, stream),
+      szDir: szDirOf(name),
       everyMs: vc.everyMs ?? everyMs,
       snapshotEveryMs: vc.snapshotEveryMs ?? snapshotEveryMs,
-      maxBytesPerSession: vc.maxBytesPerSession ?? 250_000,
+      maxBytesPerSession: vmax,
+      maxSzBytesPerSession: vc.sizeMaxBytesPerSession ?? vmax,
       maxFailures: vc.maxFailuresInRow ?? maxFailures,
       poll,
       fatal,
