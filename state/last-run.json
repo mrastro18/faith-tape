@@ -1,6 +1,6 @@
 {
- "at": "2026-11-12T05:37:31.620Z",
- "run": "43162573843",
+ "at": "2026-11-12T06:07:32.064Z",
+ "run": "43165872818",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 321,
+   "ms": 189,
    "markets": 127,
    "crypto": 20,
    "pages": 1,
@@ -22,35 +22,54 @@
    },
    "funding": "skipped"
   },
-  "kraken": {
-   "ok": true,
-   "ms": 25473,
-   "bases": 15,
-   "bars": 3836
-  },
   "coinbase": {
    "ok": true,
-   "ms": 26566,
+   "ms": 23261,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 9437,
+   "bars": 8550,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
+  "kraken": {
+   "ok": true,
+   "ms": 25403,
+   "bases": 15,
+   "bars": 3725
+  },
   "binanceus": {
    "ok": true,
-   "ms": 58449,
+   "ms": 80097,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 489,
+   "tradesWritten": 271,
    "symbolsBehind": 0
   }
  },
- "calls": 692,
- "http": [],
- "ms": 58452
+ "calls": 689,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/JTO-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/PNUT-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/SKL-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 80101
 }
