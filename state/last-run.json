@@ -1,6 +1,6 @@
 {
- "at": "2026-11-12T13:07:33.279Z",
- "run": "43224209119",
+ "at": "2026-11-12T13:37:38.204Z",
+ "run": "43229005393",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 434,
+   "ms": 454,
    "markets": 127,
    "crypto": 20,
    "pages": 1,
@@ -24,33 +24,46 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 19996,
+   "ms": 28790,
    "bases": 15,
-   "bars": 2483
+   "bars": 4179
   },
   "coinbase": {
    "ok": true,
-   "ms": 31533,
+   "ms": 47891,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 13605,
+   "bars": 24785,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 57569,
+   "ms": 57208,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 980,
+   "tradesWritten": 3829,
    "symbolsBehind": 0
   }
  },
- "calls": 700,
- "http": [],
- "ms": 57572
+ "calls": 807,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/COTI-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/MOODENG-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 57211
 }
