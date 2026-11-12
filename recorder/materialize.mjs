@@ -19,7 +19,8 @@
 // line has no asset.
 // --adopt writes the manifest line for each unlisted asset that carries one (manifest.json, from 2026-11-12c on)
 // and fits: its files are not already in git, and its bar chunks start where their files now end. Anything else is
-// reported and left alone. It changes manifests/ only; commit them from a checkout you commit from.
+// reported and left alone. It changes manifests/ only; commit them from a fresh checkout of main while no record
+// run is between its offload and its push (the record chain's bars offload also adopts a lost bar line by itself).
 //
 // Run materialize on a checkout you do not commit from: the rebuilt files are untracked or modified, by design.
 import { execFileSync } from "node:child_process";
@@ -41,7 +42,12 @@ export function ghReader(repo) {
   const release = (tag) => JSON.parse(api(`repos/${repo}/releases/tags/${tag}`).toString("utf8"));
   return {
     download(tag, name, dir) {
-      const a = release(tag).assets.find((x) => x.name === name);
+      const a = api(`repos/${repo}/releases/${release(tag).id}/assets?per_page=100`, ["--paginate", "--jq", ".[] | {id, name}"])
+        .toString("utf8")
+        .split("\n")
+        .filter(Boolean)
+        .map((l) => JSON.parse(l))
+        .find((x) => x.name === name);
       if (!a) throw new Error(`${tag}/${name}: no such asset`);
       const p = join(dir, name);
       writeFileSync(p, api(`repos/${repo}/releases/assets/${a.id}`, ["-H", "Accept: application/octet-stream"]));
@@ -54,7 +60,12 @@ export function ghReader(repo) {
         .filter((t) => RELEASE_RE.test(t));
     },
     assets(tag) {
-      return release(tag).assets.map((a) => ({ name: a.name, size: a.size, digest: a.digest ?? null }));
+      // paged: a release's own asset list may be cut short on a busy day
+      return api(`repos/${repo}/releases/${release(tag).id}/assets?per_page=100`, ["--paginate", "--jq", ".[] | {name, size, digest}"])
+        .toString("utf8")
+        .split("\n")
+        .filter(Boolean)
+        .map((l) => JSON.parse(l));
     },
   };
 }
@@ -122,11 +133,14 @@ export function materialize(root, { client, from, to, log = console.log } = {}) 
         }
         const size = sizeOf(target);
         if (size >= f.offset + f.bytes && sha256(slice(target, f.offset, f.bytes)) === f.sha256) return { ...f, target, data: bytes, write: false }; // already in place
-        if (size !== f.offset) throw new Error(`${m.asset}: ${f.path} ends at ${size}, but this chunk goes at ${f.offset}`);
+        // an append cut off part way: the start of this chunk is there, so finish it
+        let rest = bytes;
+        if (size > f.offset && size < f.offset + f.bytes && slice(target, f.offset, size - f.offset).equals(bytes.subarray(0, size - f.offset))) rest = bytes.subarray(size - f.offset);
+        else if (size !== f.offset) throw new Error(`${m.asset}: ${f.path} ends at ${size}, but this chunk goes at ${f.offset}`);
         const prev = prevOf.get(f);
         if (prev && sha256(slice(target, prev.offset, prev.bytes)) !== prev.sha256) throw new Error(`${m.asset}: ${f.path} does not hold the chunk before this one`);
         if (!prev && f.offset > 0 && !slice(target, 0, f.offset).equals(headBlob(root, f.path))) throw new Error(`${m.asset}: ${f.path} does not start with its HEAD content`);
-        return { ...f, target, data: bytes, write: true };
+        return { ...f, target, data: rest, write: true };
       });
       for (const p of parts) {
         if (!p.write) {
@@ -177,7 +191,7 @@ export function adopt(root, { client, log = console.log } = {}) {
       const { dir, buf } = fetchBundle(client, release, asset, work);
       if (!existsSync(join(dir, "manifest.json"))) throw new Error("carries no manifest line (written before 2026-11-12c)");
       const head = JSON.parse(readFileSync(join(dir, "manifest.json"), "utf8"));
-      if (head.asset !== asset || head.release !== release || !MANIFESTS[head.kind]) throw new Error("its manifest line names another asset");
+      if (head.asset !== asset || head.release !== release || !MANIFESTS[head.kind] || !asset.startsWith(`${head.kind}-`)) throw new Error("its manifest line names another asset or kind");
       const day = release.slice(5);
       for (const f of head.files) {
         if (!safe(f.path) || dayOfPath(f.path) !== day) throw new Error(`unsafe or misplaced path ${f.path}`);

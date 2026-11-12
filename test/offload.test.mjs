@@ -7,6 +7,7 @@ import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { offload, pending, dayOfPath } from "../recorder/offload.mjs";
 import { adopt, check, materialize, manifestLines } from "../recorder/materialize.mjs";
+import { retryFiles } from "../recorder/manifest.mjs";
 
 const git = (root, ...a) => execFileSync("git", ["-C", root, ...a], { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] });
 const put = (root, p, s) => {
@@ -121,7 +122,7 @@ test("bars: a tracked day file gives up only its appended tail, and the chunks r
 test("bars: a tracked file that changed other than by appending is left for git", () => {
   const root = repo();
   writeFileSync(join(root, "data/coinbase/bars1s/2026-11-11/BTC.ndjson"), "[9,9]\n[2,3]\n[3,4]\n");
-  assert.deepEqual(pending(root, "bars"), []);
+  assert.deepEqual(retryFiles(root), []);
   rmSync(root, { recursive: true, force: true });
 });
 
@@ -288,24 +289,95 @@ test("an asset whose manifest line never reached git is listed by check and rest
   rmSync(root, { recursive: true, force: true });
 });
 
-test("adopt refuses an asset whose files git already has, or whose chunk does not start at the file's end", () => {
+test("adopt refuses a quotes asset whose files git already has", () => {
   const root = repo();
   const client = store();
   put(root, "data/binanceus/quotes/2026-11-12/s1.ndjson.gz", "q1");
   offload(root, { kind: "quotes", run: "8", client, log: quiet });
   rmSync(join(root, "manifests"), { recursive: true, force: true });
   put(root, "data/binanceus/quotes/2026-11-12/s1.ndjson.gz", "q1"); // git kept the file too
-  put(root, day12b, "[1,a]\n");
-  offload(root, { kind: "bars", run: "8", client, log: quiet });
-  const kept = readFileSync(join(root, "manifests/2026-11-12.ndjson"), "utf8");
-  put(root, day12b, "[2,b]\n");
-  offload(root, { kind: "bars", run: "9", client, log: quiet });
-  writeFileSync(join(root, "manifests/2026-11-12.ndjson"), kept); // run 9's line lost
-  put(root, day12b, "[3,c]\n");
-  offload(root, { kind: "bars", run: "10", client, log: quiet }); // takes run 9's place, so run 9's chunk no longer fits
   const r = adopt(root, { client, log: quiet });
   assert.deepEqual(r.adopted, []);
-  assert.deepEqual(r.refused.sort(), ["tape-2026-11-12/bars-2026-11-12-9.tar.gz", "tape-2026-11-12/quotes-2026-11-12-8.tar.gz"]);
+  assert.deepEqual(r.refused, ["tape-2026-11-12/quotes-2026-11-12-8.tar.gz"]);
+  rmSync(root, { recursive: true, force: true });
+});
+
+test("bars: a run whose manifest line was lost is adopted by the next run before it takes an offset", () => {
+  const root = repo();
+  const client = store();
+  put(root, day12b, "[1,A]\n");
+  offload(root, { kind: "bars", run: "1", client, log: quiet });
+  const kept = readFileSync(join(root, "manifests/2026-11-12.ndjson"), "utf8");
+  commitAll(root, "1");
+  put(root, day12b, "[2,B]\n");
+  offload(root, { kind: "bars", run: "2", client, log: quiet });
+  writeFileSync(join(root, "manifests/2026-11-12.ndjson"), kept); // run 2's commit lost: the checkout is as after run 1
+  put(root, day12b, "[3,C]\n");
+  const logs = [];
+  const c = offload(root, { kind: "bars", run: "3", client, log: (l) => logs.push(l) });
+  assert.ok(logs.some((l) => /adopted tape-2026-11-12\/bars-2026-11-12-2/.test(l)));
+  assert.deepEqual(c.bundles[0].files.map((f) => f.offset), [12]);
+  commitAll(root, "3");
+  materialize(root, { client, log: quiet });
+  assert.equal(readFileSync(join(root, day12b), "utf8"), "[1,A]\n[2,B]\n[3,C]\n");
+  rmSync(root, { recursive: true, force: true });
+});
+
+test("bars: an asset whose rows are still parked is a duplicate and is removed", () => {
+  const root = repo();
+  const client = store();
+  put(root, day12b, "[1,A]\n");
+  offload(root, { kind: "bars", run: "1", client, log: quiet });
+  commitAll(root, "1");
+  // run 2's upload lands, then its check and its clean-up fail, so its rows stay parked and its asset stays
+  const { assets, remove } = client;
+  client.assets = () => {
+    throw new Error("cut off");
+  };
+  client.remove = () => {};
+  put(root, day12b, "[2,B]\n");
+  assert.deepEqual(offload(root, { kind: "bars", run: "2", client, log: quiet }).parked, [day12b]);
+  Object.assign(client, { assets, remove });
+  assert.ok(client.S.get("tape-2026-11-12").has("bars-2026-11-12-2.tar.gz"));
+  commitAll(root, "2 cut off");
+  put(root, day12b, "[3,C]\n");
+  offload(root, { kind: "bars", run: "3", client, log: quiet });
+  assert.equal(client.S.get("tape-2026-11-12").has("bars-2026-11-12-2.tar.gz"), false);
+  commitAll(root, "3");
+  materialize(root, { client, log: quiet });
+  assert.equal(readFileSync(join(root, day12b), "utf8"), "[1,A]\n[2,B]\n[3,C]\n");
+  rmSync(root, { recursive: true, force: true });
+});
+
+test("bars: every day is parked before the first upload, so a hang on one day leaves no rows at another's path", () => {
+  const root = repo();
+  const client = store();
+  const day13 = "data/coinbase/bars1s/2026-11-13/BTC.ndjson";
+  put(root, day12b, "[1,a]\n");
+  put(root, day13, "[1,b]\n");
+  let seen = null;
+  client.ensureRelease = () => {
+    // what git would commit if the step were killed here
+    seen ??= git(root, "status", "--porcelain", "-uall", "--", "data", "state").trim().split("\n").sort();
+    throw new Error("hang");
+  };
+  offload(root, { kind: "bars", run: "1", client, log: quiet });
+  assert.deepEqual(seen, ["?? state/offload-retry/" + day12b, "?? state/offload-retry/" + day13].sort());
+  rmSync(root, { recursive: true, force: true });
+});
+
+test("materialize finishes an append that was cut off part way, and ignores a half-written park", () => {
+  const root = repo();
+  const client = store();
+  put(root, day12b, "[1,a]\n[2,b]\n");
+  offload(root, { kind: "bars", run: "1", client, log: quiet });
+  commitAll(root, "1");
+  put(root, day12b, "[1,a]\n[2"); // as if the append stopped part way
+  writeFileSync(join(root, ".materialized.json"), JSON.stringify({ applied: [] }));
+  materialize(root, { client, log: quiet });
+  assert.equal(readFileSync(join(root, day12b), "utf8"), "[1,a]\n[2,b]\n");
+  put(root, "state/offload-retry/" + day12b + ".tmp", "[9,z]\n");
+  assert.deepEqual(retryFiles(root), []);
   rmSync(root, { recursive: true, force: true });
 });
 

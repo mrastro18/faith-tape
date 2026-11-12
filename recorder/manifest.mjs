@@ -39,6 +39,25 @@ export function manifestLines(root, { from, to } = {}) {
   return out;
 }
 
+/** Sizes of every blob at HEAD under `dirs` (one git call), as a Map path -> bytes. */
+export function headSizes(root, dirs) {
+  const out = new Map();
+  const ex = dirs.filter((d) => d);
+  if (!ex.length) return out;
+  let txt = "";
+  try {
+    txt = execFileSync("git", ["-C", root, "ls-tree", "-r", "-l", "-z", "HEAD", "--", ...ex], { encoding: "utf8", maxBuffer: 1 << 30, stdio: ["ignore", "pipe", "ignore"] });
+  } catch {
+    return out;
+  }
+  for (const rec of txt.split("\0")) {
+    const tab = rec.indexOf("\t");
+    if (tab < 0) continue;
+    out.set(rec.slice(tab + 1), Number(rec.slice(0, tab).trim().split(/\s+/)[3]));
+  }
+  return out;
+}
+
 /** Size of a path's blob at HEAD, 0 if it is not tracked. */
 export function headSize(root, path) {
   try {
@@ -55,12 +74,17 @@ export function headSize(root, path) {
  * path to the size its file has once every listed chunk is in place. A recorded offset that disagrees with the
  * implied one is an error: the manifests no longer describe one file.
  */
-export function appendLayout(root, lines) {
+export function appendLayout(root, lines, sizes) {
+  if (!sizes) {
+    const dirs = new Set();
+    for (const m of lines) for (const f of m.files ?? []) if (f.mode === "append") dirs.add(f.path.split("/").slice(0, 3).join("/"));
+    sizes = headSizes(root, [...dirs]);
+  }
   const ends = new Map();
   for (const m of lines)
     for (const f of m.files ?? []) {
       if (f.mode !== "append") continue;
-      if (!ends.has(f.path)) ends.set(f.path, headSize(root, f.path));
+      if (!ends.has(f.path)) ends.set(f.path, sizes.get(f.path) ?? 0);
       const at = ends.get(f.path);
       if (f.offset !== undefined && f.offset !== at) throw new Error(`${m.asset}: ${f.path} chunk at offset ${f.offset}, but the chunks before it end at ${at}`);
       f.offset = at;
@@ -69,10 +93,16 @@ export function appendLayout(root, lines) {
   return { lines, ends };
 }
 
-/** Logical end of one bar day file: HEAD plus every chunk its day's manifest lists. */
+/** Logical ends of a day's bar files: a function path -> HEAD size plus every chunk the day's manifest lists. */
+export function dayEnds(root, day, dirs) {
+  const sizes = headSizes(root, dirs);
+  const { ends } = appendLayout(root, manifestLines(root, { from: day, to: day }), sizes);
+  return (path) => ends.get(path) ?? sizes.get(path) ?? 0;
+}
+
+/** Logical end of one bar day file (one-off use; dayEnds for many paths). */
 export function logicalEnd(root, path, day) {
-  const { ends } = appendLayout(root, manifestLines(root, { from: day, to: day }));
-  return ends.get(path) ?? headSize(root, path);
+  return dayEnds(root, day, [path.split("/").slice(0, 3).join("/")])(path);
 }
 
 /** Files parked by a failed bars offload: [{path (the data path it belongs to), file (its place under RETRY)}]. */
@@ -84,7 +114,7 @@ export function retryFiles(root) {
     for (const e of readdirSync(join(base, rel), { withFileTypes: true })) {
       const r = rel ? `${rel}/${e.name}` : e.name;
       if (e.isDirectory()) walk(r);
-      else out.push({ path: r, file: `${RETRY}/${r}` });
+      else if (!e.name.endsWith(".tmp")) out.push({ path: r, file: `${RETRY}/${r}` });
     }
   };
   walk("");
