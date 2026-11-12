@@ -1,6 +1,6 @@
 {
- "at": "2026-11-12T18:37:34.298Z",
- "run": "43281693355",
+ "at": "2026-11-12T19:07:35.172Z",
+ "run": "43286823926",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 187,
+   "ms": 184,
    "markets": 127,
    "crypto": 20,
    "pages": 1,
@@ -24,46 +24,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 21055,
+   "ms": 21048,
    "bases": 15,
    "bars": 2963
   },
   "coinbase": {
    "ok": true,
-   "ms": 27146,
+   "ms": 24215,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 15060,
+   "bars": 14297,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 75340,
+   "ms": 80335,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 430,
+   "tradesWritten": 673,
    "symbolsBehind": 0
   }
  },
- "calls": 714,
+ "calls": 708,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/SUI-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/ZEC-USD/trades",
+   "path": "/products/VIRTUAL-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 75343
+ "ms": 80338
 }
