@@ -118,6 +118,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: node recorder/offload.mjs . --kind quotes --run "${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+      # The size stream (data/<venue>/quotesz/, CHANGES 2026-11-12e) after the quotes, as its own bundle and line.
+      - name: Offload quote sizes
+        continue-on-error: true
+        timeout-minutes: 4
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node recorder/offload.mjs . --kind quotesz --run "${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
       - name: Commit quotes
         continue-on-error: true
         timeout-minutes: 3
@@ -125,7 +132,7 @@ jobs:
           git config user.name "faith-tape recorder"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # a venue that never answered this session has no directory yet, and git add fails on a missing path
-          for d in data/binanceus/quotes data/coinbase/quotes data/kraken/quotes manifests; do
+          for d in data/binanceus/quotes data/coinbase/quotes data/kraken/quotes data/binanceus/quotesz data/coinbase/quotesz data/kraken/quotesz manifests; do
             if [ -d "$d" ]; then git add "$d"; fi
           done
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi

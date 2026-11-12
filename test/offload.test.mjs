@@ -546,3 +546,56 @@ test("materialize refuses a manifest line with an unexpected release or asset na
   assert.throws(() => materialize(root, { client: store(), log: quiet }), /unexpected release or asset name/);
   rmSync(root, { recursive: true, force: true });
 });
+
+test("size streams: quotesz and bridgesz are their own bundles and lines, beside quotes and bridge, and rebuild byte for byte", () => {
+  const root = repo();
+  const client = store();
+  const qa = "data/binanceus/quotes/2026-11-12/000003Z-1.ndjson.gz";
+  const za = "data/binanceus/quotesz/2026-11-12/000003Z-1.ndjson.gz";
+  const zk = "data/kraken/quotesz/2026-11-12/000003Z-1.ndjson.gz";
+  const qb = "data/binanceus/quotes-bridge/2026-11-12/002603Z-2.ndjson.gz";
+  const zb = "data/binanceus/quotesz-bridge/2026-11-12/002603Z-2.ndjson.gz";
+  for (const [p, s] of [[qa, "q"], [za, "z"], [zk, "zk"], [qb, "qb"], [zb, "zb"]]) put(root, p, s);
+  // each kind takes only its own directories
+  assert.deepEqual(pending(root, "quotes").map((x) => x.path), [qa]);
+  assert.deepEqual(pending(root, "quotesz").map((x) => x.path).sort(), [za, zk]);
+  assert.deepEqual(pending(root, "bridge").map((x) => x.path), [qb]);
+  assert.deepEqual(pending(root, "bridgesz").map((x) => x.path), [zb]);
+  for (const kind of ["quotes", "quotesz", "bridge", "bridgesz"]) assert.equal(offload(root, { kind, run: "1", client, log: quiet }).bundles.length, 1, kind);
+  assert.equal(git(root, "status", "--porcelain", "--", "data").trim(), "", "nothing left under data");
+  // the chain's kinds in manifests/, the bridge's in manifests/bridge/; a quotes or bridge line names only its own files
+  const lines = (f) => readFileSync(join(root, f), "utf8").trim().split("\n").map((l) => JSON.parse(l));
+  assert.deepEqual(lines("manifests/2026-11-12.ndjson").map((m) => [m.kind, m.asset, m.files.map((f) => f.path)]), [
+    ["quotes", "quotes-2026-11-12-1.tar.gz", [qa]],
+    ["quotesz", "quotesz-2026-11-12-1.tar.gz", [za, zk]],
+  ]);
+  assert.deepEqual(lines("manifests/bridge/2026-11-12.ndjson").map((m) => [m.kind, m.files.map((f) => f.path)]), [
+    ["bridge", [qb]],
+    ["bridgesz", [zb]],
+  ]);
+  commitAll(root, "offloaded");
+  assert.equal(materialize(root, { client, log: quiet }).applied, 4);
+  for (const [p, s] of [[qa, "q"], [za, "z"], [zk, "zk"], [qb, "qb"], [zb, "zb"]]) assert.equal(readFileSync(join(root, p), "utf8"), s, p);
+  // lost lines: check lists both size assets and adopt restores them
+  rmSync(join(root, ".materialized.json"));
+  for (const p of [za, zk, zb]) rmSync(join(root, p));
+  for (const f of ["manifests/2026-11-12.ndjson", "manifests/bridge/2026-11-12.ndjson"]) writeFileSync(join(root, f), readFileSync(join(root, f), "utf8").split("\n").filter((l) => !/"kind":"(quotesz|bridgesz)"/.test(l)).join("\n"));
+  assert.deepEqual(check(root, { client, log: quiet }).unlisted, ["tape-2026-11-12/bridgesz-2026-11-12-1.tar.gz", "tape-2026-11-12/quotesz-2026-11-12-1.tar.gz"]);
+  assert.equal(adopt(root, { client, log: quiet }).adopted.length, 2);
+  assert.deepEqual(check(root, { client, log: quiet }).unlisted, []);
+  assert.deepEqual(lines("manifests/bridge/2026-11-12.ndjson").map((m) => m.kind), ["bridge", "bridgesz"]);
+  rmSync(root, { recursive: true, force: true });
+});
+
+test("size streams: a failed upload leaves the size files for git, and the quotes bundle goes regardless", () => {
+  const root = repo();
+  put(root, "data/binanceus/quotes/2026-11-12/a.ndjson.gz", "q");
+  put(root, "data/binanceus/quotesz/2026-11-12/a.ndjson.gz", "z");
+  const ok = store();
+  assert.equal(offload(root, { kind: "quotes", run: "1", client: ok, log: quiet }).bundles.length, 1);
+  const r = offload(root, { kind: "quotesz", run: "1", client: store({ failUpload: true }), log: quiet });
+  assert.deepEqual(r.kept, ["data/binanceus/quotesz/2026-11-12/a.ndjson.gz"]);
+  assert.ok(existsSync(join(root, "data/binanceus/quotesz/2026-11-12/a.ndjson.gz")));
+  assert.deepEqual(manifestLines(root).map((m) => m.kind), ["quotes"]);
+  rmSync(root, { recursive: true, force: true });
+});

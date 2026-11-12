@@ -1,5 +1,5 @@
-// The quotes stream must not change under later recorder changes: fixed synthetic runs whose quotes files must hash
-// to what the recorder at dedac40 wrote for the same runs. queue-prov-r3 in FAITH
+// The quotes stream is unchanged by the size stream (CHANGES 2026-11-12e): fixed synthetic runs whose quotes files
+// must hash to what the recorder at dedac40 (before the size stream) wrote for the same runs. queue-prov-r3 in FAITH
 // reads data/binanceus/quotes from 2026-11-12 on, so its rows, their selection and the file names must not move.
 // Hashes are of each file's name and its gunzipped content (the gzip layer is the same code, but zlib's bytes may
 // differ between Node builds). No network.
@@ -128,3 +128,23 @@ for (const name of Object.keys(RUNS))
       rmSync(g.root, { recursive: true, force: true });
     }
   });
+
+test("golden: turning the size stream off changes no quotes byte, and on it writes only under quotesz", async () => {
+  for (const name of Object.keys(RUNS)) {
+    const off = await goldenRun(name, { extra: { sizes: false } });
+    try {
+      assert.equal(off.sha256, GOLDEN[name], name);
+      assert.equal(existsSync(join(off.root, "data", RUNS[name].venue ?? name, "quotesz")), false);
+    } finally {
+      rmSync(off.root, { recursive: true, force: true });
+    }
+  }
+  const on = await goldenRun("binanceus");
+  try {
+    const names = (s) => readdirSync(join(on.root, "data", "binanceus", s)).flatMap((d) => readdirSync(join(on.root, "data", "binanceus", s, d)).map((f) => `${d}/${f}`)).sort();
+    assert.deepEqual(names("quotesz"), names("quotes"), "one size file per session, named as its quotes file");
+    assert.deepEqual(readdirSync(join(on.root, "data", "binanceus")).sort(), ["quotes", "quotesz"]);
+  } finally {
+    rmSync(on.root, { recursive: true, force: true });
+  }
+});

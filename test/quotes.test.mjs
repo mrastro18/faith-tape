@@ -164,3 +164,95 @@ test("the bridge stream writes the same rows under quotes-bridge and leaves quot
   assert.equal(rows.at(-1)[0], "e");
   await assert.rejects(pollQuotes({ root, config, untilMs: T0, stream: "../x", fetchImpl: w.fetchImpl, now: w.now, wait: w.wait, log: () => {} }), /unknown stream/);
 });
+
+// The size stream's session files of a day (CHANGES 2026-11-12e), sealed like the quotes files.
+const szRowsOf = (root, day, stream = "quotesz", venue = "binanceus") => {
+  const dir = join(root, "data", venue, stream, day);
+  if (!existsSync(dir)) return [];
+  const names = readdirSync(dir).sort();
+  assert.ok(names.every((n) => n.endsWith(".ndjson.gz")), `unsealed: ${names}`);
+  return names.flatMap((n) => gunzipSync(readFileSync(join(dir, n))).toString("utf8").trim().split("\n").map((l) => JSON.parse(l)));
+};
+
+test("size stream: a size change alone is a z row in quotesz, never a q row; price changes and snapshots are not z rows", async () => {
+  const root = setup();
+  const T0 = Date.parse("2026-11-10T12:00:00Z");
+  // THINUSD: bid price up on the 3rd answer, bid size changes alone on the 5th, ask size alone on the 6th;
+  // THINUSDT: size changes with its price on the 4th (a q row, not a z row)
+  const w = world(T0, (t, n) => [
+    ["THINUSD", n >= 3 ? 1.01 : 1.0, n >= 5 ? 9 : 5, 1.02, n >= 6 ? 7 : 5],
+    ["THINUSDT", n >= 4 ? 0.98 : 0.99, n >= 4 ? 2 : 1, 1.03, 1],
+  ]);
+  const out = await pollQuotes({ root, config, untilMs: T0 + 40_000, fetchImpl: w.fetchImpl, now: w.now, wait: w.wait, log: () => {} });
+  const q = rowsOf(root, "2026-11-10");
+  const z = szRowsOf(root, "2026-11-10");
+  assert.deepEqual(readdirSync(join(root, "data/binanceus/quotesz/2026-11-10")), readdirSync(join(root, "data/binanceus/quotes/2026-11-10")));
+  assert.deepEqual(z[0], q[0], "the same s row");
+  assert.deepEqual(
+    z.filter((r) => r[0] === "z").map((r) => r.slice(2)),
+    [
+      ["THINUSD", 1.01, 9, 1.02, 5],
+      ["THINUSD", 1.01, 9, 1.02, 7],
+    ],
+  );
+  assert.deepEqual(q.filter((r) => r[0] === "q").map((r) => r[2]), ["THINUSD", "THINUSDT"]);
+  assert.ok(q.every((r) => r[0] !== "z") && z.every((r) => r[0] !== "q" && r[0] !== "f"));
+  const [qe, ze] = [q.at(-1), z.at(-1)];
+  assert.deepEqual([ze[0], ze[1], ze[2], ze[3], ze[4]], ["e", qe[1], qe[2], qe[3], false]);
+  assert.equal(out.sizeRows, z.length);
+  assert.equal(out.sizeCapped, false);
+});
+
+test("size stream: failed polls are mirrored, and its own budget caps it without touching the quotes file", async () => {
+  const root = setup();
+  const T0 = Date.parse("2026-11-10T12:00:00Z");
+  const w = world(T0, (t, n) => [["THINUSD", 1 + n / 100, 1, 2, 1 + n]]);
+  const wait = async (ms) => {
+    await w.wait(ms);
+    w.status = w.calls === 3 ? 503 : null;
+  };
+  const cfg = { ...config, quotes: { ...config.quotes, sizeMaxBytesPerSession: 10 } };
+  const out = await pollQuotes({ root, config: cfg, untilMs: T0 + 40_000, fetchImpl: w.fetchImpl, now: w.now, wait, log: () => {} });
+  const q = rowsOf(root, "2026-11-10");
+  const z = szRowsOf(root, "2026-11-10");
+  assert.deepEqual(z.filter((r) => r[0] === "x"), q.filter((r) => r[0] === "x"));
+  assert.equal(q.filter((r) => r[0] === "x").length, 1);
+  assert.equal(z.filter((r) => r[0] === "c").length, 1);
+  assert.equal(q.filter((r) => r[0] === "c").length, 0);
+  assert.ok(q.filter((r) => r[0] === "q").length >= 4);
+  assert.equal(z.at(-1)[4], true);
+  assert.equal(q.at(-1)[4], false);
+  assert.deepEqual([out.capped, out.sizeCapped], [false, true]);
+});
+
+test("size stream: the bridge writes quotesz-bridge; sizes: false writes no size files", async () => {
+  const root = setup();
+  const T0 = Date.parse("2026-11-10T12:00:00Z");
+  const w = world(T0, () => [["THINUSD", 1, 1, 2, 1]]);
+  await pollQuotes({ root, config, untilMs: T0 + 20_000, stream: "quotes-bridge", fetchImpl: w.fetchImpl, now: w.now, wait: w.wait, log: () => {} });
+  assert.deepEqual(readdirSync(join(root, "data", "binanceus")).sort(), ["quotes-bridge", "quotesz-bridge"]);
+  assert.deepEqual(szRowsOf(root, "2026-11-10", "quotesz-bridge").map((r) => r[0]), ["s", "e"]);
+  const root2 = setup();
+  const w2 = world(T0, () => [["THINUSD", 1, 1, 2, 1]]);
+  const out = await pollQuotes({ root: root2, config: { ...config, quotes: { ...config.quotes, sizes: false } }, untilMs: T0 + 20_000, fetchImpl: w2.fetchImpl, now: w2.now, wait: w2.wait, log: () => {} });
+  assert.deepEqual(readdirSync(join(root2, "data", "binanceus")), ["quotes"]);
+  assert.equal(out.sizeRows, undefined);
+});
+
+test("the default Binance.US session budget no longer caps a session that writes past the old 3 MB", async () => {
+  const root = setup({
+    binanceus: {
+      pairs: Array.from({ length: 400 }, (_, i) => ({ symbol: `P${i}USD`, base: `P${i}`, quote: "USD" })),
+      universe: Object.fromEntries(Array.from({ length: 400 }, (_, i) => [`P${i}USD`, { in: true }])),
+    },
+  });
+  const T0 = Date.parse("2026-11-10T12:00:00Z");
+  // every pair's bid moves every poll: the most a session can write
+  const w = world(T0, (t, n) => Array.from({ length: 400 }, (_, i) => [`P${i}USD`, 1 + n / 1000, 1, 3, 1]));
+  const out = await pollQuotes({ root, config: { spacingMs: {}, quotes: { everyMs: 5000, sizes: false } }, untilMs: T0 + 210 * 5000, fetchImpl: w.fetchImpl, now: w.now, wait: w.wait, log: () => {} });
+  const rows = rowsOf(root, "2026-11-10");
+  const raw = rows.reduce((a, r) => a + JSON.stringify(r).length + 1, 0);
+  assert.ok(raw > 3_000_000, `raw ${raw}`);
+  assert.equal(rows.filter((r) => r[0] === "c").length, 0);
+  assert.equal(out.capped, false);
+});

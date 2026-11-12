@@ -45,3 +45,17 @@ test("coverage: today is partial and never counts", () => {
   assert.equal(r.counts, false);
   assert.ok(r.minutes <= 20);
 });
+
+test("coverage: --stream reads the size stream's names alone, and quotes stays the default", () => {
+  const root = mkdtempSync(join(tmpdir(), "cov-"));
+  mkdirSync(join(root, "manifests"), { recursive: true });
+  const f = (s, n) => ({ path: `data/binanceus/${s}/2026-11-20/${n}Z-9.ndjson.gz`, mode: "file", bytes: 1, sha256: "x" });
+  writeFileSync(
+    join(root, "manifests", "2026-11-20.ndjson"),
+    [{ asset: "q", kind: "quotes", files: [f("quotes", "000003"), f("quotes", "003003")] }, { asset: "z", kind: "quotesz", files: [f("quotesz", "000003")] }].map((l) => JSON.stringify(l)).join("\n") + "\n",
+  );
+  const now = new Date("2026-11-21T01:00:00Z");
+  assert.equal(coverage(root, { now })[0].sessions, 2);
+  assert.equal(coverage(root, { now, stream: "quotesz" })[0].sessions, 1);
+  assert.throws(() => coverage(root, { now, stream: "../x" }), /unknown stream/);
+});

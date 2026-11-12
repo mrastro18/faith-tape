@@ -10,14 +10,14 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
-// manifests/<day>.ndjson (record chain: quotes and bars, in run order), then manifests/bridge/<day>.ndjson (bridge
-// quotes, whole files only, so their order against the chain's lines does not matter). Within a day the chain's
+// manifests/<day>.ndjson (record chain: quotes, quotesz and bars, in run order), then manifests/bridge/<day>.ndjson
+// (bridge and bridgesz, whole files only, so their order against the chain's lines does not matter). Within a day the chain's
 // file is read first, always.
 export const MANIFEST_DIRS = ["manifests", "manifests/bridge"];
 export const RETRY = "state/offload-retry";
 
 export const RELEASE_RE = /^tape-\d{4}-\d{2}-\d{2}$/;
-export const ASSET_RE = /^(quotes|bars|bridge)-\d{4}-\d{2}-\d{2}-[A-Za-z0-9_-]+\.tar\.gz$/;
+export const ASSET_RE = /^(quotes|quotesz|bars|bridge|bridgesz)-\d{4}-\d{2}-\d{2}-[A-Za-z0-9_-]+\.tar\.gz$/;
 
 export function manifestLines(root, { from, to } = {}) {
   const byDay = new Map();

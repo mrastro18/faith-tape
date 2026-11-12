@@ -2,14 +2,14 @@
 // repository stops growing by about 30 MB a day (CHANGES 2026-11-12, 2026-11-12c). Only a small manifest line per
 // bundle is committed: manifests/<day>.ndjson, one JSON object per line, in run order.
 //
-//   node recorder/offload.mjs <root> --kind quotes|bars|bridge --run <run id>
+//   node recorder/offload.mjs <root> --kind quotes|bars|bridge|quotesz|bridgesz --run <run id>
 //
 // For each UTC day touched by this run, the new data under the kind's directories becomes one tar.gz bundle,
 // uploaded to the release tagged tape-<day> (created if missing). The bundle also carries its own manifest line as
 // manifest.json, so an asset whose line never reached git can be adopted later (materialize.mjs --adopt).
 //
-// Quotes: an untracked session file is bundled whole. If anything fails it stays where it is and git commits it as
-// before.
+// Quotes (and bridge, quotesz, bridgesz): an untracked session file is bundled whole. If anything fails it stays
+// where it is and git commits it as before.
 //
 // Bars: a day file grows run by run, so each chunk is bundled with its offset in the rebuilt file (see
 // manifest.mjs). Before the upload, the chunk moves to state/offload-retry/<path> and the file goes back to its
@@ -27,14 +27,20 @@ import { fileURLToPath } from "node:url";
 import { sha256 } from "./lib.mjs";
 import { ASSET_RE, RETRY, dayEnds, manifestLines, retryFiles } from "./manifest.mjs";
 
+const VENUES = ["binanceus", "coinbase", "kraken"];
 export const KINDS = {
-  quotes: ["data/binanceus/quotes", "data/coinbase/quotes", "data/kraken/quotes"],
+  quotes: VENUES.map((v) => `data/${v}/quotes`),
   bars: ["data/coinbase/bars1s", "data/kraken/bars1s"],
-  bridge: ["data/binanceus/quotes-bridge", "data/coinbase/quotes-bridge", "data/kraken/quotes-bridge"],
+  bridge: VENUES.map((v) => `data/${v}/quotes-bridge`),
+  // the size streams beside quotes and bridge (CHANGES 2026-11-12e): their own kinds and assets, so a quotes or
+  // bridge bundle holds exactly the files it held before
+  quotesz: VENUES.map((v) => `data/${v}/quotesz`),
+  bridgesz: VENUES.map((v) => `data/${v}/quotesz-bridge`),
 };
 // The bridge workflow commits at the same time as the record chain, so its manifest lines go to their own files
-// and the two never edit the same file (a rebase would otherwise conflict).
-export const MANIFESTS = { quotes: "manifests", bars: "manifests", bridge: "manifests/bridge" };
+// and the two never edit the same file (a rebase would otherwise conflict). Each size kind goes with the job that
+// writes it.
+export const MANIFESTS = { quotes: "manifests", bars: "manifests", bridge: "manifests/bridge", quotesz: "manifests", bridgesz: "manifests/bridge" };
 export const tagOf = (day) => `tape-${day}`;
 // data/<venue>/<stream>/<YYYY-MM-DD>/<file>: the day is the fourth segment
 export const dayOfPath = (p) => {

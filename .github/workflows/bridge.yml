@@ -50,11 +50,18 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: node recorder/offload.mjs . --kind bridge --run "${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+      # The bridge's size stream (data/<venue>/quotesz-bridge/, CHANGES 2026-11-12e), its own bundle and line.
+      - name: Offload bridge sizes
+        continue-on-error: true
+        timeout-minutes: 4
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node recorder/offload.mjs . --kind bridgesz --run "${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
       - name: Commit bridge
         run: |
           git config user.name "faith-tape recorder"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for d in data/binanceus/quotes-bridge data/coinbase/quotes-bridge data/kraken/quotes-bridge manifests/bridge; do
+          for d in data/binanceus/quotes-bridge data/coinbase/quotes-bridge data/kraken/quotes-bridge data/binanceus/quotesz-bridge data/coinbase/quotesz-bridge data/kraken/quotesz-bridge manifests/bridge; do
             if [ -d "$d" ]; then git add "$d"; fi
           done
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
