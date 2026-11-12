@@ -202,7 +202,7 @@ export function adopt(root, { client, log = console.log } = {}) {
         if (bytes.length !== f.bytes || sha256(bytes) !== f.sha256) throw new Error(`${f.path} does not match its entry`);
         if (f.mode === "file" && existsSync(join(root, f.path))) throw new Error(`${f.path} is already in the checkout`);
         if (f.mode === "append") {
-          if (parked.has(f.path)) throw new Error(`${f.path} has a parked chunk, which holds these rows`);
+          if (parked.has(f.path)) throw new Error(`${f.path} has a parked chunk; the record chain's next bars offload for that day adopts this asset by itself`);
           const end = logicalEnd(root, f.path, day);
           if (f.offset !== end) throw new Error(`${f.path} chunk at ${f.offset}, but the file now ends at ${end}`);
         }

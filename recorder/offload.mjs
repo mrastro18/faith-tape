@@ -146,7 +146,10 @@ export function ghClient(repo) {
 export const HELD = "state/offload-held.json";
 function noteHold(root, day, reason, now) {
   const p = join(root, HELD);
-  const held = existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : {};
+  let held = {};
+  try {
+    if (existsSync(p)) held = JSON.parse(readFileSync(p, "utf8"));
+  } catch {} // a damaged file is rewritten; the holds it named are found again by their runs
   if (reason) held[day] = { since: held[day]?.since ?? new Date(now()).toISOString(), reason };
   else delete held[day];
   if (Object.keys(held).length) writeFileSync(p, JSON.stringify(held, null, 1) + "\n");
@@ -172,6 +175,19 @@ const writeAtomic = (p, bytes) => {
  * release" holds the day: its chunks stay parked (in git) and the hold is recorded in state/offload-held.json.
  * Returns {adopted, blocked}; `list` items are trimmed in place and emptied items removed.
  */
+// a chunk's rows, each with its newline
+const rows = (buf) => {
+  const out = [];
+  let at = 0;
+  while (at < buf.length) {
+    const nl = buf.indexOf(10, at);
+    const end = nl < 0 ? buf.length : nl + 1;
+    out.push(buf.subarray(at, end));
+    at = end;
+  }
+  return out;
+};
+
 export function reconcile(root, { day, tag, list, client, log = () => {} }) {
   let assets;
   try {
@@ -219,13 +235,21 @@ export function reconcile(root, { day, tag, list, client, log = () => {} }) {
       if (c.offset !== end(c.path)) return { adopted, blocked: `${h.name}: ${c.path} chunk at ${c.offset}, but the file ends at ${end(c.path)}` };
       const it = byPath.get(c.path);
       const carried = it ? it.bytes.subarray(0, it.carried ?? 0) : Buffer.alloc(0);
-      let cut = 0;
-      if (carried.length === 0) cut = 0;
-      else if (c.data.subarray(0, carried.length).equals(carried)) cut = carried.length; // the orphan holds all carried rows, and maybe more
-      else if (carried.subarray(0, c.bytes).equals(c.data)) cut = c.bytes; // the carried rows hold the whole orphan chunk
-      else return { adopted, blocked: `${h.name}: ${c.path} chunk and the parked rows diverge` };
+      // compare whole rows: every bar row starts with "[", so a byte prefix would always look shared
+      const a = rows(carried);
+      const b = rows(c.data);
+      let k = 0;
+      while (k < a.length && k < b.length && a[k].equals(b[k])) k++;
+      let cut;
+      if (k === 0) cut = 0; // no row in common: the carried rows were parked after the orphan's run, so they go after it
+      else if (k === a.length) cut = carried.length; // the orphan holds every carried row, and maybe more
+      else if (k === b.length) cut = c.bytes; // the carried rows hold the whole orphan chunk
+      else return { adopted, blocked: `${h.name}: ${c.path} chunk and the parked rows share ${k} rows, then differ` };
       cuts.push([it, cut]);
     }
+    // parks first, line last: a run killed in between leaves trimmed parks and an unlisted orphan, which the next
+    // run adopts with nothing left to cut. The other order would list the orphan while its rows are still parked,
+    // and no later run would compare them.
     for (const [it, cut] of cuts) {
       if (!it || !cut) continue;
       it.bytes = it.bytes.subarray(cut);

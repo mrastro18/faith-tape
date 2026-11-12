@@ -409,6 +409,73 @@ test("bars: a run killed part way through removing its parks does not hold the d
   rmSync(root, { recursive: true, force: true });
 });
 
+test("bars: a lost line then a listing error parks rows after the orphan, and a later run takes both in order", () => {
+  const root = repo();
+  const client = store();
+  put(root, day12b, "[1,A]\n");
+  offload(root, { kind: "bars", run: "1", client, log: quiet });
+  commitAll(root, "1");
+  const before = readFileSync(join(root, "manifests/2026-11-12.ndjson"), "utf8");
+  put(root, day12b, "[2,B]\n");
+  offload(root, { kind: "bars", run: "2", client, log: quiet });
+  writeFileSync(join(root, "manifests/2026-11-12.ndjson"), before); // run 2's line lost
+  const assets = client.assets;
+  client.assets = () => {
+    throw new Error("HTTP 502");
+  };
+  put(root, day12b, "[3,C]\n");
+  assert.deepEqual(offload(root, { kind: "bars", run: "3", client, log: quiet }).parked, [day12b]);
+  commitAll(root, "3 held");
+  client.assets = assets;
+  put(root, day12b, "[4,D]\n");
+  const r = offload(root, { kind: "bars", run: "4", client, log: quiet });
+  assert.deepEqual(r.parked, []);
+  assert.equal(existsSync(join(root, "state/offload-held.json")), false, "the hold is cleared");
+  commitAll(root, "4");
+  materialize(root, { client, log: quiet });
+  assert.equal(readFileSync(join(root, day12b), "utf8"), "[1,A]\n[2,B]\n[3,C]\n[4,D]\n");
+  rmSync(root, { recursive: true, force: true });
+});
+
+test("bars: a run killed after cutting its parks but before adopting leaves a state the next run finishes", () => {
+  const root = repo();
+  const client = store();
+  put(root, day12b, "[1,A]\n");
+  offload(root, { kind: "bars", run: "1", client, log: quiet });
+  commitAll(root, "1");
+  const before = readFileSync(join(root, "manifests/2026-11-12.ndjson"), "utf8");
+  put(root, day12b, "[2,B]\n");
+  offload(root, { kind: "bars", run: "2", client, log: quiet });
+  writeFileSync(join(root, "manifests/2026-11-12.ndjson"), before); // orphan B
+  put(root, "state/offload-retry/" + day12b, "[3,C]\n"); // the park after the cut, with no line written
+  commitAll(root, "killed in reconcile");
+  put(root, day12b, "[4,D]\n");
+  assert.deepEqual(offload(root, { kind: "bars", run: "4", client, log: quiet }).parked, []);
+  commitAll(root, "4");
+  materialize(root, { client, log: quiet });
+  assert.equal(readFileSync(join(root, day12b), "utf8"), "[1,A]\n[2,B]\n[3,C]\n[4,D]\n");
+  rmSync(root, { recursive: true, force: true });
+});
+
+test("bars: parked rows that share some rows with an orphan and then differ hold the day", () => {
+  const root = repo();
+  const client = store();
+  put(root, day12b, "[1,A]\n");
+  offload(root, { kind: "bars", run: "1", client, log: quiet });
+  commitAll(root, "1");
+  const before = readFileSync(join(root, "manifests/2026-11-12.ndjson"), "utf8");
+  put(root, day12b, "[2,B]\n[3,C]\n");
+  offload(root, { kind: "bars", run: "2", client, log: quiet });
+  writeFileSync(join(root, "manifests/2026-11-12.ndjson"), before);
+  put(root, "state/offload-retry/" + day12b, "[2,B]\n[3,X]\n");
+  commitAll(root, "diverged");
+  const r = offload(root, { kind: "bars", run: "3", client, log: quiet });
+  assert.deepEqual(r.parked, [day12b]);
+  writeFileSync(join(root, "state/offload-held.json"), "{not json");
+  assert.deepEqual(offload(root, { kind: "bars", run: "4", client, log: quiet }).parked, [day12b], "a damaged hold file does not stop the run");
+  rmSync(root, { recursive: true, force: true });
+});
+
 test("bars: an orphan that does not fit holds the day, records the hold, and check reports it", () => {
   const root = repo();
   const client = store();
