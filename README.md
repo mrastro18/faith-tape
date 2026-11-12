@@ -50,7 +50,7 @@ node recorder/materialize.mjs . --check              # assets no manifest names,
 node recorder/materialize.mjs . --adopt              # write the line for an asset that has none (commit manifests/ after)
 ```
 
-Every bundle and file is checked against its sha256 before anything is written, a file entry never overwrites different content, and a bar chunk goes only at its recorded offset, after the chunk before it, once. A bars upload that fails leaves its chunk in `state/offload-retry/` for the next run, so git never holds bar rows out of place. The result is byte for byte what the old commits would have held. Reason: these two streams grew the repository by about 27 MB a day, which would pass GitHub's recommended 1 GB in late November 2026.
+Every bundle and file is checked against its sha256 before anything is written, a file entry never overwrites different content, and a bar chunk goes only at its recorded offset, after the chunk before it, once. A bars upload that fails leaves its chunk in `state/offload-retry/` for the next run, so git never holds bar rows out of place, and a run adopts a lost bar line of its own day before it sends. A lost line from a day's last run needs `--adopt` by hand; `--check` also lists days whose bars are held (`state/offload-held.json`). The result is byte for byte what the old commits would have held. Reason: these two streams grew the repository by about 27 MB a day, which would pass GitHub's recommended 1 GB in late November 2026.
 
 ## Running locally
 

@@ -42,6 +42,13 @@ export const dayOfPath = (p) => {
   return m ? m[1] : null;
 };
 
+const headBlob = (root, p) => {
+  try {
+    return execFileSync("git", ["-C", root, "show", `HEAD:${p}`], { maxBuffer: 1 << 30, stdio: ["ignore", "pipe", "ignore"] });
+  } catch {
+    return null;
+  }
+};
 const git = (root, args, opts = {}) => execFileSync("git", ["-C", root, ...args], { encoding: opts.buffer ? null : "utf8", maxBuffer: 1 << 30, stdio: ["ignore", "pipe", "pipe"] });
 
 /**
@@ -69,11 +76,18 @@ export function pending(root, kind) {
   const out = new Map();
   for (const r of retryFiles(root)) {
     if (!KINDS.bars.some((d) => r.path.startsWith(d + "/")) || !dayOfPath(r.path)) continue;
-    out.set(r.path, { path: r.path, mode: "append", bytes: readFileSync(join(root, r.file)), retry: r.file });
+    const bytes = readFileSync(join(root, r.file));
+    // a run killed between parking and putting the file back commits both; HEAD then already ends with these rows
+    const head = headBlob(root, r.path);
+    if (head && head.length >= bytes.length && head.subarray(head.length - bytes.length).equals(bytes)) {
+      rmSync(join(root, r.file), { force: true });
+      continue;
+    }
+    out.set(r.path, { path: r.path, mode: "append", bytes, retry: r.file, carried: bytes.length });
   }
   for (const [p, it] of fresh) {
     const prev = out.get(p);
-    out.set(p, { path: p, mode: "append", bytes: prev ? Buffer.concat([prev.bytes, it.bytes]) : it.bytes, tracked: it.tracked, retry: prev?.retry, fresh: true });
+    out.set(p, { path: p, mode: "append", bytes: prev ? Buffer.concat([prev.bytes, it.bytes]) : it.bytes, tracked: it.tracked, retry: prev?.retry, carried: prev?.carried ?? 0, fresh: true });
   }
   return [...out.values()].sort((a, b) => (a.path < b.path ? -1 : 1));
 }
@@ -104,7 +118,14 @@ export function ghClient(repo) {
       gh(["release", "upload", tag, file]);
     },
     assets(tag) {
-      return list(tag).map((a) => ({ name: a.name, size: a.size, digest: a.digest ?? null }));
+      let rows;
+      try {
+        rows = list(tag);
+      } catch (e) {
+        if (/HTTP 404|Not Found/.test(String(e.stderr ?? "") + e.message)) return []; // no such release yet
+        throw e;
+      }
+      return rows.map((a) => ({ name: a.name, size: a.size, digest: a.digest ?? null }));
     },
     remove(tag, name) {
       const a = list(tag).find((x) => x.name === name);
@@ -120,6 +141,19 @@ export function ghClient(repo) {
   };
 }
 
+// state/offload-held.json: days whose bars are held by reconcile, with when the hold began, so a hold that lasts
+// shows in --check and in every run's log, not only in a step that may not fail the job
+export const HELD = "state/offload-held.json";
+function noteHold(root, day, reason, now) {
+  const p = join(root, HELD);
+  const held = existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : {};
+  if (reason) held[day] = { since: held[day]?.since ?? new Date(now()).toISOString(), reason };
+  else delete held[day];
+  if (Object.keys(held).length) writeFileSync(p, JSON.stringify(held, null, 1) + "\n");
+  else rmSync(p, { force: true });
+  return held[day]?.since;
+}
+
 // write then rename, so a parked chunk is never half written
 const writeAtomic = (p, bytes) => {
   mkdirSync(dirname(p), { recursive: true });
@@ -129,30 +163,29 @@ const writeAtomic = (p, bytes) => {
 
 /**
  * Before a bars day gets offsets: deal with bar assets in its release that no manifest line names (a run whose
- * commit was lost, or one killed between removing its chunks and writing its line). Their chunk would otherwise be
- * overtaken by this run's chunk at the same offset and drop out of the rebuilt file. An asset whose chunks are held,
- * byte for byte, at the front of this run's parked chunks is a duplicate (the run that sent it was killed before it
- * removed its park) and is deleted. An asset whose chunks all start where their files end and are not held gets its
- * line written now (adopted), and this run's chunks go after it. Anything
- * else holds the day: its chunks stay parked (in git) until someone runs materialize.mjs --check and --adopt.
- * Returns {adopted, removed, blocked}.
+ * commit was lost, or one killed between removing its parks and writing its line). Their chunk would otherwise be
+ * overtaken by this run's chunk at the same offset and drop out of the rebuilt file. Decided chunk by chunk: each
+ * orphan chunk must start where its file now ends. If this run's parked rows for that file (the part carried over
+ * from earlier runs, never this run's fresh rows) overlap it, the overlap is cut from this run's bytes and its park
+ * rewritten; then the orphan is adopted (its line written) and this run's rows go after it. A chunk at another
+ * offset, parked rows that diverge from it, an orphan that cannot be read, or a listing error other than "no such
+ * release" holds the day: its chunks stay parked (in git) and the hold is recorded in state/offload-held.json.
+ * Returns {adopted, blocked}; `list` items are trimmed in place and emptied items removed.
  */
 export function reconcile(root, { day, tag, list, client, log = () => {} }) {
   let assets;
   try {
-    assets = client.assets(tag);
-  } catch {
-    return { adopted: [], removed: [], blocked: null }; // no release yet, so no orphans
+    assets = client.assets(tag); // [] when the release does not exist yet
+  } catch (e) {
+    return { adopted: [], blocked: `cannot list ${tag}: ${e.message.split("\n")[0]}` };
   }
   const named = new Set(manifestLines(root, { from: day, to: day }).map((m) => m.asset));
   const orphans = assets.filter((a) => a.name.startsWith(`bars-${day}-`) && !named.has(a.name)).map((a) => a.name).sort();
   const adopted = [];
-  const removed = [];
-  if (!orphans.length) return { adopted, removed, blocked: null };
-  const parkedBytes = new Map(list.map((it) => [it.path, it.bytes]));
+  if (!orphans.length) return { adopted, blocked: null };
   const heads = [];
   for (const name of orphans) {
-    if (!ASSET_RE.test(name)) return { adopted, removed, blocked: `unexpected asset name ${name}` };
+    if (!ASSET_RE.test(name)) return { adopted, blocked: `unexpected asset name ${name}` };
     const work = mkdtempSync(join(tmpdir(), "reconcile-"));
     try {
       const file = client.download(tag, name, work);
@@ -160,42 +193,57 @@ export function reconcile(root, { day, tag, list, client, log = () => {} }) {
       const dir = join(work, "x");
       mkdirSync(dir);
       execFileSync("tar", ["-xzf", file, "-C", dir, "--no-same-owner", "--no-same-permissions"], { stdio: "ignore" });
-      if (!existsSync(join(dir, "manifest.json"))) return { adopted, removed, blocked: `${name} carries no manifest line` };
+      if (!existsSync(join(dir, "manifest.json"))) return { adopted, blocked: `${name} carries no manifest line` };
       const head = JSON.parse(readFileSync(join(dir, "manifest.json"), "utf8"));
-      if (head.asset !== name || head.release !== tag || head.kind !== "bars") return { adopted, removed, blocked: `${name}: its manifest line names another asset` };
+      if (head.asset !== name || head.release !== tag || head.kind !== "bars") return { adopted, blocked: `${name}: its manifest line names another asset` };
       const chunks = head.files.map((f) => {
         const bytes = readFileSync(join(dir, f.path));
         if (f.mode !== "append" || bytes.length !== f.bytes || sha256(bytes) !== f.sha256) throw new Error(`${name}: ${f.path} does not match its entry`);
         return { ...f, data: bytes };
       });
       heads.push({ name, head, chunks, size: buf.length, sha256: sha256(buf) });
+    } catch (e) {
+      return { adopted, blocked: `${name} could not be read: ${e.message.split("\n")[0]}` };
     } finally {
       rmSync(work, { recursive: true, force: true });
     }
   }
-  // oldest chunk first, so two orphans of one file are taken in order
   const first = (h) => Math.min(...h.chunks.map((c) => c.offset));
   heads.sort((a, b) => first(a) - first(b));
+  const byPath = new Map(list.map((it) => [it.path, it]));
   for (const h of heads) {
     const end = dayEnds(root, day, KINDS.bars);
-    // a chunk this run still holds at the front of its parked rows is a duplicate; any other chunk that starts
-    // where its file ends came before this run's rows
-    const held = (c) => parkedBytes.get(c.path)?.subarray(0, c.bytes).equals(c.data) ?? false;
-    const fits = h.chunks.every((c) => c.offset === end(c.path) && !held(c));
-    const dup = h.chunks.every((c) => c.offset === end(c.path) && held(c));
-    if (fits) {
-      const mf = join(root, MANIFESTS.bars, `${day}.ndjson`);
-      mkdirSync(dirname(mf), { recursive: true });
-      appendFileSync(mf, JSON.stringify({ ...h.head, size: h.size, sha256: h.sha256 }) + "\n");
-      adopted.push(h.name);
-      log(`adopted ${tag}/${h.name}, whose line was missing`);
-    } else if (dup) {
-      client.remove(tag, h.name);
-      removed.push(h.name);
-      log(`removed ${tag}/${h.name}: its rows are still parked and go out with this run`);
-    } else return { adopted, removed, blocked: `${h.name} has no manifest line and does not fit where its files end` };
+    // check every chunk before changing anything
+    const cuts = [];
+    for (const c of h.chunks) {
+      if (c.offset !== end(c.path)) return { adopted, blocked: `${h.name}: ${c.path} chunk at ${c.offset}, but the file ends at ${end(c.path)}` };
+      const it = byPath.get(c.path);
+      const carried = it ? it.bytes.subarray(0, it.carried ?? 0) : Buffer.alloc(0);
+      let cut = 0;
+      if (carried.length === 0) cut = 0;
+      else if (c.data.subarray(0, carried.length).equals(carried)) cut = carried.length; // the orphan holds all carried rows, and maybe more
+      else if (carried.subarray(0, c.bytes).equals(c.data)) cut = c.bytes; // the carried rows hold the whole orphan chunk
+      else return { adopted, blocked: `${h.name}: ${c.path} chunk and the parked rows diverge` };
+      cuts.push([it, cut]);
+    }
+    for (const [it, cut] of cuts) {
+      if (!it || !cut) continue;
+      it.bytes = it.bytes.subarray(cut);
+      it.carried = Math.max(0, (it.carried ?? 0) - cut);
+      if (it.bytes.length) writeAtomic(join(root, it.retry), it.bytes);
+      else {
+        rmSync(join(root, it.retry), { force: true });
+        list.splice(list.indexOf(it), 1);
+        byPath.delete(it.path);
+      }
+    }
+    const mf = join(root, MANIFESTS.bars, `${day}.ndjson`);
+    mkdirSync(dirname(mf), { recursive: true });
+    appendFileSync(mf, JSON.stringify({ ...h.head, size: h.size, sha256: h.sha256 }) + "\n");
+    adopted.push(h.name);
+    log(`adopted ${tag}/${h.name}, whose line was missing`);
   }
-  return { adopted, removed, blocked: null };
+  return { adopted, blocked: null };
 }
 
 /**
@@ -235,9 +283,12 @@ export function offload(root, { kind, run, client, now = Date.now, log = console
         if (r.blocked) throw new Error(r.blocked);
         const end = dayEnds(root, day, KINDS.bars);
         for (const it of list) it.offset = end(it.path);
+        noteHold(root, day, null, now);
+        if (!list.length) continue; // everything was in an adopted orphan
       } catch (e) {
         parked.push(...list.map((it) => it.path));
-        log(`offload of ${day} held, its ${list.length} bar chunks wait in ${RETRY}: ${e.message}`);
+        const since = noteHold(root, day, e.message, now);
+        log(`::error::offload of ${day} held since ${since}, its ${list.length} bar chunks wait in ${RETRY}; run materialize.mjs --check: ${e.message}`);
         continue;
       }
     }

@@ -172,11 +172,14 @@ export function check(root, { client, log = console.log } = {}) {
   const unlisted = [...present.keys()].filter((k) => !named.has(k)).sort();
   const missing = lines.filter((m) => present.get(`${m.release}/${m.asset}`) !== m.size).map((m) => `${m.release}/${m.asset}`);
   const parked = retryFiles(root).map((r) => r.path);
-  log(`${lines.length} manifest lines, ${present.size} assets; ${unlisted.length} assets no manifest names, ${missing.length} lines with no asset at their size, ${parked.length} bar chunks parked`);
+  const heldPath = join(root, "state/offload-held.json");
+  const held = existsSync(heldPath) ? JSON.parse(readFileSync(heldPath, "utf8")) : {};
+  log(`${lines.length} manifest lines, ${present.size} assets; ${unlisted.length} assets no manifest names, ${missing.length} lines with no asset at their size, ${parked.length} bar chunks parked, ${Object.keys(held).length} days held`);
+  for (const [d, h] of Object.entries(held)) log(`held: ${d} since ${h.since}: ${h.reason}`);
   for (const k of unlisted) log(`unlisted: ${k}`);
   for (const k of missing) log(`missing: ${k}`);
   for (const k of parked) log(`parked: ${k}`);
-  return { unlisted, missing, parked };
+  return { unlisted, missing, parked, held: Object.keys(held) };
 }
 
 export function adopt(root, { client, log = console.log } = {}) {

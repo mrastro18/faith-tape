@@ -323,7 +323,7 @@ test("bars: a run whose manifest line was lost is adopted by the next run before
   rmSync(root, { recursive: true, force: true });
 });
 
-test("bars: an asset whose rows are still parked is a duplicate and is removed", () => {
+test("bars: an orphan whose rows are still parked is adopted and the overlap cut from the park", () => {
   const root = repo();
   const client = store();
   put(root, day12b, "[1,A]\n");
@@ -331,8 +331,10 @@ test("bars: an asset whose rows are still parked is a duplicate and is removed",
   commitAll(root, "1");
   // run 2's upload lands, then its check and its clean-up fail, so its rows stay parked and its asset stays
   const { assets, remove } = client;
-  client.assets = () => {
-    throw new Error("cut off");
+  let calls = 0;
+  client.assets = (tag) => {
+    if (++calls > 1) throw new Error("cut off"); // the listing before the upload works, the check after it does not
+    return assets(tag);
   };
   client.remove = () => {};
   put(root, day12b, "[2,B]\n");
@@ -341,11 +343,101 @@ test("bars: an asset whose rows are still parked is a duplicate and is removed",
   assert.ok(client.S.get("tape-2026-11-12").has("bars-2026-11-12-2.tar.gz"));
   commitAll(root, "2 cut off");
   put(root, day12b, "[3,C]\n");
-  offload(root, { kind: "bars", run: "3", client, log: quiet });
-  assert.equal(client.S.get("tape-2026-11-12").has("bars-2026-11-12-2.tar.gz"), false);
+  const c = offload(root, { kind: "bars", run: "3", client, log: quiet });
+  assert.deepEqual(c.bundles[0].files.map((f) => [f.offset, f.bytes]), [[12, 6]], "run 3 sends only its own rows");
   commitAll(root, "3");
   materialize(root, { client, log: quiet });
   assert.equal(readFileSync(join(root, day12b), "utf8"), "[1,A]\n[2,B]\n[3,C]\n");
+  rmSync(root, { recursive: true, force: true });
+});
+
+test("bars: an upload failure then a lost commit neither duplicates nor drops rows", () => {
+  const root = repo();
+  const client = store();
+  const upload = client.upload;
+  put(root, day12b, "[1,A]\n");
+  offload(root, { kind: "bars", run: "1", client, log: quiet });
+  commitAll(root, "1");
+  client.upload = () => {
+    throw new Error("down");
+  };
+  put(root, day12b, "[2,B]\n");
+  offload(root, { kind: "bars", run: "2", client, log: quiet });
+  commitAll(root, "2 parked");
+  client.upload = upload;
+  const before = readFileSync(join(root, "manifests/2026-11-12.ndjson"), "utf8");
+  put(root, day12b, "[3,C]\n");
+  offload(root, { kind: "bars", run: "3", client, log: quiet }); // sends B+C, then its commit is lost
+  git(root, "checkout", "--", ".");
+  git(root, "clean", "-fdq");
+  assert.equal(readFileSync(join(root, "manifests/2026-11-12.ndjson"), "utf8"), before);
+  assert.ok(existsSync(join(root, "state/offload-retry", day12b)), "B is still parked in git");
+  put(root, day12b, "[4,D]\n");
+  const d = offload(root, { kind: "bars", run: "4", client, log: quiet });
+  assert.deepEqual(d.parked, []);
+  commitAll(root, "4");
+  materialize(root, { client, log: quiet });
+  assert.equal(readFileSync(join(root, day12b), "utf8"), "[1,A]\n[2,B]\n[3,C]\n[4,D]\n");
+  rmSync(root, { recursive: true, force: true });
+});
+
+test("bars: a run killed part way through removing its parks does not hold the day", () => {
+  const root = repo();
+  const client = store();
+  const eth = "data/coinbase/bars1s/2026-11-12/ETH.ndjson";
+  put(root, day12b, "[1,a]\n");
+  put(root, eth, "[1,e]\n");
+  offload(root, { kind: "bars", run: "1", client, log: quiet });
+  commitAll(root, "1");
+  const before = readFileSync(join(root, "manifests/2026-11-12.ndjson"), "utf8");
+  put(root, day12b, "[2,b]\n");
+  put(root, eth, "[2,f]\n");
+  offload(root, { kind: "bars", run: "2", client, log: quiet });
+  // as if killed after removing the BTC park and before the ETH park and the line
+  writeFileSync(join(root, "manifests/2026-11-12.ndjson"), before);
+  put(root, "state/offload-retry/" + eth, "[2,f]\n");
+  commitAll(root, "2 killed");
+  put(root, day12b, "[3,c]\n");
+  put(root, eth, "[3,g]\n");
+  const r = offload(root, { kind: "bars", run: "3", client, log: quiet });
+  assert.deepEqual(r.parked, []);
+  assert.equal(existsSync(join(root, "state/offload-held.json")), false);
+  commitAll(root, "3");
+  materialize(root, { client, log: quiet });
+  assert.equal(readFileSync(join(root, day12b), "utf8"), "[1,a]\n[2,b]\n[3,c]\n");
+  assert.equal(readFileSync(join(root, eth), "utf8"), "[1,e]\n[2,f]\n[3,g]\n");
+  rmSync(root, { recursive: true, force: true });
+});
+
+test("bars: an orphan that does not fit holds the day, records the hold, and check reports it", () => {
+  const root = repo();
+  const client = store();
+  put(root, day12b, "[1,a]\n");
+  offload(root, { kind: "bars", run: "1", client, log: quiet });
+  commitAll(root, "1");
+  const before = readFileSync(join(root, "manifests/2026-11-12.ndjson"), "utf8");
+  put(root, day12b, "[2,b]\n");
+  offload(root, { kind: "bars", run: "2", client, log: quiet });
+  put(root, day12b, "[3,c]\n");
+  offload(root, { kind: "bars", run: "3", client, log: quiet });
+  writeFileSync(join(root, "manifests/2026-11-12.ndjson"), before + readFileSync(join(root, "manifests/2026-11-12.ndjson"), "utf8").trim().split("\n").slice(2).join("\n") + "\n"); // run 2's line lost, run 3's kept
+  commitAll(root, "2 lost");
+  put(root, day12b, "[4,d]\n");
+  const r = offload(root, { kind: "bars", run: "4", client, now: () => Date.parse("2026-11-12T07:00:00Z"), log: quiet });
+  assert.deepEqual(r.parked, [day12b]);
+  const held = JSON.parse(readFileSync(join(root, "state/offload-held.json"), "utf8"));
+  assert.equal(held["2026-11-12"].since, "2026-11-12T07:00:00.000Z");
+  assert.deepEqual(check(root, { client, log: quiet }).held, ["2026-11-12"]);
+  rmSync(root, { recursive: true, force: true });
+});
+
+test("bars: a park that HEAD already ends with is dropped", () => {
+  const root = repo();
+  put(root, day12b, "[1,a]\n");
+  put(root, "state/offload-retry/" + day12b, "[1,a]\n"); // killed between parking and putting the file back
+  commitAll(root, "both");
+  assert.deepEqual(pending(root, "bars"), []);
+  assert.equal(existsSync(join(root, "state/offload-retry", day12b)), false);
   rmSync(root, { recursive: true, force: true });
 });
 
