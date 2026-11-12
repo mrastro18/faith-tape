@@ -1,6 +1,6 @@
 {
- "at": "2026-11-12T00:37:38.124Z",
- "run": "43128579506",
+ "at": "2026-11-12T01:07:38.549Z",
+ "run": "43132219247",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 270,
+   "ms": 377,
    "markets": 127,
    "crypto": 20,
    "pages": 1,
@@ -22,42 +22,35 @@
    },
    "funding": "skipped"
   },
+  "kraken": {
+   "ok": true,
+   "ms": 26567,
+   "bases": 15,
+   "bars": 3975
+  },
   "coinbase": {
    "ok": true,
-   "ms": 24160,
+   "ms": 31582,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 13523,
+   "bars": 14078,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
-  "kraken": {
-   "ok": true,
-   "ms": 25468,
-   "bases": 15,
-   "bars": 3867
-  },
   "binanceus": {
    "ok": true,
-   "ms": 74078,
+   "ms": 62250,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 991,
+   "tradesWritten": 619,
    "symbolsBehind": 0
   }
  },
  "calls": 708,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/PEPE-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 74080
+ "http": [],
+ "ms": 62253
 }
