@@ -1,15 +1,15 @@
 {
- "at": "2026-11-12T15:07:35.080Z",
- "run": "43244296509",
+ "at": "2026-11-12T15:37:35.693Z",
+ "run": "43249726361",
  "tasks": {
   "daily": {
    "ok": true,
-   "ms": 1,
+   "ms": 0,
    "skipped": true
   },
   "kalshi": {
    "ok": true,
-   "ms": 289,
+   "ms": 229,
    "markets": 127,
    "crypto": 20,
    "pages": 1,
@@ -24,33 +24,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 28761,
+   "ms": 25426,
    "bases": 15,
-   "bars": 4310
+   "bars": 3821
   },
   "coinbase": {
    "ok": true,
-   "ms": 44779,
+   "ms": 38651,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 20767,
+   "bars": 18818,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 75530,
+   "ms": 77315,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 1617,
+   "tradesWritten": 1163,
    "symbolsBehind": 0
   }
  },
- "calls": 838,
+ "calls": 778,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
@@ -66,22 +66,28 @@
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/BTC-USD/trades",
+   "path": "/products/ENA-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/BTC-USD/trades",
+   "path": "/products/MAGIC-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/WLFI-USD/trades",
+   "path": "/products/SKL-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/XTZ-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 75532
+ "ms": 77318
 }
