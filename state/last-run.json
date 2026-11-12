@@ -1,15 +1,15 @@
 {
- "at": "2026-11-12T14:37:34.658Z",
- "run": "43239044430",
+ "at": "2026-11-12T15:07:35.080Z",
+ "run": "43244296509",
  "tasks": {
   "daily": {
    "ok": true,
-   "ms": 0,
+   "ms": 1,
    "skipped": true
   },
   "kalshi": {
    "ok": true,
-   "ms": 304,
+   "ms": 289,
    "markets": 127,
    "crypto": 20,
    "pages": 1,
@@ -24,33 +24,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 32032,
+   "ms": 28761,
    "bases": 15,
-   "bars": 4297
+   "bars": 4310
   },
   "coinbase": {
    "ok": true,
-   "ms": 44788,
+   "ms": 44779,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 22511,
+   "bars": 20767,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 75100,
+   "ms": 75530,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 2725,
+   "tradesWritten": 1617,
    "symbolsBehind": 0
   }
  },
- "calls": 824,
+ "calls": 838,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
@@ -66,34 +66,22 @@
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/ETH-USD/trades",
+   "path": "/products/BTC-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/FET-USD/trades",
+   "path": "/products/BTC-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/LINK-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/S-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/XRP-USD/trades",
+   "path": "/products/WLFI-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 75103
+ "ms": 75532
 }
