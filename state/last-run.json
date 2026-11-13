@@ -1,6 +1,6 @@
 {
- "at": "2026-11-13T10:37:42.079Z",
- "run": "43410444109",
+ "at": "2026-11-13T11:07:33.187Z",
+ "run": "43414431349",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 225,
+   "ms": 242,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,33 +24,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 19984,
+   "ms": 18839,
    "bases": 15,
-   "bars": 2754
+   "bars": 2704
   },
   "coinbase": {
    "ok": true,
-   "ms": 27715,
+   "ms": 24097,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 11609,
+   "bars": 10214,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 56731,
+   "ms": 74517,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 427,
+   "tradesWritten": 266,
    "symbolsBehind": 0
   }
  },
- "calls": 695,
- "http": [],
- "ms": 56733
+ "calls": 690,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/ZEC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 74520
 }
