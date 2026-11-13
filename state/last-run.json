@@ -1,15 +1,15 @@
 {
- "at": "2026-11-13T13:07:34.603Z",
- "run": "43430867732",
+ "at": "2026-11-13T13:37:33.177Z",
+ "run": "43435203901",
  "tasks": {
   "daily": {
    "ok": true,
-   "ms": 1,
+   "ms": 0,
    "skipped": true
   },
   "kalshi": {
    "ok": true,
-   "ms": 248,
+   "ms": 247,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,40 +24,52 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 19922,
+   "ms": 25493,
    "bases": 15,
-   "bars": 2965
+   "bars": 3670
   },
   "coinbase": {
    "ok": true,
-   "ms": 22829,
+   "ms": 33853,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 12557,
+   "bars": 18544,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 83243,
+   "ms": 75090,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 452,
+   "tradesWritten": 2568,
    "symbolsBehind": 0
   }
  },
- "calls": 695,
+ "calls": 766,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/SKL-USD/trades",
+   "path": "/products/DIA-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/KSM-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/QNT-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 83246
+ "ms": 75092
 }
