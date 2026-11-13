@@ -1,6 +1,6 @@
 {
- "at": "2026-11-13T16:07:39.498Z",
- "run": "43459427370",
+ "at": "2026-11-13T16:37:35.891Z",
+ "run": "43464505037",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 407,
+   "ms": 290,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,40 +24,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 25474,
+   "ms": 23256,
    "bases": 15,
-   "bars": 3981
+   "bars": 3702
   },
   "coinbase": {
    "ok": true,
-   "ms": 43729,
+   "ms": 40848,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 20831,
+   "bars": 18526,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 57243,
+   "ms": 78810,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 2603,
+   "tradesWritten": 1551,
    "symbolsBehind": 0
   }
  },
- "calls": 783,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/ETH-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 57245
+ "calls": 744,
+ "http": [],
+ "ms": 78813
 }
