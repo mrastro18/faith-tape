@@ -1,15 +1,10 @@
 {
- "at": "2026-11-13T23:37:32.825Z",
- "run": "43528432728",
+ "at": "2026-11-14T00:07:34.131Z",
+ "run": "43531961840",
  "tasks": {
-  "daily": {
-   "ok": true,
-   "ms": 0,
-   "skipped": true
-  },
   "kalshi": {
    "ok": true,
-   "ms": 329,
+   "ms": 611,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -20,56 +15,42 @@
     "Energy": 4,
     "Indices": 3
    },
-   "funding": "skipped"
+   "funding": 936906
+  },
+  "daily": {
+   "ok": true,
+   "ms": 4796,
+   "items": 14
   },
   "kraken": {
    "ok": true,
-   "ms": 19917,
+   "ms": 18828,
    "bases": 15,
-   "bars": 2643
+   "bars": 2175
   },
   "coinbase": {
    "ok": true,
-   "ms": 27772,
+   "ms": 22440,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 15158,
+   "bars": 11643,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 82724,
+   "ms": 113761,
    "pairs": 260,
    "tracked": 253,
-   "klineSymbols": 0,
+   "klineSymbols": 260,
    "depthRows": 253,
-   "tradesWritten": 1309,
+   "tradesWritten": 585,
    "symbolsBehind": 0
   }
  },
- "calls": 719,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/GLM-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/TIA-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/ZEC-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 82727
+ "calls": 972,
+ "http": [],
+ "ms": 113764
 }
