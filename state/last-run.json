@@ -1,6 +1,6 @@
 {
- "at": "2026-11-14T14:07:39.483Z",
- "run": "43603166645",
+ "at": "2026-11-14T14:37:37.164Z",
+ "run": "43605795368",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 386,
+   "ms": 348,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,33 +24,70 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 25474,
+   "ms": 30948,
    "bases": 15,
-   "bars": 3495
+   "bars": 4512
   },
   "coinbase": {
    "ok": true,
-   "ms": 42145,
+   "ms": 46422,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 19019,
+   "bars": 26150,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 56695,
+   "ms": 75182,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 2683,
+   "tradesWritten": 4619,
    "symbolsBehind": 0
   }
  },
- "calls": 780,
- "http": [],
- "ms": 56698
+ "calls": 846,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/ENA-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/SOL-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/VOXEL-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 75184
 }
