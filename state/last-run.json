@@ -1,6 +1,6 @@
 {
- "at": "2026-11-14T17:07:40.369Z",
- "run": "43619326782",
+ "at": "2026-11-14T17:37:34.656Z",
+ "run": "43622079417",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 358,
+   "ms": 180,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,37 +24,61 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 27674,
+   "ms": 26525,
    "bases": 15,
-   "bars": 4169
+   "bars": 3989
   },
   "coinbase": {
    "ok": true,
-   "ms": 54937,
+   "ms": 48032,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 26228,
+   "bars": 23401,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 57590,
+   "ms": 67803,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 3277,
+   "tradesWritten": 3946,
    "symbolsBehind": 0
   }
  },
- "calls": 851,
+ "calls": 847,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
    "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/BTRST-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   },
@@ -66,16 +90,10 @@
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/RARE-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/VET-USD/trades",
+   "path": "/products/XRP-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 57592
+ "ms": 67806
 }
