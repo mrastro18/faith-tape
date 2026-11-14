@@ -1,6 +1,6 @@
 {
- "at": "2026-11-14T18:37:46.687Z",
- "run": "43627595241",
+ "at": "2026-11-14T19:07:35.624Z",
+ "run": "43630319588",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 236,
+   "ms": 336,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,46 +24,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 23268,
+   "ms": 23281,
    "bases": 15,
-   "bars": 3317
+   "bars": 3305
   },
   "coinbase": {
    "ok": true,
-   "ms": 45709,
+   "ms": 56426,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 18626,
+   "bars": 17993,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 56903,
+   "ms": 62059,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 2523,
+   "tradesWritten": 2150,
    "symbolsBehind": 0
   }
  },
- "calls": 810,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/EIGEN-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/RENDER-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 56905
+ "calls": 806,
+ "http": [],
+ "ms": 62061
 }
