@@ -1,6 +1,6 @@
 {
- "at": "2026-11-15T13:07:36.530Z",
- "run": "43717305013",
+ "at": "2026-11-15T13:37:40.540Z",
+ "run": "43719928779",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 74,
+   "ms": 470,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,64 +24,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 19903,
+   "ms": 22169,
    "bases": 15,
-   "bars": 2497
+   "bars": 3016
   },
   "coinbase": {
    "ok": true,
-   "ms": 35166,
+   "ms": 38496,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 13039,
+   "bars": 14454,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 79661,
+   "ms": 57152,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 525,
+   "tradesWritten": 852,
    "symbolsBehind": 0
   }
  },
- "calls": 763,
+ "calls": 746,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/BTC-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/BTC-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/EGLD-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/SOL-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/YFI-USD/trades",
+   "path": "/products/LPT-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 79663
+ "ms": 57154
 }
