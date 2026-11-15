@@ -1,6 +1,6 @@
 {
- "at": "2026-11-15T22:37:31.401Z",
- "run": "43770284824",
+ "at": "2026-11-15T23:07:35.169Z",
+ "run": "43773029208",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 233,
+   "ms": 329,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,33 +24,45 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 17742,
+   "ms": 19971,
    "bases": 15,
-   "bars": 2265
+   "bars": 2316
   },
   "binanceus": {
    "ok": true,
-   "ms": 74529,
+   "ms": 62009,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 623,
+   "tradesWritten": 3938,
    "symbolsBehind": 0
   },
   "coinbase": {
    "ok": true,
-   "ms": 87481,
+   "ms": 105989,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 11453,
+   "bars": 11847,
    "candles": 0,
-   "failed": [],
-   "failedCount": 0
+   "failed": [
+    {
+     "base": "ETH",
+     "status": 500
+    }
+   ],
+   "failedCount": 1
   }
  },
- "calls": 746,
- "http": [],
- "ms": 87516
+ "calls": 732,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/ETH-USD/trades",
+   "status": 500,
+   "body": "{\"message\":\"Internal Server Error\"}"
+  }
+ ],
+ "ms": 106041
 }
