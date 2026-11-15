@@ -1,15 +1,15 @@
 {
- "at": "2026-11-15T17:37:31.144Z",
- "run": "43742113153",
+ "at": "2026-11-15T18:07:28.720Z",
+ "run": "43744900530",
  "tasks": {
   "daily": {
    "ok": true,
-   "ms": 0,
+   "ms": 1,
    "skipped": true
   },
   "kalshi": {
    "ok": true,
-   "ms": 211,
+   "ms": 285,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,33 +24,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 21020,
+   "ms": 21356,
    "bases": 15,
-   "bars": 2657
+   "bars": 2774
   },
   "coinbase": {
    "ok": true,
-   "ms": 40717,
+   "ms": 38675,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 13164,
+   "bars": 14139,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 81579,
+   "ms": 81545,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 653,
+   "tradesWritten": 1388,
    "symbolsBehind": 0
   }
  },
- "calls": 782,
+ "calls": 789,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
@@ -72,34 +72,16 @@
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/CTSI-USD/trades",
+   "path": "/products/QNT-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/FLOW-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/KNC-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/POL-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/TRUMP-USD/trades",
+   "path": "/products/VTHO-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 81581
+ "ms": 81547
 }
