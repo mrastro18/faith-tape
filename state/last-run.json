@@ -1,15 +1,15 @@
 {
- "at": "2026-11-15T12:07:30.459Z",
- "run": "43712200472",
+ "at": "2026-11-15T12:37:50.131Z",
+ "run": "43714761106",
  "tasks": {
   "daily": {
    "ok": true,
-   "ms": 1,
+   "ms": 0,
    "skipped": true
   },
   "kalshi": {
    "ok": true,
-   "ms": 193,
+   "ms": 296,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,33 +24,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 20997,
+   "ms": 19959,
    "bases": 15,
-   "bars": 2764
+   "bars": 2748
   },
   "coinbase": {
    "ok": true,
-   "ms": 34151,
+   "ms": 47243,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 11999,
+   "bars": 13426,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 80509,
+   "ms": 58180,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 706,
+   "tradesWritten": 702,
    "symbolsBehind": 0
   }
  },
- "calls": 754,
+ "calls": 802,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
@@ -60,28 +60,16 @@
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/COMP-USD/trades",
+   "path": "/products/CAKE-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/GLM-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/OP-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/VIRTUAL-USD/trades",
+   "path": "/products/LPT-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 80511
+ "ms": 58183
 }
