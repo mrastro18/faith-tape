@@ -1,6 +1,6 @@
 {
- "at": "2026-11-15T20:37:34.213Z",
- "run": "43759087172",
+ "at": "2026-11-15T21:07:40.542Z",
+ "run": "43761860129",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 75,
+   "ms": 362,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,27 +24,27 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 19901,
+   "ms": 18875,
    "bases": 15,
-   "bars": 2537
+   "bars": 2559
   },
   "binanceus": {
    "ok": true,
-   "ms": 80135,
+   "ms": 57113,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 1020,
+   "tradesWritten": 563,
    "symbolsBehind": 0
   },
   "coinbase": {
    "ok": true,
-   "ms": 177863,
+   "ms": 222525,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 13646,
+   "bars": 12753,
    "candles": 0,
    "failed": [
     {
@@ -55,7 +55,7 @@
    "failedCount": 1
   }
  },
- "calls": 799,
+ "calls": 744,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
@@ -64,5 +64,5 @@
    "body": "{\"message\":\"Internal Server Error\"}"
   }
  ],
- "ms": 177903
+ "ms": 222571
 }
