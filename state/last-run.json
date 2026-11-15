@@ -1,6 +1,6 @@
 {
- "at": "2026-11-15T06:37:33.116Z",
- "run": "43686255251",
+ "at": "2026-11-15T07:07:35.266Z",
+ "run": "43688483303",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 354,
+   "ms": 185,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,33 +24,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 19942,
+   "ms": 17703,
    "bases": 15,
-   "bars": 2470
+   "bars": 2238
   },
   "coinbase": {
    "ok": true,
-   "ms": 47131,
+   "ms": 27377,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 13128,
+   "bars": 11194,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 78223,
+   "ms": 79776,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 1151,
+   "tradesWritten": 869,
    "symbolsBehind": 0
   }
  },
- "calls": 775,
- "http": [],
- "ms": 78225
+ "calls": 725,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/GIGA-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 79779
 }
