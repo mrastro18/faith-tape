@@ -1,6 +1,6 @@
 {
- "at": "2026-11-15T08:07:33.383Z",
- "run": "43692993067",
+ "at": "2026-11-15T08:37:30.962Z",
+ "run": "43695346532",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 244,
+   "ms": 221,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,33 +24,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 22106,
+   "ms": 24327,
    "bases": 15,
-   "bars": 3039
+   "bars": 3690
   },
   "coinbase": {
    "ok": true,
-   "ms": 37381,
+   "ms": 42662,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 13766,
+   "bars": 16054,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 80927,
+   "ms": 73081,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 1751,
+   "tradesWritten": 1546,
    "symbolsBehind": 0
   }
  },
- "calls": 771,
+ "calls": 797,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
@@ -60,16 +60,46 @@
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/ME-USD/trades",
+   "path": "/products/BTC-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/SKL-USD/trades",
+   "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/ETH-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/IMX-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/PUMP-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/TRUMP-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 80930
+ "ms": 73083
 }
