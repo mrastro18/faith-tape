@@ -1,6 +1,6 @@
 {
- "at": "2026-11-15T15:37:32.844Z",
- "run": "43730876659",
+ "at": "2026-11-15T16:07:42.935Z",
+ "run": "43733642830",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 339,
+   "ms": 434,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,33 +24,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 23265,
+   "ms": 21077,
    "bases": 15,
-   "bars": 2909
+   "bars": 2694
   },
   "coinbase": {
    "ok": true,
-   "ms": 44022,
+   "ms": 47282,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 14485,
+   "bars": 13571,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 62206,
+   "ms": 58105,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 1205,
+   "tradesWritten": 802,
    "symbolsBehind": 0
   }
  },
- "calls": 794,
- "http": [],
- "ms": 62208
+ "calls": 800,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/LTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 58108
 }
