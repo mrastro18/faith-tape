@@ -1,6 +1,6 @@
 {
- "at": "2026-11-15T18:37:30.179Z",
- "run": "43747761729",
+ "at": "2026-11-15T19:07:34.808Z",
+ "run": "43750590795",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 233,
+   "ms": 409,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,70 +24,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 17706,
+   "ms": 17782,
    "bases": 15,
-   "bars": 2312
+   "bars": 2389
   },
   "coinbase": {
    "ok": true,
-   "ms": 39695,
+   "ms": 43630,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 12198,
+   "bars": 12006,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 82442,
+   "ms": 58441,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 920,
+   "tradesWritten": 1887,
    "symbolsBehind": 0
   }
  },
- "calls": 787,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/BTC-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/BTC-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/BTC-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/BTC-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/DOT-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/SUI-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 82444
+ "calls": 758,
+ "http": [],
+ "ms": 58443
 }
