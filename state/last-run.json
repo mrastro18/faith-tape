@@ -1,15 +1,15 @@
 {
- "at": "2026-11-15T21:07:40.542Z",
- "run": "43761860129",
+ "at": "2026-11-15T21:37:32.725Z",
+ "run": "43764669632",
  "tasks": {
   "daily": {
    "ok": true,
-   "ms": 1,
+   "ms": 0,
    "skipped": true
   },
   "kalshi": {
    "ok": true,
-   "ms": 362,
+   "ms": 144,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,39 +24,49 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 18875,
+   "ms": 19925,
    "bases": 15,
-   "bars": 2559
+   "bars": 2782
   },
   "binanceus": {
    "ok": true,
-   "ms": 57113,
+   "ms": 82545,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 563,
+   "tradesWritten": 1533,
    "symbolsBehind": 0
   },
   "coinbase": {
    "ok": true,
-   "ms": 222525,
+   "ms": 221962,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 12753,
+   "bars": 13206,
    "candles": 0,
    "failed": [
+    {
+     "base": "ASTER",
+     "status": 500
+    },
     {
      "base": "BTC",
      "status": 500
     }
    ],
-   "failedCount": 1
+   "failedCount": 2
   }
  },
- "calls": 744,
+ "calls": 783,
  "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/ASTER-USD/trades",
+   "status": 500,
+   "body": "{\"message\":\"Internal Server Error\"}"
+  },
   {
    "host": "api.exchange.coinbase.com",
    "path": "/products/BTC-USD/trades",
@@ -64,5 +74,5 @@
    "body": "{\"message\":\"Internal Server Error\"}"
   }
  ],
- "ms": 222571
+ "ms": 222000
 }
