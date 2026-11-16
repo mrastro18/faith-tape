@@ -1,6 +1,6 @@
 {
- "at": "2026-11-16T20:07:36.024Z",
- "run": "43946386834",
+ "at": "2026-11-16T20:37:36.034Z",
+ "run": "43951633846",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 159,
+   "ms": 225,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,46 +24,46 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 21031,
+   "ms": 21009,
    "bases": 15,
-   "bars": 2764
+   "bars": 3025
   },
   "coinbase": {
    "ok": true,
-   "ms": 24794,
+   "ms": 26114,
    "bases": 137,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 12497,
+   "bars": 13346,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 71471,
+   "ms": 83611,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 885,
+   "tradesWritten": 5015,
    "symbolsBehind": 0
   }
  },
- "calls": 703,
+ "calls": 716,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/PAXG-USD/trades",
+   "path": "/products/KAITO-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/USD1-USD/trades",
+   "path": "/products/PAXG-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 71475
+ "ms": 83613
 }
