@@ -1,6 +1,6 @@
 {
- "at": "2026-11-16T01:07:47.447Z",
- "run": "43784327952",
+ "at": "2026-11-16T01:37:31.277Z",
+ "run": "43787298309",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 358,
+   "ms": 196,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,40 +24,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 21070,
+   "ms": 19910,
    "bases": 15,
-   "bars": 2540
-  },
-  "coinbase": {
-   "ok": true,
-   "ms": 40343,
-   "bases": 137,
-   "historyBases": 62,
-   "historyBehind": 0,
-   "bars": 18302,
-   "candles": 0,
-   "failed": [],
-   "failedCount": 0
+   "bars": 2760
   },
   "binanceus": {
    "ok": true,
-   "ms": 58657,
+   "ms": 82678,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 1281,
+   "tradesWritten": 1175,
    "symbolsBehind": 0
+  },
+  "coinbase": {
+   "ok": true,
+   "ms": 120705,
+   "bases": 137,
+   "historyBases": 62,
+   "historyBehind": 0,
+   "bars": 17061,
+   "candles": 0,
+   "failed": [],
+   "failedCount": 0
   }
  },
- "calls": 779,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/DASH-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 58660
+ "calls": 754,
+ "http": [],
+ "ms": 120743
 }
