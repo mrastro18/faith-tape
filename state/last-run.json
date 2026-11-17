@@ -1,6 +1,6 @@
 {
- "at": "2026-11-17T03:07:34.631Z",
- "run": "44007872107",
+ "at": "2026-11-17T03:37:36.916Z",
+ "run": "44011462582",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 163,
+   "ms": 444,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,45 +24,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 18801,
+   "ms": 19961,
    "bases": 15,
-   "bars": 1884
+   "bars": 2310
+  },
+  "coinbase": {
+   "ok": true,
+   "ms": 38408,
+   "bases": 137,
+   "historyBases": 63,
+   "historyBehind": 0,
+   "bars": 14265,
+   "candles": 0,
+   "failed": [],
+   "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 79253,
+   "ms": 82021,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 756,
+   "tradesWritten": 1325,
    "symbolsBehind": 0
-  },
-  "coinbase": {
-   "ok": true,
-   "ms": 82791,
-   "bases": 137,
-   "historyBases": 63,
-   "historyBehind": 0,
-   "bars": 10831,
-   "candles": 0,
-   "failed": [
-    {
-     "base": "XRP",
-     "status": 500
-    }
-   ],
-   "failedCount": 1
   }
  },
- "calls": 698,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/XRP-USD/trades",
-   "status": 500,
-   "body": "{\"message\":\"Internal Server Error\"}"
-  }
- ],
- "ms": 82836
+ "calls": 718,
+ "http": [],
+ "ms": 82024
 }
