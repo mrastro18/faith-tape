@@ -1,6 +1,6 @@
 {
- "at": "2026-11-17T13:37:36.983Z",
- "run": "44094508922",
+ "at": "2026-11-17T14:07:42.685Z",
+ "run": "44099601159",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 360,
+   "ms": 419,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,33 +24,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 19968,
+   "ms": 19972,
    "bases": 15,
-   "bars": 2737
+   "bars": 2607
   },
   "coinbase": {
    "ok": true,
-   "ms": 36012,
+   "ms": 29703,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 13990,
+   "bars": 13348,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 81833,
+   "ms": 57144,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 911,
+   "tradesWritten": 989,
    "symbolsBehind": 0
   }
  },
- "calls": 703,
- "http": [],
- "ms": 81836
+ "calls": 705,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/LDO-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 57146
 }
