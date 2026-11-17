@@ -1,6 +1,6 @@
 {
- "at": "2026-11-17T12:37:33.224Z",
- "run": "44084814933",
+ "at": "2026-11-17T13:08:51.312Z",
+ "run": "44089522383",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 200,
+   "ms": 242,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,40 +24,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 18834,
+   "ms": 19975,
    "bases": 15,
-   "bars": 2546
+   "bars": 2701
   },
   "coinbase": {
    "ok": true,
-   "ms": 23120,
+   "ms": 30893,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 11728,
+   "bars": 13854,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 71025,
+   "ms": 56542,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 643,
+   "tradesWritten": 749,
    "symbolsBehind": 0
   }
  },
- "calls": 693,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/NMR-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 71027
+ "calls": 704,
+ "http": [],
+ "ms": 56544
 }
