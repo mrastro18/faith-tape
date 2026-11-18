@@ -1,15 +1,15 @@
 {
- "at": "2026-11-18T16:37:39.195Z",
- "run": "44349284666",
+ "at": "2026-11-18T17:07:39.093Z",
+ "run": "44354991041",
  "tasks": {
   "daily": {
    "ok": true,
-   "ms": 1,
+   "ms": 0,
    "skipped": true
   },
   "kalshi": {
    "ok": true,
-   "ms": 334,
+   "ms": 181,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,70 +24,52 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 30905,
+   "ms": 26508,
    "bases": 15,
-   "bars": 4550
+   "bars": 4181
   },
   "coinbase": {
    "ok": true,
-   "ms": 43181,
+   "ms": 33547,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 22105,
+   "bars": 18861,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 82471,
+   "ms": 81123,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 2332,
+   "tradesWritten": 2127,
    "symbolsBehind": 0
   }
  },
- "calls": 824,
+ "calls": 767,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/BTC-USD/trades",
+   "path": "/products/ETH-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/BTC-USD/trades",
+   "path": "/products/GLM-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/BTC-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/CELR-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/S-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/TURBO-USD/trades",
+   "path": "/products/UNI-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 82474
+ "ms": 81126
 }
