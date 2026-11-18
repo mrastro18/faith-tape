@@ -1,6 +1,6 @@
 {
- "at": "2026-11-18T15:37:39.751Z",
- "run": "44337697649",
+ "at": "2026-11-18T16:07:34.741Z",
+ "run": "44343435491",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 332,
+   "ms": 195,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,33 +24,70 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 21058,
+   "ms": 23208,
    "bases": 15,
-   "bars": 3240
+   "bars": 3685
   },
   "coinbase": {
    "ok": true,
-   "ms": 49198,
+   "ms": 37944,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 17541,
+   "bars": 18309,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 107381,
+   "ms": 68652,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 2186,
+   "tradesWritten": 2549,
    "symbolsBehind": 0
   }
  },
- "calls": 767,
- "http": [],
- "ms": 107385
+ "calls": 775,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/ETC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/IMX-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/SUI-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/WLFI-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 68654
 }
