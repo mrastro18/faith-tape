@@ -1,6 +1,6 @@
 {
- "at": "2026-11-18T12:37:38.634Z",
- "run": "44305624184",
+ "at": "2026-11-18T13:07:49.634Z",
+ "run": "44310448381",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 318,
+   "ms": 223,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,40 +24,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 17735,
+   "ms": 19906,
    "bases": 15,
-   "bars": 2218
+   "bars": 2579
   },
   "coinbase": {
    "ok": true,
-   "ms": 23121,
+   "ms": 24330,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 11070,
+   "bars": 12354,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 73205,
+   "ms": 78339,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 443,
+   "tradesWritten": 700,
    "symbolsBehind": 0
   }
  },
- "calls": 694,
+ "calls": 707,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/TOSHI-USD/trades",
+   "path": "/products/VET-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 73208
+ "ms": 78342
 }
