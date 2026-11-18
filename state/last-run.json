@@ -1,6 +1,6 @@
 {
- "at": "2026-11-18T03:37:35.444Z",
- "run": "44231672608",
+ "at": "2026-11-18T04:07:39.277Z",
+ "run": "44235068563",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 167,
+   "ms": 431,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,46 +24,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 17711,
+   "ms": 17793,
    "bases": 15,
-   "bars": 1868
+   "bars": 1990
   },
   "coinbase": {
    "ok": true,
-   "ms": 24169,
+   "ms": 25948,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 10339,
+   "bars": 10095,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 69367,
+   "ms": 57644,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 479,
+   "tradesWritten": 331,
    "symbolsBehind": 0
   }
  },
- "calls": 697,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/METIS-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/VET-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 69370
+ "calls": 687,
+ "http": [],
+ "ms": 57648
 }
