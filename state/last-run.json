@@ -1,6 +1,6 @@
 {
- "at": "2026-11-18T11:07:41.175Z",
- "run": "44291702160",
+ "at": "2026-11-18T11:37:35.500Z",
+ "run": "44296312375",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 340,
+   "ms": 180,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,46 +24,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 17770,
+   "ms": 18836,
    "bases": 15,
-   "bars": 2016
+   "bars": 1932
   },
   "coinbase": {
    "ok": true,
-   "ms": 28026,
+   "ms": 22103,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 9283,
+   "bars": 9569,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 57144,
+   "ms": 69528,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 523,
+   "tradesWritten": 743,
    "symbolsBehind": 0
   }
  },
- "calls": 696,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/MOODENG-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/SKY-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 57147
+ "calls": 693,
+ "http": [],
+ "ms": 69531
 }
