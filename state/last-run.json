@@ -1,6 +1,6 @@
 {
- "at": "2026-11-19T09:07:34.871Z",
- "run": "44493449005",
+ "at": "2026-11-19T09:37:38.925Z",
+ "run": "44498061277",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 259,
+   "ms": 224,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,33 +24,52 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 16605,
+   "ms": 16614,
    "bases": 15,
-   "bars": 2059
+   "bars": 2085
   },
   "coinbase": {
    "ok": true,
-   "ms": 21564,
+   "ms": 23735,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 8931,
+   "bars": 8261,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 82619,
+   "ms": 83365,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 634,
+   "tradesWritten": 356,
    "symbolsBehind": 0
   }
  },
- "calls": 683,
- "http": [],
- "ms": 82622
+ "calls": 684,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/LAYER-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/PEPE-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/WLD-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 83367
 }
