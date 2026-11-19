@@ -1,6 +1,6 @@
 {
- "at": "2026-11-19T10:07:40.003Z",
- "run": "44502622319",
+ "at": "2026-11-19T10:37:40.129Z",
+ "run": "44507323048",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 90,
+   "ms": 244,
    "markets": 126,
    "crypto": 19,
    "pages": 1,
@@ -24,40 +24,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 16599,
+   "ms": 16647,
    "bases": 15,
-   "bars": 2155
+   "bars": 2022
   },
   "coinbase": {
    "ok": true,
-   "ms": 21084,
+   "ms": 20760,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 7968,
+   "bars": 7721,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 79819,
+   "ms": 74715,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 320,
+   "tradesWritten": 353,
    "symbolsBehind": 0
   }
  },
  "calls": 679,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/SAND-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 79821
+ "http": [],
+ "ms": 74717
 }
