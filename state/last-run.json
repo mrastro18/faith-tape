@@ -1,6 +1,6 @@
 {
- "at": "2026-11-19T22:07:37.033Z",
- "run": "44625471963",
+ "at": "2026-11-19T22:37:47.408Z",
+ "run": "44630297797",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 349,
+   "ms": 225,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,33 +25,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 23270,
+   "ms": 22180,
    "bases": 15,
-   "bars": 3316
+   "bars": 3215
   },
   "coinbase": {
    "ok": true,
-   "ms": 35192,
+   "ms": 32076,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 15471,
+   "bars": 13565,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 62358,
+   "ms": 56842,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 4541,
+   "tradesWritten": 1070,
    "symbolsBehind": 0
   }
  },
- "calls": 746,
+ "calls": 718,
  "http": [],
- "ms": 62361
+ "ms": 56844
 }
