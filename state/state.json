@@ -1836,9 +1836,9 @@
     "lastMs": 1795006680521
    },
    "1000REKTUSDT": {
-    "id": 7198,
+    "id": 7199,
     "caughtUp": true,
-    "lastMs": 1795186698325
+    "lastMs": 1795188621752
    },
    "1INCHUSDT": {
     "id": 175598,
@@ -1851,24 +1851,24 @@
     "lastMs": 1795115496866
    },
    "AAVEUSD": {
-    "id": 80252,
+    "id": 80254,
     "caughtUp": true,
-    "lastMs": 1795176340847
+    "lastMs": 1795187870102
    },
    "AAVEUSDT": {
-    "id": 916488,
+    "id": 916501,
     "caughtUp": true,
-    "lastMs": 1795183628599
+    "lastMs": 1795189038805
    },
    "ACHUSDT": {
-    "id": 281658,
+    "id": 281659,
     "caughtUp": true,
-    "lastMs": 1795125657076
+    "lastMs": 1795188367532
    },
    "ADAUSD": {
-    "id": 943753,
+    "id": 944203,
     "caughtUp": true,
-    "lastMs": 1795187250502
+    "lastMs": 1795189084374
    },
    "ADAUSDC": {
     "id": 78627,
@@ -1876,9 +1876,9 @@
     "lastMs": 1795053732542
    },
    "ADAUSDT": {
-    "id": 9264137,
+    "id": 9264520,
     "caughtUp": true,
-    "lastMs": 1795187291666
+    "lastMs": 1795189094608
    },
    "ADXUSDT": {
     "id": 12452,
@@ -1886,24 +1886,24 @@
     "lastMs": 1793767587853
    },
    "AIXBTUSDT": {
-    "id": 3288,
+    "id": 3290,
     "caughtUp": true,
-    "lastMs": 1794628494205
+    "lastMs": 1795187872164
    },
    "ALGOUSD": {
-    "id": 219921,
+    "id": 219923,
     "caughtUp": true,
-    "lastMs": 1795151304552
+    "lastMs": 1795187985524
    },
    "ALGOUSDT": {
-    "id": 588529,
+    "id": 588533,
     "caughtUp": true,
-    "lastMs": 1795185493368
+    "lastMs": 1795187985528
    },
    "ALICEUSDT": {
-    "id": 22158,
+    "id": 22161,
     "caughtUp": true,
-    "lastMs": 1794701644176
+    "lastMs": 1795188103887
    },
    "ALPINEUSDT": {
     "id": 41670,
@@ -1921,9 +1921,9 @@
     "lastMs": 1795138264667
    },
    "APEUSDT": {
-    "id": 2045607,
+    "id": 2045615,
     "caughtUp": true,
-    "lastMs": 1795176738223
+    "lastMs": 1795188929807
    },
    "API3USDT": {
     "id": 103591,
@@ -1931,14 +1931,14 @@
     "lastMs": 1795186216617
    },
    "APTUSDT": {
-    "id": 161696,
+    "id": 161699,
     "caughtUp": true,
-    "lastMs": 1795155089374
+    "lastMs": 1795187826738
    },
    "ARBUSDT": {
-    "id": 127052,
+    "id": 127054,
     "caughtUp": true,
-    "lastMs": 1795165611162
+    "lastMs": 1795187872138
    },
    "ASTERUSDT": {
     "id": 41432,
@@ -1951,14 +1951,14 @@
     "lastMs": 1794764150626
    },
    "ATOMUSD": {
-    "id": 394398,
+    "id": 394402,
     "caughtUp": true,
-    "lastMs": 1795139086466
+    "lastMs": 1795188090567
    },
    "ATOMUSDT": {
-    "id": 4193182,
+    "id": 4193186,
     "caughtUp": true,
-    "lastMs": 1795186803035
+    "lastMs": 1795188090569
    },
    "AUDIOUSDT": {
     "id": 164917,
@@ -1966,19 +1966,19 @@
     "lastMs": 1795171646149
    },
    "AUSDT": {
-    "id": 8831,
+    "id": 8840,
     "caughtUp": true,
-    "lastMs": 1795187115193
+    "lastMs": 1795188876632
    },
    "AVAXUSD": {
-    "id": 366299,
+    "id": 366317,
     "caughtUp": true,
-    "lastMs": 1795187141496
+    "lastMs": 1795188697596
    },
    "AVAXUSDT": {
-    "id": 2503068,
+    "id": 2503106,
     "caughtUp": true,
-    "lastMs": 1795187141496
+    "lastMs": 1795189037477
    },
    "AVNTUSDT": {
     "id": 24476,
@@ -2006,14 +2006,14 @@
     "lastMs": 1795174014811
    },
    "BCHUSD": {
-    "id": 115420,
+    "id": 115430,
     "caughtUp": true,
-    "lastMs": 1795179595719
+    "lastMs": 1795189081596
    },
    "BCHUSDT": {
-    "id": 1999696,
+    "id": 1999727,
     "caughtUp": true,
-    "lastMs": 1795187277083
+    "lastMs": 1795189098470
    },
    "BERTUSDT": {
     "id": 872,
@@ -2021,9 +2021,9 @@
     "lastMs": 1795132920205
    },
    "BICOUSDT": {
-    "id": 69922,
+    "id": 69929,
     "caughtUp": true,
-    "lastMs": 1795176182633
+    "lastMs": 1795188412379
    },
    "BLURUSDT": {
     "id": 20371,
@@ -2036,14 +2036,14 @@
     "lastMs": 1795069800859
    },
    "BNBUSD": {
-    "id": 1021206,
+    "id": 1021363,
     "caughtUp": true,
-    "lastMs": 1795187131433
+    "lastMs": 1795189081433
    },
    "BNBUSDT": {
-    "id": 6267958,
+    "id": 6268096,
     "caughtUp": true,
-    "lastMs": 1795187191449
+    "lastMs": 1795189080145
    },
    "BNTUSDT": {
     "id": 25171,
@@ -2051,9 +2051,9 @@
     "lastMs": 1794791790470
    },
    "BONKUSD": {
-    "id": 39862,
+    "id": 39866,
     "caughtUp": true,
-    "lastMs": 1795164805677
+    "lastMs": 1795188711974
    },
    "BONKUSDT": {
     "id": 222576,
@@ -2076,9 +2076,9 @@
     "lastMs": 1776866987411
    },
    "BTCUSDC": {
-    "id": 10934668,
+    "id": 10934873,
     "caughtUp": true,
-    "lastMs": 1795187198960
+    "lastMs": 1795189059446
    },
    "BTCUSDT": {
     "id": 29632126,
@@ -2096,9 +2096,9 @@
     "lastMs": 1795171669679
    },
    "CAKEUSDT": {
-    "id": 7770,
+    "id": 7771,
     "caughtUp": true,
-    "lastMs": 1795154498043
+    "lastMs": 1795187889239
    },
    "CELOUSDT": {
     "id": 68837,
@@ -2111,14 +2111,14 @@
     "lastMs": 1795104011199
    },
    "CHZUSDT": {
-    "id": 190893,
+    "id": 190897,
     "caughtUp": true,
-    "lastMs": 1795143534847
+    "lastMs": 1795187735857
    },
    "COMPUSDT": {
-    "id": 960913,
+    "id": 960914,
     "caughtUp": true,
-    "lastMs": 1795137021341
+    "lastMs": 1795187825806
    },
    "COTIUSDT": {
     "id": 108672,
@@ -2141,9 +2141,9 @@
     "lastMs": 1794870496240
    },
    "DASHUSDT": {
-    "id": 199951,
+    "id": 199981,
     "caughtUp": true,
-    "lastMs": 1795185964791
+    "lastMs": 1795188725305
    },
    "DGBUSD": {
     "id": 46862,
@@ -2151,49 +2151,49 @@
     "lastMs": 1795182494016
    },
    "DGBUSDT": {
-    "id": 167725,
+    "id": 167728,
     "caughtUp": true,
-    "lastMs": 1795186935755
+    "lastMs": 1795187964459
    },
    "DIAUSDT": {
-    "id": 27642,
+    "id": 27643,
     "caughtUp": true,
-    "lastMs": 1795119961785
+    "lastMs": 1795188134518
    },
    "DOGEUSD": {
-    "id": 596444,
+    "id": 596486,
     "caughtUp": true,
-    "lastMs": 1795187141337
+    "lastMs": 1795189052955
    },
    "DOGEUSDT": {
-    "id": 12753157,
+    "id": 12753308,
     "caughtUp": true,
-    "lastMs": 1795187147918
+    "lastMs": 1795189069404
    },
    "DOODUSDT": {
-    "id": 10585,
+    "id": 10587,
     "caughtUp": true,
-    "lastMs": 1795174166379
+    "lastMs": 1795188793382
    },
    "DOTUSD": {
-    "id": 179153,
+    "id": 179154,
     "caughtUp": true,
-    "lastMs": 1795175246170
+    "lastMs": 1795188242166
    },
    "DOTUSDT": {
-    "id": 894414,
+    "id": 894419,
     "caughtUp": true,
-    "lastMs": 1795186885334
+    "lastMs": 1795188920087
    },
    "DUSKUSDT": {
-    "id": 117308,
+    "id": 117340,
     "caughtUp": true,
-    "lastMs": 1795187015451
+    "lastMs": 1795189085912
    },
    "EGLDUSDT": {
-    "id": 2187073,
+    "id": 2187082,
     "caughtUp": true,
-    "lastMs": 1795139640982
+    "lastMs": 1795187900553
    },
    "EIGENUSDT": {
     "id": 3839,
@@ -2201,9 +2201,9 @@
     "lastMs": 1795149114778
    },
    "ENAUSDT": {
-    "id": 22124,
+    "id": 22128,
     "caughtUp": true,
-    "lastMs": 1795183748883
+    "lastMs": 1795187881459
    },
    "ENJUSDT": {
     "id": 225302,
@@ -2211,14 +2211,14 @@
     "lastMs": 1795143847571
    },
    "ENSUSD": {
-    "id": 22438,
+    "id": 22439,
     "caughtUp": true,
-    "lastMs": 1795180009712
+    "lastMs": 1795187733233
    },
    "ENSUSDT": {
-    "id": 297885,
+    "id": 297887,
     "caughtUp": true,
-    "lastMs": 1794744883852
+    "lastMs": 1795187733231
    },
    "ETCUSD": {
     "id": 137555,
@@ -2226,9 +2226,9 @@
     "lastMs": 1794930674038
    },
    "ETCUSDT": {
-    "id": 2351048,
+    "id": 2351051,
     "caughtUp": true,
-    "lastMs": 1795186878844
+    "lastMs": 1795188420285
    },
    "ETHUSD": {
     "id": 8727592,
@@ -2236,9 +2236,9 @@
     "lastMs": 1777345352249
    },
    "ETHUSDC": {
-    "id": 1047752,
+    "id": 1047948,
     "caughtUp": true,
-    "lastMs": 1795187265878
+    "lastMs": 1795189103183
    },
    "ETHUSDT": {
     "id": 17663562,
@@ -2246,34 +2246,34 @@
     "lastMs": 1776959912480
    },
    "FARTCOINUSDT": {
-    "id": 5590,
+    "id": 5591,
     "caughtUp": true,
-    "lastMs": 1795108582952
+    "lastMs": 1795187987059
    },
    "FETUSD": {
-    "id": 305574,
+    "id": 305579,
     "caughtUp": true,
-    "lastMs": 1795184643238
+    "lastMs": 1795188671661
    },
    "FETUSDT": {
-    "id": 1206796,
+    "id": 1206811,
     "caughtUp": true,
-    "lastMs": 1795185730427
+    "lastMs": 1795188671662
    },
    "FILUSDT": {
-    "id": 539922,
+    "id": 539930,
     "caughtUp": true,
-    "lastMs": 1795187274997
+    "lastMs": 1795188250282
    },
    "FLOKIUSD": {
-    "id": 39581,
+    "id": 39583,
     "caughtUp": true,
-    "lastMs": 1795156909789
+    "lastMs": 1795188250124
    },
    "FLOKIUSDT": {
-    "id": 773422,
+    "id": 773423,
     "caughtUp": true,
-    "lastMs": 1795156909790
+    "lastMs": 1795188250123
    },
    "FLOWUSDT": {
     "id": 75011,
@@ -2296,14 +2296,14 @@
     "lastMs": 1795135555516
    },
    "GALAUSD": {
-    "id": 291287,
+    "id": 291289,
     "caughtUp": true,
-    "lastMs": 1795176437184
+    "lastMs": 1795187890390
    },
    "GALAUSDT": {
-    "id": 757526,
+    "id": 757528,
     "caughtUp": true,
-    "lastMs": 1795186896059
+    "lastMs": 1795187890394
    },
    "GASUSDT": {
     "id": 1094,
@@ -2311,9 +2311,9 @@
     "lastMs": 1795109533742
    },
    "GIGAUSDT": {
-    "id": 11334,
+    "id": 11335,
     "caughtUp": true,
-    "lastMs": 1795186854312
+    "lastMs": 1795187757779
    },
    "GLMUSDT": {
     "id": 26314,
@@ -2321,9 +2321,9 @@
     "lastMs": 1794971048530
    },
    "GRAMUSDT": {
-    "id": 2670,
+    "id": 2671,
     "caughtUp": true,
-    "lastMs": 1795171169795
+    "lastMs": 1795188020851
    },
    "GRTUSD": {
     "id": 229013,
@@ -2341,39 +2341,39 @@
     "lastMs": 1795150060131
    },
    "GUSDT": {
-    "id": 28104,
+    "id": 28105,
     "caughtUp": true,
-    "lastMs": 1795087871248
+    "lastMs": 1795188103886
    },
    "HBARUSD": {
-    "id": 375326,
+    "id": 375338,
     "caughtUp": true,
-    "lastMs": 1795185862024
+    "lastMs": 1795189096450
    },
    "HBARUSDT": {
-    "id": 656856,
+    "id": 656871,
     "caughtUp": true,
-    "lastMs": 1795185930675
+    "lastMs": 1795188243199
    },
    "HYPEUSD": {
-    "id": 236917,
+    "id": 238285,
     "caughtUp": true,
-    "lastMs": 1795186434017
+    "lastMs": 1795189103154
    },
    "HYPEUSDT": {
-    "id": 210548,
+    "id": 211442,
     "caughtUp": true,
-    "lastMs": 1795187076749
+    "lastMs": 1795189058451
    },
    "ICPUSD": {
-    "id": 96858,
+    "id": 96864,
     "caughtUp": true,
-    "lastMs": 1795182632469
+    "lastMs": 1795188589953
    },
    "ICPUSDT": {
-    "id": 461342,
+    "id": 461428,
     "caughtUp": true,
-    "lastMs": 1795187298926
+    "lastMs": 1795189098926
    },
    "ILVUSDT": {
     "id": 51061,
@@ -2396,14 +2396,14 @@
     "lastMs": 1795126257671
    },
    "IOTAUSD": {
-    "id": 86532,
+    "id": 86535,
     "caughtUp": true,
-    "lastMs": 1795122121157
+    "lastMs": 1795187990236
    },
    "IOTAUSDT": {
-    "id": 342615,
+    "id": 342626,
     "caughtUp": true,
-    "lastMs": 1795171611434
+    "lastMs": 1795189102298
    },
    "IOTXUSDT": {
     "id": 29895,
@@ -2426,9 +2426,9 @@
     "lastMs": 1795149490659
    },
    "KAITOUSDT": {
-    "id": 4867,
+    "id": 4876,
     "caughtUp": true,
-    "lastMs": 1795184610236
+    "lastMs": 1795188608181
    },
    "KAVAUSDT": {
     "id": 90536,
@@ -2441,9 +2441,9 @@
     "lastMs": 1794666880899
    },
    "KSMUSDT": {
-    "id": 65089,
+    "id": 65090,
     "caughtUp": true,
-    "lastMs": 1795176445833
+    "lastMs": 1795188075258
    },
    "LAYERUSDT": {
     "id": 1008,
@@ -2461,14 +2461,14 @@
     "lastMs": 1795143842100
    },
    "LINKUSD": {
-    "id": 473275,
+    "id": 473317,
     "caughtUp": true,
-    "lastMs": 1795187141417
+    "lastMs": 1795189078957
    },
    "LINKUSDT": {
-    "id": 1349123,
+    "id": 1349315,
     "caughtUp": true,
-    "lastMs": 1795186968277
+    "lastMs": 1795189091748
    },
    "LMWRUSDT": {
     "id": 1945,
@@ -2476,19 +2476,19 @@
     "lastMs": 1795148962547
    },
    "LOFIUSDT": {
-    "id": 2002,
+    "id": 2005,
     "caughtUp": true,
-    "lastMs": 1795182570767
+    "lastMs": 1795188027318
    },
    "LPTUSD": {
-    "id": 57530,
+    "id": 57531,
     "caughtUp": true,
-    "lastMs": 1795148935483
+    "lastMs": 1795187990258
    },
    "LPTUSDT": {
-    "id": 268046,
+    "id": 268051,
     "caughtUp": true,
-    "lastMs": 1795163126073
+    "lastMs": 1795188254612
    },
    "LSKUSDT": {
     "id": 28404,
@@ -2496,14 +2496,14 @@
     "lastMs": 1794798251329
    },
    "LTCUSD": {
-    "id": 487269,
+    "id": 487353,
     "caughtUp": true,
-    "lastMs": 1795181497686
+    "lastMs": 1795188086669
    },
    "LTCUSDT": {
-    "id": 4260732,
+    "id": 4260999,
     "caughtUp": true,
-    "lastMs": 1795187198815
+    "lastMs": 1795189082333
    },
    "MAGICUSDT": {
     "id": 8036,
@@ -2511,9 +2511,9 @@
     "lastMs": 1795163590455
    },
    "MANAUSDT": {
-    "id": 426533,
+    "id": 426536,
     "caughtUp": true,
-    "lastMs": 1795144448179
+    "lastMs": 1795187872447
    },
    "MASKUSDT": {
     "id": 98674,
@@ -2526,9 +2526,9 @@
     "lastMs": 1795120222489
    },
    "MEUSD": {
-    "id": 2418,
+    "id": 2419,
     "caughtUp": true,
-    "lastMs": 1794688397790
+    "lastMs": 1795188160543
    },
    "MEUSDT": {
     "id": 2903,
@@ -2546,14 +2546,14 @@
     "lastMs": 1795112542761
    },
    "NEARUSD": {
-    "id": 177088,
+    "id": 177145,
     "caughtUp": true,
-    "lastMs": 1795187128476
+    "lastMs": 1795189079133
    },
    "NEARUSDT": {
-    "id": 615749,
+    "id": 615827,
     "caughtUp": true,
-    "lastMs": 1795187275649
+    "lastMs": 1795189079132
    },
    "NEIROUSDT": {
     "id": 9100,
@@ -2576,9 +2576,9 @@
     "lastMs": 1795143852703
    },
    "NPCUSDT": {
-    "id": 47451,
+    "id": 47472,
     "caughtUp": true,
-    "lastMs": 1795187005613
+    "lastMs": 1795188967106
    },
    "OCEANUSDT": {
     "id": 145509,
@@ -2586,29 +2586,29 @@
     "lastMs": 1795145685261
    },
    "OGNUSDT": {
-    "id": 226855,
+    "id": 226859,
     "caughtUp": true,
-    "lastMs": 1795151050085
+    "lastMs": 1795189084907
    },
    "ONDOUSDT": {
-    "id": 28147,
+    "id": 28156,
     "caughtUp": true,
-    "lastMs": 1795184036439
+    "lastMs": 1795187981375
    },
    "ONEUSD": {
-    "id": 145946,
+    "id": 145954,
     "caughtUp": true,
-    "lastMs": 1795155558899
+    "lastMs": 1795188428595
    },
    "ONEUSDT": {
-    "id": 5214257,
+    "id": 5214263,
     "caughtUp": true,
-    "lastMs": 1795186218742
+    "lastMs": 1795188428592
    },
    "ONGUSDT": {
-    "id": 13337,
+    "id": 13338,
     "caughtUp": true,
-    "lastMs": 1795152304201
+    "lastMs": 1795187896831
    },
    "ONTUSDT": {
     "id": 932513,
@@ -2616,14 +2616,14 @@
     "lastMs": 1795144895467
    },
    "OPUSD": {
-    "id": 212096,
+    "id": 212099,
     "caughtUp": true,
-    "lastMs": 1795140422330
+    "lastMs": 1795188015419
    },
    "OPUSDT": {
-    "id": 499609,
+    "id": 499611,
     "caughtUp": true,
-    "lastMs": 1795140422331
+    "lastMs": 1795187866930
    },
    "ORBSUSDT": {
     "id": 79933,
@@ -2636,24 +2636,24 @@
     "lastMs": 1795144556735
    },
    "PAXGUSDT": {
-    "id": 137063,
+    "id": 137065,
     "caughtUp": true,
-    "lastMs": 1795186904656
+    "lastMs": 1795188384141
    },
    "PENGUUSDT": {
-    "id": 109977,
+    "id": 110020,
     "caughtUp": true,
-    "lastMs": 1795186195341
+    "lastMs": 1795188975033
    },
    "PEPEUSD": {
-    "id": 84567,
+    "id": 84609,
     "caughtUp": true,
-    "lastMs": 1795185680754
+    "lastMs": 1795188327869
    },
    "PEPEUSDT": {
-    "id": 219803,
+    "id": 219823,
     "caughtUp": true,
-    "lastMs": 1795185945216
+    "lastMs": 1795188327867
    },
    "PNUTUSDT": {
     "id": 12182,
@@ -2661,14 +2661,14 @@
     "lastMs": 1794956978582
    },
    "POLUSD": {
-    "id": 16176,
+    "id": 16177,
     "caughtUp": true,
-    "lastMs": 1795139179008
+    "lastMs": 1795187930509
    },
    "POLUSDT": {
-    "id": 77185,
+    "id": 77195,
     "caughtUp": true,
-    "lastMs": 1795186811987
+    "lastMs": 1795187930510
    },
    "POLYXUSDT": {
     "id": 69835,
@@ -2676,9 +2676,9 @@
     "lastMs": 1795061107763
    },
    "POPCATUSDT": {
-    "id": 2990,
+    "id": 2995,
     "caughtUp": true,
-    "lastMs": 1795102914617
+    "lastMs": 1795188284911
    },
    "PORTOUSDT": {
     "id": 41802,
@@ -2691,9 +2691,9 @@
     "lastMs": 1795109352247
    },
    "PUMPUSDT": {
-    "id": 154345,
+    "id": 154364,
     "caughtUp": true,
-    "lastMs": 1795187250622
+    "lastMs": 1795188809501
    },
    "PURRUSDT": {
     "id": 4464,
@@ -2701,9 +2701,9 @@
     "lastMs": 1795163089318
    },
    "QNTUSDT": {
-    "id": 100166,
+    "id": 100172,
     "caughtUp": true,
-    "lastMs": 1795185611246
+    "lastMs": 1795188960669
    },
    "QTUMUSDT": {
     "id": 833052,
@@ -2711,14 +2711,14 @@
     "lastMs": 1795150340761
    },
    "RADUSDT": {
-    "id": 60542,
+    "id": 60547,
     "caughtUp": true,
-    "lastMs": 1795126559515
+    "lastMs": 1795188390500
    },
    "RAREUSDT": {
-    "id": 55211,
+    "id": 55214,
     "caughtUp": true,
-    "lastMs": 1795186856934
+    "lastMs": 1795188953290
    },
    "REEFUSDT": {
     "id": 71969,
@@ -2726,19 +2726,19 @@
     "lastMs": 1795151822548
    },
    "RENDERUSD": {
-    "id": 19358,
+    "id": 19382,
     "caughtUp": true,
-    "lastMs": 1795187236751
+    "lastMs": 1795188069132
    },
    "RENDERUSDT": {
-    "id": 165618,
+    "id": 165638,
     "caughtUp": true,
-    "lastMs": 1795187236150
+    "lastMs": 1795188069127
    },
    "REQUSDT": {
-    "id": 92967,
+    "id": 92968,
     "caughtUp": true,
-    "lastMs": 1795178755611
+    "lastMs": 1795187755816
    },
    "RHEAUSDT": {
     "id": 2815,
@@ -2786,19 +2786,19 @@
     "lastMs": 1795144382061
    },
    "SHIBUSD": {
-    "id": 214618,
+    "id": 214625,
     "caughtUp": true,
-    "lastMs": 1795183594480
+    "lastMs": 1795188927053
    },
    "SHIBUSDT": {
-    "id": 8376209,
+    "id": 8376218,
     "caughtUp": true,
-    "lastMs": 1795186849286
+    "lastMs": 1795187893243
    },
    "SKLUSDT": {
-    "id": 52911,
+    "id": 52914,
     "caughtUp": true,
-    "lastMs": 1795104008495
+    "lastMs": 1795188399062
    },
    "SKYUSDT": {
     "id": 7568,
@@ -2811,24 +2811,24 @@
     "lastMs": 1794978918235
    },
    "SNXUSDT": {
-    "id": 290635,
+    "id": 290638,
     "caughtUp": true,
-    "lastMs": 1795148711771
+    "lastMs": 1795189030431
    },
    "SOLUSD": {
-    "id": 1404896,
+    "id": 1406023,
     "caughtUp": true,
-    "lastMs": 1795187313019
+    "lastMs": 1795189111950
    },
    "SOLUSDC": {
-    "id": 227489,
+    "id": 227683,
     "caughtUp": true,
-    "lastMs": 1795187309940
+    "lastMs": 1795189094566
    },
    "SOLUSDT": {
-    "id": 11176950,
+    "id": 11178440,
     "caughtUp": true,
-    "lastMs": 1795187307243
+    "lastMs": 1795189111952
    },
    "SPXUSDT": {
     "id": 12375,
@@ -2841,14 +2841,14 @@
     "lastMs": 1795141898584
    },
    "SUIUSD": {
-    "id": 78836,
+    "id": 78875,
     "caughtUp": true,
-    "lastMs": 1795186831374
+    "lastMs": 1795188266585
    },
    "SUIUSDT": {
-    "id": 537391,
+    "id": 537608,
     "caughtUp": true,
-    "lastMs": 1795187141447
+    "lastMs": 1795189079318
    },
    "SUSD": {
     "id": 6494,
@@ -2856,9 +2856,9 @@
     "lastMs": 1795122960480
    },
    "SUSDT": {
-    "id": 12794,
+    "id": 12795,
     "caughtUp": true,
-    "lastMs": 1795181733576
+    "lastMs": 1795187986214
    },
    "SUSHIUSD": {
     "id": 44346,
@@ -2876,9 +2876,9 @@
     "lastMs": 1795099046145
    },
    "TFUELUSDT": {
-    "id": 233277,
+    "id": 233278,
     "caughtUp": true,
-    "lastMs": 1795181557684
+    "lastMs": 1795187712036
    },
    "THETAUSD": {
     "id": 68847,
@@ -2886,9 +2886,9 @@
     "lastMs": 1795183998780
    },
    "THETAUSDT": {
-    "id": 293511,
+    "id": 293512,
     "caughtUp": true,
-    "lastMs": 1795185448203
+    "lastMs": 1795187814296
    },
    "TIAUSDT": {
     "id": 4260,
@@ -2901,9 +2901,9 @@
     "lastMs": 1795125697189
    },
    "TOSHIUSDT": {
-    "id": 11183,
+    "id": 11184,
     "caughtUp": true,
-    "lastMs": 1795177353496
+    "lastMs": 1795187886725
    },
    "TRACUSDT": {
     "id": 38170,
@@ -2916,14 +2916,14 @@
     "lastMs": 1795153039799
    },
    "TRUMPUSD": {
-    "id": 26133,
+    "id": 26163,
     "caughtUp": true,
-    "lastMs": 1795185624617
+    "lastMs": 1795188136073
    },
    "TRUMPUSDT": {
-    "id": 96852,
+    "id": 96889,
     "caughtUp": true,
-    "lastMs": 1795185279065
+    "lastMs": 1795188140625
    },
    "TRXUSD": {
     "id": 101041,
@@ -2931,9 +2931,9 @@
     "lastMs": 1795175577053
    },
    "TRXUSDT": {
-    "id": 184712,
+    "id": 184715,
     "caughtUp": true,
-    "lastMs": 1795184824263
+    "lastMs": 1795189053505
    },
    "TURBOUSDT": {
     "id": 21780,
@@ -2941,9 +2941,9 @@
     "lastMs": 1795142579435
    },
    "TUSDT": {
-    "id": 39970,
+    "id": 39971,
     "caughtUp": true,
-    "lastMs": 1794974448070
+    "lastMs": 1795188309316
    },
    "TWTUSDT": {
     "id": 481,
@@ -2951,14 +2951,14 @@
     "lastMs": 1794238165798
    },
    "UNIUSD": {
-    "id": 81069,
+    "id": 81087,
     "caughtUp": true,
-    "lastMs": 1795183471998
+    "lastMs": 1795188938926
    },
    "UNIUSDT": {
-    "id": 2065777,
+    "id": 2065785,
     "caughtUp": true,
-    "lastMs": 1795184937642
+    "lastMs": 1795188483350
    },
    "USD1USDT": {
     "id": 2482,
@@ -2966,39 +2966,39 @@
     "lastMs": 1794993003925
    },
    "USDCUSD": {
-    "id": 473122,
+    "id": 473358,
     "caughtUp": true,
-    "lastMs": 1795187265880
+    "lastMs": 1795189103184
    },
    "USDCUSDT": {
-    "id": 1115118,
+    "id": 1115335,
     "caughtUp": true,
-    "lastMs": 1795187273924
+    "lastMs": 1795189120767
    },
    "USDUCUSDT": {
-    "id": 15167,
+    "id": 15221,
     "caughtUp": true,
-    "lastMs": 1795186346611
+    "lastMs": 1795187438791
    },
    "USELESSUSDT": {
-    "id": 6034,
+    "id": 6038,
     "caughtUp": true,
-    "lastMs": 1795106389205
+    "lastMs": 1795189050034
    },
    "VELOUSDT": {
-    "id": 5018,
+    "id": 5019,
     "caughtUp": true,
-    "lastMs": 1795182873375
+    "lastMs": 1795188484904
    },
    "VETUSD": {
-    "id": 448173,
+    "id": 448195,
     "caughtUp": true,
-    "lastMs": 1795185903724
+    "lastMs": 1795188843448
    },
    "VETUSDT": {
-    "id": 5964390,
+    "id": 5964396,
     "caughtUp": true,
-    "lastMs": 1795185674012
+    "lastMs": 1795188686543
    },
    "VIRTUALUSDT": {
     "id": 11974,
@@ -3011,14 +3011,14 @@
     "lastMs": 1794588758539
    },
    "VTHOUSD": {
-    "id": 86811,
+    "id": 86812,
     "caughtUp": true,
-    "lastMs": 1795157531425
+    "lastMs": 1795187901579
    },
    "VTHOUSDT": {
-    "id": 4136497,
+    "id": 4136507,
     "caughtUp": true,
-    "lastMs": 1795185457249
+    "lastMs": 1795188135212
    },
    "WAXPUSDT": {
     "id": 191770,
@@ -3026,14 +3026,14 @@
     "lastMs": 1795120777899
    },
    "WIFUSDT": {
-    "id": 30741,
+    "id": 30742,
     "caughtUp": true,
-    "lastMs": 1795138261330
+    "lastMs": 1795187885328
    },
    "WLDUSDT": {
-    "id": 13588,
+    "id": 13591,
     "caughtUp": true,
-    "lastMs": 1795178906339
+    "lastMs": 1795189116307
    },
    "WLFIUSDT": {
     "id": 19300,
@@ -3056,24 +3056,24 @@
     "lastMs": 1795145056822
    },
    "XLMUSD": {
-    "id": 268092,
+    "id": 268221,
     "caughtUp": true,
-    "lastMs": 1795187283921
+    "lastMs": 1795189103920
    },
    "XLMUSDT": {
-    "id": 3079978,
+    "id": 3080028,
     "caughtUp": true,
-    "lastMs": 1795187238488
+    "lastMs": 1795189104580
    },
    "XNOUSDT": {
-    "id": 62164,
+    "id": 62171,
     "caughtUp": true,
-    "lastMs": 1795146604260
+    "lastMs": 1795187923571
    },
    "XRPUSD": {
-    "id": 544483,
+    "id": 545890,
     "caughtUp": true,
-    "lastMs": 1795187320303
+    "lastMs": 1795189122617
    },
    "XTZUSDT": {
     "id": 67484,
@@ -3081,19 +3081,19 @@
     "lastMs": 1795185957517
    },
    "YFIUSDT": {
-    "id": 209036,
+    "id": 209037,
     "caughtUp": true,
-    "lastMs": 1795180592881
+    "lastMs": 1795187996502
    },
    "ZECUSD": {
-    "id": 84242,
+    "id": 84473,
     "caughtUp": true,
-    "lastMs": 1795186839993
+    "lastMs": 1795189079808
    },
    "ZENUSDT": {
-    "id": 923895,
+    "id": 923900,
     "caughtUp": true,
-    "lastMs": 1795176459754
+    "lastMs": 1795187926709
    },
    "ZILUSD": {
     "id": 151601,
@@ -7406,143 +7406,143 @@
   },
   "productsDay": "2026-11-20",
   "cursors": {
-   "BTC": 1139215833,
-   "ETH": 856864880,
-   "SOL": 361973787,
-   "USDT": 150034151,
-   "1INCH": 7297455,
-   "AAVE": 68966885,
-   "ACH": 31076057,
-   "ADA": 172186109,
-   "ALGO": 81661608,
-   "ALICE": 1689655,
-   "ANKR": 23241305,
-   "APE": 22724352,
-   "API3": 7579331,
-   "APT": 16083888,
-   "ARB": 23407352,
-   "ASTER": 859503,
-   "ATOM": 63257184,
-   "AUDIO": 2824064,
-   "AVAX": 73278565,
-   "AVNT": 14877225,
-   "AXL": 5678824,
-   "AXS": 13073497,
-   "BAND": 11879208,
-   "BAT": 9800299,
-   "BCH": 82764297,
-   "BICO": 6403232,
-   "BLUR": 6370562,
-   "BNB": 3999504,
-   "BNT": 7943987,
-   "BONK": 51941775,
+   "BTC": 1139445540,
+   "ETH": 856899699,
+   "SOL": 361985547,
+   "USDT": 150035388,
+   "1INCH": 7297525,
+   "AAVE": 68968545,
+   "ACH": 31076184,
+   "ADA": 172192484,
+   "ALGO": 81662326,
+   "ALICE": 1689683,
+   "ANKR": 23241329,
+   "APE": 22724666,
+   "API3": 7579406,
+   "APT": 16084431,
+   "ARB": 23407900,
+   "ASTER": 859918,
+   "ATOM": 63257698,
+   "AUDIO": 2824156,
+   "AVAX": 73282306,
+   "AVNT": 14877646,
+   "AXL": 5678874,
+   "AXS": 13073582,
+   "BAND": 11879255,
+   "BAT": 9800524,
+   "BCH": 82767228,
+   "BICO": 6403331,
+   "BLUR": 6370705,
+   "BNB": 4000784,
+   "BNT": 7943994,
+   "BONK": 51942170,
    "BTRST": 4509336,
-   "CAKE": 1131391,
-   "CELR": 1231934,
-   "CHZ": 11839862,
-   "COMP": 32104306,
-   "COTI": 10975358,
-   "CRV": 40504614,
-   "CTSI": 12262561,
-   "DASH": 19068172,
-   "DIA": 4427752,
-   "DOGE": 176160608,
-   "DOOD": 481207,
-   "DOT": 57448736,
-   "EGLD": 2820718,
-   "EIGEN": 5174692,
-   "ENA": 11827627,
-   "ENS": 12524984,
-   "ETC": 41955968,
-   "FARTCOIN": 17078453,
-   "FET": 57285287,
-   "FIL": 37166914,
-   "FLOKI": 2711336,
-   "FLOW": 3552183,
-   "FORT": 5764103,
-   "FORTH": 10405914,
-   "G": 711112,
-   "GIGA": 6208841,
-   "GLM": 2228276,
-   "GRT": 46456769,
-   "GTC": 4624834,
-   "HBAR": 78578712,
-   "HYPE": 12369302,
-   "ICP": 53107942,
-   "ILV": 3690877,
-   "IMX": 17264306,
-   "INJ": 30331948,
-   "JTO": 18319213,
-   "KAITO": 6157519,
-   "KAVA": 2968842,
-   "KNC": 15283229,
-   "KSM": 2868761,
-   "LAYER": 307602,
-   "LDO": 12954843,
-   "LINK": 145582098,
-   "LPT": 8893538,
-   "LTC": 202219504,
-   "MAGIC": 5030291,
-   "MANA": 42123939,
-   "MASK": 5802924,
-   "ME": 1337578,
-   "METIS": 3871799,
-   "MOODENG": 10607869,
-   "NEAR": 36923010,
-   "NMR": 15086286,
-   "OCEAN": 4266023,
-   "OGN": 9936056,
-   "ONDO": 70198278,
-   "OP": 18828677,
-   "ORCA": 10171505,
-   "PAXG": 3493224,
-   "PENGU": 23893525,
-   "PEPE": 20950803,
-   "PNUT": 5766787,
-   "POL": 5852696,
-   "POPCAT": 8991892,
-   "PUMP": 14829757,
-   "QNT": 27409854,
-   "RAD": 4376732,
-   "RARE": 5613769,
-   "RENDER": 16560710,
-   "REQ": 11619995,
-   "RLC": 9696754,
-   "ROSE": 7539206,
-   "S": 3547502,
-   "SAND": 13218112,
-   "SEI": 26494149,
-   "SHIB": 144607102,
-   "SKL": 20279464,
-   "SKY": 3534524,
-   "SNX": 20840881,
-   "SPX": 3228117,
-   "SUI": 84939436,
-   "SUSHI": 20682317,
-   "T": 1384349,
-   "TIA": 25770436,
-   "TOSHI": 18848733,
-   "TRAC": 7917148,
-   "TROLL": 1795540,
-   "TRUMP": 11382727,
-   "TURBO": 6746331,
-   "UNI": 80696731,
-   "USD1": 894539,
-   "USELESS": 6977744,
-   "VET": 11477588,
-   "VIRTUAL": 687465,
-   "VOXEL": 4130359,
-   "VTHO": 4394995,
-   "WIF": 8168913,
-   "WLD": 7028257,
-   "WLFI": 8121026,
-   "XLM": 170809922,
-   "XRP": 258548623,
-   "XTZ": 35073489,
-   "YFI": 29256920,
-   "ZEC": 72995038,
-   "ZEN": 7013317,
-   "ZRX": 29310680
+   "CAKE": 1131483,
+   "CELR": 1231937,
+   "CHZ": 11839909,
+   "COMP": 32104476,
+   "COTI": 10975695,
+   "CRV": 40505367,
+   "CTSI": 12262624,
+   "DASH": 19068540,
+   "DIA": 4427766,
+   "DOGE": 176163580,
+   "DOOD": 481263,
+   "DOT": 57450099,
+   "EGLD": 2820785,
+   "EIGEN": 5174925,
+   "ENA": 11829295,
+   "ENS": 12525053,
+   "ETC": 41956575,
+   "FARTCOIN": 17078922,
+   "FET": 57287058,
+   "FIL": 37168163,
+   "FLOKI": 2711520,
+   "FLOW": 3552259,
+   "FORT": 5764128,
+   "FORTH": 10405931,
+   "G": 711135,
+   "GIGA": 6208948,
+   "GLM": 2228294,
+   "GRT": 46457233,
+   "GTC": 4624846,
+   "HBAR": 78581279,
+   "HYPE": 12372047,
+   "ICP": 53110513,
+   "ILV": 3690932,
+   "IMX": 17264598,
+   "INJ": 30333148,
+   "JTO": 18319589,
+   "KAITO": 6157618,
+   "KAVA": 2968892,
+   "KNC": 15283252,
+   "KSM": 2868787,
+   "LAYER": 307643,
+   "LDO": 12955041,
+   "LINK": 145586904,
+   "LPT": 8893584,
+   "LTC": 202222147,
+   "MAGIC": 5030358,
+   "MANA": 42124008,
+   "MASK": 5802983,
+   "ME": 1337634,
+   "METIS": 3871843,
+   "MOODENG": 10607968,
+   "NEAR": 36926909,
+   "NMR": 15086370,
+   "OCEAN": 4266040,
+   "OGN": 9936077,
+   "ONDO": 70201627,
+   "OP": 18829161,
+   "ORCA": 10171669,
+   "PAXG": 3493470,
+   "PENGU": 23894027,
+   "PEPE": 20952051,
+   "PNUT": 5766808,
+   "POL": 5853016,
+   "POPCAT": 8992006,
+   "PUMP": 14831199,
+   "QNT": 27411573,
+   "RAD": 4376740,
+   "RARE": 5614655,
+   "RENDER": 16562229,
+   "REQ": 11620023,
+   "RLC": 9696865,
+   "ROSE": 7539274,
+   "S": 3547742,
+   "SAND": 13218202,
+   "SEI": 26494742,
+   "SHIB": 144607395,
+   "SKL": 20279517,
+   "SKY": 3535836,
+   "SNX": 20840901,
+   "SPX": 3228296,
+   "SUI": 84944522,
+   "SUSHI": 20682607,
+   "T": 1384418,
+   "TIA": 25770858,
+   "TOSHI": 18850092,
+   "TRAC": 7917227,
+   "TROLL": 1795636,
+   "TRUMP": 11383747,
+   "TURBO": 6746461,
+   "UNI": 80702555,
+   "USD1": 894553,
+   "USELESS": 6978625,
+   "VET": 11478025,
+   "VIRTUAL": 687700,
+   "VOXEL": 4130447,
+   "VTHO": 4396096,
+   "WIF": 8169347,
+   "WLD": 7029535,
+   "WLFI": 8121146,
+   "XLM": 170813115,
+   "XRP": 258561881,
+   "XTZ": 35073677,
+   "YFI": 29257034,
+   "ZEC": 73007393,
+   "ZEN": 7013389,
+   "ZRX": 29310897
   },
   "recordStart": {
    "BTC": 1794269437000,
@@ -10263,64 +10263,64 @@
   "pairsDay": "2026-11-20",
   "cursors": {
    "BTC": {
-    "since": "1795187253000000000",
-    "lastId": 117004692
+    "since": "1795188450000000000",
+    "lastId": 117014672
    },
    "ETH": {
-    "since": "1795187258000000000",
-    "lastId": 69642350
+    "since": "1795189069000000000",
+    "lastId": 69648467
    },
    "SOL": {
-    "since": "1795187262000000000",
-    "lastId": 35809494
+    "since": "1795189076000000000",
+    "lastId": 35812896
    },
    "USDC": {
-    "since": "1795187264000000000",
-    "lastId": 24303858
+    "since": "1795189081000000000",
+    "lastId": 24306521
    },
    "USDT": {
-    "since": "1795187266000000000",
-    "lastId": 85901282
+    "since": "1795189084000000000",
+    "lastId": 85903116
    },
    "0G": {
-    "since": "1795187268000000000",
-    "lastId": 589995
+    "since": "1795189086000000000",
+    "lastId": 590041
    },
    "1INCH": {
-    "since": "1795187269000000000",
-    "lastId": 374350
+    "since": "1795189087000000000",
+    "lastId": 374360
    },
    "A": {
-    "since": "1795187270000000000",
-    "lastId": 142488
+    "since": "1795189088000000000",
+    "lastId": 142671
    },
    "AAVE": {
-    "since": "1795187271000000000",
-    "lastId": 5696818
+    "since": "1795189089000000000",
+    "lastId": 5697295
    },
    "ACH": {
-    "since": "1795187273000000000",
-    "lastId": 861499
+    "since": "1795189091000000000",
+    "lastId": 861560
    },
    "ADA": {
-    "since": "1795187274000000000",
-    "lastId": 22087552
+    "since": "1795189092000000000",
+    "lastId": 22089189
    },
    "ADX": {
-    "since": "1795187275000000000",
+    "since": "1795189094000000000",
     "lastId": 122490
    },
    "AIXBT": {
-    "since": "1795187276000000000",
-    "lastId": 134441
+    "since": "1795189095000000000",
+    "lastId": 134443
    },
    "ALGO": {
-    "since": "1795187277000000000",
-    "lastId": 7608993
+    "since": "1795189096000000000",
+    "lastId": 7609424
    },
    "ALICE": {
-    "since": "1795187278000000000",
-    "lastId": 100318
+    "since": "1795189097000000000",
+    "lastId": 100329
    }
   }
  },
