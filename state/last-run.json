@@ -1,6 +1,6 @@
 {
- "at": "2026-11-20T08:07:39.034Z",
- "run": "44699987170",
+ "at": "2026-11-20T08:37:49.293Z",
+ "run": "44703972006",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 267,
+   "ms": 406,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,40 +25,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 18830,
+   "ms": 17771,
    "bases": 15,
-   "bars": 2208
+   "bars": 2125
   },
   "coinbase": {
    "ok": true,
-   "ms": 27277,
+   "ms": 28910,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 11118,
+   "bars": 11386,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 78919,
+   "ms": 66070,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 793,
+   "tradesWritten": 584,
    "symbolsBehind": 0
   }
  },
- "calls": 708,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/SKL-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 78922
+ "calls": 700,
+ "http": [],
+ "ms": 66073
 }
