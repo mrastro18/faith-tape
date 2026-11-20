@@ -1,0 +1,1822 @@
+[
+ {
+  "symbol": "0GUSDT",
+  "base": "0G",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "1000MOGUSDT",
+  "base": "1000MOG",
+  "quote": "USDT",
+  "tick": "0.00000001",
+  "step": "1.00"
+ },
+ {
+  "symbol": "1000REKTUSDT",
+  "base": "1000REKT",
+  "quote": "USDT",
+  "tick": "0.00000001",
+  "step": "1.00"
+ },
+ {
+  "symbol": "1INCHUSDT",
+  "base": "1INCH",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "1MWOJAKUSDT",
+  "base": "1MWOJAK",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "AAVEUSD",
+  "base": "AAVE",
+  "quote": "USD",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "AAVEUSDT",
+  "base": "AAVE",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "ACHUSDT",
+  "base": "ACH",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "ADAUSD",
+  "base": "ADA",
+  "quote": "USD",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "ADAUSDC",
+  "base": "ADA",
+  "quote": "USDC",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "ADAUSDT",
+  "base": "ADA",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "ADXUSDT",
+  "base": "ADX",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "AIXBTUSDT",
+  "base": "AIXBT",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "ALGOUSD",
+  "base": "ALGO",
+  "quote": "USD",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "ALGOUSDT",
+  "base": "ALGO",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "ALICEUSDT",
+  "base": "ALICE",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ALPINEUSDT",
+  "base": "ALPINE",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ANIMEUSDT",
+  "base": "ANIME",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "ANKRUSDT",
+  "base": "ANKR",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "APEUSDT",
+  "base": "APE",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "API3USDT",
+  "base": "API3",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "APTUSDT",
+  "base": "APT",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ARBUSDT",
+  "base": "ARB",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "ASTERUSDT",
+  "base": "ASTER",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ASTRUSDT",
+  "base": "ASTR",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "ATOMUSD",
+  "base": "ATOM",
+  "quote": "USD",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ATOMUSDT",
+  "base": "ATOM",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "AUDIOUSDT",
+  "base": "AUDIO",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "AUSDT",
+  "base": "A",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "AVAXUSD",
+  "base": "AVAX",
+  "quote": "USD",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "AVAXUSDT",
+  "base": "AVAX",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "AVNTUSDT",
+  "base": "AVNT",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "AXLUSDT",
+  "base": "AXL",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "AXSUSDT",
+  "base": "AXS",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "BANDUSDT",
+  "base": "BAND",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "BATUSDT",
+  "base": "BAT",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "BCHUSD",
+  "base": "BCH",
+  "quote": "USD",
+  "tick": "0.10000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "BCHUSDT",
+  "base": "BCH",
+  "quote": "USDT",
+  "tick": "0.10000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "BERTUSDT",
+  "base": "BERT",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "BICOUSDT",
+  "base": "BICO",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "BLURUSDT",
+  "base": "BLUR",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "BMTUSDT",
+  "base": "BMT",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "BNBUSD",
+  "base": "BNB",
+  "quote": "USD",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "BNBUSDT",
+  "base": "BNB",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "BNTUSDT",
+  "base": "BNT",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "BONKUSD",
+  "base": "BONK",
+  "quote": "USD",
+  "tick": "0.00000001",
+  "step": "1.00"
+ },
+ {
+  "symbol": "BONKUSDT",
+  "base": "BONK",
+  "quote": "USDT",
+  "tick": "0.00000001",
+  "step": "1.00"
+ },
+ {
+  "symbol": "BOSONUSDT",
+  "base": "BOSON",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "BRETTUSDT",
+  "base": "BRETT",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "BTCUSD",
+  "base": "BTC",
+  "quote": "USD",
+  "tick": "0.01000000",
+  "step": "0.00001000"
+ },
+ {
+  "symbol": "BTCUSDC",
+  "base": "BTC",
+  "quote": "USDC",
+  "tick": "0.01000000",
+  "step": "0.00001000"
+ },
+ {
+  "symbol": "BTCUSDT",
+  "base": "BTC",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00001000"
+ },
+ {
+  "symbol": "BTRSTUSDT",
+  "base": "BTRST",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "BTTCUSDT",
+  "base": "BTTC",
+  "quote": "USDT",
+  "tick": "0.00000001",
+  "step": "1.0"
+ },
+ {
+  "symbol": "CAKEUSDT",
+  "base": "CAKE",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "CELOUSDT",
+  "base": "CELO",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "CELRUSDT",
+  "base": "CELR",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "CHZUSDT",
+  "base": "CHZ",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "COMPUSDT",
+  "base": "COMP",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "COTIUSDT",
+  "base": "COTI",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "CRVUSD",
+  "base": "CRV",
+  "quote": "USD",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "CRVUSDT",
+  "base": "CRV",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "CTSIUSDT",
+  "base": "CTSI",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "DASHUSDT",
+  "base": "DASH",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "DGBUSD",
+  "base": "DGB",
+  "quote": "USD",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "DGBUSDT",
+  "base": "DGB",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "DIAUSDT",
+  "base": "DIA",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "DOGEUSD",
+  "base": "DOGE",
+  "quote": "USD",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "DOGEUSDT",
+  "base": "DOGE",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "DOODUSDT",
+  "base": "DOOD",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "DOTUSD",
+  "base": "DOT",
+  "quote": "USD",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "DOTUSDT",
+  "base": "DOT",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "DUSKUSDT",
+  "base": "DUSK",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "EGLDUSDT",
+  "base": "EGLD",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "EIGENUSDT",
+  "base": "EIGEN",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ENAUSDT",
+  "base": "ENA",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ENJUSDT",
+  "base": "ENJ",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "ENSUSD",
+  "base": "ENS",
+  "quote": "USD",
+  "tick": "0.01000000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ENSUSDT",
+  "base": "ENS",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ETCUSD",
+  "base": "ETC",
+  "quote": "USD",
+  "tick": "0.01000000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ETCUSDT",
+  "base": "ETC",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ETHUSD",
+  "base": "ETH",
+  "quote": "USD",
+  "tick": "0.01000000",
+  "step": "0.00010000"
+ },
+ {
+  "symbol": "ETHUSDC",
+  "base": "ETH",
+  "quote": "USDC",
+  "tick": "0.01000000",
+  "step": "0.00010000"
+ },
+ {
+  "symbol": "ETHUSDT",
+  "base": "ETH",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00010000"
+ },
+ {
+  "symbol": "FARTCOINUSDT",
+  "base": "FARTCOIN",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "FETUSD",
+  "base": "FET",
+  "quote": "USD",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "FETUSDT",
+  "base": "FET",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "FILUSDT",
+  "base": "FIL",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "FLOKIUSD",
+  "base": "FLOKI",
+  "quote": "USD",
+  "tick": "0.00000001",
+  "step": "1.00"
+ },
+ {
+  "symbol": "FLOKIUSDT",
+  "base": "FLOKI",
+  "quote": "USDT",
+  "tick": "0.00000001",
+  "step": "1.00"
+ },
+ {
+  "symbol": "FLOWUSDT",
+  "base": "FLOW",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "FLUXUSDT",
+  "base": "FLUX",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "FORTHUSDT",
+  "base": "FORTH",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "FORTUSDT",
+  "base": "FORT",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "GALAUSD",
+  "base": "GALA",
+  "quote": "USD",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "GALAUSDT",
+  "base": "GALA",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "GASUSDT",
+  "base": "GAS",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "GIGAUSDT",
+  "base": "GIGA",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "GLMUSDT",
+  "base": "GLM",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "GRAMUSDT",
+  "base": "GRAM",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "GRTUSD",
+  "base": "GRT",
+  "quote": "USD",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "GRTUSDT",
+  "base": "GRT",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "GTCUSDT",
+  "base": "GTC",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "GUSDT",
+  "base": "G",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "HBARUSD",
+  "base": "HBAR",
+  "quote": "USD",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "HBARUSDT",
+  "base": "HBAR",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "HYPEUSD",
+  "base": "HYPE",
+  "quote": "USD",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "HYPEUSDT",
+  "base": "HYPE",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "ICPUSD",
+  "base": "ICP",
+  "quote": "USD",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ICPUSDT",
+  "base": "ICP",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ILVUSDT",
+  "base": "ILV",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "IMXUSDT",
+  "base": "IMX",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "INJUSDT",
+  "base": "INJ",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "IOSTUSDT",
+  "base": "IOST",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "IOTAUSD",
+  "base": "IOTA",
+  "quote": "USD",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "IOTAUSDT",
+  "base": "IOTA",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "IOTXUSDT",
+  "base": "IOTX",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "JTOUSDT",
+  "base": "JTO",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "JUPUSD",
+  "base": "JUP",
+  "quote": "USD",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "JUPUSDT",
+  "base": "JUP",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "KAITOUSDT",
+  "base": "KAITO",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "KAVAUSDT",
+  "base": "KAVA",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "KNCUSDT",
+  "base": "KNC",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "KSMUSDT",
+  "base": "KSM",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "LAYERUSDT",
+  "base": "LAYER",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "LAZIOUSDT",
+  "base": "LAZIO",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "LDOUSDT",
+  "base": "LDO",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "LINKUSD",
+  "base": "LINK",
+  "quote": "USD",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "LINKUSDT",
+  "base": "LINK",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "LMWRUSDT",
+  "base": "LMWR",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "LOFIUSDT",
+  "base": "LOFI",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "LPTUSD",
+  "base": "LPT",
+  "quote": "USD",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "LPTUSDT",
+  "base": "LPT",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "LSKUSDT",
+  "base": "LSK",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "LTCUSD",
+  "base": "LTC",
+  "quote": "USD",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "LTCUSDT",
+  "base": "LTC",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "MAGICUSDT",
+  "base": "MAGIC",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "MANAUSDT",
+  "base": "MANA",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "MASKUSDT",
+  "base": "MASK",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "METISUSDT",
+  "base": "METIS",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "MEUSD",
+  "base": "ME",
+  "quote": "USD",
+  "tick": "0.00001000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "MEUSDT",
+  "base": "ME",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "MEWUSDT",
+  "base": "MEW",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00"
+ },
+ {
+  "symbol": "MOODENGUSDT",
+  "base": "MOODENG",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "NEARUSD",
+  "base": "NEAR",
+  "quote": "USD",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "NEARUSDT",
+  "base": "NEAR",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "NEIROUSDT",
+  "base": "NEIRO",
+  "quote": "USDT",
+  "tick": "0.00000001",
+  "step": "1.00"
+ },
+ {
+  "symbol": "NEOUSDT",
+  "base": "NEO",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "NMRUSDT",
+  "base": "NMR",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "NOBODYUSDT",
+  "base": "NOBODY",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "NPCUSDT",
+  "base": "NPC",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "OCEANUSDT",
+  "base": "OCEAN",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "OGNUSDT",
+  "base": "OGN",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "ONDOUSDT",
+  "base": "ONDO",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "ONEUSD",
+  "base": "ONE",
+  "quote": "USD",
+  "tick": "0.00000100",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "ONEUSDT",
+  "base": "ONE",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "ONGUSDT",
+  "base": "ONG",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "ONTUSDT",
+  "base": "ONT",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "OPUSD",
+  "base": "OP",
+  "quote": "USD",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "OPUSDT",
+  "base": "OP",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ORBSUSDT",
+  "base": "ORBS",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "ORCAUSDT",
+  "base": "ORCA",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "PAXGUSDT",
+  "base": "PAXG",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00010000"
+ },
+ {
+  "symbol": "PENGUUSDT",
+  "base": "PENGU",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "PEPEUSD",
+  "base": "PEPE",
+  "quote": "USD",
+  "tick": "0.00000001",
+  "step": "1.00"
+ },
+ {
+  "symbol": "PEPEUSDT",
+  "base": "PEPE",
+  "quote": "USDT",
+  "tick": "0.00000001",
+  "step": "1.00"
+ },
+ {
+  "symbol": "PNUTUSDT",
+  "base": "PNUT",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "POLUSD",
+  "base": "POL",
+  "quote": "USD",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "POLUSDT",
+  "base": "POL",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "POLYXUSDT",
+  "base": "POLYX",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "POPCATUSDT",
+  "base": "POPCAT",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "PORTOUSDT",
+  "base": "PORTO",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "PROMUSDT",
+  "base": "PROM",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "PUMPUSDT",
+  "base": "PUMP",
+  "quote": "USDT",
+  "tick": "0.00000010",
+  "step": "1.00"
+ },
+ {
+  "symbol": "PURRUSDT",
+  "base": "PURR",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "QNTUSDT",
+  "base": "QNT",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "QTUMUSDT",
+  "base": "QTUM",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "RADUSDT",
+  "base": "RAD",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "RAREUSDT",
+  "base": "RARE",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "REEFUSDT",
+  "base": "REEF",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "RENDERUSD",
+  "base": "RENDER",
+  "quote": "USD",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "RENDERUSDT",
+  "base": "RENDER",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "REQUSDT",
+  "base": "REQ",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "RHEAUSDT",
+  "base": "RHEA",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "RLCUSDT",
+  "base": "RLC",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "ROSEUSDT",
+  "base": "ROSE",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "RVNUSD",
+  "base": "RVN",
+  "quote": "USD",
+  "tick": "0.00000100",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "RVNUSDT",
+  "base": "RVN",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "SANDUSD",
+  "base": "SAND",
+  "quote": "USD",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "SANDUSDT",
+  "base": "SAND",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "SANTOSUSDT",
+  "base": "SANTOS",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "SEIUSDT",
+  "base": "SEI",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "SHIBUSD",
+  "base": "SHIB",
+  "quote": "USD",
+  "tick": "0.00000001",
+  "step": "1.00"
+ },
+ {
+  "symbol": "SHIBUSDT",
+  "base": "SHIB",
+  "quote": "USDT",
+  "tick": "0.00000001",
+  "step": "1.00"
+ },
+ {
+  "symbol": "SKLUSDT",
+  "base": "SKL",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "SKYUSDT",
+  "base": "SKY",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "SLPUSDT",
+  "base": "SLP",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "SNXUSDT",
+  "base": "SNX",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "SOLUSD",
+  "base": "SOL",
+  "quote": "USD",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "SOLUSDC",
+  "base": "SOL",
+  "quote": "USDC",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "SOLUSDT",
+  "base": "SOL",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "SPXUSDT",
+  "base": "SPX",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "STORJUSDT",
+  "base": "STORJ",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "SUIUSD",
+  "base": "SUI",
+  "quote": "USD",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "SUIUSDT",
+  "base": "SUI",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "SUSD",
+  "base": "S",
+  "quote": "USD",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "SUSDT",
+  "base": "S",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "SUSHIUSD",
+  "base": "SUSHI",
+  "quote": "USD",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "SUSHIUSDT",
+  "base": "SUSHI",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "SYSUSDT",
+  "base": "SYS",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "TFUELUSDT",
+  "base": "TFUEL",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "THETAUSD",
+  "base": "THETA",
+  "quote": "USD",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "THETAUSDT",
+  "base": "THETA",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "TIAUSDT",
+  "base": "TIA",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "TLMUSDT",
+  "base": "TLM",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "TOSHIUSDT",
+  "base": "TOSHI",
+  "quote": "USDT",
+  "tick": "0.00000001",
+  "step": "1.00"
+ },
+ {
+  "symbol": "TRACUSDT",
+  "base": "TRAC",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "TROLLUSDT",
+  "base": "TROLL",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "TRUMPUSD",
+  "base": "TRUMP",
+  "quote": "USD",
+  "tick": "0.00100000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "TRUMPUSDT",
+  "base": "TRUMP",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "TRXUSD",
+  "base": "TRX",
+  "quote": "USD",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "TRXUSDT",
+  "base": "TRX",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "TURBOUSDT",
+  "base": "TURBO",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "TUSDT",
+  "base": "T",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "TWTUSDT",
+  "base": "TWT",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "UNIUSD",
+  "base": "UNI",
+  "quote": "USD",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "UNIUSDT",
+  "base": "UNI",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "USD1USDT",
+  "base": "USD1",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "USDCUSD",
+  "base": "USDC",
+  "quote": "USD",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "USDCUSDT",
+  "base": "USDC",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "USDTUSD",
+  "base": "USDT",
+  "quote": "USD",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "USDUCUSDT",
+  "base": "USDUC",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "USELESSUSDT",
+  "base": "USELESS",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "VELOUSDT",
+  "base": "VELO",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "VETUSD",
+  "base": "VET",
+  "quote": "USD",
+  "tick": "0.00000100",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "VETUSDT",
+  "base": "VET",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "VIRTUALUSDT",
+  "base": "VIRTUAL",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "VOXELUSDT",
+  "base": "VOXEL",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "VTHOUSD",
+  "base": "VTHO",
+  "quote": "USD",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "VTHOUSDT",
+  "base": "VTHO",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "WAXPUSDT",
+  "base": "WAXP",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "WIFUSDT",
+  "base": "WIF",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "WLDUSDT",
+  "base": "WLD",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "WLFIUSDT",
+  "base": "WLFI",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10"
+ },
+ {
+  "symbol": "WODUSDT",
+  "base": "WOD",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "XDCUSDT",
+  "base": "XDC",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "1.00"
+ },
+ {
+  "symbol": "XECUSDT",
+  "base": "XEC",
+  "quote": "USDT",
+  "tick": "0.00000001",
+  "step": "1.00"
+ },
+ {
+  "symbol": "XLMUSD",
+  "base": "XLM",
+  "quote": "USD",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "XLMUSDT",
+  "base": "XLM",
+  "quote": "USDT",
+  "tick": "0.00001000",
+  "step": "1.00000000"
+ },
+ {
+  "symbol": "XNOUSDT",
+  "base": "XNO",
+  "quote": "USDT",
+  "tick": "0.00100000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "XRPUSD",
+  "base": "XRP",
+  "quote": "USD",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "XRPUSDT",
+  "base": "XRP",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "XTZUSDT",
+  "base": "XTZ",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "YFIUSDT",
+  "base": "YFI",
+  "quote": "USDT",
+  "tick": "1.00000000",
+  "step": "0.00001000"
+ },
+ {
+  "symbol": "ZECUSD",
+  "base": "ZEC",
+  "quote": "USD",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "ZECUSDT",
+  "base": "ZEC",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.00100000"
+ },
+ {
+  "symbol": "ZENUSDT",
+  "base": "ZEN",
+  "quote": "USDT",
+  "tick": "0.01000000",
+  "step": "0.01000000"
+ },
+ {
+  "symbol": "ZILUSD",
+  "base": "ZIL",
+  "quote": "USD",
+  "tick": "0.00000100",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "ZILUSDT",
+  "base": "ZIL",
+  "quote": "USDT",
+  "tick": "0.00000100",
+  "step": "0.10000000"
+ },
+ {
+  "symbol": "ZRXUSDT",
+  "base": "ZRX",
+  "quote": "USDT",
+  "tick": "0.00010000",
+  "step": "1.00000000"
+ }
+]
