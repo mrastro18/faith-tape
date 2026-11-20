@@ -1,6 +1,6 @@
 {
- "at": "2026-11-20T06:07:47.215Z",
- "run": "44685522822",
+ "at": "2026-11-20T06:37:37.684Z",
+ "run": "44689059808",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 368,
+   "ms": 247,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,33 +25,52 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 18037,
+   "ms": 17708,
    "bases": 15,
-   "bars": 1935
+   "bars": 2258
   },
   "coinbase": {
    "ok": true,
-   "ms": 32088,
+   "ms": 26535,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 12591,
+   "bars": 11584,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 58933,
+   "ms": 82620,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 1107,
+   "tradesWritten": 795,
    "symbolsBehind": 0
   }
  },
- "calls": 703,
- "http": [],
- "ms": 58936
+ "calls": 706,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/KSM-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/RENDER-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/TURBO-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 82623
 }
