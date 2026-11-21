@@ -1,15 +1,15 @@
 {
- "at": "2026-11-21T06:37:40.276Z",
- "run": "44876382656",
+ "at": "2026-11-21T07:07:34.631Z",
+ "run": "44878717118",
  "tasks": {
   "daily": {
    "ok": true,
-   "ms": 0,
+   "ms": 1,
    "skipped": true
   },
   "kalshi": {
    "ok": true,
-   "ms": 218,
+   "ms": 282,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,46 +25,70 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 26539,
+   "ms": 29834,
    "bases": 15,
-   "bars": 4186
+   "bars": 4680
   },
   "coinbase": {
    "ok": true,
-   "ms": 37084,
+   "ms": 48476,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 22068,
+   "bars": 25301,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 73494,
+   "ms": 75328,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 5703,
+   "tradesWritten": 6972,
    "symbolsBehind": 0
   }
  },
- "calls": 798,
+ "calls": 857,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/ETH-USD/trades",
+   "path": "/products/BTC-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   },
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/XLM-USD/trades",
+   "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/BTC-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/XRP-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 73497
+ "ms": 75330
 }
