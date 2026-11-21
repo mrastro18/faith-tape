@@ -1,7 +1,985 @@
 {
- "at": 1795133254404,
+ "at": 1795219658750,
  "json": {
   "funding_rates": [
+   {
+    "funding_rate": 0.0000765892819029,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.8496",
+    "market_ticker": "KXAAPLPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "0.9489",
+    "market_ticker": "KXAAVEPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "5.7247",
+    "market_ticker": "KXABBVPERP"
+   },
+   {
+    "funding_rate": 0.000048024139785,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.0591",
+    "market_ticker": "KXABTPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "4.4305",
+    "market_ticker": "KXACNPERP"
+   },
+   {
+    "funding_rate": -0.0004419082978702,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "0.1387",
+    "market_ticker": "KXADAPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "4.3535",
+    "market_ticker": "KXADBEPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.9292",
+    "market_ticker": "KXADIPERP"
+   },
+   {
+    "funding_rate": -0.0000048664874838,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.0439",
+    "market_ticker": "KXAMATPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "8.4787",
+    "market_ticker": "KXAMDPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "8.7063",
+    "market_ticker": "KXAMGNPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "4.9287",
+    "market_ticker": "KXAMZNPERP"
+   },
+   {
+    "funding_rate": -0.0000207615525453,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.3321",
+    "market_ticker": "KXANETPERP"
+   },
+   {
+    "funding_rate": 0.00000354686516,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "1.3887",
+    "market_ticker": "KXAPHPERP"
+   },
+   {
+    "funding_rate": 0.0000031585929087,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.0324",
+    "market_ticker": "KXARMPERP"
+   },
+   {
+    "funding_rate": 0.00000385982352,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "25.3830",
+    "market_ticker": "KXASMLPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.0543",
+    "market_ticker": "KXAVGOPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.0281",
+    "market_ticker": "KXAXPPERP"
+   },
+   {
+    "funding_rate": -0.0003890424337892,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "1.6201",
+    "market_ticker": "KXBABAPERP"
+   },
+   {
+    "funding_rate": 0.0000123534880041,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "0.9388",
+    "market_ticker": "KXBACPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.1015",
+    "market_ticker": "KXBAPERP"
+   },
+   {
+    "funding_rate": -0.0001523226787059,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "1.8835",
+    "market_ticker": "KXBCHPERP"
+   },
+   {
+    "funding_rate": -0.0001004223997154,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.8930",
+    "market_ticker": "KXBKNGPERP"
+   },
+   {
+    "funding_rate": 0.0000313566987716,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "22.0067",
+    "market_ticker": "KXBLKPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "0.5331",
+    "market_ticker": "KXBNBPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "11.3721",
+    "market_ticker": "KXBRKBPERP"
+   },
+   {
+    "funding_rate": 0.0001233207650414,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "5.8287",
+    "market_ticker": "KXBTCPERP"
+   },
+   {
+    "funding_rate": 0.0000023780259761,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "10.1696",
+    "market_ticker": "KXCATPERP"
+   },
+   {
+    "funding_rate": 0.0000749499339571,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.7239",
+    "market_ticker": "KXCOPPERP"
+   },
+   {
+    "funding_rate": 5.100643997e-7,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "22.0568",
+    "market_ticker": "KXCOSTPERP"
+   },
+   {
+    "funding_rate": 0.0000053597383399,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.2111",
+    "market_ticker": "KXCPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.6154",
+    "market_ticker": "KXCRMPERP"
+   },
+   {
+    "funding_rate": -0.0000516030634638,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "4.5878",
+    "market_ticker": "KXCRWDPERP"
+   },
+   {
+    "funding_rate": -0.0000659111448091,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "1.8087",
+    "market_ticker": "KXCSCOPERP"
+   },
+   {
+    "funding_rate": 0.000060392447358,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "4.1609",
+    "market_ticker": "KXCVXPERP"
+   },
+   {
+    "funding_rate": -0.0000376744977112,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "5.5371",
+    "market_ticker": "KXDELLPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "12.1672",
+    "market_ticker": "KXDEPERP"
+   },
+   {
+    "funding_rate": 0.0000169514398641,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "4.4123",
+    "market_ticker": "KXDHRPERP"
+   },
+   {
+    "funding_rate": -0.000004428592519,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.3593",
+    "market_ticker": "KXDISPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "5.2675",
+    "market_ticker": "KXDOGEPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "1.5981",
+    "market_ticker": "KXETHPERP"
+   },
+   {
+    "funding_rate": 0.0000291857378293,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.1639",
+    "market_ticker": "KXGEPERP"
+   },
+   {
+    "funding_rate": 0.0000070734110445,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "13.9301",
+    "market_ticker": "KXGEVPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.3310",
+    "market_ticker": "KXGILDPERP"
+   },
+   {
+    "funding_rate": 0.0002186093016536,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "5.3229",
+    "market_ticker": "KXGOOGLPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "15.8345",
+    "market_ticker": "KXGSPERP"
+   },
+   {
+    "funding_rate": 0.000039174056431,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.8038",
+    "market_ticker": "KXHDPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.0159",
+    "market_ticker": "KXHYPEPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "4.4850",
+    "market_ticker": "KXIBMPERP"
+   },
+   {
+    "funding_rate": 0.0000521438450028,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "1.0243",
+    "market_ticker": "KXINTCPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "7.9979",
+    "market_ticker": "KXISRGPERP"
+   },
+   {
+    "funding_rate": -0.0000170776242899,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "5.4135",
+    "market_ticker": "KXJNJPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.2114",
+    "market_ticker": "KXJPMPERP"
+   },
+   {
+    "funding_rate": -0.0000019009473558,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.5387",
+    "market_ticker": "KXKLACPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "1.9377",
+    "market_ticker": "KXKOPERP"
+   },
+   {
+    "funding_rate": -0.0002427696370649,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.4913",
+    "market_ticker": "KXKSHIBPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "8.3066",
+    "market_ticker": "KXLINKPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "10.0428",
+    "market_ticker": "KXLINPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "26.9498",
+    "market_ticker": "KXLLYPERP"
+   },
+   {
+    "funding_rate": -0.0000046569493876,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "11.3319",
+    "market_ticker": "KXLMTPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.6648",
+    "market_ticker": "KXLRCXPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.9643",
+    "market_ticker": "KXLTCPERP"
+   },
+   {
+    "funding_rate": -0.0000398124776158,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "12.5188",
+    "market_ticker": "KXMAPERP"
+   },
+   {
+    "funding_rate": -0.0000088290692427,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "5.4786",
+    "market_ticker": "KXMCDPERP"
+   },
+   {
+    "funding_rate": 0.0001466442096087,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "11.2163",
+    "market_ticker": "KXMETAPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.6719",
+    "market_ticker": "KXMRKPERP"
+   },
+   {
+    "funding_rate": 0.0000759969299568,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "9.6631",
+    "market_ticker": "KXMSFTPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.2988",
+    "market_ticker": "KXMSPERP"
+   },
+   {
+    "funding_rate": -0.0002063547202815,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "11.8605",
+    "market_ticker": "KXMUPERP"
+   },
+   {
+    "funding_rate": 0.0001166035442571,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.7676",
+    "market_ticker": "KXNEARPERP"
+   },
+   {
+    "funding_rate": -0.0000293124120183,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "1.6689",
+    "market_ticker": "KXNEEPERP"
+   },
+   {
+    "funding_rate": 0.0000353075176694,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "1.8840",
+    "market_ticker": "KXNEMPERP"
+   },
+   {
+    "funding_rate": 0.0000374122594618,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "1.1335",
+    "market_ticker": "KXNFLXPERP"
+   },
+   {
+    "funding_rate": 0.0000826013948442,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.5149",
+    "market_ticker": "KXNVDAPERP"
+   },
+   {
+    "funding_rate": -0.0000481967645855,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.0185",
+    "market_ticker": "KXORCLPERP"
+   },
+   {
+    "funding_rate": 0.0000033759699721,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.8700",
+    "market_ticker": "KXPANWPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.8114",
+    "market_ticker": "KXPEPPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "0.5478",
+    "market_ticker": "KXPFEPERP"
+   },
+   {
+    "funding_rate": 0.0000208589366564,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.3875",
+    "market_ticker": "KXPGPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.4495",
+    "market_ticker": "KXPLDPERP"
+   },
+   {
+    "funding_rate": 0.0000473110719354,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.8660",
+    "market_ticker": "KXPLTRPERP"
+   },
+   {
+    "funding_rate": 0.0000242088426224,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.6794",
+    "market_ticker": "KXPMPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.9970",
+    "market_ticker": "KXQCOMPERP"
+   },
+   {
+    "funding_rate": 0.0002322677857651,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "12.2108",
+    "market_ticker": "KXQQQPERP"
+   },
+   {
+    "funding_rate": -0.0000433163575517,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.8009",
+    "market_ticker": "KXRTXPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.0618",
+    "market_ticker": "KXSBUXPERP"
+   },
+   {
+    "funding_rate": 0.0000197235582114,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "1.8000",
+    "market_ticker": "KXSCHWPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.4811",
+    "market_ticker": "KXSHOPPERP"
+   },
+   {
+    "funding_rate": -0.0000178080433328,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.0536",
+    "market_ticker": "KXSKHYPERP"
+   },
+   {
+    "funding_rate": 0.0000257864516705,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "1.5817",
+    "market_ticker": "KXSNDKPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.7371",
+    "market_ticker": "KXSOLPERP"
+   },
+   {
+    "funding_rate": 0.0000650300807213,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.5576",
+    "market_ticker": "KXSPCXPERP"
+   },
+   {
+    "funding_rate": 0.0002423341118938,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "13.7907",
+    "market_ticker": "KXSPYPERP"
+   },
+   {
+    "funding_rate": -0.0001391258013478,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.3293",
+    "market_ticker": "KXSUIPERP"
+   },
+   {
+    "funding_rate": 0.0000121349294978,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.7882",
+    "market_ticker": "KXTJXPERP"
+   },
+   {
+    "funding_rate": 0.0000162936525359,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "13.3973",
+    "market_ticker": "KXTMOPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.3109",
+    "market_ticker": "KXTMUSPERP"
+   },
+   {
+    "funding_rate": 0.000298442590103,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.9069",
+    "market_ticker": "KXTSLAPERP"
+   },
+   {
+    "funding_rate": 0.0000498129531812,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.4123",
+    "market_ticker": "KXTSMPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "5.2740",
+    "market_ticker": "KXTXNPERP"
+   },
+   {
+    "funding_rate": 0.0000068030383274,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "6.7973",
+    "market_ticker": "KXUNHPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "4.3499",
+    "market_ticker": "KXUNIPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "5.7413",
+    "market_ticker": "KXUNPPERP"
+   },
+   {
+    "funding_rate": -0.0013198247077842,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "11.4492",
+    "market_ticker": "KXUS2000PERP"
+   },
+   {
+    "funding_rate": -0.0000329286345436,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "12.1920",
+    "market_ticker": "KXUS500PERP"
+   },
+   {
+    "funding_rate": 0.0003752829363024,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.1294",
+    "market_ticker": "KXUSTECH100PERP"
+   },
+   {
+    "funding_rate": -0.0000530386842051,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "8.0504",
+    "market_ticker": "KXVPERP"
+   },
+   {
+    "funding_rate": 0.0002338946390432,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "1.9667",
+    "market_ticker": "KXVVVPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "0.9296",
+    "market_ticker": "KXVZPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "4.7962",
+    "market_ticker": "KXWELLPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "1.5614",
+    "market_ticker": "KXWFCPERP"
+   },
+   {
+    "funding_rate": -0.0002640879613025,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "0.2256",
+    "market_ticker": "KXWLDPERP"
+   },
+   {
+    "funding_rate": 0.000084423563966,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "2.5595",
+    "market_ticker": "KXWMTPERP"
+   },
+   {
+    "funding_rate": -3.019090248e-7,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "3.1913",
+    "market_ticker": "KXXOMPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "0.8856",
+    "market_ticker": "KXXRPPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T21:00:00Z",
+    "mark_price": "7.3173",
+    "market_ticker": "KXZECPERP"
+   },
+   {
+    "funding_rate": -0.0004196927385155,
+    "funding_time": "2026-11-20T19:30:00Z",
+    "mark_price": "0.9069",
+    "market_ticker": "KXBRENTFUTURE"
+   },
+   {
+    "funding_rate": 0.0035879779657032,
+    "funding_time": "2026-11-20T19:30:00Z",
+    "mark_price": "0.3660",
+    "market_ticker": "KXHHGASFUTURE"
+   },
+   {
+    "funding_rate": -0.0001215457285337,
+    "funding_time": "2026-11-20T19:30:00Z",
+    "mark_price": "0.8336",
+    "market_ticker": "KXWTIFUTURE"
+   },
+   {
+    "funding_rate": -0.0003124468802453,
+    "funding_time": "2026-11-20T15:00:00Z",
+    "mark_price": "2.8500",
+    "market_ticker": "KXALUMINUMPERP"
+   },
+   {
+    "funding_rate": 0.000275022789877,
+    "funding_time": "2026-11-20T15:00:00Z",
+    "mark_price": "5.6658",
+    "market_ticker": "KXCOPPERPERP"
+   },
+   {
+    "funding_rate": 0.0004243714378921,
+    "funding_time": "2026-11-20T15:00:00Z",
+    "mark_price": "3.5802",
+    "market_ticker": "KXGOLDPERP"
+   },
+   {
+    "funding_rate": 0.0008512434713919,
+    "funding_time": "2026-11-20T15:00:00Z",
+    "mark_price": "0.9038",
+    "market_ticker": "KXPALLADIUMPERP"
+   },
+   {
+    "funding_rate": 0.0001711041876239,
+    "funding_time": "2026-11-20T15:00:00Z",
+    "mark_price": "1.3287",
+    "market_ticker": "KXPLATINUMPERP"
+   },
+   {
+    "funding_rate": 0.0003645099100821,
+    "funding_time": "2026-11-20T15:00:00Z",
+    "mark_price": "4.2445",
+    "market_ticker": "KXSILVERPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "1.0143",
+    "market_ticker": "KXAAVEPERP"
+   },
+   {
+    "funding_rate": -0.0002317685747679,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "0.1468",
+    "market_ticker": "KXADAPERP"
+   },
+   {
+    "funding_rate": -0.0001109000123658,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "1.9627",
+    "market_ticker": "KXBCHPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "0.5673",
+    "market_ticker": "KXBNBPERP"
+   },
+   {
+    "funding_rate": -0.000122961482471,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "6.1507",
+    "market_ticker": "KXBTCPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "5.6501",
+    "market_ticker": "KXDOGEPERP"
+   },
+   {
+    "funding_rate": -0.0001632695803351,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "1.7385",
+    "market_ticker": "KXETHPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "6.3314",
+    "market_ticker": "KXHYPEPERP"
+   },
+   {
+    "funding_rate": -0.0002943667960289,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "3.6805",
+    "market_ticker": "KXKSHIBPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "8.7647",
+    "market_ticker": "KXLINKPERP"
+   },
+   {
+    "funding_rate": -0.0002598221646857,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "4.1436",
+    "market_ticker": "KXLTCPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "2.9526",
+    "market_ticker": "KXNEARPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "7.1112",
+    "market_ticker": "KXSOLPERP"
+   },
+   {
+    "funding_rate": -0.0001513518702672,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "6.8359",
+    "market_ticker": "KXSUIPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "4.7382",
+    "market_ticker": "KXUNIPERP"
+   },
+   {
+    "funding_rate": 0.0002208045265135,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "2.0661",
+    "market_ticker": "KXVVVPERP"
+   },
+   {
+    "funding_rate": -0.0003695892807436,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "0.2427",
+    "market_ticker": "KXWLDPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "0.9450",
+    "market_ticker": "KXXRPPERP"
+   },
+   {
+    "funding_rate": 0.0001739015603597,
+    "funding_time": "2026-11-20T13:00:00Z",
+    "mark_price": "8.1025",
+    "market_ticker": "KXZECPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "1.0201",
+    "market_ticker": "KXAAVEPERP"
+   },
+   {
+    "funding_rate": -0.0003002553246046,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "0.1476",
+    "market_ticker": "KXADAPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "2.0291",
+    "market_ticker": "KXBCHPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "0.5669",
+    "market_ticker": "KXBNBPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "6.1443",
+    "market_ticker": "KXBTCPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "5.6815",
+    "market_ticker": "KXDOGEPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "1.7255",
+    "market_ticker": "KXETHPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "6.4815",
+    "market_ticker": "KXHYPEPERP"
+   },
+   {
+    "funding_rate": -0.0002981404101014,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "3.7156",
+    "market_ticker": "KXKSHIBPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "8.7672",
+    "market_ticker": "KXLINKPERP"
+   },
+   {
+    "funding_rate": -0.0002707209314393,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "4.1338",
+    "market_ticker": "KXLTCPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "3.0099",
+    "market_ticker": "KXNEARPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "7.2040",
+    "market_ticker": "KXSOLPERP"
+   },
+   {
+    "funding_rate": -0.000234852356734,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "6.8898",
+    "market_ticker": "KXSUIPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "4.7512",
+    "market_ticker": "KXUNIPERP"
+   },
+   {
+    "funding_rate": 0.0003507493585665,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "2.0633",
+    "market_ticker": "KXVVVPERP"
+   },
+   {
+    "funding_rate": -0.0004384732504598,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "0.2442",
+    "market_ticker": "KXWLDPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "0.9601",
+    "market_ticker": "KXXRPPERP"
+   },
+   {
+    "funding_rate": 0,
+    "funding_time": "2026-11-20T05:00:00Z",
+    "mark_price": "8.4411",
+    "market_ticker": "KXZECPERP"
+   },
    {
     "funding_rate": 0.0000902523355695,
     "funding_time": "2026-11-19T21:00:00Z",
