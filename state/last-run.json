@@ -1,6 +1,6 @@
 {
- "at": "2026-11-21T12:07:41.738Z",
- "run": "44902296636",
+ "at": "2026-11-21T12:37:38.355Z",
+ "run": "44904800043",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 524,
+   "ms": 361,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,40 +25,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 17724,
+   "ms": 19975,
    "bases": 15,
-   "bars": 2732
+   "bars": 2897
   },
   "coinbase": {
    "ok": true,
-   "ms": 23769,
+   "ms": 34855,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 13727,
+   "bars": 15433,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 84815,
+   "ms": 62213,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 1529,
+   "tradesWritten": 1587,
    "symbolsBehind": 0
   }
  },
- "calls": 700,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/ME-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 84819
+ "calls": 721,
+ "http": [],
+ "ms": 62216
 }
