@@ -1,6 +1,6 @@
 {
- "at": "2026-11-22T10:07:41.153Z",
- "run": "45010834033",
+ "at": "2026-11-22T10:37:42.348Z",
+ "run": "45013314500",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 429,
+   "ms": 401,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,33 +25,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 21077,
+   "ms": 18875,
    "bases": 15,
-   "bars": 2981
+   "bars": 2569
   },
   "coinbase": {
    "ok": true,
-   "ms": 35997,
+   "ms": 28446,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 14401,
+   "bars": 11217,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 61952,
+   "ms": 57157,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 2765,
+   "tradesWritten": 777,
    "symbolsBehind": 0
   }
  },
- "calls": 732,
- "http": [],
- "ms": 61955
+ "calls": 697,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/TIA-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 57159
 }
