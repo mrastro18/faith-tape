@@ -1,6 +1,6 @@
 {
- "at": "2026-11-22T14:07:40.299Z",
- "run": "45031048810",
+ "at": "2026-11-22T14:37:41.187Z",
+ "run": "45033788567",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 295,
+   "ms": 288,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,33 +25,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 17766,
+   "ms": 17734,
    "bases": 15,
-   "bars": 2380
+   "bars": 2357
   },
   "coinbase": {
    "ok": true,
-   "ms": 26756,
+   "ms": 22652,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 10240,
+   "bars": 9804,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 62053,
+   "ms": 75619,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 947,
+   "tradesWritten": 723,
    "symbolsBehind": 0
   }
  },
- "calls": 689,
- "http": [],
- "ms": 62056
+ "calls": 684,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/OGN-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 75621
 }
