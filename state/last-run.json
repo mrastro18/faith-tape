@@ -1,6 +1,6 @@
 {
- "at": "2026-11-22T04:07:43.602Z",
- "run": "44983611680",
+ "at": "2026-11-22T04:37:37.929Z",
+ "run": "44985840449",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 303,
+   "ms": 373,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,40 +25,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 18868,
+   "ms": 17770,
    "bases": 15,
-   "bars": 2145
+   "bars": 1930
   },
   "coinbase": {
    "ok": true,
-   "ms": 27089,
+   "ms": 26979,
    "bases": 137,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 11044,
+   "bars": 10138,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 61372,
+   "ms": 62122,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 1125,
+   "tradesWritten": 913,
    "symbolsBehind": 0
   }
  },
- "calls": 692,
+ "calls": 687,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/SKY-USD/trades",
+   "path": "/products/RARE-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 61375
+ "ms": 62126
 }
