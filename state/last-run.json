@@ -1,15 +1,10 @@
 {
- "at": "2026-11-22T23:37:39.618Z",
- "run": "45084212748",
+ "at": "2026-11-23T00:07:46.449Z",
+ "run": "45086861787",
  "tasks": {
-  "daily": {
-   "ok": true,
-   "ms": 0,
-   "skipped": true
-  },
   "kalshi": {
    "ok": true,
-   "ms": 214,
+   "ms": 725,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -21,50 +16,43 @@
     "Energy": 4,
     "Indices": 5
    },
-   "funding": "skipped"
+   "funding": 1086941
+  },
+  "daily": {
+   "ok": true,
+   "ms": 4463,
+   "items": 14
   },
   "kraken": {
    "ok": true,
-   "ms": 18828,
+   "ms": 20011,
    "bases": 15,
-   "bars": 2310
+   "bars": 2317
   },
   "coinbase": {
    "ok": true,
-   "ms": 26384,
+   "ms": 27442,
    "bases": 137,
-   "historyBases": 63,
+   "historyBases": 64,
    "historyBehind": 0,
-   "bars": 10630,
+   "bars": 9785,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 68850,
+   "ms": 86007,
    "pairs": 260,
    "tracked": 253,
-   "klineSymbols": 0,
+   "klineSymbols": 260,
    "depthRows": 253,
-   "tradesWritten": 1284,
+   "tradesWritten": 894,
    "symbolsBehind": 0
   }
  },
- "calls": 707,
+ "calls": 973,
  "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/G-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/POPCAT-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
   {
    "host": "api.exchange.coinbase.com",
    "path": "/products/USD1-USD/trades",
@@ -72,5 +60,5 @@
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 68853
+ "ms": 86009
 }
