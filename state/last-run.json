@@ -1,6 +1,6 @@
 {
- "at": "2026-11-23T07:07:41.408Z",
- "run": "45128772215",
+ "at": "2026-11-23T07:37:41.091Z",
+ "run": "45132400541",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 333,
+   "ms": 179,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,33 +25,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 17791,
+   "ms": 17715,
    "bases": 15,
-   "bars": 2196
+   "bars": 2069
   },
   "coinbase": {
    "ok": true,
-   "ms": 25298,
+   "ms": 21948,
    "bases": 137,
    "historyBases": 64,
    "historyBehind": 0,
-   "bars": 8930,
+   "bars": 8582,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 61950,
+   "ms": 69361,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 674,
+   "tradesWritten": 754,
    "symbolsBehind": 0
   }
  },
- "calls": 680,
- "http": [],
- "ms": 61953
+ "calls": 685,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/WLFI-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 69364
 }
