@@ -1,10 +1,15 @@
 {
- "at": "2026-11-23T00:07:46.449Z",
- "run": "45086861787",
+ "at": "2026-11-23T00:37:38.152Z",
+ "run": "45089810680",
  "tasks": {
+  "daily": {
+   "ok": true,
+   "ms": 0,
+   "skipped": true
+  },
   "kalshi": {
    "ok": true,
-   "ms": 725,
+   "ms": 191,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -16,49 +21,37 @@
     "Energy": 4,
     "Indices": 5
    },
-   "funding": 1086941
-  },
-  "daily": {
-   "ok": true,
-   "ms": 4463,
-   "items": 14
+   "funding": "skipped"
   },
   "kraken": {
    "ok": true,
-   "ms": 20011,
+   "ms": 18797,
    "bases": 15,
-   "bars": 2317
+   "bars": 2148
   },
   "coinbase": {
    "ok": true,
-   "ms": 27442,
+   "ms": 21916,
    "bases": 137,
    "historyBases": 64,
    "historyBehind": 0,
-   "bars": 9785,
+   "bars": 10159,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 86007,
+   "ms": 81769,
    "pairs": 260,
    "tracked": 253,
-   "klineSymbols": 260,
+   "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 894,
+   "tradesWritten": 1074,
    "symbolsBehind": 0
   }
  },
- "calls": 973,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/USD1-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 86009
+ "calls": 694,
+ "http": [],
+ "ms": 81772
 }
