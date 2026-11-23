@@ -1,6 +1,6 @@
 {
- "at": "2026-11-23T18:07:48.380Z",
- "run": "45234906857",
+ "at": "2026-11-23T18:37:45.995Z",
+ "run": "45240283316",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 362,
+   "ms": 139,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,33 +25,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 23253,
+   "ms": 18819,
    "bases": 15,
-   "bars": 3761
+   "bars": 3038
   },
   "coinbase": {
    "ok": true,
-   "ms": 41530,
+   "ms": 25206,
    "bases": 137,
    "historyBases": 64,
    "historyBehind": 0,
-   "bars": 18678,
+   "bars": 13880,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 78443,
+   "ms": 68574,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 2374,
+   "tradesWritten": 1264,
    "symbolsBehind": 0
   }
  },
- "calls": 762,
- "http": [],
- "ms": 78446
+ "calls": 710,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/SHIB-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 68577
 }
