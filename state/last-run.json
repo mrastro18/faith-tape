@@ -1,6 +1,6 @@
 {
- "at": "2026-11-23T20:07:44.992Z",
- "run": "45255968786",
+ "at": "2026-11-23T20:37:44.660Z",
+ "run": "45261213065",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 215,
+   "ms": 360,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,46 +25,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 24313,
+   "ms": 19974,
    "bases": 15,
-   "bars": 3574
+   "bars": 3129
   },
   "coinbase": {
    "ok": true,
-   "ms": 27655,
+   "ms": 31126,
    "bases": 137,
    "historyBases": 64,
    "historyBehind": 0,
-   "bars": 15235,
+   "bars": 13437,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 69710,
+   "ms": 59866,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 1670,
+   "tradesWritten": 1371,
    "symbolsBehind": 0
   }
  },
- "calls": 725,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/PENGU-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/SKY-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 69713
+ "calls": 712,
+ "http": [],
+ "ms": 59869
 }
