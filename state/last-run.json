@@ -1,6 +1,6 @@
 {
- "at": "2026-11-24T21:07:47.733Z",
- "run": "45487777840",
+ "at": "2026-11-24T21:37:49.633Z",
+ "run": "45492898180",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 236,
+   "ms": 288,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,40 +25,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 21001,
+   "ms": 18862,
    "bases": 15,
-   "bars": 2966
+   "bars": 2686
   },
   "coinbase": {
    "ok": true,
-   "ms": 25152,
+   "ms": 27276,
    "bases": 136,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 12858,
+   "bars": 10618,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 81722,
+   "ms": 58647,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 814,
+   "tradesWritten": 690,
    "symbolsBehind": 0
   }
  },
- "calls": 715,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/ZEN-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 81724
+ "calls": 689,
+ "http": [],
+ "ms": 58651
 }
