@@ -1,15 +1,15 @@
 {
- "at": "2026-11-24T19:07:42.036Z",
- "run": "45466778733",
+ "at": "2026-11-24T19:37:53.818Z",
+ "run": "45472097890",
  "tasks": {
   "daily": {
    "ok": true,
-   "ms": 1,
+   "ms": 0,
    "skipped": true
   },
   "kalshi": {
    "ok": true,
-   "ms": 290,
+   "ms": 506,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,52 +25,33 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 19905,
+   "ms": 18878,
    "bases": 15,
-   "bars": 2928
+   "bars": 2883
   },
   "coinbase": {
    "ok": true,
-   "ms": 25929,
+   "ms": 28748,
    "bases": 136,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 11607,
+   "bars": 11892,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 80916,
+   "ms": 57676,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 911,
+   "tradesWritten": 701,
    "symbolsBehind": 0
   }
  },
- "calls": 704,
- "http": [
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/PNUT-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/TURBO-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/YFI-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  }
- ],
- "ms": 80919
+ "calls": 700,
+ "http": [],
+ "ms": 57679
 }
