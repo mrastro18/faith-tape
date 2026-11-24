@@ -1,15 +1,10 @@
 {
- "at": "2026-11-23T23:37:39.671Z",
- "run": "45290362933",
+ "at": "2026-11-24T00:07:44.484Z",
+ "run": "45294481262",
  "tasks": {
-  "daily": {
-   "ok": true,
-   "ms": 0,
-   "skipped": true
-  },
   "kalshi": {
    "ok": true,
-   "ms": 206,
+   "ms": 652,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -21,37 +16,49 @@
     "Energy": 4,
     "Indices": 5
    },
-   "funding": "skipped"
+   "funding": 1107017
+  },
+  "daily": {
+   "ok": true,
+   "ms": 4396,
+   "items": 14
   },
   "kraken": {
    "ok": true,
-   "ms": 17738,
+   "ms": 18924,
    "bases": 15,
-   "bars": 2301
+   "bars": 2303
   },
   "coinbase": {
    "ok": true,
-   "ms": 29481,
-   "bases": 137,
-   "historyBases": 64,
+   "ms": 27032,
+   "bases": 136,
+   "historyBases": 63,
    "historyBehind": 0,
-   "bars": 12172,
+   "bars": 12397,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 72864,
+   "ms": 91056,
    "pairs": 260,
    "tracked": 253,
-   "klineSymbols": 0,
+   "klineSymbols": 260,
    "depthRows": 253,
-   "tradesWritten": 896,
+   "tradesWritten": 974,
    "symbolsBehind": 0
   }
  },
- "calls": 691,
- "http": [],
- "ms": 72866
+ "calls": 971,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/WLFI-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 91059
 }
