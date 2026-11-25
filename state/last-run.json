@@ -1,15 +1,15 @@
 {
- "at": "2026-11-25T14:08:06.560Z",
- "run": "45630547814",
+ "at": "2026-11-25T14:37:45.861Z",
+ "run": "45636016225",
  "tasks": {
   "daily": {
    "ok": true,
-   "ms": 0,
+   "ms": 1,
    "skipped": true
   },
   "kalshi": {
    "ok": true,
-   "ms": 301,
+   "ms": 197,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,33 +25,52 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 26559,
+   "ms": 28722,
    "bases": 15,
-   "bars": 4075
+   "bars": 4141
   },
   "coinbase": {
    "ok": true,
-   "ms": 50428,
+   "ms": 34058,
    "bases": 136,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 17953,
+   "bars": 18758,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 58060,
+   "ms": 74099,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 4018,
+   "tradesWritten": 4485,
    "symbolsBehind": 0
   }
  },
- "calls": 762,
- "http": [],
- "ms": 58063
+ "calls": 766,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/ETH-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/JTO-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/YFI-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 74102
 }
