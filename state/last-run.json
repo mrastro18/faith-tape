@@ -1,6 +1,6 @@
 {
- "at": "2026-11-25T11:07:44.156Z",
- "run": "45601390789",
+ "at": "2026-11-25T11:37:44.561Z",
+ "run": "45606090815",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 312,
+   "ms": 273,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,46 +25,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 19921,
+   "ms": 21028,
    "bases": 15,
-   "bars": 2627
+   "bars": 2954
   },
   "coinbase": {
    "ok": true,
-   "ms": 22723,
+   "ms": 23850,
    "bases": 136,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 8830,
+   "bars": 9689,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 82722,
+   "ms": 74423,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 385,
+   "tradesWritten": 670,
    "symbolsBehind": 0
   }
  },
- "calls": 687,
+ "calls": 701,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/SHIB-USD/trades",
-   "status": 429,
-   "body": "{\"message\":\"Public rate limit exceeded\"}"
-  },
-  {
-   "host": "api.exchange.coinbase.com",
-   "path": "/products/WLFI-USD/trades",
+   "path": "/products/VET-USD/trades",
    "status": 429,
    "body": "{\"message\":\"Public rate limit exceeded\"}"
   }
  ],
- "ms": 82725
+ "ms": 74426
 }
