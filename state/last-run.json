@@ -1,6 +1,6 @@
 {
- "at": "2026-11-25T06:37:40.930Z",
- "run": "45561926004",
+ "at": "2026-11-25T07:07:43.520Z",
+ "run": "45565632554",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 279,
+   "ms": 204,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,33 +25,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 18839,
+   "ms": 17703,
    "bases": 15,
-   "bars": 2305
+   "bars": 2254
   },
   "coinbase": {
    "ok": true,
-   "ms": 21455,
+   "ms": 21447,
    "bases": 136,
    "historyBases": 63,
    "historyBehind": 0,
-   "bars": 9540,
+   "bars": 9165,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 74013,
+   "ms": 79300,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 860,
+   "tradesWritten": 645,
    "symbolsBehind": 0
   }
  },
- "calls": 684,
- "http": [],
- "ms": 74015
+ "calls": 683,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/PUMP-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 79303
 }
