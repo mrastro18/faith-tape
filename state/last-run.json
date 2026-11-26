@@ -1,6 +1,6 @@
 {
- "at": "2026-11-26T10:07:42.024Z",
- "run": "45798282373",
+ "at": "2026-11-26T10:37:57.630Z",
+ "run": "45802988912",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 443,
+   "ms": 220,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,45 +25,45 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 17713,
+   "ms": 17754,
    "bases": 15,
-   "bars": 2042
+   "bars": 2232
   },
   "binanceus": {
    "ok": true,
-   "ms": 83153,
+   "ms": 56660,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 370,
+   "tradesWritten": 387,
    "symbolsBehind": 0
   },
   "coinbase": {
    "ok": true,
-   "ms": 119992,
+   "ms": 140900,
    "bases": 136,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 6858,
+   "bars": 10544,
    "candles": 0,
    "failed": [
     {
-     "base": "BTC",
+     "base": "XRP",
      "status": 500
     }
    ],
    "failedCount": 1
   }
  },
- "calls": 671,
+ "calls": 689,
  "http": [
   {
    "host": "api.exchange.coinbase.com",
-   "path": "/products/BTC-USD/trades",
+   "path": "/products/XRP-USD/trades",
    "status": 500,
    "body": "{\"message\":\"Internal Server Error\"}"
   }
  ],
- "ms": 120107
+ "ms": 140946
 }
