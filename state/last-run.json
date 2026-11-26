@@ -1,6 +1,6 @@
 {
- "at": "2026-11-26T09:38:01.210Z",
- "run": "45793624987",
+ "at": "2026-11-26T10:07:42.024Z",
+ "run": "45798282373",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 329,
+   "ms": 443,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,33 +25,45 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 17766,
+   "ms": 17713,
    "bases": 15,
-   "bars": 2054
+   "bars": 2042
   },
   "binanceus": {
    "ok": true,
-   "ms": 57981,
+   "ms": 83153,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 321,
+   "tradesWritten": 370,
    "symbolsBehind": 0
   },
   "coinbase": {
    "ok": true,
-   "ms": 134969,
+   "ms": 119992,
    "bases": 136,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 8790,
+   "bars": 6858,
    "candles": 0,
-   "failed": [],
-   "failedCount": 0
+   "failed": [
+    {
+     "base": "BTC",
+     "status": 500
+    }
+   ],
+   "failedCount": 1
   }
  },
- "calls": 680,
- "http": [],
- "ms": 135015
+ "calls": 671,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/BTC-USD/trades",
+   "status": 500,
+   "body": "{\"message\":\"Internal Server Error\"}"
+  }
+ ],
+ "ms": 120107
 }
