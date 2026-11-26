@@ -1,6 +1,6 @@
 {
- "at": "2026-11-26T17:07:44.471Z",
- "run": "45864910509",
+ "at": "2026-11-26T17:37:47.044Z",
+ "run": "45869242699",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 227,
+   "ms": 353,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,33 +25,55 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 17716,
+   "ms": 17768,
    "bases": 15,
-   "bars": 2500
-  },
-  "coinbase": {
-   "ok": true,
-   "ms": 47192,
-   "bases": 136,
-   "historyBases": 62,
-   "historyBehind": 0,
-   "bars": 12283,
-   "candles": 0,
-   "failed": [],
-   "failedCount": 0
+   "bars": 2429
   },
   "binanceus": {
    "ok": true,
-   "ms": 83956,
+   "ms": 56985,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 796,
+   "tradesWritten": 533,
    "symbolsBehind": 0
+  },
+  "coinbase": {
+   "ok": true,
+   "ms": 83257,
+   "bases": 136,
+   "historyBases": 62,
+   "historyBehind": 0,
+   "bars": 10723,
+   "candles": 0,
+   "failed": [
+    {
+     "base": "LTC",
+     "status": 500
+    },
+    {
+     "base": "SEI",
+     "status": 500
+    }
+   ],
+   "failedCount": 2
   }
  },
- "calls": 688,
- "http": [],
- "ms": 83959
+ "calls": 687,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/LTC-USD/trades",
+   "status": 500,
+   "body": "{\"message\":\"Internal Server Error\"}"
+  },
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/SEI-USD/trades",
+   "status": 500,
+   "body": "{\"message\":\"Internal Server Error\"}"
+  }
+ ],
+ "ms": 83290
 }
