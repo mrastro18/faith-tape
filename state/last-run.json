@@ -1,6 +1,6 @@
 {
- "at": "2026-11-27T00:37:53.172Z",
- "run": "45917759288",
+ "at": "2026-11-27T01:07:49.450Z",
+ "run": "45920696269",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 218,
+   "ms": 219,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,33 +25,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 17765,
+   "ms": 17789,
    "bases": 15,
-   "bars": 1933
+   "bars": 1946
   },
   "coinbase": {
    "ok": true,
-   "ms": 30527,
+   "ms": 25894,
    "bases": 136,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 10059,
+   "bars": 10464,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 57761,
+   "ms": 57120,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 933,
+   "tradesWritten": 670,
    "symbolsBehind": 0
   }
  },
- "calls": 687,
- "http": [],
- "ms": 57763
+ "calls": 692,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/MOODENG-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 57124
 }
