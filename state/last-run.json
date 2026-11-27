@@ -1,6 +1,6 @@
 {
- "at": "2026-11-27T19:07:54.751Z",
- "run": "46054385389",
+ "at": "2026-11-27T19:37:47.364Z",
+ "run": "46057956067",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 352,
+   "ms": 235,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,33 +25,45 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 17806,
+   "ms": 17762,
    "bases": 15,
-   "bars": 2808
+   "bars": 2570
   },
   "binanceus": {
    "ok": true,
-   "ms": 57810,
+   "ms": 56908,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 3884,
+   "tradesWritten": 612,
    "symbolsBehind": 0
   },
   "coinbase": {
    "ok": true,
-   "ms": 78674,
+   "ms": 68422,
    "bases": 136,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 11404,
+   "bars": 9458,
    "candles": 0,
-   "failed": [],
-   "failedCount": 0
+   "failed": [
+    {
+     "base": "SOL",
+     "status": 500
+    }
+   ],
+   "failedCount": 1
   }
  },
- "calls": 689,
- "http": [],
- "ms": 78860
+ "calls": 682,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/SOL-USD/trades",
+   "status": 500,
+   "body": "{\"message\":\"Internal Server Error\"}"
+  }
+ ],
+ "ms": 68461
 }
