@@ -1,6 +1,6 @@
 {
- "at": "2026-11-28T13:37:48.619Z",
- "run": "46150501602",
+ "at": "2026-11-28T14:07:44.065Z",
+ "run": "46152989410",
  "tasks": {
   "daily": {
    "ok": true,
@@ -9,7 +9,7 @@
   },
   "kalshi": {
    "ok": true,
-   "ms": 143,
+   "ms": 207,
    "markets": 143,
    "crypto": 19,
    "pages": 1,
@@ -25,33 +25,40 @@
   },
   "kraken": {
    "ok": true,
-   "ms": 17726,
+   "ms": 19930,
    "bases": 15,
-   "bars": 2248
+   "bars": 2648
   },
   "coinbase": {
    "ok": true,
-   "ms": 20443,
+   "ms": 22967,
    "bases": 136,
    "historyBases": 62,
    "historyBehind": 0,
-   "bars": 9371,
+   "bars": 10991,
    "candles": 0,
    "failed": [],
    "failedCount": 0
   },
   "binanceus": {
    "ok": true,
-   "ms": 68885,
+   "ms": 74806,
    "pairs": 260,
    "tracked": 253,
    "klineSymbols": 0,
    "depthRows": 253,
-   "tradesWritten": 461,
+   "tradesWritten": 1145,
    "symbolsBehind": 0
   }
  },
- "calls": 681,
- "http": [],
- "ms": 68887
+ "calls": 693,
+ "http": [
+  {
+   "host": "api.exchange.coinbase.com",
+   "path": "/products/ROSE-USD/trades",
+   "status": 429,
+   "body": "{\"message\":\"Public rate limit exceeded\"}"
+  }
+ ],
+ "ms": 74808
 }
